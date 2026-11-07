@@ -62,6 +62,21 @@ def main():
     with ThreadPoolExecutor(4) as ex:
         hist = dict(ex.map(surpresa, uni))
 
+    def previsao(e):
+        j = get(f"https://api.nasdaq.com/api/analyst/{e['us']}/earnings-forecast", hdr=NQ, tries=3)
+        d = (j or {}).get('data') or {}
+        def linhas(bloco):
+            return [{'periodo': r.get('fiscalEnd') or r.get('fiscalPeriod'), 'eps': num(r.get('consensusEPSForecast')),
+                     'alto': num(r.get('highEPSForecast')), 'baixo': num(r.get('lowEPSForecast')),
+                     'n': num(r.get('noOfEstimates')), 'revisoes_cima': num(r.get('up')), 'revisoes_baixo': num(r.get('down'))}
+                    for r in ((d.get(bloco) or {}).get('rows') or [])]
+        return e['t'], {'anual': linhas('yearlyForecast'), 'trimestral': linhas('quarterlyForecast')}
+
+    with ThreadPoolExecutor(4) as ex:
+        prev = dict(ex.map(previsao, uni))
+    if not any(v['anual'] for v in prev.values()) and velho.get('previsoes'):
+        prev = velho['previsoes']
+
     passados = sum(1 for d in dias if d <= HOJE)
     ok = lidos[0] >= 0.8 * passados
     if not ok and velho:  # leitura fraca: fica a copia anterior para as datas que nao vieram
@@ -71,9 +86,9 @@ def main():
             if not hist.get(t):
                 hist[t] = h
     eventos.sort(key=lambda x: x['data'])
-    guardar(OUT, 'calendario.json', {'lido': AGORA, 'eventos': eventos, 'historico': hist})
+    guardar(OUT, 'calendario.json', {'lido': AGORA, 'eventos': eventos, 'historico': hist, 'previsoes': prev})
     mark(RAW, 'calendario', ok, f'{lidos[0]} de {passados} dias passados lidos; {len(eventos)} eventos')
-    print('calendario:', lidos[0], 'dias,', len(eventos), 'eventos,', sum(1 for v in hist.values() if v), 'historicos')
+    print('calendario:', lidos[0], 'dias,', len(eventos), 'eventos,', sum(1 for v in hist.values() if v), 'historicos,', sum(1 for v in prev.values() if v['anual']), 'com consenso anual')
 
 
 if __name__ == '__main__':
