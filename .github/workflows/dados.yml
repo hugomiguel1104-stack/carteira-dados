@@ -64,10 +64,17 @@ jobs:
         run: |
           cp data/raw/status.json data/out/estado.json 2>/dev/null || echo '{}' > data/out/estado.json
           ls -la data/out
+      - name: Pacote para a app (documentos da base de dados)
+        continue-on-error: true
+        run: |
+          rm -rf data/art
+          python pipeline/artefacto.py data/out data/art GEN
+          rm -f data/art/lotes.json
+          cat data/art/manifesto.json
       - name: Guardar no ramo data (um commit, sem historico)
         run: |
           cd data
           git symbolic-ref HEAD refs/heads/tmp
-          git add -A raw out
+          git add -A raw out art
           git -c user.name=dados-bot -c user.email=dados-bot@users.noreply.github.com commit -qm "dados $(date -u +%FT%TZ) ${{ steps.m.outputs.modo }}"
           git push -qf origin HEAD:data

@@ -4,6 +4,9 @@
 Parte os JSON de out/ em documentos de menos de 256 KiB e agrupa-os em lotes de escrita
 (no máximo 50 documentos e ~900 KB por lote), prontos para o ArtifactData `batch`.
 
+Corre no GitHub Actions (passo "Pacote para a app"): escreve art/docs/*.json e art/manifesto.json no ramo data.
+A tarefa diária do Claude só lê o manifesto e copia os documentos (não corre código).
+
 Uso:
   python pipeline/artefacto.py <out_dir> <destino> <geracao> [geracao_anterior]
 
@@ -100,6 +103,10 @@ for k, d in final.items():
 if atual:
     lotes.append(atual)
 json.dump(lotes, open(os.path.join(DEST, 'lotes.json'), 'w'), indent=1)
+# manifesto: só ids, para a tarefa montar as escritas sem correr código (corre no GitHub Actions)
+import datetime as _dt
+json.dump({'feito': _dt.datetime.now(_dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'), 'docs': len(final),
+           'lotes': [[w['doc_id'] for w in l] for l in lotes]}, open(os.path.join(DEST, 'manifesto.json'), 'w'), indent=1)
 if ANT and ANT != GEN:
     ids = [w['doc_id'] for l in lotes for w in l]
     apagar = [[{'op': 'delete', 'collection': f'terminal/{ANT}/d', 'doc_id': i, 'if_version': 1} for i in ids[j:j + 50]] for j in range(0, len(ids), 50)]
