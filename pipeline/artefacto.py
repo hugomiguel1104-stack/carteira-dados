@@ -5,18 +5,20 @@ Parte os JSON de out/ em documentos de menos de 256 KiB e agrupa-os em lotes de 
 (no máximo 50 documentos e ~900 KB por lote), prontos para o ArtifactData `batch`.
 
 Uso:
-  python pipeline/artefacto.py <out_dir> <destino> [versoes.json]
+  python pipeline/artefacto.py <out_dir> <destino> <geracao> [geracao_anterior]
 
-  versoes.json (opcional): {"doc_id": versao, ...} lido da coleção `terminal` antes de escrever.
-  Documentos que já existem levam if_version; os novos não.
-
-Escreve <destino>/docs/<doc_id>.json e <destino>/lotes.json:
-  [[{"op": "set", "collection": "terminal", "doc_id": ..., "file_path": ..., "if_version": ...}, ...], ...]
+Cada corrida escreve uma geração nova (documentos novos, sem if_version) na coleção
+terminal/<geracao>/d; o documento terminal/atual aponta para a geração em uso e a página lê só essa.
+Escreve <destino>/docs/<doc_id>.json, <destino>/lotes.json (escrita) e, com geracao_anterior,
+<destino>/apagar.json (lotes de delete da geração anterior, if_version 1, porque cada documento
+de uma geração só é escrito uma vez).
 """
 import json, os, re, sys
 
 OUT, DEST = sys.argv[1], sys.argv[2]
-VERS = json.load(open(sys.argv[3])) if len(sys.argv) > 3 and os.path.exists(sys.argv[3]) else {}
+GEN = sys.argv[3]
+ANT = sys.argv[4] if len(sys.argv) > 4 else None
+COL = f'terminal/{GEN}/d'
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LIM_DOC = 250_000
 LIM_LOTE = 900_000
@@ -61,27 +63,45 @@ for f in (ler('fichas.json', {}) or {}).get('fichas', []):
         'comp': f.get('comparacoes', [])}
 
 os.makedirs(os.path.join(DEST, 'docs'), exist_ok=True)
-lotes, atual, tam = [], [], 0
-for k, d in docs.items():
+# empacota: px-*, sec-* e ficha-* vão juntos em documentos de até ~240 KB (menos documentos = menos escritas)
+tam = lambda o: len(json.dumps(o, ensure_ascii=False, separators=(',', ':')).encode('utf-8'))
+final = {k: d for k, d in docs.items() if not k.startswith(('px-', 'sec-', 'ficha-'))}
+for pref in ('px', 'sec', 'ficha'):
+    itens = [(k, d) for k, d in docs.items() if k.startswith(pref + '-')]
+    pack, n, i = [], 0, 1
+    for k, d in itens:
+        t = tam(d)
+        if t > LIM_DOC - 2000:
+            if d.get('md'):
+                d['md'] = d['md'][:max(0, len(d['md']) - (t - LIM_DOC) - 6000)] + '\n\n…(ficha cortada no Terminal; abre o ficheiro original)'
+                t = tam(d)
+            if t > LIM_DOC - 2000:
+                print('AVISO: fica de fora (grande de mais):', k, t, file=sys.stderr)
+                continue
+        if pack and n + t > 240_000:
+            final[f'{pref}-{i}'] = {'itens': pack}
+            pack, n, i = [], 0, i + 1
+        pack.append(d)
+        n += t
+    if pack:
+        final[f'{pref}-{i}'] = {'itens': pack}
+lotes, atual, tl = [], [], 0
+for k, d in final.items():
     txt = json.dumps(d, ensure_ascii=False, separators=(',', ':'))
-    if len(txt.encode('utf-8')) > LIM_DOC and k.startswith('ficha-'):   # ficha demasiado grande: corta o texto, mantém os números
-        d['md'] = d['md'][:max(0, len(d['md']) - (len(txt.encode('utf-8')) - LIM_DOC) - 2000)] + '\n\n…(ficha cortada no Terminal; abre o ficheiro original)'
-        txt = json.dumps(d, ensure_ascii=False, separators=(',', ':'))
-    n = len(txt.encode('utf-8'))
-    if n > LIM_DOC:
-        print('AVISO: documento grande de mais, fica de fora:', k, n, file=sys.stderr)
-        continue
+    nb = len(txt.encode('utf-8'))
     p = os.path.join(DEST, 'docs', k + '.json')
     open(p, 'w', encoding='utf-8').write(txt)
-    w = {'op': 'set', 'collection': 'terminal', 'doc_id': k, 'file_path': os.path.abspath(p)}
-    if k in VERS:
-        w['if_version'] = VERS[k]
-    if atual and (len(atual) >= 50 or tam + n > LIM_LOTE):
+    w = {'op': 'set', 'collection': COL, 'doc_id': k, 'file_path': os.path.abspath(p)}
+    if atual and (len(atual) >= 50 or tl + nb > LIM_LOTE):
         lotes.append(atual)
-        atual, tam = [], 0
+        atual, tl = [], 0
     atual.append(w)
-    tam += n
+    tl += nb
 if atual:
     lotes.append(atual)
 json.dump(lotes, open(os.path.join(DEST, 'lotes.json'), 'w'), indent=1)
-print(f'{len(docs)} documentos em {len(lotes)} lotes;', sum(os.path.getsize(os.path.join(DEST, 'docs', f)) for f in os.listdir(os.path.join(DEST, 'docs'))) // 1024, 'KB')
+if ANT and ANT != GEN:
+    ids = [w['doc_id'] for l in lotes for w in l]
+    apagar = [[{'op': 'delete', 'collection': f'terminal/{ANT}/d', 'doc_id': i, 'if_version': 1} for i in ids[j:j + 50]] for j in range(0, len(ids), 50)]
+    json.dump(apagar, open(os.path.join(DEST, 'apagar.json'), 'w'), indent=1)
+print(f'{len(final)} documentos em {len(lotes)} lotes;', sum(os.path.getsize(os.path.join(DEST, 'docs', f)) for f in os.listdir(os.path.join(DEST, 'docs'))) // 1024, 'KB')
