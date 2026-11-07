@@ -27,14 +27,17 @@ METRICAS = {
     'i_d': ('fluxo', ['ResearchAndDevelopmentExpense', 'ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost'],
             ['ResearchAndDevelopmentExpense'], 'moeda'),
     'ebit': ('fluxo', ['OperatingIncomeLoss'], ['ProfitLossFromOperatingActivities'], 'moeda'),
-    'lucro_liquido': ('fluxo', ['NetIncomeLoss', 'ProfitLoss'],
+    'lucro_liquido': ('fluxo', ['NetIncomeLoss', 'NetIncomeLossAvailableToCommonStockholdersBasic', 'ProfitLoss',
+                                'NetIncomeLossAttributableToParent'],
                       ['ProfitLossAttributableToOwnersOfParent', 'ProfitLoss'], 'moeda'),
     'eps_diluido': ('eps', ['EarningsPerShareDiluted'], ['DilutedEarningsLossPerShare'], 'eps'),
     'cfo': ('fluxo', ['NetCashProvidedByUsedInOperatingActivities',
                       'NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'],
             ['CashFlowsFromUsedInOperatingActivities'], 'moeda'),
     'capex': ('fluxo', ['PaymentsToAcquirePropertyPlantAndEquipment', 'PaymentsToAcquireProductiveAssets'],
-              ['PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities', 'PurchaseOfPropertyPlantAndEquipment'],
+              ['PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities', 'PurchaseOfPropertyPlantAndEquipment',
+               'PurchaseOfPropertyPlantAndEquipmentIntangibleAssetsOtherThanGoodwillInvestmentPropertyAndOtherNoncurrentAssets',
+               'PaymentsForPropertyPlantAndEquipment', 'PurchaseOfIntangibleAssetsAndPropertyPlantAndEquipment'],
               'moeda'),
     'd_a': ('fluxo', ['DepreciationDepletionAndAmortization', 'DepreciationAmortizationAndAccretionNet',
                       'DepreciationAndAmortization'], ['DepreciationAndAmortisationExpense'], 'moeda'),
@@ -92,7 +95,8 @@ def factos(cf, conceitos, tax, tipo, moeda_pref):
                 continue
             chave = (o.get('start'), o['end'])
             if chave not in este or o.get('filed', '') > este[chave][1]:
-                este[chave] = (o['val'], o.get('filed', ''), 0)   # dentro do conceito: a entrega mais recente (restatements)
+                anual_ok = o.get('form', '').split('/')[0] in ('10-K', '20-F', '40-F') and o.get('fp') == 'FY'
+                este[chave] = (o['val'], o.get('filed', ''), anual_ok)   # dentro do conceito: a entrega mais recente (restatements)
         for chave, v in este.items():
             out.setdefault(chave, v)                              # entre conceitos: o de maior prioridade manda
     return out, uni
@@ -100,10 +104,10 @@ def factos(cf, conceitos, tax, tipo, moeda_pref):
 
 def anual(f, tipo):
     linhas = {}
-    for (ini, fim), (v, _, _) in f.items():
+    for (ini, fim), (v, _, anual_ok) in f.items():
         if tipo == 'stock':
             continue
-        if ini and 340 <= dias(ini, fim) <= 380:
+        if ini and anual_ok and 340 <= dias(ini, fim) <= 380:   # so o exercicio do 10-K/20-F (nao os 12 meses moveis dos 10-Q)
             linhas[fim] = v
     return linhas
 

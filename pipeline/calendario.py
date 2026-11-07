@@ -37,8 +37,8 @@ def main():
     def dia(d):
         j = get('https://api.nasdaq.com/api/calendar/earnings?date=' + d.isoformat(), hdr=NQ, tries=3)
         rows = ((j or {}).get('data') or {}).get('rows')
-        if j and (j.get('data') is not None):
-            lidos[0] += 1
+        if j and (j.get('data') is not None) and d <= HOJE:
+            lidos[0] += 1   # so conta os dias passados: a Nasdaq nao responde a datas futuras sem eventos confirmados
         out = []
         for r in rows or []:
             s = (r.get('symbol') or '').upper()
@@ -62,7 +62,8 @@ def main():
     with ThreadPoolExecutor(4) as ex:
         hist = dict(ex.map(surpresa, uni))
 
-    ok = lidos[0] >= 0.8 * len(dias)
+    passados = sum(1 for d in dias if d <= HOJE)
+    ok = lidos[0] >= 0.8 * passados
     if not ok and velho:  # leitura fraca: fica a copia anterior para as datas que nao vieram
         vist = {(x['t'], x['data']) for x in eventos}
         eventos += [x for x in velho.get('eventos', []) if (x['t'], x['data']) not in vist]
@@ -71,7 +72,7 @@ def main():
                 hist[t] = h
     eventos.sort(key=lambda x: x['data'])
     guardar(OUT, 'calendario.json', {'lido': AGORA, 'eventos': eventos, 'historico': hist})
-    mark(RAW, 'calendario', ok, f'{lidos[0]} de {len(dias)} dias lidos; {len(eventos)} eventos')
+    mark(RAW, 'calendario', ok, f'{lidos[0]} de {passados} dias passados lidos; {len(eventos)} eventos')
     print('calendario:', lidos[0], 'dias,', len(eventos), 'eventos,', sum(1 for v in hist.values() if v), 'historicos')
 
 
