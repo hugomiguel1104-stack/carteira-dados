@@ -1,3 +1,4 @@
 _versoes_tmp/
 __pycache__/
 *.pyc
+tools/sync_fichas.log
