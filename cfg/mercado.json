@@ -1,0 +1,19 @@
+{
+  "indices": [
+    ["^GSPC","S&P 500","EUA"],["^NDX","Nasdaq 100","EUA"],["^DJI","Dow Jones","EUA"],["^RUT","Russell 2000","EUA"],
+    ["^STOXX","STOXX Europe 600","Europa"],["^STOXX50E","Euro STOXX 50","Europa"],["^GDAXI","DAX","Europa"],["PSI20.LS","PSI","Europa"],
+    ["EUNL.DE","MSCI World (EUNL)","Global"],["IS3N.DE","MSCI EM IMI (IS3N)","Global"],["^N225","Nikkei 225","Ásia"],
+    ["^VIX","VIX","Risco"],["^TNX","Juro EUA 10a","Taxas"],["EURUSD=X","EUR/USD","Câmbio"],
+    ["BZ=F","Brent","Matérias-primas"],["GC=F","Ouro","Matérias-primas"],["BTC-USD","Bitcoin","Cripto"]
+  ],
+  "setores_eua": [
+    ["XLK","Tecnologia"],["XLC","Comunicações"],["XLY","Consumo discricionário"],["XLP","Consumo básico"],["XLF","Financeiro"],
+    ["XLV","Saúde"],["XLI","Industrial"],["XLE","Energia"],["XLB","Materiais"],["XLU","Utilities"],["XLRE","Imobiliário"]
+  ],
+  "setores_europa": [
+    ["EXV3.DE","Tecnologia"],["EXV1.DE","Bancos"],["EXH5.DE","Seguros"],["EXH2.DE","Serviços financeiros"],["EXV4.DE","Saúde"],
+    ["EXH4.DE","Bens e serviços industriais"],["EXV8.DE","Construção e materiais"],["EXV7.DE","Químicos"],["EXV6.DE","Recursos básicos"],
+    ["EXH1.DE","Petróleo e gás"],["EXH9.DE","Utilities"],["EXV2.DE","Telecomunicações"],["EXH6.DE","Media"],["EXH3.DE","Alimentação e bebidas"],
+    ["EXH7.DE","Bens pessoais e do lar"],["EXH8.DE","Retalho"],["EXV5.DE","Automóvel"],["EXV9.DE","Viagens e lazer"],["EXI5.DE","Imobiliário"]
+  ]
+}

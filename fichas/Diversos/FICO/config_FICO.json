@@ -1,0 +1,2539 @@
+{
+ "ticker": "FICO",
+ "titulo": "Fair Isaac Corporation (FICO) — DCF e Reverse DCF",
+ "subtitulo": "Camada 3. Camada 1 = FICO_Ficha.md. Camada 2 = analise FY26-Q3 em chat. Data: 08-Ago-2026.",
+ "switches": {
+  "cadeia": "cash_opex",
+  "da_modo": "vintage",
+  "motores": [
+   "A",
+   "B",
+   "C"
+  ]
+ },
+ "mercado": {
+  "data": "2026-08-07",
+  "preco": 1031.89,
+  "preco_memo": 1033.43,
+  "shares": 21.598,
+  "divida": 5582.4,
+  "caixa": 248.444,
+  "nao_marketavel": 56.093,
+  "pct_ponte": 1.0,
+  "minoritarios": 0
+ },
+ "wacc": {
+  "rf": 0.0425,
+  "erp": 0.045,
+  "beta_unlev": 1.0098,
+  "kd": 0.0625,
+  "tax_wacc": 0.25,
+  "wacc_override": 0,
+  "required": 0.0965
+ },
+ "tv_activo": {
+  "g": 0.025,
+  "midyear": 1,
+  "ppe": 90.988,
+  "vida_carteira": 5.5,
+  "vida_capex": 4.0,
+  "nwc": 0.08
+ },
+ "drivers": {
+  "ano": [
+   "Y1",
+   "Y2",
+   "Y3",
+   "Y4",
+   "Y5",
+   "Y6",
+   "Y7",
+   "Y8",
+   "Y9",
+   "Y10"
+  ],
+  "cresc": [
+   0.128,
+   0.08,
+   0.07,
+   0.065,
+   0.06,
+   0.055,
+   0.05,
+   0.045,
+   0.04,
+   0.035
+  ],
+  "opex": [
+   0.475,
+   0.473,
+   0.471,
+   0.469,
+   0.467,
+   0.465,
+   0.463,
+   0.461,
+   0.459,
+   0.455
+  ],
+  "capex": [
+   0.018,
+   0.018,
+   0.018,
+   0.019,
+   0.019,
+   0.019,
+   0.02,
+   0.02,
+   0.02,
+   0.02
+  ],
+  "tax": [
+   0.25,
+   0.25,
+   0.25,
+   0.255,
+   0.255,
+   0.26,
+   0.26,
+   0.26,
+   0.26,
+   0.26
+  ]
+ },
+ "base": {
+  "receita_ltm": 2393.575,
+  "ebit_ltm": 1236.298,
+  "label_base": "LTM Jun-26"
+ },
+ "seeds": {
+  "A": 0.07364647,
+  "B": 0.05482717
+ },
+ "grelha": {
+  "eixo_linhas": [
+   -0.01,
+   -0.005,
+   0.0,
+   0.005,
+   0.01
+  ],
+  "eixo_colunas": [
+   -0.06,
+   -0.03,
+   0.0,
+   0.03,
+   0.06
+  ]
+ },
+ "tabela_wacc_g": {
+  "linhas": [
+   0.075,
+   0.08,
+   0.0865,
+   0.095,
+   0.1,
+   0.11
+  ],
+  "colunas": [
+   0.015,
+   0.02,
+   0.025,
+   0.03,
+   0.035
+  ]
+ },
+ "passthrough": {
+  "Trimestres": {
+   "A1": {
+    "v": "TRIMESTRES — 19 trimestres, FQ1-22 (Dez-21) a FQ3-26 (Jun-26)",
+    "b": true,
+    "sz": 13.0,
+    "c": "FFFFFF"
+   },
+   "A2": {
+    "v": "CapIQ As Presented Quarterly. Ano fiscal fecha a 30-Set. Milhares de USD. Ancora o ano-base do modelo.",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "A4": {
+    "v": "Trimestre",
+    "b": true
+   },
+   "A5": {
+    "v": "DEMONSTRACAO DE RESULTADOS",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A6": {
+    "v": "Receita total"
+   },
+   "A7": {
+    "v": "  Scores"
+   },
+   "A8": {
+    "v": "  Software"
+   },
+   "A9": {
+    "v": "Margem — Scores % do total"
+   },
+   "A10": {
+    "v": "SG&A"
+   },
+   "A11": {
+    "v": "EBIT (operating income)",
+    "b": true
+   },
+   "A12": {
+    "v": "Margem EBIT %"
+   },
+   "A13": {
+    "v": "Juros (liquido)"
+   },
+   "A14": {
+    "v": "Net income (GAAP)"
+   },
+   "A16": {
+    "v": "BALANCO E ESTRUTURA DE CAPITAL",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A17": {
+    "v": "Divida total (corrente + LT)"
+   },
+   "A18": {
+    "v": "Caixa e equivalentes"
+   },
+   "A19": {
+    "v": "Divida liquida",
+    "b": true
+   },
+   "A20": {
+    "v": "Capital proprio (total equity)"
+   },
+   "A22": {
+    "v": "MEMO",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A23": {
+    "v": "SBC — ver Historico. Nao divulgado por rubrica no ER trimestral.",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "A24": {
+    "v": "FQ4 do CapIQ Segments tem plug 'Segment Adjustment' — G6. Receita OK, lucro por segmento nao.",
+    "sz": 8.0,
+    "c": "C00000"
+   },
+   "B4": {
+    "v": "FQ1-22",
+    "b": true
+   },
+   "B6": {
+    "v": 322361,
+    "f": "#,##0"
+   },
+   "B7": {
+    "v": 169487,
+    "f": "#,##0"
+   },
+   "B8": {
+    "v": 152874,
+    "f": "#,##0"
+   },
+   "B9": {
+    "v": "=B7/B6",
+    "f": "0.0%"
+   },
+   "B10": {
+    "v": -98048,
+    "f": "#,##0"
+   },
+   "B11": {
+    "v": 115586,
+    "f": "#,##0",
+    "b": true
+   },
+   "B12": {
+    "v": "=B11/B6",
+    "f": "0.0%"
+   },
+   "B13": {
+    "v": -12195,
+    "f": "#,##0"
+   },
+   "B14": {
+    "v": 84959,
+    "f": "#,##0"
+   },
+   "B17": {
+    "v": 1633292,
+    "f": "#,##0"
+   },
+   "B18": {
+    "v": 162157,
+    "f": "#,##0"
+   },
+   "B19": {
+    "v": "=B17-B18",
+    "f": "#,##0",
+    "b": true
+   },
+   "B20": {
+    "v": -538299,
+    "f": "#,##0"
+   },
+   "C4": {
+    "v": "FQ2-22",
+    "b": true
+   },
+   "C6": {
+    "v": 357195,
+    "f": "#,##0"
+   },
+   "C7": {
+    "v": 183742,
+    "f": "#,##0"
+   },
+   "C8": {
+    "v": 153453,
+    "f": "#,##0"
+   },
+   "C9": {
+    "v": "=C7/C6",
+    "f": "0.0%"
+   },
+   "C10": {
+    "v": -96414,
+    "f": "#,##0"
+   },
+   "C11": {
+    "v": 152057,
+    "f": "#,##0",
+    "b": true
+   },
+   "C12": {
+    "v": "=C11/C6",
+    "f": "0.0%"
+   },
+   "C13": {
+    "v": -17211,
+    "f": "#,##0"
+   },
+   "C14": {
+    "v": 104383,
+    "f": "#,##0"
+   },
+   "C17": {
+    "v": 1794674,
+    "f": "#,##0"
+   },
+   "C18": {
+    "v": 174219,
+    "f": "#,##0"
+   },
+   "C19": {
+    "v": "=C17-C18",
+    "f": "#,##0",
+    "b": true
+   },
+   "C20": {
+    "v": -663416,
+    "f": "#,##0"
+   },
+   "D4": {
+    "v": "FQ3-22",
+    "b": true
+   },
+   "D6": {
+    "v": 348966,
+    "f": "#,##0"
+   },
+   "D7": {
+    "v": 179355,
+    "f": "#,##0"
+   },
+   "D8": {
+    "v": 169611,
+    "f": "#,##0"
+   },
+   "D9": {
+    "v": "=D7/D6",
+    "f": "0.0%"
+   },
+   "D10": {
+    "v": -93248,
+    "f": "#,##0"
+   },
+   "D11": {
+    "v": 140615,
+    "f": "#,##0",
+    "b": true
+   },
+   "D12": {
+    "v": "=D11/D6",
+    "f": "0.0%"
+   },
+   "D13": {
+    "v": -18721,
+    "f": "#,##0"
+   },
+   "D14": {
+    "v": 93500,
+    "f": "#,##0"
+   },
+   "D17": {
+    "v": 1956671,
+    "f": "#,##0"
+   },
+   "D18": {
+    "v": 155062,
+    "f": "#,##0"
+   },
+   "D19": {
+    "v": "=D17-D18",
+    "f": "#,##0",
+    "b": true
+   },
+   "D20": {
+    "v": -847472,
+    "f": "#,##0"
+   },
+   "E4": {
+    "v": "FQ4-22",
+    "b": true
+   },
+   "E6": {
+    "v": 348748,
+    "f": "#,##0"
+   },
+   "E7": {
+    "v": 174059,
+    "f": "#,##0"
+   },
+   "E8": {
+    "v": 174689,
+    "f": "#,##0"
+   },
+   "E9": {
+    "v": "=E7/E6",
+    "f": "0.0%"
+   },
+   "E10": {
+    "v": -96153,
+    "f": "#,##0"
+   },
+   "E11": {
+    "v": 134156,
+    "f": "#,##0",
+    "b": true
+   },
+   "E12": {
+    "v": "=E11/E6",
+    "f": "0.0%"
+   },
+   "E13": {
+    "v": "n/d",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "E14": {
+    "v": 90699,
+    "f": "#,##0"
+   },
+   "E17": {
+    "v": 1853669,
+    "f": "#,##0"
+   },
+   "E18": {
+    "v": 133202,
+    "f": "#,##0"
+   },
+   "E19": {
+    "v": "=E17-E18",
+    "f": "#,##0",
+    "b": true
+   },
+   "E20": {
+    "v": -801947,
+    "f": "#,##0"
+   },
+   "F4": {
+    "v": "FQ1-23",
+    "b": true
+   },
+   "F6": {
+    "v": 344870,
+    "f": "#,##0"
+   },
+   "F7": {
+    "v": 177988,
+    "f": "#,##0"
+   },
+   "F8": {
+    "v": 166882,
+    "f": "#,##0"
+   },
+   "F9": {
+    "v": "=F7/F6",
+    "f": "0.0%"
+   },
+   "F10": {
+    "v": -92995,
+    "f": "#,##0"
+   },
+   "F11": {
+    "v": 140339,
+    "f": "#,##0",
+    "b": true
+   },
+   "F12": {
+    "v": "=F11/F6",
+    "f": "0.0%"
+   },
+   "F13": {
+    "v": -22800,
+    "f": "#,##0"
+   },
+   "F14": {
+    "v": 97643,
+    "f": "#,##0"
+   },
+   "F17": {
+    "v": 1920666,
+    "f": "#,##0"
+   },
+   "F18": {
+    "v": 139856,
+    "f": "#,##0"
+   },
+   "F19": {
+    "v": "=F17-F18",
+    "f": "#,##0",
+    "b": true
+   },
+   "F20": {
+    "v": -802095,
+    "f": "#,##0"
+   },
+   "G4": {
+    "v": "FQ2-23",
+    "b": true
+   },
+   "G6": {
+    "v": 380266,
+    "f": "#,##0"
+   },
+   "G7": {
+    "v": 198507,
+    "f": "#,##0"
+   },
+   "G8": {
+    "v": 181759,
+    "f": "#,##0"
+   },
+   "G9": {
+    "v": "=G7/G6",
+    "f": "0.0%"
+   },
+   "G10": {
+    "v": -100158,
+    "f": "#,##0"
+   },
+   "G11": {
+    "v": 159761,
+    "f": "#,##0",
+    "b": true
+   },
+   "G12": {
+    "v": "=G11/G6",
+    "f": "0.0%"
+   },
+   "G13": {
+    "v": -23897,
+    "f": "#,##0"
+   },
+   "G14": {
+    "v": 101550,
+    "f": "#,##0"
+   },
+   "G17": {
+    "v": 1924663,
+    "f": "#,##0"
+   },
+   "G18": {
+    "v": 137771,
+    "f": "#,##0"
+   },
+   "G19": {
+    "v": "=G17-G18",
+    "f": "#,##0",
+    "b": true
+   },
+   "G20": {
+    "v": -770793,
+    "f": "#,##0"
+   },
+   "H4": {
+    "v": "FQ3-23",
+    "b": true
+   },
+   "H6": {
+    "v": 398688,
+    "f": "#,##0"
+   },
+   "H7": {
+    "v": 201778,
+    "f": "#,##0"
+   },
+   "H8": {
+    "v": 196910,
+    "f": "#,##0"
+   },
+   "H9": {
+    "v": "=H7/H6",
+    "f": "0.0%"
+   },
+   "H10": {
+    "v": -108081,
+    "f": "#,##0"
+   },
+   "H11": {
+    "v": 177031,
+    "f": "#,##0",
+    "b": true
+   },
+   "H12": {
+    "v": "=H11/H6",
+    "f": "0.0%"
+   },
+   "H13": {
+    "v": -24545,
+    "f": "#,##0"
+   },
+   "H14": {
+    "v": 128758,
+    "f": "#,##0"
+   },
+   "H17": {
+    "v": 1929660,
+    "f": "#,##0"
+   },
+   "H18": {
+    "v": 163022,
+    "f": "#,##0"
+   },
+   "H19": {
+    "v": "=H17-H18",
+    "f": "#,##0",
+    "b": true
+   },
+   "H20": {
+    "v": -703976,
+    "f": "#,##0"
+   },
+   "I4": {
+    "v": "FQ4-23",
+    "b": true
+   },
+   "I6": {
+    "v": 389733,
+    "f": "#,##0"
+   },
+   "I7": {
+    "v": 195555,
+    "f": "#,##0"
+   },
+   "I8": {
+    "v": 194178,
+    "f": "#,##0"
+   },
+   "I9": {
+    "v": "=I7/I6",
+    "f": "0.0%"
+   },
+   "I10": {
+    "v": -99331,
+    "f": "#,##0"
+   },
+   "I11": {
+    "v": 165699,
+    "f": "#,##0",
+    "b": true
+   },
+   "I12": {
+    "v": "=I11/I6",
+    "f": "0.0%"
+   },
+   "I13": {
+    "v": "n/d",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "I14": {
+    "v": 101424,
+    "f": "#,##0"
+   },
+   "I17": {
+    "v": 1861658,
+    "f": "#,##0"
+   },
+   "I18": {
+    "v": 136778,
+    "f": "#,##0"
+   },
+   "I19": {
+    "v": "=I17-I18",
+    "f": "#,##0",
+    "b": true
+   },
+   "I20": {
+    "v": -687990,
+    "f": "#,##0"
+   },
+   "J4": {
+    "v": "FQ1-24",
+    "b": true
+   },
+   "J6": {
+    "v": 382059,
+    "f": "#,##0"
+   },
+   "J7": {
+    "v": 192112,
+    "f": "#,##0"
+   },
+   "J8": {
+    "v": 189947,
+    "f": "#,##0"
+   },
+   "J9": {
+    "v": "=J7/J6",
+    "f": "0.0%"
+   },
+   "J10": {
+    "v": -104329,
+    "f": "#,##0"
+   },
+   "J11": {
+    "v": 151359,
+    "f": "#,##0",
+    "b": true
+   },
+   "J12": {
+    "v": "=J11/J6",
+    "f": "0.0%"
+   },
+   "J13": {
+    "v": -24162,
+    "f": "#,##0"
+   },
+   "J14": {
+    "v": 121065,
+    "f": "#,##0"
+   },
+   "J17": {
+    "v": 1961655,
+    "f": "#,##0"
+   },
+   "J18": {
+    "v": 160421,
+    "f": "#,##0"
+   },
+   "J19": {
+    "v": "=J17-J18",
+    "f": "#,##0",
+    "b": true
+   },
+   "J20": {
+    "v": -725765,
+    "f": "#,##0"
+   },
+   "K4": {
+    "v": "FQ2-24",
+    "b": true
+   },
+   "K6": {
+    "v": 433809,
+    "f": "#,##0"
+   },
+   "K7": {
+    "v": 236885,
+    "f": "#,##0"
+   },
+   "K8": {
+    "v": 196924,
+    "f": "#,##0"
+   },
+   "K9": {
+    "v": "=K7/K6",
+    "f": "0.0%"
+   },
+   "K10": {
+    "v": -110867,
+    "f": "#,##0"
+   },
+   "K11": {
+    "v": 194841,
+    "f": "#,##0",
+    "b": true
+   },
+   "K12": {
+    "v": "=K11/K6",
+    "f": "0.0%"
+   },
+   "K13": {
+    "v": -26093,
+    "f": "#,##0"
+   },
+   "K14": {
+    "v": 129799,
+    "f": "#,##0"
+   },
+   "K17": {
+    "v": 2043652,
+    "f": "#,##0"
+   },
+   "K18": {
+    "v": 135667,
+    "f": "#,##0"
+   },
+   "K19": {
+    "v": "=K17-K18",
+    "f": "#,##0",
+    "b": true
+   },
+   "K20": {
+    "v": -735660,
+    "f": "#,##0"
+   },
+   "L4": {
+    "v": "FQ3-24",
+    "b": true
+   },
+   "L6": {
+    "v": 447849,
+    "f": "#,##0"
+   },
+   "L7": {
+    "v": 241450,
+    "f": "#,##0"
+   },
+   "L8": {
+    "v": 206399,
+    "f": "#,##0"
+   },
+   "L9": {
+    "v": "=L7/L6",
+    "f": "0.0%"
+   },
+   "L10": {
+    "v": -124881,
+    "f": "#,##0"
+   },
+   "L11": {
+    "v": 190251,
+    "f": "#,##0",
+    "b": true
+   },
+   "L12": {
+    "v": "=L11/L6",
+    "f": "0.0%"
+   },
+   "L13": {
+    "v": -26868,
+    "f": "#,##0"
+   },
+   "L14": {
+    "v": 126256,
+    "f": "#,##0"
+   },
+   "L17": {
+    "v": 2119943,
+    "f": "#,##0"
+   },
+   "L18": {
+    "v": 156043,
+    "f": "#,##0"
+   },
+   "L19": {
+    "v": "=L17-L18",
+    "f": "#,##0",
+    "b": true
+   },
+   "L20": {
+    "v": -829306,
+    "f": "#,##0"
+   },
+   "M4": {
+    "v": "FQ4-24",
+    "b": true
+   },
+   "M6": {
+    "v": 453809,
+    "f": "#,##0"
+   },
+   "M7": {
+    "v": 249203,
+    "f": "#,##0"
+   },
+   "M8": {
+    "v": 204606,
+    "f": "#,##0"
+   },
+   "M9": {
+    "v": "=M7/M6",
+    "f": "0.0%"
+   },
+   "M10": {
+    "v": -122757,
+    "f": "#,##0"
+   },
+   "M11": {
+    "v": 197178,
+    "f": "#,##0",
+    "b": true
+   },
+   "M12": {
+    "v": "=M11/M6",
+    "f": "0.0%"
+   },
+   "M13": {
+    "v": "n/d",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "M14": {
+    "v": 135691,
+    "f": "#,##0"
+   },
+   "M17": {
+    "v": 2209021,
+    "f": "#,##0"
+   },
+   "M18": {
+    "v": 150667,
+    "f": "#,##0"
+   },
+   "M19": {
+    "v": "=M17-M18",
+    "f": "#,##0",
+    "b": true
+   },
+   "M20": {
+    "v": -962679,
+    "f": "#,##0"
+   },
+   "N4": {
+    "v": "FQ1-25",
+    "b": true
+   },
+   "N6": {
+    "v": 439968,
+    "f": "#,##0"
+   },
+   "N7": {
+    "v": 235675,
+    "f": "#,##0"
+   },
+   "N8": {
+    "v": 204293,
+    "f": "#,##0"
+   },
+   "N9": {
+    "v": "=N7/N6",
+    "f": "0.0%"
+   },
+   "N10": {
+    "v": -127950,
+    "f": "#,##0"
+   },
+   "N11": {
+    "v": 179528,
+    "f": "#,##0",
+    "b": true
+   },
+   "N12": {
+    "v": "=N11/N6",
+    "f": "0.0%"
+   },
+   "N13": {
+    "v": -29488,
+    "f": "#,##0"
+   },
+   "N14": {
+    "v": 152528,
+    "f": "#,##0"
+   },
+   "N17": {
+    "v": 2421100,
+    "f": "#,##0"
+   },
+   "N18": {
+    "v": 184254,
+    "f": "#,##0"
+   },
+   "N19": {
+    "v": "=N17-N18",
+    "f": "#,##0",
+    "b": true
+   },
+   "N20": {
+    "v": -1138164,
+    "f": "#,##0"
+   },
+   "O4": {
+    "v": "FQ2-25",
+    "b": true
+   },
+   "O6": {
+    "v": 498735,
+    "f": "#,##0"
+   },
+   "O7": {
+    "v": 297039,
+    "f": "#,##0"
+   },
+   "O8": {
+    "v": 201696,
+    "f": "#,##0"
+   },
+   "O9": {
+    "v": "=O7/O6",
+    "f": "0.0%"
+   },
+   "O10": {
+    "v": -120420,
+    "f": "#,##0"
+   },
+   "O11": {
+    "v": 245648,
+    "f": "#,##0",
+    "b": true
+   },
+   "O12": {
+    "v": "=O11/O6",
+    "f": "0.0%"
+   },
+   "O13": {
+    "v": -31378,
+    "f": "#,##0"
+   },
+   "O14": {
+    "v": 162615,
+    "f": "#,##0"
+   },
+   "O17": {
+    "v": 2528179,
+    "f": "#,##0"
+   },
+   "O18": {
+    "v": 146641,
+    "f": "#,##0"
+   },
+   "O19": {
+    "v": "=O17-O18",
+    "f": "#,##0",
+    "b": true
+   },
+   "O20": {
+    "v": -1124052,
+    "f": "#,##0"
+   },
+   "P4": {
+    "v": "FQ3-25",
+    "b": true
+   },
+   "P6": {
+    "v": 536415,
+    "f": "#,##0"
+   },
+   "P7": {
+    "v": 324309,
+    "f": "#,##0"
+   },
+   "P8": {
+    "v": 212106,
+    "f": "#,##0"
+   },
+   "P9": {
+    "v": "=P7/P6",
+    "f": "0.0%"
+   },
+   "P10": {
+    "v": -139114,
+    "f": "#,##0"
+   },
+   "P11": {
+    "v": 262518,
+    "f": "#,##0",
+    "b": true
+   },
+   "P12": {
+    "v": "=P11/P6",
+    "f": "0.0%"
+   },
+   "P13": {
+    "v": -32899,
+    "f": "#,##0"
+   },
+   "P14": {
+    "v": 181789,
+    "f": "#,##0"
+   },
+   "P17": {
+    "v": 2779554,
+    "f": "#,##0"
+   },
+   "P18": {
+    "v": 189049,
+    "f": "#,##0"
+   },
+   "P19": {
+    "v": "=P17-P18",
+    "f": "#,##0",
+    "b": true
+   },
+   "P20": {
+    "v": -1397446,
+    "f": "#,##0"
+   },
+   "Q4": {
+    "v": "FQ4-25",
+    "b": true
+   },
+   "Q6": {
+    "v": 515751,
+    "f": "#,##0"
+   },
+   "Q7": {
+    "v": 311552,
+    "f": "#,##0"
+   },
+   "Q8": {
+    "v": 204199,
+    "f": "#,##0"
+   },
+   "Q9": {
+    "v": "=Q7/Q6",
+    "f": "0.0%"
+   },
+   "Q10": {
+    "v": -125544,
+    "f": "#,##0"
+   },
+   "Q11": {
+    "v": 237156,
+    "f": "#,##0",
+    "b": true
+   },
+   "Q12": {
+    "v": "=Q11/Q6",
+    "f": "0.0%"
+   },
+   "Q13": {
+    "v": "n/d",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "Q14": {
+    "v": 155014,
+    "f": "#,##0"
+   },
+   "Q17": {
+    "v": 3055691,
+    "f": "#,##0"
+   },
+   "Q18": {
+    "v": 134136,
+    "f": "#,##0"
+   },
+   "Q19": {
+    "v": "=Q17-Q18",
+    "f": "#,##0",
+    "b": true
+   },
+   "Q20": {
+    "v": -1745784,
+    "f": "#,##0"
+   },
+   "R4": {
+    "v": "FQ1-26",
+    "b": true
+   },
+   "R6": {
+    "v": 511959,
+    "f": "#,##0"
+   },
+   "R7": {
+    "v": 304534,
+    "f": "#,##0"
+   },
+   "R8": {
+    "v": 207425,
+    "f": "#,##0"
+   },
+   "R9": {
+    "v": "=R7/R6",
+    "f": "0.0%"
+   },
+   "R10": {
+    "v": -140737,
+    "f": "#,##0"
+   },
+   "R11": {
+    "v": 234049,
+    "f": "#,##0",
+    "b": true
+   },
+   "R12": {
+    "v": "=R11/R6",
+    "f": "0.0%"
+   },
+   "R13": {
+    "v": -42006,
+    "f": "#,##0"
+   },
+   "R14": {
+    "v": 158373,
+    "f": "#,##0"
+   },
+   "R17": {
+    "v": 3196829,
+    "f": "#,##0"
+   },
+   "R18": {
+    "v": 162034,
+    "f": "#,##0"
+   },
+   "R19": {
+    "v": "=R17-R18",
+    "f": "#,##0",
+    "b": true
+   },
+   "R20": {
+    "v": -1808134,
+    "f": "#,##0"
+   },
+   "S4": {
+    "v": "FQ2-26",
+    "b": true
+   },
+   "S6": {
+    "v": 691677,
+    "f": "#,##0"
+   },
+   "S7": {
+    "v": 474973,
+    "f": "#,##0"
+   },
+   "S8": {
+    "v": 216704,
+    "f": "#,##0"
+   },
+   "S9": {
+    "v": "=S7/S6",
+    "f": "0.0%"
+   },
+   "S10": {
+    "v": -144097,
+    "f": "#,##0"
+   },
+   "S11": {
+    "v": 402465,
+    "f": "#,##0",
+    "b": true
+   },
+   "S12": {
+    "v": "=S11/S6",
+    "f": "0.0%"
+   },
+   "S13": {
+    "v": -44579,
+    "f": "#,##0"
+   },
+   "S14": {
+    "v": 264458,
+    "f": "#,##0"
+   },
+   "S17": {
+    "v": 3639063,
+    "f": "#,##0"
+   },
+   "S18": {
+    "v": 219419,
+    "f": "#,##0"
+   },
+   "S19": {
+    "v": "=S17-S18",
+    "f": "#,##0",
+    "b": true
+   },
+   "S20": {
+    "v": -2101650,
+    "f": "#,##0"
+   },
+   "T4": {
+    "v": "FQ3-26",
+    "b": true
+   },
+   "T6": {
+    "v": 674188,
+    "f": "#,##0"
+   },
+   "T7": {
+    "v": 458897,
+    "f": "#,##0"
+   },
+   "T8": {
+    "v": 215291,
+    "f": "#,##0"
+   },
+   "T9": {
+    "v": "=T7/T6",
+    "f": "0.0%"
+   },
+   "T10": {
+    "v": -170835,
+    "f": "#,##0"
+   },
+   "T11": {
+    "v": 362628,
+    "f": "#,##0",
+    "b": true
+   },
+   "T12": {
+    "v": "=T11/T6",
+    "f": "0.0%"
+   },
+   "T13": {
+    "v": -59877,
+    "f": "#,##0"
+   },
+   "T14": {
+    "v": 237172,
+    "f": "#,##0"
+   },
+   "T17": {
+    "v": 5582389,
+    "f": "#,##0"
+   },
+   "T18": {
+    "v": 248444,
+    "f": "#,##0"
+   },
+   "T19": {
+    "v": "=T17-T18",
+    "f": "#,##0",
+    "b": true
+   },
+   "T20": {
+    "v": -4097135,
+    "f": "#,##0"
+   }
+  },
+  "Historico": {
+   "A1": {
+    "v": "HISTORICO — FY2023, FY2024, FY2025 + LTM Jun-2026",
+    "b": true,
+    "sz": 13.0,
+    "c": "FFFFFF"
+   },
+   "A2": {
+    "v": "CapIQ As Presented Annual. Milhoes de USD. LTM = 9M FY26 + FQ4-25. Racios que ancoram cada driver.",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "A4": {
+    "v": "",
+    "b": true
+   },
+   "B4": {
+    "v": "FY2023",
+    "b": true
+   },
+   "C4": {
+    "v": "FY2024",
+    "b": true
+   },
+   "D4": {
+    "v": "FY2025",
+    "b": true
+   },
+   "E4": {
+    "v": "LTM Jun-26",
+    "b": true
+   },
+   "A5": {
+    "v": "RECEITA",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A6": {
+    "v": "Receita total",
+    "b": true
+   },
+   "B6": {
+    "v": 1513.557,
+    "f": "#,##0.0",
+    "b": true
+   },
+   "C6": {
+    "v": 1717.526,
+    "f": "#,##0.0",
+    "b": true
+   },
+   "D6": {
+    "v": 1990.869,
+    "f": "#,##0.0",
+    "b": true
+   },
+   "E6": {
+    "v": 2393.575,
+    "f": "#,##0.0",
+    "b": true
+   },
+   "A7": {
+    "v": "  Crescimento %",
+    "b": false
+   },
+   "B7": {
+    "v": "n/d",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "C7": {
+    "v": "=C6/B6-1",
+    "f": "0.0%",
+    "b": false
+   },
+   "D7": {
+    "v": "=D6/C6-1",
+    "f": "0.0%",
+    "b": false
+   },
+   "E7": {
+    "v": "=E6/D6-1",
+    "f": "0.0%",
+    "b": false
+   },
+   "A8": {
+    "v": "  Scores",
+    "b": false
+   },
+   "B8": {
+    "v": 773.828,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "C8": {
+    "v": 919.65,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "D8": {
+    "v": 1168.575,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "E8": {
+    "v": 1549.956,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "A9": {
+    "v": "  Software",
+    "b": false
+   },
+   "B9": {
+    "v": 739.729,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "C9": {
+    "v": 797.876,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "D9": {
+    "v": 822.294,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "E9": {
+    "v": 843.619,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "A10": {
+    "v": "  Scores % do total",
+    "b": false
+   },
+   "B10": {
+    "v": "=B8/B6",
+    "f": "0.0%",
+    "b": false
+   },
+   "C10": {
+    "v": "=C8/C6",
+    "f": "0.0%",
+    "b": false
+   },
+   "D10": {
+    "v": "=D8/D6",
+    "f": "0.0%",
+    "b": false
+   },
+   "E10": {
+    "v": "=E8/E6",
+    "f": "0.0%",
+    "b": false
+   },
+   "A12": {
+    "v": "CUSTOS E MARGEM",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A13": {
+    "v": "EBIT (GAAP)",
+    "b": true
+   },
+   "B13": {
+    "v": 642.83,
+    "f": "#,##0.0",
+    "b": true
+   },
+   "C13": {
+    "v": 733.629,
+    "f": "#,##0.0",
+    "b": true
+   },
+   "D13": {
+    "v": 924.85,
+    "f": "#,##0.0",
+    "b": true
+   },
+   "E13": {
+    "v": 1236.298,
+    "f": "#,##0.0",
+    "b": true
+   },
+   "A14": {
+    "v": "  Margem EBIT %",
+    "b": false
+   },
+   "B14": {
+    "v": "=B13/B6",
+    "f": "0.0%",
+    "b": false
+   },
+   "C14": {
+    "v": "=C13/C6",
+    "f": "0.0%",
+    "b": false
+   },
+   "D14": {
+    "v": "=D13/D6",
+    "f": "0.0%",
+    "b": false
+   },
+   "E14": {
+    "v": "=E13/E6",
+    "f": "0.0%",
+    "b": false
+   },
+   "A15": {
+    "v": "D&A",
+    "b": false
+   },
+   "B15": {
+    "v": 14.638,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "C15": {
+    "v": 13.827,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "D15": {
+    "v": 14.952,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "E15": {
+    "v": 16.144,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "A16": {
+    "v": "  D&A % receita",
+    "b": false
+   },
+   "B16": {
+    "v": "=B15/B6",
+    "f": "0.0%",
+    "b": false
+   },
+   "C16": {
+    "v": "=C15/C6",
+    "f": "0.0%",
+    "b": false
+   },
+   "D16": {
+    "v": "=D15/D6",
+    "f": "0.0%",
+    "b": false
+   },
+   "E16": {
+    "v": "=E15/E6",
+    "f": "0.0%",
+    "b": false
+   },
+   "A17": {
+    "v": "Cash opex ex-D&A",
+    "b": true
+   },
+   "B17": {
+    "v": "=B6-B13-B15",
+    "f": "#,##0.0",
+    "b": true
+   },
+   "C17": {
+    "v": "=C6-C13-C15",
+    "f": "#,##0.0",
+    "b": true
+   },
+   "D17": {
+    "v": "=D6-D13-D15",
+    "f": "#,##0.0",
+    "b": true
+   },
+   "E17": {
+    "v": "=E6-E13-E15",
+    "f": "#,##0.0",
+    "b": true
+   },
+   "A18": {
+    "v": "  Cash opex % receita  <- DRIVER",
+    "b": true
+   },
+   "B18": {
+    "v": "=B17/B6",
+    "f": "0.0%",
+    "b": true
+   },
+   "C18": {
+    "v": "=C17/C6",
+    "f": "0.0%",
+    "b": true
+   },
+   "D18": {
+    "v": "=D17/D6",
+    "f": "0.0%",
+    "b": true
+   },
+   "E18": {
+    "v": "=E17/E6",
+    "f": "0.0%",
+    "b": true
+   },
+   "A19": {
+    "v": "SBC (memo — DENTRO do opex)",
+    "b": false
+   },
+   "B19": {
+    "v": 123.847,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "C19": {
+    "v": 149.439,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "D19": {
+    "v": 156.667,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "E19": {
+    "v": 174.278,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "A20": {
+    "v": "  SBC % receita",
+    "b": false
+   },
+   "B20": {
+    "v": "=B19/B6",
+    "f": "0.0%",
+    "b": false
+   },
+   "C20": {
+    "v": "=C19/C6",
+    "f": "0.0%",
+    "b": false
+   },
+   "D20": {
+    "v": "=D19/D6",
+    "f": "0.0%",
+    "b": false
+   },
+   "E20": {
+    "v": "=E19/E6",
+    "f": "0.0%",
+    "b": false
+   },
+   "A22": {
+    "v": "CAIXA",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A23": {
+    "v": "Cash from operations",
+    "b": false
+   },
+   "B23": {
+    "v": 468.915,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "C23": {
+    "v": 632.964,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "D23": {
+    "v": 778.807,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "E23": {
+    "v": 1001.549,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "A24": {
+    "v": "Capex (PP&E + software capitalizado)",
+    "b": false
+   },
+   "B24": {
+    "v": 4.237,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "C24": {
+    "v": 25.551,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "D24": {
+    "v": 39.407,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "E24": {
+    "v": 40.7,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "A25": {
+    "v": "  Capex % receita  <- DRIVER",
+    "b": true
+   },
+   "B25": {
+    "v": "=B24/B6",
+    "f": "0.0%",
+    "b": true
+   },
+   "C25": {
+    "v": "=C24/C6",
+    "f": "0.0%",
+    "b": true
+   },
+   "D25": {
+    "v": "=D24/D6",
+    "f": "0.0%",
+    "b": true
+   },
+   "E25": {
+    "v": "=E24/E6",
+    "f": "0.0%",
+    "b": true
+   },
+   "A26": {
+    "v": "Free cash flow (def. da empresa)",
+    "b": true
+   },
+   "B26": {
+    "v": 464.678,
+    "f": "#,##0.0",
+    "b": true
+   },
+   "C26": {
+    "v": 607.413,
+    "f": "#,##0.0",
+    "b": true
+   },
+   "D26": {
+    "v": 739.4,
+    "f": "#,##0.0",
+    "b": true
+   },
+   "E26": {
+    "v": 960.849,
+    "f": "#,##0.0",
+    "b": true
+   },
+   "A27": {
+    "v": "  FCF % receita",
+    "b": false
+   },
+   "B27": {
+    "v": "=B26/B6",
+    "f": "0.0%",
+    "b": false
+   },
+   "C27": {
+    "v": "=C26/C6",
+    "f": "0.0%",
+    "b": false
+   },
+   "D27": {
+    "v": "=D26/D6",
+    "f": "0.0%",
+    "b": false
+   },
+   "E27": {
+    "v": "=E26/E6",
+    "f": "0.0%",
+    "b": false
+   },
+   "A28": {
+    "v": "Juros pagos",
+    "b": false
+   },
+   "B28": {
+    "v": 95.546,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "C28": {
+    "v": 105.638,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "D28": {
+    "v": 133.647,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "E28": {
+    "v": 186.344,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "A29": {
+    "v": "FCFF = FCF + juros x (1-t)",
+    "b": true
+   },
+   "B29": {
+    "v": "=B26+B28*0.75",
+    "f": "#,##0.0",
+    "b": true
+   },
+   "C29": {
+    "v": "=C26+C28*0.75",
+    "f": "#,##0.0",
+    "b": true
+   },
+   "D29": {
+    "v": "=D26+D28*0.75",
+    "f": "#,##0.0",
+    "b": true
+   },
+   "E29": {
+    "v": "=E26+E28*0.75",
+    "f": "#,##0.0",
+    "b": true
+   },
+   "A31": {
+    "v": "IMPOSTO",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A32": {
+    "v": "Taxa efectiva",
+    "b": false
+   },
+   "B32": {
+    "v": 0.2244,
+    "f": "0.0%",
+    "b": false
+   },
+   "C32": {
+    "v": 0.2013,
+    "f": "0.0%",
+    "b": false
+   },
+   "D32": {
+    "v": 0.1877,
+    "f": "0.0%",
+    "b": false
+   },
+   "E32": {
+    "v": 0.2246,
+    "f": "0.0%",
+    "b": false
+   },
+   "A34": {
+    "v": "NWC — das linhas reportadas (G9)",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A35": {
+    "v": "Variacao de NWC (uso de caixa)",
+    "b": false
+   },
+   "B35": {
+    "v": 63.448,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "C35": {
+    "v": 20.485,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "D35": {
+    "v": 18.547,
+    "f": "#,##0.0",
+    "b": false
+   },
+   "E35": {
+    "v": "n/d",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "A36": {
+    "v": "  % da receita incremental",
+    "b": false
+   },
+   "B36": {
+    "v": 0.466,
+    "f": "0.0%",
+    "b": false
+   },
+   "C36": {
+    "v": 0.1,
+    "f": "0.0%",
+    "b": false
+   },
+   "D36": {
+    "v": 0.068,
+    "f": "0.0%",
+    "b": false
+   },
+   "E36": {
+    "v": "n/d",
+    "sz": 8.0,
+    "c": "808080"
+   }
+  },
+  "Crosscheck": {
+   "A1": {
+    "v": "CROSSCHECK — multiplos e coerencia",
+    "b": true,
+    "sz": 13.0,
+    "c": "FFFFFF"
+   },
+   "A2": {
+    "v": "Peer set do CapIQ CONTESTADO e nao usado — ver nota em baixo. Multiplos proprios e o que conta.",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "A4": {
+    "v": "MULTIPLOS ACTUAIS (LTM Jun-26, preco 1.031,89)",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A5": {
+    "v": "EV / Receita LTM"
+   },
+   "B5": {
+    "v": 11.5,
+    "f": "0.0\"x\""
+   },
+   "A6": {
+    "v": "EV / EBIT LTM (GAAP)"
+   },
+   "B6": {
+    "v": 22.3,
+    "f": "0.0\"x\""
+   },
+   "A7": {
+    "v": "EV / FCFF LTM"
+   },
+   "B7": {
+    "v": 25.0,
+    "f": "0.0\"x\""
+   },
+   "A8": {
+    "v": "P / E LTM (GAAP)"
+   },
+   "B8": {
+    "v": 27.3,
+    "f": "0.0\"x\""
+   },
+   "A9": {
+    "v": "P / E FY26E (non-GAAP, guidance 42,43)"
+   },
+   "B9": {
+    "v": 24.3,
+    "f": "0.0\"x\""
+   },
+   "A10": {
+    "v": "FCF yield sobre market cap"
+   },
+   "B10": {
+    "v": 0.0431,
+    "f": "0.0%"
+   },
+   "A11": {
+    "v": "FCFF yield sobre EV"
+   },
+   "B11": {
+    "v": 0.0399,
+    "f": "0.0%"
+   },
+   "A12": {
+    "v": "Divida / EBITDA LTM"
+   },
+   "B12": {
+    "v": 4.4,
+    "f": "0.0\"x\""
+   },
+   "A14": {
+    "v": "CROSS-CHECK DO TERMINAL VALUE",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A15": {
+    "v": "Ver DCF!B-. O Gordon implica um EV/EBIT de saida — se sair absurdo, o g esta errado.",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "A17": {
+    "v": "PEER SET — CONTESTADO",
+    "b": true,
+    "sz": 10.0,
+    "c": "C00000"
+   },
+   "A18": {
+    "v": "O CapIQ sugeriu SaaS puro: RingCentral, Nutanix, HubSpot, Samsara, Datadog, DocuSign,",
+    "sz": 8.0
+   },
+   "A19": {
+    "v": "Tyler, Octave Intelligence, NCR Voyix, Box. ZERO bureaus, zero rating agencies.",
+    "sz": 8.0
+   },
+   "A20": {
+    "v": "O segmento Scores — 65% da receita e 88% do lucro dos segmentos — nao tem um unico",
+    "sz": 8.0
+   },
+   "A21": {
+    "v": "comparavel no conjunto. Comparaveis certos seriam TRU, EFX, EXPN, MCO, SPGI.",
+    "sz": 8.0
+   },
+   "A22": {
+    "v": "DECISAO (Hugo, 08-Ago-2026): nao se pede novo export. O negocio e demasiado especifico",
+    "sz": 8.0,
+    "c": "1F3864"
+   },
+   "A23": {
+    "v": "para triangular por multiplos de pares. A ancora e o DCF e o reverse DCF.",
+    "sz": 8.0,
+    "c": "1F3864"
+   },
+   "A25": {
+    "v": "SENTIMENTO (CapIQ Estimates, 07-Ago-2026)",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A26": {
+    "v": "Price target medio / mediana"
+   },
+   "B26": {
+    "v": "1.489,48 / 1.530,00"
+   },
+   "A27": {
+    "v": "Intervalo dos PT"
+   },
+   "B27": {
+    "v": "707,00 a 1.950,00 (n=19, sd 247,57)"
+   },
+   "A28": {
+    "v": "LT growth do consenso"
+   },
+   "B28": {
+    "v": "27,46% media (n=5, 14,6% a 33,3%)"
+   },
+   "A29": {
+    "v": "Revisoes FQ4-26 EPS"
+   },
+   "B29": {
+    "v": "3 para cima / 14 para baixo"
+   },
+   "A30": {
+    "v": "Revisoes FY27 EPS"
+   },
+   "B30": {
+    "v": "5 para cima / 13 para baixo"
+   },
+   "A31": {
+    "v": "Short interest"
+   },
+   "B31": {
+    "v": "10,34% — MAXIMO dos 5 anos (min 1,61%)"
+   },
+   "A32": {
+    "v": "Short interest ha 12 meses"
+   },
+   "B32": {
+    "v": "3,57% — quase triplicou"
+   },
+   "A33": {
+    "v": "52 semanas"
+   },
+   "B33": {
+    "v": "1.998,01 / 870,01 — preco -48,4% do maximo"
+   },
+   "A34": {
+    "v": "Rating S&P"
+   },
+   "B34": {
+    "v": "BB+ (sub-investment grade)"
+   }
+  }
+ },
+ "ancoras": {
+  "data": "FY26-Q3 (trimestre terminado 30-Jun-2026) reportado a 29-Jul-2026.",
+  "preco": "Fecho 07-Ago-2026 (CapIQ). G17 PASSA: posterior ao ER de 29-Jul e ao 10-Q. Dentro das 52 semanas (870,01-1.998,01), no terco inferior.",
+  "preco_memo": "Latest price CapIQ. Nao alimenta o modelo.",
+  "shares": "21.597.635 na capa do 10-Q FY26-Q3 (17-Jul-2026). G3 PASSA — bate com o CapIQ (21,6M). ATENCAO: o ASR de 1,5 mM$ so liquida a 30-Set-2026; a contagem final ainda nao existe.",
+  "divida": "5.282,4 LT + 300,0 corrente = 5.582,4 (balanco Jun-26). Bate com os 5,58 mM$ do CFO na call. Leases OPERACIONAIS (19,2) EXCLUIDOS — a renda esta dentro do EBIT. Sem finance leases materiais. CapIQ da 5.598,0 (+15,6) — G18, o filing ganha.",
+  "caixa": "Cash and equivalents 248,444 (balanco Jun-26).",
+  "nao_marketavel": "Marketable securities NAO CORRENTES 56,093. Sao liquidas — reconhecidas a 100%. O CapIQ deixou-as fora do EV (G4).",
+  "pct_ponte": "100%. Sao titulos negociaveis, nao participacoes iliquidas.",
+  "minoritarios": "Nao ha.",
+  "ev_mercado": "27.564,6 — alvo dos motores A e B.",
+  "rf": "4,25%. CONFIRMADO pelo Hugo a 08-Ago-2026. Inferido em primeira instancia das notes de 6,250% a 8 anos colocadas em Mar-2026 com rating BB+ (spread tipico 200-260bp).",
+  "erp": "4,50%. Damodaran, mesma convencao do NOW_DCF e do META_DCF.",
+  "beta_unlev": "1,0098. NAO e Damodaran puro — ver nota. Damodaran US Jan-2026: Information Services 0,7564 (N=15) e Software Sys&App 1,2482 (N=309). Ponderado pelo lucro dos segmentos (88,3% Scores / 11,7% Software) da 0,8140 -> realavancado 0,967. O beta de regressao a 5 anos da propria FICO no CapIQ e 1,30. Uso 1,0098 (= levered 1,200), entre os dois: o compositio do sector e dominado por bureaus estaveis que nao enfrentam a disrupcao regulatoria da FICO, e a regressao propria incorpora um periodo de stress agudo. Amplitude do G13: 342 por 100bp de WACC.",
+  "kd": "6,25% — custo MARGINAL, taxa dos Senior Notes due 2034 colocados a 20-Mar-2026. A media ponderada da divida existente e 5,64% (CFO, call FY26-Q3); uso a marginal porque e o custo de refinanciar.",
+  "tax_wacc": "25%. Weber na call: operating tax rate 25-26%, ETR ~24%.",
+  "beta_lev": "beta = unlev x [1 + (1-t) x D/E]. D/E de mercado = 5.582,4 / 22.286,6 = 0,2504.",
+  "wacc_calc": "(1-Wd) x Ke + Wd x Kd x (1-t). Kd APOS imposto.",
+  "g": "2,5% nominal, abaixo do PIB nominal. Deliberadamente abaixo dos 3,0% que usei na estimativa de chat: a incerteza regulatoria sobre o motor de lucro nao justifica crescimento perpetuo a par da economia.",
+  "ppe": "PP&E liquido 90,988 (balanco Jun-26). Negocio sem activos — 3,8% do total do balanco.",
+  "vida_carteira": "5,5 anos. PP&E liquido 91,0 sobre D&A LTM de 16,1 da 5,65. Amplitude no G13: 1,62 — irrelevante.",
+  "vida_capex": "4,0 anos. Mistura FY25: software capitalizado 30,5 (vida ~3) e PP&E 8,9 (vida ~5). Ponderado 3,45; uso 4,0. Amplitude no G13: 1,62 — o driver MENOS sensivel de todos.",
+  "nwc": "8% da receita incremental. Das linhas reportadas do cash flow (G9, nunca da linha agregada do CapIQ): FY23 46,6%, FY24 10,0%, FY25 6,8%. Mediana 10,0%; media 21,1% inflacionada pelo outlier de FY23. Uso 8% = leitura recente. Amplitude no G13: 18,79 — imaterial.",
+  "lin_ano": "Ano-base LTM Jun-26 = 9M FY26 + FQ4-25.",
+  "lin_cresc": "Y1 +12,8% = ARITMETICA DE PRECO FLAT, nao palpite. FY26-Q1 (Out-Dez-25) foi o ultimo trimestre pre-aumento; a anualizacao do aumento de $4,95->$10,00 sozinha da +12,9% sobre a base LTM. O consenso implica ~+18,8% em Y1, o que EXIGE novo aumento de preco em 2027 — a empresa recusou-se a comentar a tabela de 2027 na call. Y2-Y10 desacelera para 3,5%: volume 'low single digit' (Weber) mais software plano. CAGR 6,2%.",
+  "lin_opex": "LTM 47,7%. Historico: FY22 59,1% / FY23 56,6% / FY24 56,5% / FY25 52,8%. A queda de 5,1pp em FY25->LTM e o aumento de preco a cair inteiro na margem, com custo incremental zero. Y10 a 45,5% assume mix (Scores a 90,8% de margem a crescer mais que Software a 25,5%) sem novo preco. ATENCAO G15: 45,5% e MELHOR do que qualquer ano ja alcancado.",
+  "lin_capex": "LTM 1,70%. Definicao da EMPRESA: PP&E + software capitalizado (39,4 em FY25, nao os 8,9 da linha do CapIQ — G18). Y10 a 2,0%, ligeiramente conservador. Amplitude 40,62 — quase irrelevante, ao contrario da Meta.",
+  "lin_tax": "ETR LTM 22,5%. Guidance da empresa 25-26% operating / ~24% efectiva. Y10 a 26% = topo do guidance. CONSERVADOR.",
+  "shift_g": "Fica sempre a 0 na folha DCF. O motor B tem shift proprio na folha Reverse."
+ },
+ "leia_me": {
+  "fontes": [
+   [
+    "Financeiros anuais",
+    "CapIQ As Presented Annual FY2020-FY2025. Financials/FICO_CapIQ_Financials_AsPresented_Annual.xls"
+   ],
+   [
+    "Financeiros trimestrais",
+    "CapIQ As Presented Quarterly, Dez-2021 a Jun-2026 (19 trimestres). Cobre o ultimo filing."
+   ],
+   [
+    "FY26-Q3",
+    "_docs/FY26-Q3_ER.pdf (8-K Item 2.02, EX-99.1, 29-Jul-2026), FY26-Q3_10Q.pdf, FY26-Q3_InvestorPres.pdf e FY26-Q3_Transcript.md (call de 1:04:51, 17 analistas)."
+   ],
+   [
+    "Reconciliacao non-GAAP",
+    "SEMPRE dos ER. Os decks tem o Regulation G Schedule em IMAGEM (G8) — inutilizavel."
+   ],
+   [
+    "Estrutura de capital",
+    "5 x 8-K de FY2026 em _docs/: notes de 1,0 mM$ a 6,250% due 2034 (Mar-26) e term loan de 1,5 mM$ + ASR de 1,5 mM$ (Jun-26). Fonte primaria, nao inferida do CapIQ."
+   ],
+   [
+    "Consenso",
+    "CapIQ Estimates Report. PT medio 1.489,48 / mediana 1.530,00 (n=19), intervalo 707,00-1.950,00, sd 247,57. LT growth 27,46% medio (n=5)."
+   ],
+   [
+    "Beta",
+    "Damodaran US Jan-2026 (_ferramentas/Damodaran/) + regressao a 5 anos do CapIQ. Ver ancora de beta_unlev."
+   ],
+   [
+    "Preco",
+    "Fecho 07-Ago-2026: 1.031,89. Latest 1.033,43."
+   ],
+   [
+    "Concentracao de clientes",
+    "10-Q FY26-Q3 pag. 16: Experian, TransUnion e Equifax = 63% da receita TOTAL no trimestre (54% ha um ano), cada uma acima de 10%."
+   ],
+   [
+    "NAO USADO",
+    "Comparable Analysis do CapIQ. Peer set SaaS puro sem um unico bureau — contestado e descartado por decisao do Hugo (08-Ago-2026). Ver folha Crosscheck."
+   ]
+  ],
+  "gates": [
+   [
+    "G1 GAAP vs non-GAAP",
+    "DISPAROU — RESOLVIDO. O Key Stats do CapIQ mistura bases: EBITDA LTM 52,8% de margem (GAAP) contra FY26E 61,3% (consenso ex-SBC). Salto de 8,5pp que e DEFINICAO, nao operacao. O modelo corre inteiramente em base GAAP: EBIT LTM 1.236,3 do filing, SBC dentro do opex. O consenso serve so de referencia de receita."
+   ],
+   [
+    "G2 Share count",
+    "OK — Diluted outstanding 21,598 M usado para market cap E para valor/accao. O ponderado diluido do trimestre (22,703 M) e maior porque o buyback ocorreu a meio do trimestre; nao se usa. RESSALVA: o ASR de 1,5 mM$ liquida a 30-Set-2026 e o numero final depende do VWAP — com o preco abaixo da referencia, a liquidacao entrega MAIS accoes."
+   ],
+   [
+    "G3 Split / capa do filing",
+    "OK — 21.597.635 na capa do 10-Q a 17-Jul-2026, bate com o CapIQ. Sem splits. Serie coerente: 23.190.906 (Abr-26) -> 21.597.635 (Jul-26), -6,9% num trimestre."
+   ],
+   [
+    "G4 EV / activos liquidos",
+    "DISPAROU — RESOLVIDO. O CapIQ deduziu apenas caixa e ST (248,4) e deixou 56,1 de marketable securities nao correntes dentro do EV. Sao titulos negociaveis: reconhecidos a 100% na ponte. Efeito 2,60 por accao."
+   ],
+   [
+    "G5 Purchase accounting",
+    "OK — A amortizacao de intangiveis adquiridos e ZERO desde FY25 (totalmente amortizada: 4,993 em FY20 -> 0,917 em FY24 -> 0). A expansao de margem de 22,9% para 51,6% NAO e purchase accounting; e alavanca operacional real."
+   ],
+   [
+    "G6 Reclassificacoes / segmentos",
+    "DISPAROU — RESOLVIDO. A folha Segments do CapIQ tem as linhas de LUCRO corrompidas nos FQ3/FQ4 de FY23-FY25: aparece um plug 'Segment Adjustment' de -124,9 / -150,4 / -167,6 e o total nao reconcilia com a demonstracao de resultados (FQ4-25: segmentos 112,9 vs IS 237,2). As linhas de RECEITA batem ao milhar com a linha 'Core' da IS. Uso receita dos segmentos; lucro por segmento so nos trimestres que reconciliam (FY26 Q1-Q3, verificados um a um)."
+   ],
+   [
+    "G7 LTM vs FY",
+    "OK — LTM Jun-26 = 9M FY26 (1.877,824) + FQ4-25 (515,751) = 2.393,575. Bate com o Key Stats do CapIQ. NAO ler 2.393,6 vs 1.990,9 como crescimento anual."
+   ],
+   [
+    "G8 PDF legivel",
+    "DISPAROU — RESOLVIDO. Os investor decks de FY26-Q2 e Q3 tem as ULTIMAS 4 PAGINAS em imagem: Statements of Cash Flows, Statements of Income, Regulation G Schedule e Reconciliation of Non-GAAP Guidance. Precisamente as que interessam ao principio 5. Reconciliacoes tiradas dos ER (texto). Resto dos decks extrai limpo."
+   ],
+   [
+    "G9 NWC",
+    "RESOLVIDO — Calculado das linhas reportadas do cash flow, nunca da linha agregada. FY23 46,6% da receita incremental, FY24 10,0%, FY25 6,8%. Driver a 8%. Amplitude no G13: 18,79 — imaterial neste negocio."
+   ],
+   [
+    "G10 As Presented",
+    "OK — As Presented em toda a serie propria. O Comparable Analysis usa Default Comps mas foi descartado, portanto nem sequer entra."
+   ],
+   [
+    "G11 YoY homologo / cash flow YTD",
+    "DISPAROU — RESOLVIDO. A folha Cash Flow TRIMESTRAL do CapIQ vem ACUMULADA YTD (3/6/9/12 meses), nao em trimestres discretos. Ler a coluna como 'o trimestre' produz lixo. Todo o cash flow trimestral vem dos ER, que reportam trimestre e acumulado em separado."
+   ],
+   [
+    "G12 Ficha vs Excel",
+    "VER FOLHA Reverse — detectores automaticos nos motores A e B. Vermelho acima de 0,1% = seeds velhos, resultados nao se citam."
+   ],
+   [
+    "G13 Driver dominante",
+    "FEITO — bandas definidas ANTES de olhar. Amplitude no valor/accao: crescimento 447 > WACC 342 > g perpetuo 210 > cash opex 156 > imposto 137 > capex 41 > NWC 19 > vida do capex 1,6. Eixos da grelha = crescimento e cash opex (os dois OPERACIONAIS mais sensiveis; o WACC e taxa de desconto e vive na tabela WACC x g). NOTA: ao contrario da Meta, capex e vida dos activos sao praticamente irrelevantes — a FICO nao tem activos."
+   ],
+   [
+    "G14 Modelo vs evidencia",
+    "DISPAROU — O cash opex esta modelado a MELHORAR (47,5% -> 45,5%) e o ultimo trimestre mostra-o a melhorar tambem (45,6% em FQ3-26). Coerente. MAS a receita caiu SEQUENCIALMENTE pela primeira vez em quatro anos neste par de trimestres: 691,7 -> 674,2 (-2,5%), e os Scores -3,4%. Nos tres anos anteriores o FQ2->FQ3 subiu sempre (+4,8%, +3,2%, +7,6%). Por isso o crescimento e eixo de cenario e tem invalidador ligado (INV-1)."
+   ],
+   [
+    "G15 Conservadorismo composto",
+    "CORRIDA FEITA — ver 04_reversao. Conservadores: imposto (26% vs ETR LTM 22,5%), capex (2,0% vs 1,70%), g (2,5%), e valor ZERO atribuido ao DLP e a aceitacao do 10T pelas GSEs. Optimistas: cash opex Y10 a 45,5%, melhor do que qualquer ano ja alcancado. Neutro: crescimento Y1 = aritmetica de preco flat. NAO e um bear mal rotulado — mas esta claramente ABAIXO do consenso, e isso esta declarado."
+   ],
+   [
+    "G16 Fecho dos gates",
+    "OK — Nenhum gate ficou aproximado a meio. G1/G4/G6/G8/G9/G11 resolvidos com o dado correcto e a fonte citada; G2 aceite com ressalva escrita sobre o ASR; G14 encaminhado para eixo de cenario e invalidador."
+   ],
+   [
+    "G17 Ancora externa",
+    "PASSA — Preco de 07-Ago-2026 POSTERIOR ao ER de 29-Jul-2026 e ao 10-Q de Jun-2026. O export trimestral cobre ate Jun-2026 e o anual ate FY25 (correcto: FY26 ainda nao fechou). 1.031,89 esta dentro das 52 semanas (870,01-1.998,01)."
+   ],
+   [
+    "G18 Tie-out CapIQ vs filing",
+    "FEITO — divida: CapIQ 5.598,0 vs filing 5.582,4 (+15,6, 0,3%) -> uso o filing. Caixa: CapIQ omitiu 56,1 de marketable securities nao correntes. CAPEX: o CapIQ mostra so 'Additions to PP&E' 8,9 em FY25; a definicao da propria FICO no calculo de FCF inclui 30,5 de software capitalizado, total 39,4 — o CapIQ SUBESTIMA 4,4x. D&A LTM 16,144 reconciliado (9M FY26 12,123 + FQ4-25 4,021). Share count e ultimo periodo batem."
+   ],
+   [
+    "G-A Concentracao de clientes",
+    "MATERIAL — 10-Q pag. 16: Experian, TransUnion e Equifax valem 63% da receita TOTAL (54% ha um ano), cada uma acima de 10%. E os risk factors do 10-K FY25 dizem: 'Experian, TransUnion and Equifax have formed a joint venture that is selling a credit scoring product competitive with our products' — a VantageScore. 63% da receita vem de tres empresas que sao donas do concorrente. Ligado ao INV-3."
+   ],
+   [
+    "G-B SBC",
+    "DECISAO METODOLOGICA — SBC e CUSTO REAL dentro do EBIT, sem add-back, share count constante. Consequencia: o FCFF do modelo em Y1 (991,5) e ABAIXO do free cash flow reportado pela empresa em LTM (960,8 + juros apos imposto = 1.100,6), porque o FCF da empresa adiciona o SBC de volta como nao-caixa. Tratar o FCF reportado como base de FCFF E manter a contagem de accoes fixa e dupla contagem — e vale 142 por accao. Este foi o erro da estimativa preliminar em chat."
+   ]
+  ],
+  "convencoes": [
+   [
+    "Unidades",
+    "Milhoes de USD, excepto por accao e percentagens. Ano fiscal fecha a 30 de Setembro — rotulos FISCAIS (FY26-Q3 = trimestre terminado 30-Jun-2026)."
+   ],
+   [
+    "SBC",
+    "CUSTO REAL dentro do cash opex. Sem add-back. Share count constante. Sem dupla contagem. LTM 174,3 = 7,3% da receita."
+   ],
+   [
+    "Cadeia",
+    "cash_opex: Receita x (1 - cash opex ex-D&A) - D&A = EBIT; x (1-t) = NOPAT; + D&A - Capex - Inv.NWC = FCFF. Descontado ao WACC = ENTERPRISE VALUE."
+   ],
+   [
+    "Capex",
+    "Definicao da EMPRESA: adicoes de PP&E + software capitalizado. NAO a linha do CapIQ, que exclui o software e subestima 4,4x."
+   ],
+   [
+    "Divida",
+    "Divida financeira corrente + LT. Leases OPERACIONAIS excluidos (a renda esta dentro do EBIT). Sem finance leases materiais."
+   ],
+   [
+    "WACC",
+    "(1-Wd) x Ke + Wd x Kd x (1-t). Kd APOS imposto, taxa marginal de 6,25%."
+   ],
+   [
+    "Required return",
+    "Nivel 2 da rubrica = WACC + 100bp. Moat estabelecido, FCF consistente, mas concentracao de mix extrema e rating BB+. Nao e nivel 1 (tem 5,3 mM$ de divida liquida); nao e nivel 3 (converte 40% da receita em FCF)."
+   ],
+   [
+    "Azul",
+    "Celula de input, editavel."
+   ],
+   [
+    "Preto",
+    "Formula. Nao escrever por cima."
+   ]
+  ]
+ },
+ "referencias": {
+  "cresc": {
+   "tipo": "consenso",
+   "valor": 0.188,
+   "modo": "cagr",
+   "fonte": "CapIQ Estimates: FY27E 2.896,8 sobre FY26E 2.547,7. Implicito em Y1 sobre a base LTM = +18,8%."
+  },
+  "opex": {
+   "tipo": "facto",
+   "valor": 0.4768,
+   "modo": "nivel_y10",
+   "fonte": "MELHOR ano proprio ja alcancado — LTM Jun-26, 47,68%. O modelo poe Y10 em 45,5%, melhor do que a empresa alguma vez conseguiu."
+  },
+  "capex": {
+   "tipo": "facto",
+   "valor": 0.017,
+   "modo": "nivel_y10",
+   "fonte": "LTM Jun-26, definicao da empresa (PP&E + software capitalizado)."
+  },
+  "tax": {
+   "tipo": "facto",
+   "valor": 0.2246,
+   "modo": "nivel_y10",
+   "fonte": "ETR LTM Jun-26. Guidance da empresa 25-26% operating / ~24% efectiva."
+  },
+  "nwc": {
+   "tipo": "facto",
+   "valor": 0.1,
+   "modo": "escalar",
+   "fonte": "Mediana de 3 anos das linhas reportadas do cash flow (FY23 46,6% / FY24 10,0% / FY25 6,8%). Media 21,1% inflacionada pelo outlier de FY23."
+  }
+ },
+ "cenarios": {
+  "g13": [
+   [
+    "Crescimento da receita",
+    "+3pp / -3pp",
+    1008.92,
+    561.49,
+    "=C6-D6"
+   ],
+   [
+    "WACC",
+    "-100bp / +100bp",
+    958.96,
+    617.16,
+    "=C7-D7"
+   ],
+   [
+    "g perpetuo",
+    "3,5% / 1,5%",
+    882.08,
+    672.24,
+    "=C8-D8"
+   ],
+   [
+    "Cash opex / receita",
+    "-4pp / +4pp",
+    838.06,
+    682.16,
+    "=C9-D9"
+   ],
+   [
+    "Taxa de imposto",
+    "-5pp / +5pp",
+    828.67,
+    691.55,
+    "=C10-D10"
+   ],
+   [
+    "Capex / receita",
+    "-1pp / +1pp",
+    780.42,
+    739.8,
+    "=C11-D11"
+   ],
+   [
+    "NWC / delta receita",
+    "0% / 16%",
+    769.5,
+    750.71,
+    "=C12-D12"
+   ],
+   [
+    "Vida do capex novo",
+    "3 / 6 anos",
+    760.63,
+    759.01,
+    "=C13-D13"
+   ]
+  ],
+  "discretos": [
+   [
+    "BEAR",
+    "-4pp",
+    "+3,5pp",
+    "base",
+    454.2,
+    "=E41/Inputs!$B$6-1",
+    "=E41/Inputs!$B$7-1",
+    0.0,
+    0.3
+   ],
+   [
+    "BASE",
+    "base",
+    "base",
+    "base",
+    760.11,
+    "=E42/Inputs!$B$6-1",
+    "=E42/Inputs!$B$7-1",
+    0.0,
+    0.5
+   ],
+   [
+    "BULL",
+    "+3,5pp",
+    "-3pp",
+    "base",
+    1132.17,
+    "=E43/Inputs!$B$6-1",
+    "=E43/Inputs!$B$7-1",
+    0.0,
+    0.2
+   ],
+   [
+    "PONDERADO",
+    null,
+    null,
+    null,
+    "=SUMPRODUCT(E41:E43,I41:I43)",
+    "=E44/Inputs!$B$6-1",
+    "=E44/Inputs!$B$7-1",
+    null,
+    null
+   ]
+  ],
+  "bandas": [
+   [
+    "1a tranche — base rende 9,65%",
+    617.68,
+    "Preco a que o cenario BASE entrega o required return. Calculado, nao estimado. -40,1% face ao preco de hoje."
+   ],
+   [
+    "2a tranche — bear de eixo unico nao perde",
+    504.73,
+    "So o driver dominante adverso (crescimento -4pp). -51,1% face a hoje."
+   ],
+   [
+    "Posicao cheia — bear conjunto nao perde",
+    454.2,
+    "Crescimento -4pp E cash opex +3,5pp em simultaneo. -56,0% face a hoje."
+   ],
+   [
+    "Base rende 9,0%",
+    698.99,
+    "Referencia intermedia."
+   ]
+  ],
+  "precos_assimetria": [
+   1031.89,
+   900,
+   800,
+   700,
+   617.68,
+   504.73
+  ],
+  "stress": [
+   [
+    "STRESS TEST DE DOWNSIDE (aritmetico)",
+    null
+   ],
+   [
+    "Tabela de precos de 2027 recuada 30% no mortgage score",
+    null
+   ],
+   [
+    "Receita de mortgage originations anualizada",
+    "1.138 (62% dos Scores x 4)"
+   ],
+   [
+    "Corte de 30% no preco",
+    "-341 de receita"
+   ],
+   [
+    "A margem de segmento de 90,8%",
+    "-310 de lucro operacional"
+   ],
+   [
+    "Apos imposto a 25%",
+    "-233 de FCFF, sobre 991 em Y1 = -23,5%"
+   ],
+   [
+    "Valor por accao (cenario BEAR)",
+    "454,20"
+   ],
+   [
+    "vs 1.031,89",
+    "-56,0%"
+   ],
+   [
+    "Peso do TV no BEAR",
+    "ver folha Cenarios"
+   ]
+  ],
+  "notas": {
+   "14": "EIXOS: crescimento (topo) x capex (esquerda) — e o que o motor local do template suporta estruturalmente. RESSALVA DO G13: o 03_sensibilidade poe o capex em 2o lugar (amplitude 203) mas com a banda default de +/-5pp, que num negocio com capex de 1,7% da receita NAO E PLAUSIVEL — e um swing de 3,5x. Com banda plausivel (+/-1pp) o capex cai para 6o (amplitude 41) e o 2o driver operacional real e o CASH OPEX (amplitude 117 a +/-3pp; 156 a +/-4pp). A banda do capex nesta grelha foi por isso reduzida para +/-1pp. A sensibilidade ao cash opex esta na tabela do G13.",
+   "37": "Celula do canto = valor/accao do motor local. Fica vazia ate correr a tabela de dados no Excel.",
+   "62": "Regra do Hugo: nao entrar abaixo de 2,0x de assimetria. A 1.031,89 o upside ao BULL e +9,7% e o downside ao BEAR e -56,0% -> 0,17x. Nao e fronteira, e o lado errado dela. A 617,68 (1a tranche) a assimetria passa a 83,3% / -26,5% = 3,1x.",
+   "30": "G15 vs FACTO: +7,22% (entre 5% e 10%) -> frase obrigatoria no sumario da ficha. G15 vs CONSENSO: +73,59%, TODO ele no driver de crescimento — repor o consenso (Y1 +18,8%) leva o valor de 760,11 para 1.319,49. A tese inteira assenta nesse unico julgamento."
+  }
+ }
+}

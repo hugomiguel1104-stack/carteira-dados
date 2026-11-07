@@ -1,0 +1,514 @@
+# Ficha de Empresa — SAP SE (SAP · XETRA)
+
+> **Documento único e vivo.** Não se cria cópia por trimestre — actualiza-se este.
+> Camada 1 de três. Camada 2 (tracking trimestral) vive em chat. Camada 3 é o `SAP_DCF.xlsx`.
+> Todo o número de valuation lê-se de uma célula do Excel ou da saída dos scripts `02`–`07` (G12).
+
+`Criada:` 27-Jul-2026 · `Última revisão estrutural:` 29-Out-2026 · `Último quarter processado:` Q3-2026 (QS de 21-Out-2026)
+
+> **Revisão de 30-10-2026 — regra de custo de capital da carteira** (Rf soberana a 10 anos à data do preço, ERP do estudo Kroll mais recente — zona euro 5,0–5,5%, usado 5,0% —, CRP só se relevante). Actualizados RESUMO, ESTADO, REVERSE DCF (novo), log e changelog. **Os cenários adverso e favorável, o ponderado e a 2ª tranche ficam por refazer**: os caminhos completos dos drivers não ficaram gravados a 29-10 e não se reproduzem a partir dos extremos. O corpo (cenários, sumário, §7) continua a ERP 4,20%. Ficheiros renomeados para os nomes fixos (`SAP_Ficha.md`, `SAP_DCF.xlsx`, `config_SAP.json`); as versões datadas estão em `_arquivo\`.
+
+---
+
+## RESUMO
+
+| | |
+|---|---|
+| **Preço** | € 211,20 *(fecho XETRA 28-Out-2026; +50,6% desde a revisão de Jul-26)* |
+| **Market cap · EV** | € 244,4 bn · € 235,0 bn *(net cash ex-leases 2,2 bn + participações 7,6 bn)* |
+| **Fair value DCF (base)** | **€ 239,91 ao required de 8,38% → upside +13,6%** · € 250,94 ao WACC · € 216,60 a 9% |
+| **Cenários** *(25/50/25)* | A IA come os seats *(por refazer; € 194,85 a ERP 4,20%)* · **A migração paga € 239,91** · Plataforma de dados e agentes *(por refazer; € 322,52 a ERP 4,20%)* *(@required)* |
+| **Retorno que o preço oferece** | 9,16% ao ano no base (8,96% ponderado), contra 8,38% exigido |
+| **Decisão** | **Manter; reforço autorizado até 5,7% da carteira** — a 1ª tranche (€ 239,91) está acima do preço; a cheia (€ 192,73) passou para baixo com o ERP de 5% |
+| **O que decide** | Q4-26 e guidance 2027 (fim de Jan-2027): receita total cc 2027 ≥ 10% e FCF FY26 ≈ € 10 bn (exige ~€ 2,0 bn no Q4 contra € 1,0 bn no Q4-25) |
+
+> **Estado de fecho: PROVISÓRIO.** G15 bloqueado na âncora estrutural do cash opex terminal — o export Comps não veio nesta revisão. Fecha com o export ou com dispensa escrita do Hugo.
+
+---
+
+## ESTADO — detalhe
+
+| | | | |
+|---|---|---|---|
+| **Preço** | € 211,20 | **Data** | 28-Out-2026 (QS Q3 a 21-Out → G17 OK) |
+| **Market cap** | € 244.358 M *(1.157 M acções diluídas)* | **EV** | € 235.022 M *(+ dívida ex-leases 8.784 − caixa 10.997 − participações 7.636 + minoritários 513)* |
+| **Valor DCF** *(A migração paga)* | € 250,94 @WACC 8,13% · **€ 239,91 @required 8,38%** | **Upside** | +18,8% · **+13,6%** |
+| **Cenários nomeados** *(p declaradas antes)* | *por refazer* / **€ 239,91** / *por refazer* @req · ponderado por refazer | **IRR esperada** | 8,96% vs required 8,38% |
+| **Ciclo de capex** | não se aplica — capex 2,24% da receita LTM, média 3 anos ~2,3% | **Impacto no valor** | baixo — capex +1,5 pp custa € 14,6 |
+| **Δ FV vs revisão anterior** | € 214,35 (@9%) → € 276,62 (@7,62%): **+€ 62,27** | **Atribuição** | taxa +58,05 · business plan +11,62 · erro/método −12,88 · balanço e ano-base +5,48 |
+| **Ke** *(regra da carteira: Bund 10Y 3,38% + ERP Kroll zona euro 5,0%, sem CRP, beta Damodaran 0,9636 unlev.)* | 8,32% | **Ke ±100 bp** | € 304,25 / € 213,37 @WACC |
+| **Amplitude favorável–adverso** | por refazer *(€ 194,85 – € 322,52 @req a ERP 4,20%)* | **Drivers dominantes** | crescimento (134) ≈ WACC (128) > g (87) > cash opex (52) |
+| **IRR implícita** *(motor A)* | **9,16%** | **vs required return** | +78 bp *(vs WACC +103 bp; vs 9% +16 bp)* |
+| **Crescimento que o preço exige** *(motor B)* | **CAGR 6,62%** a 10 anos para render 8,38% | **vs** | base 8,37% · 9M26 +12% cc · a 9% exige 8,01% |
+| **Decisão** | Manter; reforço permitido | **Gates** | 1ª tranche < € 239,91 (base) · 2ª < ponderado, por refazer · cheia < € 192,73 (crescimento −3 pp) |
+| **Peso máximo da posição** | **5,7%** *(cauda conjunta −35,2%)* · 3,6% no stress de disrupção | **Bear conjunto** | € 136,87 (−35,2%) |
+| **Invalidadores** | 0 disparados de 7 activos · 1 em vigilância (#4) · 1 encerrado (#5) | **Último report** | QS Q3-26, 21-Out-2026 |
+| **ROIC** | 21,2% LTM (20,2% FY25) | **ROIC marginal** | 43% *(Δ NOPAT 745 / Δ capital 1.731, com 2,1 bn de aquisições)* · 2,9x o WACC |
+| **Próximo catalisador** | Q4-26 + guidance 2027, fim de Jan-2027 | **O que decide** | aceleração da receita 2027 e opex a 80–90% do crescimento |
+| **Consenso sell-side** | PT médio € 238,93 (n=27; 19 Buy, 5 Outperform, 5 Hold, 0 Sell; mín. € 175) | **vs o meu DCF** | FV/PT 1,00 @req (1,05 @WACC) |
+| **Peers** | sem export Comps nesta revisão | **vs pares maduros** | n/d — os múltiplos de Jul-26 têm 3 meses e não se reusam |
+| **Short interest** | sem dados novos (Jul-26: 9,6 M ADR, regime novo desde Fev-26) | **vs mediana 5 anos** | n/d |
+| **Posição actual** | detida — nº de acções e custo médio a confirmar | **% da carteira** | a confirmar |
+
+**Múltiplos-chave**
+
+| Múltiplo | Actual | Série própria (6 trimestres) | Leitura |
+|---|---|---|---|
+| EV / op. profit non-IFRS LTM *(âncora)* | 20,5x *(EV do modelo)* | — | Q3 anualizado: 19,4x |
+| TEV / NTM EBIT (CapIQ) | 18,5x | 24,2x Jun-25 → 12,6x Mar-26 → 18,5x | a meio do de-rating; a série não é âncora (de-rating em curso) |
+| P / NTM EPS | 26,2x | 35,6x → 18,0x → 26,2x | idem |
+| FCF yield LTM *(o que contraria)* | 3,7% | — | abaixo do Bund + ERP de 7,6% exigido; só se justifica com o crescimento do base |
+
+---
+
+## TÓPICOS-CHAVE
+
+- **A tese de Julho pagou-se no preço, não no modelo.** A acção subiu 50,6% (€ 140,20 → € 211,20) enquanto o fair value ao hurdle de 9% passou de € 214,35 para € 216,60; ao mesmo hurdle, o preço está hoje no fair value.
+- **A recomendação mudou por causa da taxa, não do negócio.** Dos +€ 62,27 de fair value, € 58,05 vêm de passar do hurdle fixo de 9% para a rubrica v1.3 (WACC + 25 bp = 7,62%); o business plan acrescenta € 11,62 e um erro corrigido tira € 8,51.
+- **O trimestre foi bom, mas a expansão de margem é sobretudo efeito de base.** Margem non-IFRS +1,2 pp (29,5%), dos quais ~1,1 pp vêm de one-offs de € 0,1 bn no Q3-25; o cloud a +25% cc inclui um catch-up de clientes que saíram de dificuldades financeiras, não quantificado.
+- **O preço exige pouco ao negócio.** Para render 7,62% basta CAGR de receita de 4,77% durante dez anos; o current cloud backlog cresce 26% cc e o 9M26 cresceu 12% cc.
+- **Contra a tese: o FCF de 2026 precisa de um Q4 que nunca existiu.** O guidance de ~€ 10 bn exige € 2,03 bn no Q4 contra € 1,03 bn no Q4-25; e o net cash caiu de € 3,4 bn para € 2,2 bn com € 4,7 bn de dívida nova a financiar buyback e aquisições.
+
+---
+
+## CICLO DE CAPEX
+
+Sem ciclo de capex relevante: capex na definição da gestão 2,24% da receita LTM (€ 882 M, com leases), contra ~2,3% na média FY23–FY25. A SAP corre sobre hyperscalers; G20 e G21 não se aplicam.
+
+---
+
+## CENÁRIOS — três, nomeados, com os pressupostos à vista
+
+Probabilidades declaradas antes de ver os valores: 25 / 50 / 25 (default). Números do `07_cenarios.py`.
+
+### 1. A IA come os seats *(25%)*
+
+**A história.** Os agentes reduzem o número de utilizadores nomeados nos clientes e a SAP não consegue mudar o pricing para consumo à mesma velocidade. As migrações RISE continuam, mas com descontos maiores; o cloud desce para a casa dos 10–15% em 2028 e o suporte cai mais depressa do que o cloud o substitui. A gestão protege a margem com cortes, mas não consegue alavancagem.
+
+| Pressuposto | Valor | Porquê |
+|---|---|---|
+| Crescimento | 11,0% → 3,0% *(CAGR 5,97%)* | Y1 ainda sustentado pelo backlog contratado (cRPO +26% cc); depois a base de seats encolhe |
+| Cash opex / receita | 69,5% → 70,0% | sem alavanca: o preço por unidade cai ao ritmo da eficiência |
+| Capex / receita | 2,3% | igual ao base |
+| Resultado | margem EBIT mín. 28,06% (Y2) e 28,06% no Y10; FCFF/receita Y10 19,50% | |
+| **Valor** | **€ 204,55** @WACC · € 194,85 @required | IRR ao preço de hoje: 7,21% |
+
+**Sinais de que estamos aqui:** cloud cc < 18% (invalidador 1); cRPO cc < 20% (invalidador 2); receita total cc 2027 < 10% (invalidador 8).
+
+### 2. A migração paga *(base, 50%)*
+
+**A história.** A base on-premise migra para RISE/GROW durante a década; cada euro de suporte que morre é substituído por vários de subscrição. A receita total acelera em 2027 como a gestão guiou e depois faz fade para 4% no Y10. A alavanca vem do guidance de opex (80–90% do crescimento da receita em 2027) e dos > € 2 bn de eficiência até 2028; o SBC normaliza para 5% com a cotação a subir.
+
+| Pressuposto | Valor | Porquê |
+|---|---|---|
+| Crescimento | 12,0% → 4,0% *(CAGR 8,37%)* | 9M26 +12% cc; 2027 acelera (gestão); consenso FY27–30 +10,7% a +12,3% |
+| Cash opex / receita *(SBC dentro)* | 69,2% → 63,9% | LTM 68,6% com SBC 3,9%; normalizado a SBC 5,0% = 69,7%; Y10 = EBITDA 36,1% vs consenso FY30 ~36,4% |
+| Capex / receita | 2,3% | LTM 2,24% (definição da gestão, com leases) |
+| Imposto · NWC | 29% · 2,0% do Δ receita | guidance FY26; média FY22–25 2,1% |
+| Resultado | margem EBIT mín. 28,54% (Y1) e 34,26% no Y10; FCFF/receita Y10 23,79% | |
+| **Valor** | **€ 291,32** @WACC · **€ 276,62** @required | IRR ao preço de hoje: 9,16% |
+
+**Sinais de que estamos aqui:** cRPO cc 22–28%; suporte entre −5% e −10%; margem non-IFRS FY27 ≥ 30% com o SBC a subir.
+
+### 3. Plataforma de dados e agentes *(25%)*
+
+**A história.** Business Data Cloud (com Dremio e Reltio) e a camada de agentes (Joule Work) monetizam por consumo em cima de dados que já estão dentro da SAP. O cloud mantém-se acima de 20% mais tempo, a receita total cresce ~13% em 2027–28 e a mistura de software de dados de margem alta empurra a margem bruta.
+
+| Pressuposto | Valor | Porquê |
+|---|---|---|
+| Crescimento | 13,0% → 5,5% *(CAGR 9,77%)* | backlog a +26% cc e consenso FY28 +12,3% |
+| Cash opex / receita | 69,0% → 62,0% | eficiência de € 2 bn mais mix de dados |
+| Capex / receita | 2,3% | — |
+| Resultado | margem EBIT mín. 28,76% (Y1) e 36,24% no Y10; FCFF/receita Y10 25,09% | |
+| **Valor** | **€ 340,09** @WACC · € 322,52 @required | IRR ao preço de hoje: 10,15% |
+
+**Sinais de que estamos aqui:** cRPO cc > 28% em dois trimestres; receita de BDC/IA divulgada; margem bruta cloud de volta acima de 75%.
+
+### Leitura conjunta
+
+| | A IA come os seats | **A migração paga** | Plataforma de dados e agentes | Ponderado |
+|---|---|---|---|---|
+| Probabilidade | 25% | **50%** | 25% | — |
+| Valor @WACC 7,37% | 204,55 | **291,32** | 340,09 | 281,82 |
+| Valor @required 7,62% | 194,85 | **276,62** | 322,52 | 267,65 |
+| IRR ao preço de hoje | 7,21% | **9,16%** | 10,15% | 8,96% |
+
+O preço (€ 211,20) está entre o adverso e o base: interpolando ao WACC, equivale a dar **92% de probabilidade ao cenário "A IA come os seats"** e 8% ao base. Ao hurdle antigo de 9% a leitura é outra — o preço está em cima do base (€ 216,60).
+
+**Matriz cenário × taxa de desconto** — separa negócio de taxa *(07_cenarios.py, mais as colunas 9% e 10% calculadas no mesmo motor)*:
+
+| Cenário ＼ taxa | WACC Jul-26 7,01% | WACC −100 bp 6,37% | **WACC actual 7,37%** | Required 7,62% | 9,00% | 10,00% |
+|---|---|---|---|---|---|---|
+| A IA come os seats | **220** | **255** | 205 | 195 | 155 | 136 |
+| **A migração paga** | **315** | **369** | **291** | **277** | **217** | 187 |
+| Plataforma de dados e agentes | **369** | **433** | **340** | **323** | **251** | **216** |
+| BP de Jul-26 *(método e balanço novos)* | **302** | **354** | **279** | **265** | 207 | 178 |
+
+*(A negrito, acima do preço actual de € 211,20.)* A última linha é o business plan de Julho no motor novo: a diferença para "A migração paga" é o que o negócio mexeu (+€ 11,62 @required); a diferença entre colunas é o que a taxa mexeu.
+
+---
+
+## REVERSE DCF — o que o preço exige *(30-10-2026, ERP 5,0%)*
+
+*Calculado sobre o `modelo_calc` do `config_SAP.json` (reconstruído do Excel de 29-10; Excel regerado e verificado a 30-10). Preço € 211,20.*
+
+**0. A grelha simples — valor por acção ao WACC (8,13%)** *(crescimento × margem EBITDA do Y10)*
+
+| CAGR 10a ＼ Margem EBITDA Y10 | 30,1% | 33,1% | **36,1% (base)** | 39,1% | 41,1% |
+|---|---|---|---|---|---|
+| 5,4% *(base −3 pp)* | € 165,8 | € 183,5 | € 201,2 | **€ 218,8** | **€ 230,6** |
+| 6,9% | € 185,0 | € 204,8 | **€ 224,6** | **€ 244,4** | **€ 257,7** |
+| **8,4% (base)** | € 206,5 | **€ 228,7** | **€ 250,9** | **€ 273,2** | **€ 288,0** |
+| 9,9% | **€ 230,5** | **€ 255,5** | **€ 280,4** | **€ 305,4** | **€ 322,0** |
+| 11,4% *(base +3 pp)* | **€ 257,5** | **€ 285,4** | **€ 313,4** | **€ 341,4** | **€ 360,0** |
+
+*A negrito, células acima do preço.* Capex na linha do base: −0,5 pp → € 255,1 · +1 pp → € 242,5 · +2 pp → € 234,2. **Para valer € 211,20 ao WACC**, com a margem do base o CAGR teria de ser **6,0%**; com o crescimento do base, a margem EBITDA do Y10 teria de ser **30,7%**.
+
+**1. Retorno que o preço oferece (motor A)** — inalterado pelo ERP
+
+| | IRR |
+|---|---|
+| **Base** · ponderado *(29-10)* | **9,16%** · 8,96% |
+| Base com crescimento −3 pp / cash opex +3 pp / g −1 pp | 7,86% / 8,59% / 8,58% |
+
+**2. Crescimento exigido (motor B) — CAGR a 10 anos, por retorno exigido × margem EBITDA do Y10**
+
+| Retorno exigido ＼ Margem Y10 | 30,1% | 33,1% | **36,1% (base)** | 39,1% |
+|---|---|---|---|---|
+| **Required 8,38% (nível 1 = WACC + 25 bp)** | 9,29% | 7,88% | **6,62%** | 5,46% |
+| WACC + 100 bp (9,13%) | 11,04% | 9,60% | 8,30% | 7,11% |
+| 11% | 14,96% | 13,44% | 12,07% | 10,81% |
+| 12% | 16,87% | 15,31% | 13,90% | 12,62% |
+
+Âncoras: CAGR do base 8,37% · 9M26 +12% cc · consenso FY27–30 +10,7% a +12,3%.
+
+**3. Em números falsificáveis** — Y4 com Y1–Y2 no base: o preço exige receita de **€ 57.874 M** (base € 60.326 M), EBITDA **€ 19.561 M** (base € 20.390 M), NOPAT/acção **€ 11,31** (base € 11,81) — crescimento de 8,7% no Y3 a cair para 1,7% no Y10.
+
+**Leitura:** com o ERP de 5%, o preço já pede mais (6,6% a dez anos em vez de 4,8%), mas continua abaixo do que a SAP faz e do consenso. A margem de segurança encolheu de +31% para +14% ao required.
+
+---
+
+## SUMÁRIO EXECUTIVO
+
+**Recomendação: manter, com reforço autorizado até 5,7% da carteira.** O fair value do cenário base é € 276,62 ao required return de 7,62%, contra € 211,20 de preço — +31,0%. Não é «reduzir» porque o preço oferece 9,16% ao ano no base e 8,96% ponderado, acima do exigido, e o cenário adverso vale € 204,55 ao WACC, apenas 3% abaixo do preço. Não é «comprar com convicção» porque € 58,05 dos € 62,27 que o fair value subiu desde Julho vêm da taxa de desconto e não do negócio: ao hurdle de 9% que a ficha usava, o preço está no fair value. E o G15 ainda não fechou.
+
+**A tese numa frase.** Em Julho a tensão era a SAP ter convertido dois terços da receita para cloud e o mercado ter-lhe cortado metade do valor; em três meses a acção recuperou 50,6% e a pergunta passou a ser outra — se o negócio cresce o suficiente para justificar que o mercado lhe volte a pedir só ~9%.
+
+**Os financials em vinte segundos.** Receita do Q3 de € 10.270 M, +13% reportado e +12% a moeda constante, pela primeira vez acima de € 10 bn. O cloud é 64,9% do total e cresce 26% (25% cc), com o Cloud ERP Suite a +29%; mas a própria SAP diz que o trimestre teve um catch-up de receita de vários trimestres de clientes que saíram de dificuldades financeiras, sem o quantificar. O current cloud backlog — a receita cloud contratada para os próximos doze meses — está em € 24.144 M, +26% cc, o mesmo ritmo do Q2. O suporte caiu 5% (−6% cc), um abrandamento face aos −8% do Q2, mas a gestão escreve que a queda vai acelerar nos próximos anos. A margem operacional non-IFRS foi 29,5% contra 28,3%, e a decomposição muda a leitura: o Q3-25 tinha € 0,1 bn de impactos negativos (alteração de jurisprudência fiscal e transformação de força de trabalho), que valem ~1,1 pp; as três aquisições de 2026 tiraram 0,4 pp; o SBC ficou estável em 4,6% da receita. Subjacente, a margem andou entre zero e +0,5 pp. Os add-backs do non-IFRS continuam a 3,3% do operating profit, só aquisições e reestruturação — o SBC fica dentro, ao contrário dos pares americanos. A margem bruta cloud desceu pelo terceiro trimestre (75,2% → 74,6% → 74,3%). FCF de € 1.718 M no trimestre (+36%) e € 7.968 M em nove meses (+11%, +16% sem o pagamento Teradata). O balanço mudou de natureza: net liquidity de € 2.213 M contra € 3.381 M em Dezembro, com € 4.663 M de dívida nova emitida em 2026 a financiar € 4.124 M de buyback e € 1.829 M de aquisições.
+
+**O DCF.** Dez anos de FCFF ao WACC, ponte EV→equity explícita, agora no pipeline v1.7.
+
+| Pressuposto | Y1 → Y10 | Âncora |
+|---|---|---|
+| Crescimento da receita | 12,0% → 4,0% (CAGR 8,37%) | 9M26 +12% cc; consenso FY27–30 +10,7% a +12,3% |
+| Cash opex ex-D&A *(SBC dentro)* | 69,2% → 63,9% | LTM 68,6% com SBC a 3,9%; SBC normalizado 5,0% |
+| Capex / receita *(com leases)* | 2,3% | LTM 2,24% |
+| Imposto · g perpétuo | 29% · 2,5% | guidance FY26 · PIB nominal zona euro ~3% |
+| WACC · required | 7,37% · 7,62% | Bund 3,38% + ERP implícito 4,20%; nível 1 |
+
+Enterprise value de € 327.719 M ao WACC e € 291,32 por acção. O reverse DCF diz que o mercado desconta a SAP a 9,16% e que, para render 7,62%, basta um CAGR de receita de 4,77% durante dez anos. Três honestidades: o terminal value pesa 68,4% do EV ao WACC (67,1% ao required), abaixo do limite de 75% mas alto; o múltiplo de saída implícito é 16,0x EV/EBITDA no ano 5, abaixo dos 17,3x de hoje, logo não é heróico; e o driver dominante é o crescimento, com amplitude de € 134 para ±3 pp, praticamente empatado com o WACC (€ 128 para ±100 bp) — em Julho a taxa era três vezes mais sensível do que qualquer driver operacional; agora não.
+
+| Driver — banda | Favorável | Adverso | Amplitude |
+|---|---|---|---|
+| Crescimento ±3 pp | 365,95 | 232,00 | 133,95 |
+| WACC ∓100 bp | 368,59 | 240,56 | 128,02 |
+| g perpétuo ±1 pp | 343,81 | 256,72 | 87,09 |
+| Cash opex ∓3 pp | 317,18 | 265,46 | 51,71 |
+| Imposto ∓4 pp | 307,66 | 274,98 | 32,69 |
+| Capex −0,5/+1,5 pp | 296,18 | 276,73 | 19,45 |
+
+**Os múltiplos, e se contradizem o DCF.** EV sobre operating profit non-IFRS de 20,5x LTM e 19,4x sobre o Q3 anualizado — sem distorção do LTM. Na série própria, o TEV/NTM EBIT foi de 24,2x em Jun-25 para 12,6x em Mar-26 e está em 18,5x: a meio do de-rating, e uma série que mede um de-rating em curso não é âncora. Não há múltiplos de pares nesta revisão — o export Comps não veio, e os 14,3x/12,2x de Julho têm três meses. O FCF yield de 3,7% é o argumento do outro lado: sozinho não paga o retorno exigido, que depende do crescimento.
+
+**Qual das fontes governa.** O reverse DCF, como em Julho, e o motor B é a afirmação que decide: acredito que a SAP cresce mais de 4,77% ao ano durante dez anos? Com o backlog a +26% cc, sim. O DCF directo fica como segunda leitura, porque 68% está no terminal e o resultado depende de uma taxa que mudou de política em Setembro. O cross-check independente que falta é o de pares, e é exactamente o que bloqueia o G15.
+
+**Se comprar a X, ganho quanto por ano?** *(06_retorno.py --md)*
+
+| Preço | EV/EBITDA NTM à entrada | Retorno total 5a | **Anualizado, com re-rating** | Sem re-rating | Re-rating |
+|---|---|---|---|---|---|
+| € 211,20 | 17,3x | +96,80% | **14,50%** | 9,16% | +5,34% |
+| € 220,78 | 18,1x | +88,26% | **13,49%** | 8,88% | +4,61% |
+| € 267,65 | 22,1x | +55,30% | **9,20%** | 7,79% | +1,42% |
+| € 276,62 | 22,9x | +50,26% | **8,48%** | 7,62% | +0,86% |
+| € 291,31 | 24,1x | +42,68% | **7,37%** | 7,37% | +0,00% |
+
+Heatmap — IRR a 5 anos ao preço de hoje (€ 211,20), crescimento × EV/EBITDA NTM de saída:
+
+| Crescimento ＼ EV/EBITDA de saída | 12,8x | 16,0x *(DCF)* | 16,7x | 17,3x *(hoje)* | 20,8x |
+|---|---|---|---|---|---|
+| −2 pp | 8,31% | 12,26% | 13,05% | 13,71% | 17,29% |
+| −1 pp | 9,36% | 13,37% | 14,17% | 14,84% | 18,48% |
+| base | 10,41% | **14,48%** | 15,30% | 15,98% | 19,68% |
+| +1 pp | 11,47% | 15,61% | 16,43% | 17,13% | 20,87% |
+| +2 pp | 12,54% | 16,73% | 17,57% | 18,28% | 22,08% |
+
+Dos 14,5% com re-rating, 9,2 pp são negócio (a IRR sem re-rating) e 5,3 pp são o preço convergir para o fair value ao WACC. As colunas «DCF» (16,0x) e «hoje» (17,3x) estão próximas; lê-se a do DCF. *(O script imprime «$»; substituído por «€».)*
+
+**Porque não é a recomendação adjacente, e o que a mudaria.** A escada ao required de 7,62% trocou os dois primeiros degraus, porque o ponderado (€ 267,65) sai abaixo do base (€ 276,62) — o adverso pesa mais do que o favorável compensa. Todos os degraus estão acima do preço, incluindo a posição cheia (€ 220,78, o base com crescimento −3 pp). A assimetria favorável:adverso ao preço é 19,4x ao WACC — o adverso quase não perde. O que trava o reforço não é o preço, é o tamanho: a cauda conjunta (crescimento −4 pp, opex +5 pp, taxa +150 bp) vale € 136,87, −35,2%, e com perda máxima de 2% da carteira o peso não passa de 5,7%; o stress de disrupção dá 3,6%. Muda para **reduzir** se disparar o invalidador 1, 2 ou 8 do bloco A, ou se o preço passar € 276,62 sem o business plan mexer. Muda para **reforço com convicção** quando o G15 fechar sem cortar o terminal e o Q4 entregar o FCF.
+
+| Banda | Preço | Racional | Assimetria fav:adv @WACC | Peso máx. |
+|---|---|---|---|---|
+| Preço actual | 211,20 | IRR esperada 8,96% · IRR base 9,16% | 19,4x | 5,7% |
+| **1ª tranche** *(trocada)* | 276,62 | valor **base** @required | 0,88x | 4,0% |
+| **2ª tranche** *(trocada)* | 267,65 | valor **ponderado** @required | 1,15x | 4,1% |
+| **Posição cheia** | 220,78 | base com crescimento −3 pp @required | 7,35x | 5,3% |
+
+**Prémios aplicados**
+
+| Prémio | Aplicado? | Valor | Risco que cobre | Sobrepõe-se a outro? |
+|---|---|---|---|---|
+| CRP | Não | 0 | Alemanha Aaa | — |
+| Hurdle nível 1 | Sim | +25 bp | execução e alocação de capital (M&A, dívida para buyback) | Não. Nível 1 porque: custo de mudança no processo, net cash, 89% de receita recorrente com backlog divulgado, ROIC 2,9x o WACC. Nível 2 (8,37%) daria base € 240,56 e cheia € 193,23 — o argumento para ele é o risco de disrupção de modelo de negócio pela IA, que o beta não mede |
+| Fade terminal abaixo da âncora estrutural | **Por verificar** | — | — | sem export Comps |
+
+**Próximo catalisador:** resultados Q4-26 e guidance 2027, final de Janeiro de 2027.
+
+---
+
+## 1. Negócio — o que vende
+
+Software de aplicação empresarial. Quatro linhas de receita, FY2025 (20-F, F-5):
+
+| € M | FY2025 | FY2024 | Δ | % do total |
+|---|---|---|---|---|
+| Cloud | 21.023 | 17.141 | +22,6% | 57,1% |
+| Software support | 10.525 | 11.290 | −6,8% | 28,6% |
+| Software licenses | 990 | 1.399 | −29,2% | 2,7% |
+| Services | 4.262 | 4.346 | −1,9% | 11,6% |
+| **Total** | **36.800** | **34.176** | **+7,7%** | 100% |
+
+**Q3-26:** cloud € 6.668 M (64,9% da receita), suporte € 2.434 M (23,7%), licenças € 147 M, serviços € 1.021 M. Cloud ERP Suite € 5.924 M no trimestre, 89% do cloud, +28% cc. Extension Suite € 688 M (+8% cc). IaaS € 56 M, −27%, por decisão.
+
+O **Cloud ERP Suite** — S/4HANA Cloud, BTP e os módulos core de people, spend, commerce e working capital, vendidos nos pacotes RISE e GROW. Aquisições de 2026, todas no segmento ATS: Reltio (master data, € 1.076 M, Mai), Dremio (lakehouse, € 515 M, Jul), Prior Labs (modelos fundacionais tabulares, € 518 M, Jul); acordo para comprar a TechWolf. Contributo no Q3: € 49 M de receita e −€ 39 M de operating profit non-IFRS.
+
+Dois segmentos: **ATS** (Q3-26: € 9.297 M de receita, € 3.807 M de resultado) e **Core Services** (€ 974 M e € 113 M, −40% — a margem de serviços caiu).
+
+Regiões (Q3-26): EMEA 46,4% (Alemanha 16,0%), Americas 39,3% (EUA 31,1%), APJ 14,3%.
+
+---
+
+## 2. Vantagem competitiva — porquê esta e não a rival
+
+**Lente competitiva definida com o Hugo: Oracle e Workday.** Sem alteração estrutural nesta revisão.
+
+O que a SAP tem e as rivais não: a **base instalada de ERP core em grandes empresas industriais europeias**, com os processos financeiros, logísticos e de produção codificados em sistemas que correm há vinte ou trinta anos. Um cliente que migra de SAP para Oracle Fusion não muda de software — reescreve a forma como a empresa opera.
+
+Evidência: os clientes com mais de quatro soluções SAP mais do que duplicaram desde 2021 e são mais de 20% da base (20-F, p. 55); cRPO a +26% cc no Q3-26 contra cloud a +25% cc.
+
+Contra a Oracle, a SAP compete com a mesma estrutura — base instalada a migrar para cloud própria — e a Oracle tem a vantagem de possuir a infraestrutura. Contra a Workday, a SAP perde em HCM puro e ganha quando o cliente quer ERP e HCM no mesmo modelo de dados.
+
+**Ressalva:** o 20-F FY2025 não tem secção de concorrência. Esta secção é análise, não disclosure.
+
+---
+
+## 3. Monetização — de onde vem exactamente o dinheiro
+
+Subscrições cloud reconhecidas *over time*, facturadas em avanço — contract liabilities de € 8.371 M no Q3-26 (€ 6.718 M em Dez-25). Suporte ratable em contratos anuais. Licenças *point in time*, em extinção. Serviços por percentagem de acabamento.
+
+O motor económico é uma troca: cada euro de suporte on-premise que morre (margem bruta 90,1% no Q3) é substituído por vários euros de subscrição cloud (74,3%). **A transição dilui a margem bruta e multiplica a receita.** A margem bruta de cloud & software desceu de 80,6% no Q1-25 para 78,7% no Q3-26; a total ficou em 73,4%.
+
+**Novo em 2027:** com o IFRS 18, a SAP passa a excluir do non-IFRS os efeitos cambiais e os juros de impostos (QS Q3-26, nota N). A série non-IFRS de 2027 não será comparável com 2026 sem ponte.
+
+---
+
+## 4. Moat — porque é que isto não é replicável
+
+Três camadas, por ordem de durabilidade:
+
+**Custo de mudança no processo, não no dado.** Migrar de SAP é reconstruir a lógica de negócio; um programa de S/4HANA numa multinacional conta-se em anos.
+
+**Dados e semântica.** Business Data Cloud com Dremio e Reltio tenta converter o moat de processo num moat de dados para a era dos agentes. Ainda não verificável: a SAP não divulga receita de BDC nem de IA.
+
+**Ecossistema de implementadores.** Capgemini, Accenture, Deloitte — distribuição gratuita e barreira simultânea.
+
+### O moat converte-se em economia? O teste do ROIC
+
+Método desta revisão: capital investido = capital próprio total + passivos financeiros − caixa e activos financeiros correntes − participações não operacionais; NOPAT = operating profit non-IFRS × 0,71.
+
+| | FY2025 | LTM Sep-26 |
+|---|---|---|
+| NOPAT | € 7.397 M | € 8.142 M |
+| Capital investido | € 36.685 M | € 38.416 M |
+| **ROIC** | 20,2% | **21,2%** |
+| Spread vs WACC 7,37% | +12,8 pp | +13,8 pp |
+
+| ROIC marginal (FY25 → LTM) | |
+|---|---|
+| Capital acrescentado | € 1.731 M *(inclui € 2,1 bn de aquisições)* |
+| Δ NOPAT | € 745 M |
+| **ROIC marginal** | **43%** |
+
+Passa o teste. **Os 15,4% e 40,5% (ex-goodwill) de Jul-26 não são comparáveis** — o método não ficou escrito e não é reconstituível; regista-se em vez de se reconciliar à força.
+
+---
+
+## 5. SWOT
+
+**Forças** — base instalada com custo de mudança em processo; cloud a 25% cc com cRPO a 26% cc; add-backs do non-IFRS a 3,3%; net liquidity € 2,2 bn mais € 7,6 bn de participações; capex 2,2% da receita; buyback de € 10 bn até 2027 (€ 4,2 bn feitos a € 164,79 médios); rating A+/A1.
+
+**Fraquezas** — 67% da receita fora do euro sem hedge de translação; suporte em declínio que a gestão diz que vai acelerar; margem bruta cloud a descer três trimestres seguidos; SBC ligado à cotação (reflexivo); balanço a ser alavancado para buyback e M&A.
+
+**Oportunidades** — base on-premise por migrar; monetização por consumo em BDC e agentes; > € 2 bn de eficiência até 2028; opex de 2027 a crescer 80–90% da receita.
+
+**Ameaças** — redução de seats por agentes de IA; concorrência no suporte de terceiros reforçada pelos compromissos com a CE (dividir o landscape entre prestadores, fim das taxas de reinstalação); Celonis com julgamento a 8-Mar-2027; três aquisições com PPA preliminar.
+
+---
+
+## 6. Legal, regulatório e fiscal
+
+| Matéria | Tipo | Estado | Exposição | Timeline |
+|---|---|---|---|---|
+| Comissão Europeia — manutenção on-premise | Antitrust | **Encerrado**: decisão de compromissos de 9-Jul-2026, vinculativa, global, 10 anos, com trustee | não quantificada pela SAP | Encerrado |
+| Teradata | Litígio | Encerrado: US$ 480 M pagos em Mar-2026 | — | Encerrado |
+| Celonis | Antitrust (EUA) | julgamento 8-Mar-2027; ~US$ 70 M | imaterial em valor; precedente de acesso a dados | Mar-2027 |
+| Fiscal | Litigância | ~€ 192 M em disputa, sem provisão | <0,1% do market cap | — |
+
+**Comissão Europeia — o que a decisão diz.** Compromissos oferecidos pela SAP e tornados vinculativos: clarificar quando o cliente pode dividir o landscape entre prestadores de manutenção ou níveis de suporte; terminar licenças e suporte em fim de vida do produto, implementação falhada imputável à SAP ou insolvência; reduzir 10% de licenças com redução de ≥ 10% da força de trabalho em dois anos; regras para desinvestimentos; acesso alargado a contratos single-metric; abolição das taxas de reinstalação. Não há remédio imposto nem alteração geral do preço do suporte — o invalidador 5 não disparou e fica encerrado. **A ficha de Jul-26 dava a decisão como "pendente em 2026" quando já tinha sido tomada a 9-Jul, 18 dias antes** — erro registado no changelog.
+
+**Fiscal.** Taxa combinada alemã 26,8%; efectiva non-IFRS 2025 30,5%, guidance FY26 ~29%; Q3-26 25,8%.
+
+---
+
+## 7. Enquadramento de valuation
+
+### Que métricas são as certas
+
+**EV sobre operating profit non-IFRS** — o non-IFRS da SAP mantém o SBC dentro e retira só amortização de adquiridos e one-offs. Comparar com non-GAAP de SaaS americanos sobrestima a SAP. **FCF** como segunda métrica: € 9.002 M LTM, 3,7% de yield; guidance FY26 ~€ 10 bn. Atenção ao IFRS 18 em 2027 (§3).
+
+### O múltiplo está barato porque o preço caiu ou porque o lucro caiu?
+
+Já não está barato: está a meio caminho. Desde Julho o preço subiu 50,6% e o operating profit non-IFRS LTM 4,2% (€ 11.005 M → € 11.468 M). A compressão de 2025–26 era de-rating; a recuperação também é re-rating.
+
+| | LTM | Q3-26 anualizado |
+|---|---|---|
+| EV / op. profit non-IFRS | 20,5x | 19,4x |
+
+### Decomposição do movimento de margem — Q3-26 vs Q3-25
+
+| | Q3-25 | Q3-26 | Δ | Corre off? |
+|---|---|---|---|---|
+| Operating profit IFRS | 2.487 | 2.930 | +443 | |
+| + Acquisition-related | 96 | 104 | +8 | Sim |
+| + Reestruturação | −18 | −3 | +15 | Sim |
+| **Operating profit non-IFRS** | **2.566** | **3.030** | **+464** | |
+| Margem non-IFRS | 28,3% | 29,5% | +1,2 pp | |
+| SBC (nota K) | 429 (4,7%) | 474 (4,6%) | +0,1 pp | **Não** |
+| One-offs no Q3-25 (jurisprudência fiscal + transformação de força de trabalho) | € 0,1 bn | — | **~+1,1 pp** | Sim |
+| Aquisições de 2026 | — | −39 | −0,4 pp | parcial |
+
+Subjacente, a margem andou entre zero e +0,5 pp. **Leitura ambígua a confirmar no transcript:** o QS diz «€ 0,1 bn cada» — se «cada» se referir aos dois itens e não às duas métricas, o efeito de base é € 0,2 bn (2,2 pp) e a margem subjacente comprimiu.
+
+**O efeito SBC que preocupava em Julho não apareceu.** A cotação subiu ~€ 55 no Q3 e o SBC ficou em 4,6% da receita. O modelo normaliza a 5,0% (Julho: 5,5%).
+
+### Três lentes, três veredictos
+
+| Lente | Leitura | Veredicto |
+|---|---|---|
+| DCF @required 7,62% | € 276,62 · +31,0% | Barata |
+| Reverse DCF (motor B) | CAGR exigido 4,77% contra base de 8,37% | Barata |
+| Série própria de múltiplos | TEV/NTM EBIT 18,5x, a meio de 24,2x → 12,6x | Neutra |
+| Pares | sem export | n/d |
+
+### Os drivers dominantes (G13)
+
+Tabela no sumário. **Desvio a registar:** as bandas por defeito correram primeiro (capex ±5 pp, implausível num negócio com capex de 2,2%); as bandas SAP (capex −0,5/+1,5 pp, imposto ±4 pp, NWC −2/+6 pp) foram fixadas antes de ler a corrida final, mas depois da primeira. O crescimento e o opex não mudaram de banda. Eixos: crescimento × cash opex; a grelha viva do pipeline só suporta capex × crescimento, por isso fica como está e o heatmap corre com eixo crescimento.
+
+### G15 — corrida de reversão
+
+| Driver | Tipo | Modelo | Referência | Posição | Efeito |
+|---|---|---|---|---|---|
+| Crescimento (Y1) | facto | 12,0% | 12,0% (9M26 cc) | em linha | 0,00 |
+| Cash opex Y10 | consenso | 63,9% | 63,6% (FY30E) | conservador | +2,59 |
+| Capex Y10 | facto | 2,30% | 2,24% (LTM) | conservador | +0,58 |
+| Imposto | facto | 29% | 29% (guidance) | em linha | 0,00 |
+| NWC | facto | 2,0% | 2,1% (média 4 anos) | favorável | −0,06 |
+
+Reversão vs factos: conservadores +0,20%, favoráveis −0,02% — OK. Vs consenso +0,89% — abaixo do limiar de divulgação. **BLOQUEADO:** o cash opex terminal não tem âncora estrutural (quartil superior dos pares nomeados) porque o export Comps não veio. Armadilhas de contagem: o fade para 4% no Y10 fica abaixo do LT growth do consenso (mediana 14,4%, n=4) mas o consenso de LT growth com n=4 não é referência utilizável; o capex não foi contado como favorável.
+
+**Calibração.** FV/PT consenso = 1,16 @required (1,22 @WACC). Com a rubrica v1.3, esta ficha passou de abaixo para acima do consenso — vigiar se as outras fichas fazem o mesmo (critério da calibração: não concentrar acima de 1,0).
+
+---
+
+## A. Invalidadores da tese
+
+| # | Afirmação | Invalidador — condição observável | Onde verifico | Definido | Estado | Revisto |
+|---|---|---|---|---|---|---|
+| 1 | O cloud substitui o suporte (§3) | Crescimento cloud cc **< 18%** | QS, trimestral | Jul-26 | OK — 25% (Q3, com catch-up) | 29-Out-26 |
+| 2 | Receita contratada sustenta a década (§2) | Current cloud backlog cc **< 20%** | QS, trimestral | Jul-26 | OK — 26% | 29-Out-26 |
+| 3 | O suporte encolhe a ritmo gerível (§3) | Suporte YoY **pior que −12%** | QS, trimestral | Jul-26 | OK — −5% (−6% cc); gestão diz que vai acelerar | 29-Out-26 |
+| 4 | A margem é estrutural, não artefacto do SBC (§7) | Margem non-IFRS de ano completo **< 27,0% com a cotação a não cair** | QS + nota K, anual | Jul-26 | **Vigiar** — LTM 29,1%; normalizada a SBC 5% = 28,0%; FY26 é o primeiro ano com a cotação a subir no 2º semestre | 29-Out-26 |
+| 5 | ~~Pricing power do suporte sobrevive à CE~~ | ~~CE impõe remédios que obriguem a desagregar o preço do suporte~~ | — | Jul-26 | **Encerrado** — decisão de compromissos de 9-Jul-26, sem remédio imposto | 29-Out-26 |
+| 6 | Escala cloud não destrói margem (§3) | Margem bruta cloud **< 72,0%** | QS, trimestral | Jul-26 | OK — 74,3%, terceira descida seguida | 29-Out-26 |
+| 7 | Capital devolvido sustenta o retorno (§5) | Buyback **< € 3,5 bn/ano** | CF trimestral | Jul-26 | OK — € 4,1 bn em 9M (€ 1,5 bn no Q3) | 29-Out-26 |
+| 8 | A receita acelera em 2027 (cenário base, Y1) | Receita total cc **FY27 < 10,0%** *(ou guidance FY27 abaixo de 10%)* | Guidance Jan-27 · QS, trimestral | **29-Out-26** | Novo — 9M26 +12% cc | 29-Out-26 |
+
+Contagem: 7 activos, 0 disparados, 1 em vigilância (#4), 1 encerrado (#5). **Desenho:** o #8 substitui o #5 e liga o invalidador ao Y1 do base; o threshold está a 2 pp do realizado, portanto pode disparar. O #3 já esteve em −11% (Q1-26 reportado: −10,6%).
+
+**Disparados:** nenhum.
+
+**Regra de saída (para o caso de estar certo):** reduzir para metade se o preço passar € 276,62 (base @required) sem revisão em alta do business plan.
+
+---
+
+## B. Log de fair value e decisões
+
+| Data | Quarter | Preço | FV DCF | IRR impl. | Growth impl. | Decisão | Racional (1 linha) |
+|---|---|---|---|---|---|---|---|
+| 30-10-2026 | Q3-26 | € 211,20 | € 250,94 @WACC · € 239,91 @req | 9,16% | CAGR 6,62% @required | Manter; reforço autorizado | Regra de custo de capital da carteira: ERP 4,20% → 5,0% (Kroll zona euro, limite inferior); Bund 3,38% igual. Ponte: só ERP, −€ 40,38 @WACC. Cheia passa para € 192,73, abaixo do preço |
+| 27-Jul-2026 | Q2-26 | € 140,20 | € 214,35 @9% *(€ 205,84 sem o erro do D&A)* | 12,28% | 2,72% @9% | T1 aberta | Mercado exigia 12,3% a uma empresa com ROIC 2x o WACC |
+| 29-Out-2026 | Q3-26 | € 211,20 | **€ 276,62 @7,62%** · € 216,60 @9% | **9,16%** | **4,77% @7,62%** · 8,01% @9% | **Manter; reforço até 5,7%** | Preço +50,6%; FV +€ 62,27, dos quais € 58,05 de taxa (rubrica v1.3) |
+
+**Ponte do fair value face à revisão anterior** *(ponte.py sobre o modelo_calc; fecha ao cêntimo)*
+
+| Grupo | Passo | Valor/acção | Δ |
+|---|---|---|---|
+| — | FV publicado Jul-26 @9% *(replicado: € 214,35)* | 214,35 | — |
+| Erros / método | Erro: o D&A de 3,3% incluía a amortização de adquiridos (0,97 pp), que o EBIT non-IFRS nunca deduziu — somava-se ao FCFF sem ter sido custo | 205,84 | −8,51 |
+| Erros / método | Cadeia do pipeline (cash opex), D&A endógeno por classe | 204,95 | −0,89 |
+| Erros / método | Capex na definição da gestão (+0,70 pp de leases) e leases (€ 1.735 M) fora da dívida | 201,47 | −3,48 |
+| Mercado e balanço | Net cash ex-leases € 2.213 M, participações € 7.636 M, 1.157 M acções | 200,94 | −0,53 |
+| Ano-base | LTM Jun-26 € 38.193 M → LTM Sep-26 € 39.387 M | 206,95 | +6,00 |
+| **Taxa de desconto** | 9,00% → 7,62% (WACC 7,37% + 25 bp, nível 1) | 265,00 | **+58,05** |
+| **Business plan** | Drivers de Out-26 (crescimento 12% → 4%, cash opex 69,2% → 63,9%, capex 2,3%) | **276,62** | **+11,62** |
+
+Atribuição: taxa de desconto **+€ 58,05** · business plan +€ 11,62 · método e erros −€ 12,88 · mercado, balanço e ano-base +€ 5,48. **Mais de metade do Δ vem da taxa:** ao WACC de Julho (7,01%) o FV seria € 315,34; ao hurdle de Julho (9%) € 216,60. A mudança de recomendação é de política de taxa, não de tese.
+
+O WACC subiu de 7,00% para 7,37% (Bund de 2,75% "a verificar" para 3,38% medido; ERP de 4,5% histórico para 4,20% implícito — o par antigo violava o G19).
+
+**Verificação retrospectiva (Jul → Out).** A decisão de Julho — abrir a T1 a € 140,20 — estava certa e pela razão escrita: o preço subiu 50,6% com o business plan praticamente parado (+€ 2,25 ao mesmo hurdle). O que estava errado era a T2 (€ 134,17) e a T3 (€ 75,38): degraus que nunca dispararam.
+
+---
+
+## D. Sentimento e posicionamento
+
+**Insider.** CFO Dominik Asam comprou ~€ 972 mil em instrumentos SAP a 27-Jul-2026, quatro dias depois do Q2 (fonte secundária, boerse-express; **a confirmar na notificação de managers' transactions da SAP/BaFin** — o preço unitário reportado, € 97,24, sugere derivado).
+
+**Short interest.** Sem série nova nesta revisão. Jul-26: 9,60 M acções no ADR NYSE, regime novo desde Fev-26.
+
+**Sell-side** (CapIQ, painel XETRA): PT médio **€ 238,93**, mediano € 240,00, intervalo € 175–290, desvio-padrão € 24,95, n=27; 19 Buy, 5 Outperform, 5 Hold, 0 Sell. Desde Julho o PT médio subiu 18% (€ 201,91). LT growth médio 16,2%, mediano 14,4% (n=4). Painel NYSE: US$ 280,83 (n=12), € 250,3 à taxa implícita no ADR (1,1218).
+
+| Base | Fair value | Governa? |
+|---|---|---|
+| DCF, SBC como custo, @required 7,62% | € 276,62 | **Sim** |
+| DCF @9% (hurdle de Jul-26) | € 216,60 | referência |
+| Consenso sell-side | € 238,93 | não — referência |
+| Mínimo do sell-side | € 175,00 | — |
+
+O meu FV está 16% acima do consenso ao required; ao 9% está 9% abaixo. A diferença para o sell-side é taxa, não crescimento: o crescimento do base (CAGR 8,37%) está abaixo do consenso para FY27–30.
+
+**Capital return.** € 4,2 bn de buyback feitos até Set-26 (25,2 M acções a € 164,79); dividendo FY25 € 2,50 pago (€ 2.883 M). Financiado em parte com € 4,7 bn de dívida nova.
+
+---
+
+## C. Changelog
+
+| Data | Quarter | O que mudou | Secções |
+|---|---|---|---|
+| 30-10-2026 | Q3-26 | Regra de custo de capital da carteira (decisão do Hugo): Rf Bund 10Y (3,38%, igual), ERP Kroll 5,0% (era 4,20% Damodaran), CRP 0. Ke 7,53% → 8,32%; required 7,62% → 8,38% (nível 1). FV € 291,32 → € 250,94 @WACC (€ 276,62 → € 239,91 @req); motor A inalterado (9,16%); motor B 4,77% → 6,62%; cheia € 192,73. **Cenários adverso/favorável, ponderado, 2ª tranche e peso máximo por refazer** — os caminhos não ficaram gravados. Config reconstruído do Excel (`00_extrair_config.py`, reproduz € 291,32). Ficheiros com nomes fixos v1.9 | RESUMO, ESTADO, REVERSE DCF (novo), B, C |
+| 29-Out-2026 | Q3-26 | **Revisão Q3-26.** Preço € 140,20 → € 211,20. Modelo migrado do Excel feito à mão para o pipeline v1.7 (cash opex, D&A por classe, capex com leases, motores A/B/C). Required return passa do hurdle fixo de 9% para a rubrica v1.3, nível 1 (7,62%). Formato v1.7: RESUMO, cenários nomeados, ponte e matriz. Invalidador #5 encerrado (CE), #8 novo (receita FY27 cc). | Todas |
+| 29-Out-2026 | Q3-26 | **Erros de Jul-26 corrigidos e registados:** (1) o D&A projectado (3,3%) incluía amortização de adquiridos que o EBIT non-IFRS não deduz — o FCFF estava inflacionado em ~0,97 pp da receita, **−€ 8,51 por acção** @9%; (2) a ficha dava a decisão da CE como pendente quando tinha sido tomada a 9-Jul-26; (3) o par Rf 2,75%/ERP 4,5% histórico violava o G19 e o Bund já fechara Julho a 3,21%; (4) o ROIC de Julho (15,4%) não tem método reconstituível — substituído e não reconciliado. | B, 6, 4, ESTADO |
+| 29-Out-2026 | Q3-26 | **Pendente:** G15 bloqueado na âncora estrutural (export Comps); transcript do call Q3-26 (para fechar a ambiguidade «€ 0,1 bn cada» na §7); confirmação da compra do CFO; posição actual e custo médio. | ESTADO, 7, D |
+| 27-Jul-2026 | Q2-26 | Criação da ficha. Camadas 1, 2 e 3 a partir de quatro Quarterly Statements, 20-F FY2025, Integrated Report 2025, deck e transcript do Q2-26, cinco exports do Capital IQ e série de short interest. Correcções registadas: G2 mal diagnosticado (era buyback, não diluição); PPA do Dremio/Prior Labs pedido em vão (fecharam depois do Q2); Integrated Report redundante; G17 e G18 novos (preços desfasados e coluna cumulativa do CapIQ); cópia do Excel feita antes da reescrita da folha Cenarios. | Todas |
+
+---
+
+*Template v3.3 — formato v1.7. Camada 1 de três: ficha estrutural · análise trimestral em chat · DCF em Excel.*

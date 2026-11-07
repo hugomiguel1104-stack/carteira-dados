@@ -1,0 +1,73 @@
+name: dados
+# Recolhe precos, historico SEC, calendario, macro e fichas, e guarda o resultado no ramo "data".
+# A tarefa do Claude das 22:58 (Lisboa) le esse ramo e atualiza o artefacto Carteira Hugo e Je.
+on:
+  schedule:
+    - cron: '20 21 * * 1-5'   # depois do fecho dos EUA (21:00 UTC no inverno, 20:00 no verao)
+    - cron: '20 9 * * 6'      # sabado: apanha o que tiver falhado na semana
+  push:
+    branches: [main]
+    paths: ['fichas/**', 'cfg/**', 'pipeline/**']
+  workflow_dispatch:
+    inputs:
+      modo: { description: 'tudo, precos ou fichas', default: 'tudo' }
+permissions:
+  contents: write
+concurrency: { group: dados, cancel-in-progress: false }
+jobs:
+  recolha:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SEC_UA: 'carteira-dados hugomiguel1104@gmail.com'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dados anteriores (ramo data)
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: |
+          mkdir -p data && cd data && git init -q
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git fetch -q --depth 1 origin data; then git checkout -q FETCH_HEAD -- .; fi
+          mkdir -p raw out
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -q requests openpyxl
+      - name: Modo
+        id: m
+        run: |
+          M="${{ github.event.inputs.modo }}"
+          if [ -z "$M" ]; then if [ "${{ github.event_name }}" = "push" ]; then M=fichas; else M=tudo; fi; fi
+          echo "modo=$M" >> "$GITHUB_OUTPUT"
+      - name: Fichas
+        continue-on-error: true
+        run: python pipeline/fichas.py data/raw data/out
+      - name: Precos (Yahoo)
+        if: steps.m.outputs.modo != 'fichas'
+        continue-on-error: true
+        run: python pipeline/precos.py data/raw data/out
+      - name: SEC (financials e filings)
+        if: steps.m.outputs.modo == 'tudo'
+        continue-on-error: true
+        timeout-minutes: 10
+        run: python pipeline/sec.py data/raw data/out
+      - name: Calendario (Nasdaq)
+        if: steps.m.outputs.modo == 'tudo'
+        continue-on-error: true
+        timeout-minutes: 8
+        run: python pipeline/calendario.py data/raw data/out
+      - name: Macro (BLS, BEA, Eurostat, Michigan)
+        if: steps.m.outputs.modo == 'tudo'
+        continue-on-error: true
+        timeout-minutes: 8
+        run: python pipeline/econ.py data/raw data/out
+      - name: Estado
+        run: |
+          cp data/raw/status.json data/out/estado.json 2>/dev/null || echo '{}' > data/out/estado.json
+          ls -la data/out
+      - name: Guardar no ramo data (um commit, sem historico)
+        run: |
+          cd data
+          git symbolic-ref HEAD refs/heads/tmp
+          git add -A raw out
+          git -c user.name=dados-bot -c user.email=dados-bot@users.noreply.github.com commit -qm "dados $(date -u +%FT%TZ) ${{ steps.m.outputs.modo }}"
+          git push -qf origin HEAD:data

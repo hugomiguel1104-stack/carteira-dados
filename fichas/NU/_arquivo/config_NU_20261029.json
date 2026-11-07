@@ -1,0 +1,126 @@
+{
+  "ticker": "NU",
+  "metodo": "residual income USD com arrasto cambial",
+  "gerado": "29-10-2026",
+  "mercado": {
+    "price": 11.97,
+    "price_date": "2026-10-28",
+    "shares": 4878.4,
+    "B0_jun": 13249.7,
+    "fx_jun": 5.161,
+    "fx_now": 5.3497,
+    "days": 120,
+    "s": 0.85
+  },
+  "custo_capital": {
+    "rf": 0.0499,
+    "erp": 0.042,
+    "beta": 0.82,
+    "crp_w": {
+      "Brasil": [
+        0.91,
+        0.0324
+      ],
+      "Mexico": [
+        0.07,
+        0.0246
+      ],
+      "Colombia": [
+        0.02,
+        0.0285
+      ]
+    },
+    "hurdle_bp": 0.0025,
+    "crp": 0.031776,
+    "ke": 0.116116,
+    "required": 0.118616,
+    "rf_metodo": "A",
+    "erp_fonte": "Damodaran ERP implicito 1-Out-2026 4,20%",
+    "beta_fonte": "Damodaran Global Jan-2026, Financial Svcs (Non-bank & Insurance) 0,82",
+    "crp_fonte": "Damodaran ctryprem Jan-2026, ponderado pela receita de clientes por pais (FS Q2-26 nota 34)"
+  },
+  "base": {
+    "r1": 0.31,
+    "r2": 0.3,
+    "r3": 0.29,
+    "roe_t": 0.24,
+    "shift": 0.0,
+    "f": 0.05,
+    "s": 0.85,
+    "b": 0.85,
+    "ke": 0.116116,
+    "g": 0.04
+  },
+  "cenarios_nomeados": {
+    "Ciclo fiscal": {
+      "p": 0.3,
+      "r1": 0.27,
+      "r2": 0.24,
+      "r3": 0.24,
+      "roe_t": 0.2,
+      "f": 0.075
+    },
+    "Incumbente digital": {
+      "p": 0.5
+    },
+    "Plataforma latino-americana": {
+      "p": 0.2,
+      "r1": 0.32,
+      "r2": 0.31,
+      "r3": 0.31,
+      "roe_t": 0.27,
+      "f": 0.03
+    }
+  },
+  "bandas_g13": {
+    "Depreciacao do real (f)": {
+      "f": 0.077
+    },
+    "ROE terminal": {
+      "roe_t": 0.19
+    },
+    "ROE Y1-Y3": {
+      "r1": 0.27,
+      "r2": 0.26,
+      "r3": 0.25
+    },
+    "Ke": {
+      "ke": 0.126116
+    },
+    "g perpetuo": {
+      "g": 0.03
+    },
+    "Retencao Y1-Y3": {
+      "b": 0.7
+    },
+    "Quota em moeda local (s)": {
+      "s": 1.0
+    }
+  },
+  "g15": {
+    "ancora_provisoria": "Itau ROE recorrente FY24 22,2% / FY25 23,4% (IR 4Q25). Falta export Comps"
+  },
+  "consenso": {
+    "NI": {
+      "2026": 4155.4,
+      "2027": 5397.5,
+      "2028": 7054.5
+    },
+    "ROE": {
+      "2026": 0.3167,
+      "2027": 0.3034,
+      "2028": 0.309
+    },
+    "BVPS": {
+      "2026": 3.1815,
+      "2027": 4.16876,
+      "2028": 5.29325
+    },
+    "PT": 18.93,
+    "PT_med": 19.0,
+    "n": 23,
+    "PT_min": 12.0,
+    "PT_max": 23.0,
+    "LTG": 0.2838
+  }
+}

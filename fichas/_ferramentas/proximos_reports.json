@@ -1,0 +1,38 @@
+{
+  "_leia_me": [
+    "Datas do proximo earnings report, para a coluna 'Proximo report' do tracker.",
+    "PRECEDENCIA: se a ficha da empresa trouxer data explicita no campo 'Proximo catalisador',",
+    "e ESSA que ganha. Este ficheiro so preenche o que a ficha nao fixa.",
+    "O Alpha Vantage serve para DATAS, nunca para valores — a serie de EPS do ultimo trimestre",
+    "vem contaminada (verificado na AAPL em Jul-2026: devolveu o valor do homologo).",
+    "Refrescar com: EARNINGS_CALENDAR por ticker, horizon=6month. Limite free: 25 pedidos/dia."
+  ],
+  "obtido_em": "2026-07-31",
+  "empresas": {
+    "NOW": {
+      "data": "2026-10-28",
+      "fiscal": "2026-09-30",
+      "fonte": "Alpha Vantage EARNINGS_CALENDAR"
+    },
+    "SAP": {
+      "data": "2026-10-21",
+      "fiscal": "2026-09-30",
+      "fonte": "Alpha Vantage EARNINGS_CALENDAR"
+    },
+    "META": {
+      "data": null,
+      "fonte": "por agendar",
+      "nota": "AV devolveu vazio a 31-07-2026 — reportou a 29/07 e a proxima ainda nao esta marcada. A ficha estima fim de Outubro."
+    },
+    "MSFT": {
+      "data": null,
+      "fonte": "por agendar",
+      "nota": "AV devolveu vazio a 31-07-2026 — reportou a 29/07 e a proxima ainda nao esta marcada. A ficha estima FY27-Q1, final de Out-2026."
+    },
+    "CRWV": {
+      "data": null,
+      "fonte": "ficha",
+      "nota": "A propria ficha fixa 11-08-2026 no campo 'Proximo catalisador'. O parser le de la."
+    }
+  }
+}

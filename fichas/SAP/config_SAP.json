@@ -1,0 +1,1847 @@
+{
+ "ticker": "SAP",
+ "titulo": "SAP SE (XTRA:SAP) — DCF e Reverse DCF",
+ "subtitulo": "Camada 3. Camada 1 = SAP_Ficha.md. Revisao Q3-26 (QS de 21-Out-2026). Preco de 28-Out-2026. Migrado para o pipeline v1.7 (o modelo de Jul-26 era feito a mao).",
+ "switches": {
+  "cadeia": "cash_opex",
+  "da_modo": "classes",
+  "motores": [
+   "A",
+   "B",
+   "C"
+  ]
+ },
+ "mercado": {
+  "data": "2026-10-29",
+  "preco": 211.2,
+  "preco_memo": 140.2,
+  "shares": 1157,
+  "divida": 8784,
+  "caixa": 10997,
+  "nao_marketavel": 7636,
+  "pct_ponte": 1,
+  "minoritarios": 513
+ },
+ "wacc": {
+  "rf": 0.0338,
+  "erp": 0.05,
+  "beta_unlev": 0.9636,
+  "kd": 0.04,
+  "tax_wacc": 0.29,
+  "wacc_override": 0,
+  "required": 0.083831,
+  "crp": 0.0,
+  "rf_metodo": "A",
+  "erp_fonte": "Kroll Recommended Eurozone ERP 5,0-5,5% (estudo mais recente, 2-09-2026); usado 5,0% (limite inferior; o Hugo: Europa 5%). Regra da carteira (Hugo, 30-10-2026): Rf sempre soberana a 10 anos, ERP sempre Kroll; implicito Damodaran 4,20% como sensibilidade.",
+  "crp_fonte": "n/a — CRP 0",
+  "beta_fonte": "Damodaran Global/Europe Jan-2026, Software (System & Application) 0,9636 unlev (ficha de 29-10)"
+ },
+ "tv_activo": {
+  "g": 0.025,
+  "midyear": 1,
+  "ppe": 4549,
+  "vida_carteira": 5,
+  "vida_capex": 5,
+  "nwc": 0.02,
+  "meio_ano": 1,
+  "classes": [
+   {
+    "nome": "Equipamento, software e ROU",
+    "peso": 0.8,
+    "vida": 5
+   },
+   {
+    "nome": "Edificios e terreno",
+    "peso": 0.2,
+    "vida": 30
+   }
+  ],
+  "carteira": [
+   {
+    "nome": "Equipamento/ROU (2 anos)",
+    "valor": 900,
+    "vida": 2
+   },
+   {
+    "nome": "Equipamento/ROU (4 anos)",
+    "valor": 1500,
+    "vida": 4
+   },
+   {
+    "nome": "Edificios e terreno",
+    "valor": 2149,
+    "vida": 25
+   }
+  ]
+ },
+ "drivers": {
+  "ano": [
+   "Y1",
+   "Y2",
+   "Y3",
+   "Y4",
+   "Y5",
+   "Y6",
+   "Y7",
+   "Y8",
+   "Y9",
+   "Y10"
+  ],
+  "cresc": [
+   0.12,
+   0.12,
+   0.11,
+   0.1,
+   0.09,
+   0.08,
+   0.07,
+   0.06,
+   0.05,
+   0.04
+  ],
+  "opex": [
+   0.692,
+   0.68,
+   0.67,
+   0.662,
+   0.655,
+   0.65,
+   0.646,
+   0.643,
+   0.641,
+   0.639
+  ],
+  "capex": [
+   0.023,
+   0.023,
+   0.023,
+   0.023,
+   0.023,
+   0.023,
+   0.023,
+   0.023,
+   0.023,
+   0.023
+  ],
+  "tax": [
+   0.29,
+   0.29,
+   0.29,
+   0.29,
+   0.29,
+   0.29,
+   0.29,
+   0.29,
+   0.29,
+   0.29
+  ]
+ },
+ "ancoras": {
+  "data": "QS Q3-26 publicado 21-Out-2026 apos o fecho; webcast as 23:00 CEST.",
+  "preco": "Fecho XETRA 28-Out-2026 (CapIQ: Latest/Last close 208,95/211,20; folha Multiples datada 28-Out). Posterior ao QS de 21-Out -> G17 OK. 52 semanas 127,50-232,20.",
+  "preco_memo": "Preco da revisao anterior (24-Jul-2026). So referencia.",
+  "shares": "Diluted weighted Q3-26 = 1.157 M (QS A.1). CapIQ 1.154,2 e o snapshot de Jun-26 e nao desconta os ~9 M recomprados no Q3. Ponto no tempo estimado ~1.153 M: usar 1.157 e conservador em ~0,4% (G2 aceite).",
+  "divida": "Divida financeira EX-LEASES = cash & ST 10.997 - net liquidity 2.213 (definicao SAP, slide 26 Q3-26) = 8.784. Inclui as emissoes de 2026 (+4.663). Leases (~1,8 bn) FORA: o capex projectado inclui os pagamentos de leases (definicao FCF da SAP).",
+  "caixa": "Cash 9.364 + other financial assets correntes 1.633 = 10.997 (QS B; = CapIQ Cash & ST).",
+  "nao_marketavel": "Other financial assets nao correntes 8.300 x 92% equity investments (rácio do 20-F FY25) = 7.636. Ganhos fora do EBIT e do non-IFRS -> sem dupla contagem.",
+  "pct_ponte": "100%, como em Jul-26. A 75% o valor/accao cai ~1,65.",
+  "minoritarios": "QS Q3-26 B.",
+  "rf": "Bund 10Y 28-10-2026 = 3,38% (ficha de 29-10), data do preco. Regra da carteira: Rf sempre 10 anos.",
+  "erp": "Kroll Recommended Eurozone ERP 5,0-5,5% (estudo mais recente, 2-09-2026); usado 5,0% (limite inferior; o Hugo: Europa 5%). Regra da carteira (Hugo, 30-10-2026): Rf sempre soberana a 10 anos, ERP sempre Kroll; implicito Damodaran 4,20% como sensibilidade.",
+  "beta_unlev": "Damodaran Western Europe Jan-2026, Software (System & Application), N=290, unlevered corrigido de caixa. Tecto sectorial.",
+  "kd": "Bund 3,38% + ~60 bp para A+/A1 (S&P/Moody's). Peso de 3,5% no WACC: +/-50 bp no Kd mexe o WACC 1 bp.",
+  "tax_wacc": "Guidance ETR non-IFRS FY26 ~29%.",
+  "g": "2,5% nominal. PIB nominal zona euro ~3%. g <= PIB LT.",
+  "ppe": "PP&E Q3-26 4.549 (inclui ROU). Repartido em tranches para o D&A do Y1 bater com o run-rate ex-adquiridos (~900 LTM).",
+  "vida_carteira": "Substituido pelas tranches (da_modo = classes).",
+  "vida_capex": "Substituido pelas classes: 80% equipamento/software/ROU a 5 anos, 20% edificios a 30.",
+  "nwc": "G9 de Jul-26: media FY22-FY25 das linhas do CF = 2,1% de consumo. LTM Sep-26: -195 de consumo.",
+  "lin_cresc": "9M26 +12% cc (+9,5% reportado). Gestao: 2026 ~10,6% cc e 2027 ACELERA. Consenso FY27 +11,9%, FY28 +12,3%, FY29 +10,7%, FY30 +11,1%. Fade para 4% no Y10 (Jul-26: 6%).",
+  "lin_opex": "CASH OPEX ex-D&A, SBC dentro. LTM 68,6% com SBC a 3,9% (deprimido pela cotacao). Normalizado SBC 5,0% -> 69,7%. Guidance 2027: opex a 80-90% do crescimento da receita; >2 bn de eficiencia ate 2028. Y10 63,9% = EBITDA 36,1% (consenso FY30 EBIT 34,1% + D&A ~2,3% = 36,4%).",
+  "lin_capex": "Definicao da gestao (FCF): PP&E+intangiveis - proceeds + leases. LTM 2,24%. Consenso FY27-28 2,2% (sem leases).",
+  "lin_tax": "Guidance FY26 non-IFRS ~29%; 2025 30,5%; consenso 29-30%.",
+  "shift_g": "Fica sempre a 0. O motor B tem shift proprio na folha Reverse.",
+  "janela_check": "As formulas de D&A tem a janela amarrada a parte inteira da vida util. Se mudares B37 para outra ordem de grandeza, regera o modelo."
+ },
+ "base": {
+  "receita_ltm": 39387,
+  "ebit_ltm": 11468,
+  "label_base": "LTM Sep-26"
+ },
+ "leia_me": {
+  "fontes": [
+   [
+    "Filings",
+    "_docs/2026-Q3_QuarterlyStatement.pdf (21-Out-2026, 23 p.) e 2026-Q3_Presentation.pdf (28 p.). Revisao anterior: 20-F FY25, QS Q3-25 a Q2-26, transcript Q2-26."
+   ],
+   [
+    "CapIQ",
+    "Financials/SAP_CapIQ_Financials.xls (As Presented, trimestral; ultima coluna Sep-30-2026) e SAP_CapIQ_Estimates.xls (painel XTRA, 27 PT, 28 EPS)."
+   ],
+   [
+    "Preco",
+    "211,20 EUR fecho XETRA 28-Out-2026."
+   ],
+   [
+    "Taxas",
+    "Bund 10Y 3,38% (28-Out, Trading Economics); ERP implicito Damodaran 4,20% (1-Out-2026)."
+   ],
+   [
+    "EC",
+    "Commitment decision da Comissao Europeia, 9-Jul-2026 (comunicado SAP e Brussels Times)."
+   ],
+   [
+    "NAO DISPONIVEL",
+    "Transcript do call Q3-26; export Comps (ancora estrutural do G15); nota de leases do Q3."
+   ]
+  ],
+  "gates": [
+   [
+    "G3 splits",
+    "OK. Capital emitido 1.229 M inalterado."
+   ],
+   [
+    "G4 activos no EV",
+    "RESOLVIDO. LT equity investments 7.636 na ponte (CapIQ deixa-os fora: TEV 243.871 vs EV do modelo 235.022)."
+   ],
+   [
+    "G5 amort. intangiveis",
+    "RESOLVIDO e ERRO DE JUL-26 CORRIGIDO. Acquisition-related LTM 379, fora do non-IFRS. O modelo de Jul-26 somava-a ao FCFF via D&A (3,3%) sem a ter deduzido no EBIT: -8,51/accao @9%. Agora D&A ex-adquiridos. Tres aquisicoes de 2026 com PPA preliminar (drag non-IFRS Q3 -39)."
+   ],
+   [
+    "G6 reclassificados",
+    "ATENCAO 2027. IFRS 18 e duas exclusoes novas no non-IFRS a partir de 2027 (efeitos cambiais e juros de impostos). A serie non-IFRS de 2027 nao sera comparavel com 2026 sem ponte."
+   ],
+   [
+    "G7 LTM vs FY",
+    "OK. LTM Sep-26 = FY25 - 9M25 + 9M26 = 39.387 (bate com CapIQ). Nao e YoY."
+   ],
+   [
+    "G8 PDF legivel",
+    "OK. QS 105k caracteres, deck 31k."
+   ],
+   [
+    "G9 NWC",
+    "ACEITE. 2,0% vs media 2,1% das linhas do CF. LTM: -195."
+   ],
+   [
+    "G10 template",
+    "OK. As Presented."
+   ],
+   [
+    "G11 homologo",
+    "OK. YoY contra Q3-25 do QS (comparativo publicado)."
+   ],
+   [
+    "G12 ficha vs Excel",
+    "Ver bloco RECONCILIACAO e folha Reverse. 02 a verde antes de citar."
+   ],
+   [
+    "G13 driver dominante",
+    "Crescimento (amplitude 134) ~ WACC (128) > g (87) > cash opex (52) > imposto (33) > capex (19, banda -0,5/+1,5pp). Bandas SAP para capex/imposto/NWC/vida fixadas antes de ler, mas DEPOIS de uma corrida com as bandas por defeito (capex +/-5pp, implausivel num asset-light). Eixos: crescimento x cash opex; a grelha viva do Excel so suporta capex x crescimento (limite do pipeline)."
+   ],
+   [
+    "G14 modelo vs evidencia",
+    "SBC modelado a 5,0% vs 3,9% LTM: a cotacao subiu ~55 no Q3 e o SBC do Q3 foi so 4,6% da receita. Margem: expansao de +1,2pp no Q3 e ~1,1pp efeito de base (one-offs de 0,1 bn no Q3-25). Modelo nao extrapola o trimestre."
+   ],
+   [
+    "G15 conservadorismo",
+    "Factos: +0,20% (OK). Consenso: +0,89%. BLOQUEADO na ancora estrutural do cash opex terminal: sem export Comps nesta revisao."
+   ],
+   [
+    "G16 sem meio-termo",
+    "Todos resolvidos/aceites, excepto G15 ancora (bloqueante ate export ou dispensa escrita do Hugo)."
+   ],
+   [
+    "G17 Ancora externa",
+    "OK. Preco 28-Out > QS 21-Out. Export CapIQ cobre Sep-30-2026. Preco dentro das 52 semanas (127,50-232,20)."
+   ],
+   [
+    "G18 Tie-out CapIQ vs filing",
+    "Divida: CapIQ 10.588 inclui leases (~1,8 bn) e deixa LT investments fora; modelo usa 8.784 ex-leases (net liquidity SAP 2.213) com leases no capex. Capex: definicao da gestao 882 LTM (CapIQ: 701 so PP&E+intang). D&A: 1.279 total, 900 ex-adquiridos. Shares: ver G2. Periodo: Sep-30-2026."
+   ],
+   [
+    "G19 Custo de capital",
+    "Metodo A: Bund 3,38% (28-Out) + ERP implicito 4,20% (1-Out). Sem CRP (Alemanha Aaa). Beta Damodaran 0,9636 unlev. Ke 7,53%; +/-100bp: 6,53%-8,53%."
+   ],
+   [
+    "G20 capex-crescimento",
+    "Nao aplicavel (capex 2,3% da receita; sem ciclo). ROIC marginal implicito Y10 316%."
+   ],
+   [
+    "G21 margem vs pre-ciclo",
+    "Nao aplicavel."
+   ],
+   [
+    "Valor por accao",
+    "=DCF!$B$27"
+   ]
+  ],
+  "convencoes": [
+   [
+    "Enterprise value",
+    "=DCF!$B$15"
+   ],
+   [
+    "Peso do TV no EV",
+    "=DCF!$B$16"
+   ],
+   [
+    "WACC em uso",
+    "=Inputs!$B$29"
+   ],
+   [
+    "Motor A — desvio G12",
+    "=Reverse!$B$16"
+   ],
+   [
+    "Motor B — desvio G12",
+    "=Reverse!$B$36"
+   ],
+   [
+    "G20 — ROIC marginal implicito Y5",
+    "=Projecoes!$B$35"
+   ],
+   [
+    "G20 — ROIC marginal implicito Y10",
+    "=Projecoes!$C$35"
+   ],
+   [
+    "G20 — receita incremental / capex Y10",
+    "=Projecoes!$C$37"
+   ]
+  ]
+ },
+ "cenarios": {
+  "g13": [
+   [
+    "Crescimento da receita",
+    "+3.0/-3.0 pp",
+    365.95,
+    232,
+    "=C6-D6"
+   ],
+   [
+    "WACC",
+    "-1.0/+1.0 pp",
+    368.59,
+    240.56,
+    "=C7-D7"
+   ],
+   [
+    "g perpetuo",
+    "+1.0/-1.0 pp",
+    343.81,
+    256.72,
+    "=C8-D8"
+   ],
+   [
+    "Cash opex / receita",
+    "-3.0/+3.0 pp",
+    317.18,
+    265.46,
+    "=C9-D9"
+   ],
+   [
+    "Taxa de imposto",
+    "-4.0/+4.0 pp",
+    307.66,
+    274.98,
+    "=C10-D10"
+   ],
+   [
+    "Capex / receita",
+    "-0.5/+1.5 pp",
+    296.18,
+    276.73,
+    "=C11-D11"
+   ],
+   [
+    "NWC / delta receita",
+    "-2.0/+6.0 pp",
+    292.56,
+    287.6,
+    "=C12-D12"
+   ],
+   [
+    "Vida do capex novo",
+    "+2.0/-1.5 anos",
+    290.84,
+    291.71,
+    "=C13-D13"
+   ]
+  ],
+  "discretos": [
+   [
+    "A IA come os seats (ERP 4,20% — por refazer)",
+    "CAGR 6,0%",
+    "Y10 70,0%",
+    "2,3%",
+    204.55,
+    "=E41/Inputs!$B$6-1",
+    "=E41/Inputs!$B$7-1",
+    null,
+    0.25
+   ],
+   [
+    "A migracao paga (base)",
+    "CAGR 8,4%",
+    "Y10 63,9%",
+    "2,3%",
+    "=DCF!$B$27",
+    "=E42/Inputs!$B$6-1",
+    "=E42/Inputs!$B$7-1",
+    "=DCF!$B$17",
+    0.5
+   ],
+   [
+    "Plataforma de dados e agentes (ERP 4,20% — por refazer)",
+    "CAGR 9,8%",
+    "Y10 62,0%",
+    "2,3%",
+    340.09,
+    "=E43/Inputs!$B$6-1",
+    "=E43/Inputs!$B$7-1",
+    null,
+    0.25
+   ],
+   [
+    "PONDERADO @WACC",
+    null,
+    null,
+    null,
+    "=SUMPRODUCT(E41:E43,I41:I43)",
+    "=E44/Inputs!$B$6-1",
+    "=E44/Inputs!$B$7-1",
+    null,
+    null
+   ]
+  ],
+  "bandas": [
+   [
+    "1a tranche — base @required 8.38%",
+    239.91,
+    "07_cenarios: escada trocou (ponderado abaixo do base)."
+   ],
+   [
+    "2a tranche — ponderado @required (ERP 4,20% — por refazer: caminhos dos cenarios nao gravados)",
+    267.65,
+    "Soma p x V dos tres cenarios nomeados."
+   ],
+   [
+    "Posicao cheia — base com crescimento -3pp @required",
+    192.73,
+    "Bear de eixo unico no driver dominante (G13)."
+   ],
+   [
+    "Referencia: base @9% (hurdle de Jul-26)",
+    216.6,
+    "Mesmo modelo, taxa antiga."
+   ]
+  ],
+  "precos_assimetria": [
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
+  ],
+  "stress": [
+   [
+    null,
+    null
+   ],
+   [
+    null,
+    null
+   ],
+   [
+    null,
+    null
+   ],
+   [
+    null,
+    null
+   ],
+   [
+    null,
+    null
+   ],
+   [
+    null,
+    null
+   ],
+   [
+    null,
+    null
+   ]
+  ],
+  "notas": {
+   "14": "Eixos: crescimento x cash opex por G13; a grelha viva do pipeline so suporta capex x crescimento — fica como esta, o heatmap do 06 corre com eixo crescimento.",
+   "37": "Celula do canto = valor/accao do motor local. Fica vazia ate correr a tabela de dados."
+  }
+ },
+ "grelha": {
+  "eixo_linhas": [
+   -0.05,
+   -0.025,
+   0,
+   0.025,
+   0.05
+  ],
+  "eixo_colunas": [
+   -0.03,
+   -0.015,
+   0,
+   0.015,
+   0.03
+  ]
+ },
+ "tabela_wacc_g": {
+  "linhas": [
+   0.0637,
+   0.0687,
+   0.0737,
+   0.0762,
+   0.0837,
+   0.09
+  ],
+  "colunas": [
+   0.015,
+   0.02,
+   0.025,
+   0.03,
+   0.035
+  ]
+ },
+ "seeds": {
+  "A": 0.0916219129642624,
+  "B": -0.0359272069646977,
+  "D": null
+ },
+ "resultados_guardados": [
+  [
+   "RESULTADOS GUARDADOS DOS GOAL SEEKS",
+   null
+  ],
+  [
+   "Preenchido pelo 02_motores_reverse.py. Reconfirmar sempre que um driver mude.",
+   null
+  ],
+  [
+   "Motor A @ 211.20",
+   "9.1622%"
+  ],
+  [
+   "Motor B @ 211.20, required 8%",
+   "shift -3.59% -> CAGR 4.77%"
+  ],
+  [
+   "Valor/accao base @ WACC 7.37%",
+   "291.32"
+  ]
+ ],
+ "passthrough": {
+  "Trimestres": {
+   "A1": {
+    "v": "TRIMESTRES — Q1-25 a Q3-26 (7 trimestres)",
+    "b": true,
+    "sz": 13.0,
+    "c": "FFFFFF"
+   },
+   "A2": {
+    "v": "Quarterly Statements Q1-25 a Q3-26 + CapIQ As Presented. Q2-26 descumulado (CapIQ traz 6M). Non-IFRS do QS; Q1-25 e Q4-25 por diferenca de 9M/FY.",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "A4": {
+    "v": "Trimestre",
+    "b": true
+   },
+   "B4": {
+    "v": "Q1-25",
+    "b": true
+   },
+   "C4": {
+    "v": "Q2-25",
+    "b": true
+   },
+   "D4": {
+    "v": "Q3-25",
+    "b": true
+   },
+   "E4": {
+    "v": "Q4-25",
+    "b": true
+   },
+   "F4": {
+    "v": "Q1-26",
+    "b": true
+   },
+   "G4": {
+    "v": "Q2-26",
+    "b": true
+   },
+   "H4": {
+    "v": "Q3-26",
+    "b": true
+   },
+   "A5": {
+    "v": "Receita total",
+    "b": true
+   },
+   "B5": {
+    "v": 9013,
+    "f": "#,##0"
+   },
+   "C5": {
+    "v": 9027,
+    "f": "#,##0"
+   },
+   "D5": {
+    "v": 9076,
+    "f": "#,##0"
+   },
+   "E5": {
+    "v": 9684,
+    "f": "#,##0"
+   },
+   "F5": {
+    "v": 9555,
+    "f": "#,##0"
+   },
+   "G5": {
+    "v": 9878,
+    "f": "#,##0"
+   },
+   "H5": {
+    "v": 10270,
+    "f": "#,##0"
+   },
+   "A6": {
+    "v": "Cloud"
+   },
+   "B6": {
+    "v": 4993,
+    "f": "#,##0"
+   },
+   "C6": {
+    "v": 5130,
+    "f": "#,##0"
+   },
+   "D6": {
+    "v": 5290,
+    "f": "#,##0"
+   },
+   "E6": {
+    "v": 5610,
+    "f": "#,##0"
+   },
+   "F6": {
+    "v": 5962,
+    "f": "#,##0"
+   },
+   "G6": {
+    "v": 6282,
+    "f": "#,##0"
+   },
+   "H6": {
+    "v": 6668,
+    "f": "#,##0"
+   },
+   "A7": {
+    "v": "Software support"
+   },
+   "B7": {
+    "v": 2762,
+    "f": "#,##0"
+   },
+   "C7": {
+    "v": 2642,
+    "f": "#,##0"
+   },
+   "D7": {
+    "v": 2565,
+    "f": "#,##0"
+   },
+   "E7": {
+    "v": 2557,
+    "f": "#,##0"
+   },
+   "F7": {
+    "v": 2469,
+    "f": "#,##0"
+   },
+   "G7": {
+    "v": 2439,
+    "f": "#,##0"
+   },
+   "H7": {
+    "v": 2434,
+    "f": "#,##0"
+   },
+   "A8": {
+    "v": "Software licenses"
+   },
+   "B8": {
+    "v": 183,
+    "f": "#,##0"
+   },
+   "C8": {
+    "v": 194,
+    "f": "#,##0"
+   },
+   "D8": {
+    "v": 161,
+    "f": "#,##0"
+   },
+   "E8": {
+    "v": 452,
+    "f": "#,##0"
+   },
+   "F8": {
+    "v": 116,
+    "f": "#,##0"
+   },
+   "G8": {
+    "v": 131,
+    "f": "#,##0"
+   },
+   "H8": {
+    "v": 147,
+    "f": "#,##0"
+   },
+   "A9": {
+    "v": "Services"
+   },
+   "B9": {
+    "v": 1075,
+    "f": "#,##0"
+   },
+   "C9": {
+    "v": 1061,
+    "f": "#,##0"
+   },
+   "D9": {
+    "v": 1060,
+    "f": "#,##0"
+   },
+   "E9": {
+    "v": 1066,
+    "f": "#,##0"
+   },
+   "F9": {
+    "v": 1007,
+    "f": "#,##0"
+   },
+   "G9": {
+    "v": 1026,
+    "f": "#,##0"
+   },
+   "H9": {
+    "v": 1021,
+    "f": "#,##0"
+   },
+   "A10": {
+    "v": "Operating profit IFRS"
+   },
+   "B10": {
+    "v": 2333,
+    "f": "#,##0"
+   },
+   "C10": {
+    "v": 2456,
+    "f": "#,##0"
+   },
+   "D10": {
+    "v": 2487,
+    "f": "#,##0"
+   },
+   "E10": {
+    "v": 2554,
+    "f": "#,##0"
+   },
+   "F10": {
+    "v": 2741,
+    "f": "#,##0"
+   },
+   "G10": {
+    "v": 2643,
+    "f": "#,##0"
+   },
+   "H10": {
+    "v": 2930,
+    "f": "#,##0"
+   },
+   "A11": {
+    "v": "Operating profit non-IFRS"
+   },
+   "B11": {
+    "v": 2460,
+    "f": "#,##0"
+   },
+   "C11": {
+    "v": 2564,
+    "f": "#,##0"
+   },
+   "D11": {
+    "v": 2566,
+    "f": "#,##0"
+   },
+   "E11": {
+    "v": 2829,
+    "f": "#,##0"
+   },
+   "F11": {
+    "v": 2866,
+    "f": "#,##0"
+   },
+   "G11": {
+    "v": 2743,
+    "f": "#,##0"
+   },
+   "H11": {
+    "v": 3030,
+    "f": "#,##0"
+   },
+   "A12": {
+    "v": "SBC (nota K)"
+   },
+   "B12": {
+    "v": 420,
+    "f": "#,##0"
+   },
+   "C12": {
+    "v": 529,
+    "f": "#,##0"
+   },
+   "D12": {
+    "v": 429,
+    "f": "#,##0"
+   },
+   "E12": {
+    "v": 316,
+    "f": "#,##0"
+   },
+   "F12": {
+    "v": 285,
+    "f": "#,##0"
+   },
+   "G12": {
+    "v": 468,
+    "f": "#,##0"
+   },
+   "H12": {
+    "v": 474,
+    "f": "#,##0"
+   },
+   "A13": {
+    "v": "Cloud gross margin non-IFRS %"
+   },
+   "B13": {
+    "v": 0.75,
+    "f": "0.0%"
+   },
+   "C13": {
+    "v": 0.752,
+    "f": "0.0%"
+   },
+   "D13": {
+    "v": 0.751,
+    "f": "0.0%"
+   },
+   "E13": {
+    "v": 0.746,
+    "f": "0.0%"
+   },
+   "F13": {
+    "v": 0.752,
+    "f": "0.0%"
+   },
+   "G13": {
+    "v": 0.746,
+    "f": "0.0%"
+   },
+   "H13": {
+    "v": 0.743,
+    "f": "0.0%"
+   },
+   "A14": {
+    "v": "Gross margin non-IFRS %"
+   },
+   "B14": {
+    "v": 0.736,
+    "f": "0.0%"
+   },
+   "C14": {
+    "v": 0.736,
+    "f": "0.0%"
+   },
+   "D14": {
+    "v": 0.738,
+    "f": "0.0%"
+   },
+   "E14": {
+    "v": 0.741,
+    "f": "0.0%"
+   },
+   "F14": {
+    "v": 0.734,
+    "f": "0.0%"
+   },
+   "G14": {
+    "v": 0.734,
+    "f": "0.0%"
+   },
+   "H14": {
+    "v": 0.734,
+    "f": "0.0%"
+   },
+   "A15": {
+    "v": "Current cloud backlog"
+   },
+   "D15": {
+    "v": 18839,
+    "f": "#,##0"
+   },
+   "G15": {
+    "v": 22929,
+    "f": "#,##0"
+   },
+   "H15": {
+    "v": 24144,
+    "f": "#,##0"
+   },
+   "A16": {
+    "v": "Buyback (caixa)"
+   },
+   "B16": {
+    "v": 125,
+    "f": "#,##0"
+   },
+   "C16": {
+    "v": 1508,
+    "f": "#,##0"
+   },
+   "D16": {
+    "v": 304,
+    "f": "#,##0"
+   },
+   "E16": {
+    "v": 0,
+    "f": "#,##0"
+   },
+   "F16": {
+    "v": 2279,
+    "f": "#,##0"
+   },
+   "G16": {
+    "v": 321,
+    "f": "#,##0"
+   },
+   "H16": {
+    "v": 1524,
+    "f": "#,##0"
+   },
+   "A18": {
+    "v": "DERIVADOS",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A19": {
+    "v": "Margem non-IFRS %"
+   },
+   "B19": {
+    "v": "=B11/B5",
+    "f": "0.0%"
+   },
+   "C19": {
+    "v": "=C11/C5",
+    "f": "0.0%"
+   },
+   "D19": {
+    "v": "=D11/D5",
+    "f": "0.0%"
+   },
+   "E19": {
+    "v": "=E11/E5",
+    "f": "0.0%"
+   },
+   "F19": {
+    "v": "=F11/F5",
+    "f": "0.0%"
+   },
+   "G19": {
+    "v": "=G11/G5",
+    "f": "0.0%"
+   },
+   "H19": {
+    "v": "=H11/H5",
+    "f": "0.0%"
+   },
+   "A20": {
+    "v": "SBC / receita %"
+   },
+   "B20": {
+    "v": "=B12/B5",
+    "f": "0.0%"
+   },
+   "C20": {
+    "v": "=C12/C5",
+    "f": "0.0%"
+   },
+   "D20": {
+    "v": "=D12/D5",
+    "f": "0.0%"
+   },
+   "E20": {
+    "v": "=E12/E5",
+    "f": "0.0%"
+   },
+   "F20": {
+    "v": "=F12/F5",
+    "f": "0.0%"
+   },
+   "G20": {
+    "v": "=G12/G5",
+    "f": "0.0%"
+   },
+   "H20": {
+    "v": "=H12/H5",
+    "f": "0.0%"
+   },
+   "A21": {
+    "v": "Cloud % da receita"
+   },
+   "B21": {
+    "v": "=B6/B5",
+    "f": "0.0%"
+   },
+   "C21": {
+    "v": "=C6/C5",
+    "f": "0.0%"
+   },
+   "D21": {
+    "v": "=D6/D5",
+    "f": "0.0%"
+   },
+   "E21": {
+    "v": "=E6/E5",
+    "f": "0.0%"
+   },
+   "F21": {
+    "v": "=F6/F5",
+    "f": "0.0%"
+   },
+   "G21": {
+    "v": "=G6/G5",
+    "f": "0.0%"
+   },
+   "H21": {
+    "v": "=H6/H5",
+    "f": "0.0%"
+   },
+   "A22": {
+    "v": "Add-backs / op. profit non-IFRS"
+   },
+   "B22": {
+    "v": "=(B11-B10)/B11",
+    "f": "0.0%"
+   },
+   "C22": {
+    "v": "=(C11-C10)/C11",
+    "f": "0.0%"
+   },
+   "D22": {
+    "v": "=(D11-D10)/D11",
+    "f": "0.0%"
+   },
+   "E22": {
+    "v": "=(E11-E10)/E11",
+    "f": "0.0%"
+   },
+   "F22": {
+    "v": "=(F11-F10)/F11",
+    "f": "0.0%"
+   },
+   "G22": {
+    "v": "=(G11-G10)/G11",
+    "f": "0.0%"
+   },
+   "H22": {
+    "v": "=(H11-H10)/H11",
+    "f": "0.0%"
+   },
+   "A23": {
+    "v": "Crescimento YoY cloud (reportado)"
+   },
+   "E23": {
+    "v": "=E6/B6-1",
+    "f": "0.0%"
+   },
+   "F23": {
+    "v": "=F6/C6-1",
+    "f": "0.0%"
+   },
+   "G23": {
+    "v": "=G6/D6-1",
+    "f": "0.0%"
+   },
+   "H23": {
+    "v": "=H6/5290-1",
+    "f": "0.0%"
+   },
+   "A24": {
+    "v": "Crescimento YoY support (reportado)"
+   },
+   "E24": {
+    "v": "=E7/B7-1",
+    "f": "0.0%"
+   },
+   "F24": {
+    "v": "=F7/C7-1",
+    "f": "0.0%"
+   },
+   "G24": {
+    "v": "=G7/2642-1",
+    "f": "0.0%"
+   },
+   "H24": {
+    "v": "=H7/2565-1",
+    "f": "0.0%"
+   },
+   "A26": {
+    "v": "LTM Sep-26 (ancora do ano-base) = FY25 - 9M25 + 9M26",
+    "b": true
+   },
+   "A27": {
+    "v": "Receita"
+   },
+   "B27": {
+    "v": 39387,
+    "f": "#,##0"
+   },
+   "C27": {
+    "v": "=B27/$B$27",
+    "f": "0.0%"
+   },
+   "A28": {
+    "v": "Operating profit non-IFRS"
+   },
+   "B28": {
+    "v": 11468,
+    "f": "#,##0"
+   },
+   "C28": {
+    "v": "=B28/$B$27",
+    "f": "0.0%"
+   },
+   "A29": {
+    "v": "D&A total"
+   },
+   "B29": {
+    "v": 1279,
+    "f": "#,##0"
+   },
+   "C29": {
+    "v": "=B29/$B$27",
+    "f": "0.0%"
+   },
+   "A30": {
+    "v": "  de que acquisition-related (fora do non-IFRS)"
+   },
+   "B30": {
+    "v": 379,
+    "f": "#,##0"
+   },
+   "C30": {
+    "v": "=B30/$B$27",
+    "f": "0.0%"
+   },
+   "A31": {
+    "v": "D&A ex-adquiridos"
+   },
+   "B31": {
+    "v": 900,
+    "f": "#,##0"
+   },
+   "C31": {
+    "v": "=B31/$B$27",
+    "f": "0.0%"
+   },
+   "A32": {
+    "v": "SBC"
+   },
+   "B32": {
+    "v": 1543,
+    "f": "#,##0"
+   },
+   "C32": {
+    "v": "=B32/$B$27",
+    "f": "0.0%"
+   },
+   "A33": {
+    "v": "Capex PP&E + intangiveis"
+   },
+   "B33": {
+    "v": 701,
+    "f": "#,##0"
+   },
+   "C33": {
+    "v": "=B33/$B$27",
+    "f": "0.0%"
+   },
+   "A34": {
+    "v": "Proceeds de venda de PP&E"
+   },
+   "B34": {
+    "v": 96,
+    "f": "#,##0"
+   },
+   "C34": {
+    "v": "=B34/$B$27",
+    "f": "0.0%"
+   },
+   "A35": {
+    "v": "Pagamentos de leases"
+   },
+   "B35": {
+    "v": 277,
+    "f": "#,##0"
+   },
+   "C35": {
+    "v": "=B35/$B$27",
+    "f": "0.0%"
+   },
+   "A36": {
+    "v": "Capex definicao da gestao (FCF)"
+   },
+   "B36": {
+    "v": 882,
+    "f": "#,##0"
+   },
+   "C36": {
+    "v": "=B36/$B$27",
+    "f": "0.0%"
+   },
+   "A37": {
+    "v": "Cash opex ex-D&A (incl. SBC)"
+   },
+   "B37": {
+    "v": 27019,
+    "f": "#,##0"
+   },
+   "C37": {
+    "v": "=B37/$B$27",
+    "f": "0.0%"
+   },
+   "A38": {
+    "v": "CFO"
+   },
+   "B38": {
+    "v": 9883,
+    "f": "#,##0"
+   },
+   "C38": {
+    "v": "=B38/$B$27",
+    "f": "0.0%"
+   },
+   "A39": {
+    "v": "FCF (definicao SAP)"
+   },
+   "B39": {
+    "v": 9002,
+    "f": "#,##0"
+   },
+   "C39": {
+    "v": "=B39/$B$27",
+    "f": "0.0%"
+   },
+   "A40": {
+    "v": "Buybacks"
+   },
+   "B40": {
+    "v": 4124,
+    "f": "#,##0"
+   },
+   "C40": {
+    "v": "=B40/$B$27",
+    "f": "0.0%"
+   }
+  },
+  "Historico": {
+   "A1": {
+    "v": "HISTORICO — FY2023 a FY2025 + LTM Sep-26",
+    "b": true,
+    "sz": 13.0,
+    "c": "FFFFFF"
+   },
+   "A2": {
+    "v": "20-F FY2025 / CapIQ As Presented. EBIT non-IFRS = CapIQ Key Stats (e non-IFRS apesar do rotulo, G1 de Jul-26).",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "A4": {
+    "v": "Periodo",
+    "b": true
+   },
+   "B4": {
+    "v": "FY2023",
+    "b": true
+   },
+   "C4": {
+    "v": "FY2024",
+    "b": true
+   },
+   "D4": {
+    "v": "FY2025",
+    "b": true
+   },
+   "E4": {
+    "v": "LTM Sep-26",
+    "b": true
+   },
+   "A5": {
+    "v": "Receita",
+    "b": true
+   },
+   "B5": {
+    "v": 31207,
+    "f": "#,##0"
+   },
+   "C5": {
+    "v": 34176,
+    "f": "#,##0"
+   },
+   "D5": {
+    "v": 36800,
+    "f": "#,##0"
+   },
+   "E5": {
+    "v": 39387,
+    "f": "#,##0"
+   },
+   "A6": {
+    "v": "Operating profit non-IFRS"
+   },
+   "B6": {
+    "v": 6013,
+    "f": "#,##0"
+   },
+   "C6": {
+    "v": 8153,
+    "f": "#,##0"
+   },
+   "D6": {
+    "v": 10418,
+    "f": "#,##0"
+   },
+   "E6": {
+    "v": 11468,
+    "f": "#,##0"
+   },
+   "A7": {
+    "v": "Operating profit IFRS"
+   },
+   "B7": {
+    "v": 5799,
+    "f": "#,##0"
+   },
+   "C7": {
+    "v": 4665,
+    "f": "#,##0"
+   },
+   "D7": {
+    "v": 9617,
+    "f": "#,##0"
+   },
+   "E7": {
+    "v": 10654,
+    "f": "#,##0"
+   },
+   "A8": {
+    "v": "SBC"
+   },
+   "B8": {
+    "v": 2220,
+    "f": "#,##0"
+   },
+   "C8": {
+    "v": 2385,
+    "f": "#,##0"
+   },
+   "D8": {
+    "v": 1695,
+    "f": "#,##0"
+   },
+   "E8": {
+    "v": 1543,
+    "f": "#,##0"
+   },
+   "A9": {
+    "v": "D&A total"
+   },
+   "B9": {
+    "v": 1373,
+    "f": "#,##0"
+   },
+   "C9": {
+    "v": 1280,
+    "f": "#,##0"
+   },
+   "D9": {
+    "v": 1311,
+    "f": "#,##0"
+   },
+   "E9": {
+    "v": 1279,
+    "f": "#,##0"
+   },
+   "A10": {
+    "v": "Capex PP&E + intangiveis"
+   },
+   "B10": {
+    "v": 785,
+    "f": "#,##0"
+   },
+   "C10": {
+    "v": 797,
+    "f": "#,##0"
+   },
+   "D10": {
+    "v": 739,
+    "f": "#,##0"
+   },
+   "E10": {
+    "v": 701,
+    "f": "#,##0"
+   },
+   "A11": {
+    "v": "CFO"
+   },
+   "B11": {
+    "v": 6246,
+    "f": "#,##0"
+   },
+   "C11": {
+    "v": 5207,
+    "f": "#,##0"
+   },
+   "D11": {
+    "v": 9156,
+    "f": "#,##0"
+   },
+   "E11": {
+    "v": 9883,
+    "f": "#,##0"
+   },
+   "A12": {
+    "v": "FCF (definicao SAP)"
+   },
+   "C12": {
+    "v": 4113,
+    "f": "#,##0"
+   },
+   "D12": {
+    "v": 8239,
+    "f": "#,##0"
+   },
+   "E12": {
+    "v": 9002,
+    "f": "#,##0"
+   },
+   "A13": {
+    "v": "Buybacks"
+   },
+   "B13": {
+    "v": 949,
+    "f": "#,##0"
+   },
+   "C13": {
+    "v": 2106,
+    "f": "#,##0"
+   },
+   "D13": {
+    "v": 1937,
+    "f": "#,##0"
+   },
+   "E13": {
+    "v": 4124,
+    "f": "#,##0"
+   },
+   "A15": {
+    "v": "RACIOS",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A16": {
+    "v": "Crescimento receita"
+   },
+   "C16": {
+    "v": "=C5/B5-1",
+    "f": "0.0%"
+   },
+   "D16": {
+    "v": "=D5/C5-1",
+    "f": "0.0%"
+   },
+   "E16": {
+    "v": "=E5/D5-1",
+    "f": "0.0%"
+   },
+   "F16": {
+    "v": "LTM vs FY25 NAO e YoY (G7): sao 9 meses de roll. YoY real 9M26 = +9,5% reportado, +12% cc.",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "A17": {
+    "v": "Margem non-IFRS"
+   },
+   "B17": {
+    "v": "=B6/B5",
+    "f": "0.0%"
+   },
+   "C17": {
+    "v": "=C6/C5",
+    "f": "0.0%"
+   },
+   "D17": {
+    "v": "=D6/D5",
+    "f": "0.0%"
+   },
+   "E17": {
+    "v": "=E6/E5",
+    "f": "0.0%"
+   },
+   "A18": {
+    "v": "Margem IFRS"
+   },
+   "B18": {
+    "v": "=B7/B5",
+    "f": "0.0%"
+   },
+   "C18": {
+    "v": "=C7/C5",
+    "f": "0.0%"
+   },
+   "D18": {
+    "v": "=D7/D5",
+    "f": "0.0%"
+   },
+   "E18": {
+    "v": "=E7/E5",
+    "f": "0.0%"
+   },
+   "A19": {
+    "v": "SBC / receita"
+   },
+   "B19": {
+    "v": "=B8/B5",
+    "f": "0.0%"
+   },
+   "C19": {
+    "v": "=C8/C5",
+    "f": "0.0%"
+   },
+   "D19": {
+    "v": "=D8/D5",
+    "f": "0.0%"
+   },
+   "E19": {
+    "v": "=E8/E5",
+    "f": "0.0%"
+   },
+   "A20": {
+    "v": "D&A / receita"
+   },
+   "B20": {
+    "v": "=B9/B5",
+    "f": "0.0%"
+   },
+   "C20": {
+    "v": "=C9/C5",
+    "f": "0.0%"
+   },
+   "D20": {
+    "v": "=D9/D5",
+    "f": "0.0%"
+   },
+   "E20": {
+    "v": "=E9/E5",
+    "f": "0.0%"
+   },
+   "A21": {
+    "v": "Capex / receita"
+   },
+   "B21": {
+    "v": "=B10/B5",
+    "f": "0.0%"
+   },
+   "C21": {
+    "v": "=C10/C5",
+    "f": "0.0%"
+   },
+   "D21": {
+    "v": "=D10/D5",
+    "f": "0.0%"
+   },
+   "E21": {
+    "v": "=E10/E5",
+    "f": "0.0%"
+   },
+   "A22": {
+    "v": "FCF / receita"
+   },
+   "C22": {
+    "v": "=C12/C5",
+    "f": "0.0%"
+   },
+   "D22": {
+    "v": "=D12/D5",
+    "f": "0.0%"
+   },
+   "E22": {
+    "v": "=E12/E5",
+    "f": "0.0%"
+   },
+   "A23": {
+    "v": "Buyback / SBC"
+   },
+   "B23": {
+    "v": "=B13/B8",
+    "f": "0.00"
+   },
+   "C23": {
+    "v": "=C13/C8",
+    "f": "0.00"
+   },
+   "D23": {
+    "v": "=D13/D8",
+    "f": "0.00"
+   },
+   "E23": {
+    "v": "=E13/E8",
+    "f": "0.00"
+   }
+  },
+  "Crosscheck": {
+   "A1": {
+    "v": "CROSSCHECK DE MULTIPLOS",
+    "b": true,
+    "sz": 13.0,
+    "c": "FFFFFF"
+   },
+   "A2": {
+    "v": "Tres comparacoes: vs propria (6 trimestres CapIQ, de-rating em curso), vs pares (sem export Comps nesta revisao), vs trimestre anualizado.",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "A4": {
+    "v": "BASES",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A5": {
+    "v": "EV do modelo (ponte: divida ex-leases, LT investments fora)"
+   },
+   "B5": {
+    "v": "=Inputs!B13",
+    "f": "#,##0"
+   },
+   "A6": {
+    "v": "TEV CapIQ (leases dentro, LT investments dentro do EV)"
+   },
+   "B6": {
+    "v": 243871,
+    "f": "#,##0"
+   },
+   "A7": {
+    "v": "Op. profit non-IFRS LTM"
+   },
+   "B7": {
+    "v": 11468,
+    "f": "#,##0"
+   },
+   "A8": {
+    "v": "Op. profit non-IFRS Q3-26 anualizado"
+   },
+   "B8": {
+    "v": 12120,
+    "f": "#,##0"
+   },
+   "A9": {
+    "v": "Consenso EBIT FY27E"
+   },
+   "B9": {
+    "v": 13735,
+    "f": "#,##0"
+   },
+   "A10": {
+    "v": "FCF LTM"
+   },
+   "B10": {
+    "v": 9002,
+    "f": "#,##0"
+   },
+   "A12": {
+    "v": "MULTIPLOS DO MODELO",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "A13": {
+    "v": "EV / op. profit non-IFRS LTM"
+   },
+   "B13": {
+    "v": "=B5/B7",
+    "f": "0.0\\x"
+   },
+   "A14": {
+    "v": "EV / op. profit Q3 anualizado"
+   },
+   "B14": {
+    "v": "=B5/B8",
+    "f": "0.0\\x"
+   },
+   "A15": {
+    "v": "EV / EBIT FY27E consenso"
+   },
+   "B15": {
+    "v": "=B5/B9",
+    "f": "0.0\\x"
+   },
+   "A16": {
+    "v": "FCF yield LTM (s/ market cap)"
+   },
+   "B16": {
+    "v": "=B10/Inputs!B12",
+    "f": "0.0%"
+   },
+   "A18": {
+    "v": "SERIE PROPRIA — CapIQ Multiples, fecho",
+    "b": true,
+    "sz": 10.0,
+    "c": "1F3864"
+   },
+   "B19": {
+    "v": "Jun-25",
+    "b": true
+   },
+   "C19": {
+    "v": "Sep-25",
+    "b": true
+   },
+   "D19": {
+    "v": "Dec-25",
+    "b": true
+   },
+   "E19": {
+    "v": "Mar-26",
+    "b": true
+   },
+   "F19": {
+    "v": "Jun-26",
+    "b": true
+   },
+   "G19": {
+    "v": "28-Oct-26",
+    "b": true
+   },
+   "A20": {
+    "v": "TEV / NTM EBIT"
+   },
+   "B20": {
+    "v": 24.2,
+    "f": "0.0\\x"
+   },
+   "C20": {
+    "v": 21.43,
+    "f": "0.0\\x"
+   },
+   "D20": {
+    "v": 14.33,
+    "f": "0.0\\x"
+   },
+   "E20": {
+    "v": 12.59,
+    "f": "0.0\\x"
+   },
+   "F20": {
+    "v": 16.86,
+    "f": "0.0\\x"
+   },
+   "G20": {
+    "v": 18.49,
+    "f": "0.0\\x"
+   },
+   "A21": {
+    "v": "P / NTM EPS"
+   },
+   "B21": {
+    "v": 35.65,
+    "f": "0.0\\x"
+   },
+   "C21": {
+    "v": 31.63,
+    "f": "0.0\\x"
+   },
+   "D21": {
+    "v": 20.29,
+    "f": "0.0\\x"
+   },
+   "E21": {
+    "v": 17.97,
+    "f": "0.0\\x"
+   },
+   "F21": {
+    "v": 23.86,
+    "f": "0.0\\x"
+   },
+   "G21": {
+    "v": 26.19,
+    "f": "0.0\\x"
+   },
+   "A22": {
+    "v": "TEV / LTM unlevered FCF"
+   },
+   "B22": {
+    "v": 34.26,
+    "f": "0.0\\x"
+   },
+   "C22": {
+    "v": 30.98,
+    "f": "0.0\\x"
+   },
+   "D22": {
+    "v": 19.34,
+    "f": "0.0\\x"
+   },
+   "E22": {
+    "v": 18.39,
+    "f": "0.0\\x"
+   },
+   "F22": {
+    "v": 22.73,
+    "f": "0.0\\x"
+   },
+   "G22": {
+    "v": 23.51,
+    "f": "0.0\\x"
+   },
+   "A24": {
+    "v": "AVISO G17 (Jul-26): a folha Historical Capitalization do CapIQ preca as colunas semanas depois do fim do trimestre. Esta serie vem da folha Multiples (fecho do periodo).",
+    "sz": 8.0,
+    "c": "808080"
+   },
+   "A25": {
+    "v": "Pares: sem export Comps nesta revisao. Os 14,3x (ORCL) e 12,2x (WDAY) da ficha de Jul-26 tem 3 meses e nao se reusam.",
+    "sz": 8.0,
+    "c": "808080"
+   }
+  }
+ }
+}

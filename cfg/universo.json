@@ -1,0 +1,22 @@
+{
+  "_leia_me": "Empresas acompanhadas. grupo: posicao | watchlist | extra. yahoo = simbolo de precos; us = simbolo nos EUA (SEC e Nasdaq); ficha = pasta em fichas/ (null se nao houver). Acrescentar uma empresa = uma linha; a corrida seguinte preenche precos, historico SEC e calendario.",
+  "empresas": [
+    {"t": "GOOGL", "nome": "Alphabet",        "grupo": "posicao",   "yahoo": "GOOGL",    "us": "GOOGL", "ficha": "GOOGL"},
+    {"t": "AMZN",  "nome": "Amazon",          "grupo": "posicao",   "yahoo": "AMZN",     "us": "AMZN",  "ficha": null},
+    {"t": "MA",    "nome": "Mastercard",      "grupo": "posicao",   "yahoo": "MA",       "us": "MA",    "ficha": null},
+    {"t": "ASML",  "nome": "ASML",            "grupo": "posicao",   "yahoo": "ASML.AS",  "us": "ASML",  "ficha": null},
+    {"t": "ADYEN", "nome": "Adyen",           "grupo": "posicao",   "yahoo": "ADYEN.AS", "us": null,    "ficha": "Adyen"},
+    {"t": "META",  "nome": "Meta",            "grupo": "posicao",   "yahoo": "META",     "us": "META",  "ficha": "Meta"},
+    {"t": "SAP",   "nome": "SAP",             "grupo": "posicao",   "yahoo": "SAP.DE",   "us": "SAP",   "ficha": "SAP"},
+    {"t": "MELI",  "nome": "MercadoLibre",    "grupo": "posicao",   "yahoo": "MELI",     "us": "MELI",  "ficha": "MELI"},
+    {"t": "NVDA",  "nome": "NVIDIA",          "grupo": "posicao",   "yahoo": "NVDA",     "us": "NVDA",  "ficha": null},
+    {"t": "NOW",   "nome": "ServiceNow",      "grupo": "posicao",   "yahoo": "NOW",      "us": "NOW",   "ficha": "NOW"},
+    {"t": "NU",    "nome": "Nu Holdings",     "grupo": "posicao",   "yahoo": "NU",       "us": "NU",    "ficha": "NU"},
+    {"t": "UBER",  "nome": "Uber",            "grupo": "posicao",   "yahoo": "UBER",     "us": "UBER",  "ficha": "Uber"},
+    {"t": "BKNG",  "nome": "Booking",         "grupo": "posicao",   "yahoo": "BKNG",     "us": "BKNG",  "ficha": "BKNG"},
+    {"t": "MSFT",  "nome": "Microsoft",       "grupo": "watchlist", "yahoo": "MSFT",     "us": "MSFT",  "ficha": "MSFT"},
+    {"t": "CELH",  "nome": "Celsius",         "grupo": "watchlist", "yahoo": "CELH",     "us": "CELH",  "ficha": "Diversos/CELH"},
+    {"t": "CRWV",  "nome": "CoreWeave",       "grupo": "watchlist", "yahoo": "CRWV",     "us": "CRWV",  "ficha": "Diversos/CRWV"},
+    {"t": "FICO",  "nome": "FICO",            "grupo": "watchlist", "yahoo": "FICO",     "us": "FICO",  "ficha": "Diversos/FICO"}
+  ]
+}

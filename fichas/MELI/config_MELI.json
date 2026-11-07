@@ -1,0 +1,359 @@
+{
+  "ticker": "MELI",
+  "titulo": "MercadoLibre (MELI) — DCF e Reverse DCF",
+  "subtitulo": "Camada 3. Camada 1 = MELI_Ficha.md. Camada 2 = analise trimestral em chat. Data: 05-Ago-2026. Base LTM Q2-26.",
+  "switches": {
+    "cadeia": "cash_opex",
+    "da_modo": "vintage",
+    "motores": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  "mercado": {
+    "data": "2026-08-05",
+    "preco": 1832.0,
+    "preco_memo": 1922.57,
+    "shares": 50.7,
+    "divida": 2550.0,
+    "caixa": 4524.0,
+    "nao_marketavel": 0,
+    "pct_ponte": 0.5,
+    "minoritarios": 0
+  },
+  "wacc": {
+    "rf": 0.047,
+    "erp": 0.055,
+    "beta_unlev": 1.31,
+    "kd": 0.07,
+    "tax_wacc": 0.29,
+    "wacc_override": 0.1172,
+    "required": 0.1272
+  },
+  "tv_activo": {
+    "g": 0.03,
+    "midyear": 1,
+    "ppe": 2755.0,
+    "vida_carteira": 3,
+    "vida_capex": 8,
+    "nwc": 0.16
+  },
+  "drivers": {
+    "ano": [
+      "Y1",
+      "Y2",
+      "Y3",
+      "Y4",
+      "Y5",
+      "Y6",
+      "Y7",
+      "Y8",
+      "Y9",
+      "Y10"
+    ],
+    "cresc": [
+      0.4,
+      0.32,
+      0.26,
+      0.21,
+      0.17,
+      0.14,
+      0.11,
+      0.09,
+      0.07,
+      0.055
+    ],
+    "opex": [
+      0.885,
+      0.875,
+      0.865,
+      0.858,
+      0.852,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85
+    ],
+    "capex": [
+      0.04,
+      0.04,
+      0.039,
+      0.038,
+      0.037,
+      0.036,
+      0.035,
+      0.035,
+      0.035,
+      0.035
+    ],
+    "tax": [
+      0.29,
+      0.29,
+      0.29,
+      0.29,
+      0.29,
+      0.29,
+      0.29,
+      0.29,
+      0.29,
+      0.29
+    ]
+  },
+  "base": {
+    "receita_ltm": 35182.0,
+    "ebit_ltm": 2907.0,
+    "label_base": "LTM Q2-26"
+  },
+  "ancoras": {
+    "data": "Q2-26 reportado a 05-Ago-2026 depois do fecho. Este modelo usa o preco POS-reaccao.",
+    "preco": "$1.832 no after-hours de 05-Ago-2026 (-4,67%), fornecido pelo Hugo. Convencao da casa, a mesma da META: after-hours pos-resultados como ancora, fecho oficial como memo. G17 PASSA — o preco e posterior ao release das 22:43.",
+    "preco_memo": "Fecho oficial de 05-Ago-2026: $1.922,57. O CapIQ traz $1.888,50, que e o fecho de 04-Ago — os exports foram puxados as 14:09 de dia 5, durante a sessao.",
+    "shares": "50,7M diluted outstanding (CapIQ Comparable Analysis). MESMO numero para market cap e para valor por accao (G2).",
+    "divida": "2.550 = SO passivos de locacao operacional (513 correntes + 2.037 nao correntes, balanco de 30-Jun-2026). O loans payable de 10.626 NAO entra aqui — esta netado na linha de investimento na carteira de credito. Contar as duas coisas seria contar o mesmo item duas vezes. O CapIQ poe TEV de 102.453,6 com net debt de 6.712 porque trata todo o loans payable como divida.",
+    "caixa": "4.524 = caixa 3.649 + investimentos curto prazo 2.081 + investimentos longo prazo 1.715, MENOS 2.921 de defice de float (funds payable to customers 16.035 contra restricted cash 13.114 — ha dinheiro de clientes alojado em activos nao restritos). O restricted cash e os funds payable ficam ambos FORA: e float de clientes do Mercado Pago, nao e da MELI.",
+    "nao_marketavel": "Nao aplicavel.",
+    "minoritarios": "Nao ha.",
+    "rf": "UST 10 anos a 4,70%, fecho de 03-Ago-2026 (Alpha Vantage).",
+    "erp": "5,50% = 4,50% de ERP maduro + 100bp de premio de risco-pais. RECALIBRADO. A primeira versao usava 250bp de CRP e produzia WACC de 13,63%, required de 16,13% e uma escada de entrada a -45%/-54%/-70% — gates que so disparam num crash, portanto decorativos, que e exactamente o que o principio 15 proibe. A razao de fundo e mais forte que a mecanica: o beta de 1,31 e uma REGRESSAO dos retornos reais da MELI e ja embute a volatilidade latino-americana realizada. Somar-lhe 250bp de CRP e dar premio duas vezes pelo mesmo risco. Mantenho 100bp porque a exposicao a Argentina justifica algum premio residual que a regressao contra o S&P nao apanha por completo. SENSIBILIDADE, que continua a ser o numero que decide: a 4,50% o valor da $2.062 (+12,6%); a 5,50% da $1.696 (-7,4%); a 7,00% da $1.319 (-28,0%); a 8,50% da $1.063 (-42,0%).",
+    "beta_unlev": "1,31. Confirmado pelo Hugo em DUAS fontes, Finviz e CapIQ, a 05-Ago-2026. E um beta LEVERED de regressao — usado directamente, SEM realavancar, porque ja reflecte a estrutura de capital observada. Por isso o campo chama-se unlev mas o wacc_override contorna a formula do template.",
+    "kd": "7,0%. A divida corporativa da MELI e essencialmente locacoes; o funding do credito esta netado na carteira. Estimativa, nao observado.",
+    "tax_wacc": "29%. ETR do LTM Q1-26 = 29,3%, FY2025 = 29,7%. O FY2024 de 21,4% e pre-normalizacao. Brasil 34%, Argentina 35%, Mexico 30%.",
+    "wacc_override": "11.72%. E 92882 a Ke 11.91% (= 4,70% + 1,31 x 5,50%) + D 2550 a Kd depois de imposto 4,97%.",
+    "required": "12.72% = WACC 11.72% + 100bp. NIVEL 2, BAIXADO de nivel 3 depois de challenge do Hugo a 05-Ago-2026. A justificacao do nivel 3 era carteira de credito, compressao de margem e execucao — mas essas tres coisas JA ESTAO nos cash flows: a margem EBIT so recupera a 12,3% em Y10 contra o pico proprio de 14,6% em 2023, a carteira entra como investimento explicito a 16% do incremento, e o crescimento cai a 5,5%. Cobrar 250bp por cima e dar premio duas vezes pelo mesmo risco, que e o erro que a rubrica proibe e que ja tinha sido cometido no ERP. A nivel 3 a 1a tranche caia em $1.230, ou -53,5% do ATH de $2.645; a nivel 2 fica em $1.479, -44,1% do ATH e -19,3% do preco de hoje. Na rubrica a MELI encaixa no nivel 2: moat estabelecido (a Amazon entrou no Brasil e nao a deslocou), FCF positivo, lider de mercado.",
+    "g": "3,0%. Acima dos 2,5% que uso em nomes dos EUA, porque a receita e nominal em economias de inflacao estrutural mais alta.",
+    "ppe": "2.755 = PP&E liquido 2.725 + intangiveis 30, balanco de 30-Jun-2026. O goodwill de 168 fica de fora, nao amortiza.",
+    "vida_carteira": "3 anos. E uma VIDA EFECTIVA calibrada para reproduzir o D&A observado (2.755/3 = 918 contra 985 no LTM), nao uma afirmacao sobre a vida dos activos. A MELI amortiza tecnologia depressa e o D&A inclui intangiveis.",
+    "vida_capex": "8 anos. Centros de distribuicao, frota e tecnologia.",
+    "nwc": "16% do incremento de receita. ESTA E A LINHA CENTRAL DO MODELO E NAO E WORKING CAPITAL NORMAL — e o investimento liquido na CARTEIRA DE CREDITO. No LTM Q2-26 a carteira liquida (loans receivable 11.996 menos loans payable 10.626) cresceu 1.788 sobre um incremento de receita de 11.086, ou seja 16,1%. O working capital de comercio e proximo de zero porque o float (funds payable to customers contra restricted cash) compensa-se. Nota: em Q2-24 a carteira liquida era NEGATIVA (-1.091) — o funding excedia o livro. Passou a positiva em Q3-25 e nao parou de subir.",
+    "cresc": "Y1 +40%. RECALIBRADO pelo G15: os 33% iniciais assumiam desaceleracao de 17pp face aos +50% reportados no Q2-26, e repetir o padrao sequencial proprio daria +49,8%. Os 40% ficam abaixo disso de proposito — o reportado tem vento cambial que pode nao persistir (FX-neutral +43%) e a Argentina desacelera de 130% para 48% em quatro trimestres. Fade ate 5,5% em Y10, CAGR de 17.8%.",
+    "opex": "Cash opex ex-D&A. LTM = 88,94% (receita 35.182 menos EBITDA 3.892). Fade ate 85,0% em Y6, o que implica margem EBIT de ~12,5% — abaixo do pico proprio de 14,3% do Q2-24. Se a tese de investimento da gestao estiver certa, isto e conservador; se estiver errada, e optimista.",
+    "capex": "4,0% da receita a descer para 3,5%. LTM realizado = 4,25% (1.496/35.182). A MELI esta a construir logistica propria; o capex do Q2-26 foi 441, +54% YoY.",
+    "tax": "29% em toda a projeccao."
+  },
+  "leia_me": {
+    "fontes": [
+      [
+        "Financeiros trimestrais",
+        "CapIQ As Presented Quarterly, Q4-22 a Q1-26 (14 trimestres). Financials/CapIQ_Financials_Quarterly_AsPresented_2026-08-05.xls"
+      ],
+      [
+        "Financeiros anuais",
+        "CapIQ As Presented Annual. Financials/CapIQ_Financials_Annual_AsPresented_2026-08-05.xls"
+      ],
+      [
+        "Q2-26",
+        "_docs/2026-Q2_ER.pdf (shareholder letter, 05-Ago-2026, 19 pag.) e _docs/2026-Q2_Deck.pdf (34 pag.). NAO esta no CapIQ — os exports sao anteriores ao print."
+      ],
+      [
+        "FY2025",
+        "_docs/2025-FY_10K.pdf (142 pag., fiscal year ended December 31, 2025)"
+      ],
+      [
+        "Consenso",
+        "CapIQ Estimates Report — PRE-PRINT, desactualizado. A receita do Q2-26 bateu em $410M e as revisoes ainda nao sairam. NAO usado para construir o Y1."
+      ],
+      [
+        "Preco",
+        "$1.832 no after-hours de 05-Ago-2026 (-4,67%). Fecho oficial $1.922,57."
+      ],
+      [
+        "Beta",
+        "1,31 levered, confirmado em Finviz e CapIQ pelo Hugo."
+      ],
+      [
+        "Sentimento",
+        "Pesquisa web de 05-Ago-2026: Citi cortou recomendacao e preco-alvo (-11%) por compressao de margem e pressao no take-rate; Itau BBA estima que a politica de portes custe ~$390M/ano de lucro antes de impostos; estimativas de EPS caidas 22% antes do print."
+      ]
+    ],
+    "gates": [
+      [
+        "G1",
+        "PASSA — Margem EBITDA do LTM = 11,06%. Nao ha mistura de base GAAP com consenso non-GAAP: o Y1 foi construido do run-rate proprio, nao do consenso."
+      ],
+      [
+        "G2",
+        "PASSA — 50,7M de diluted outstanding, o mesmo numero para market cap e para valor por accao."
+      ],
+      [
+        "G3",
+        "PASSA — sem splits. Share count do CapIQ Comparable Analysis bate com a ordem de grandeza do 10-K FY2025."
+      ],
+      [
+        "G4",
+        "DISPARA e RESOLVIDO — a decisao mais importante do modelo. O restricted cash de 13.114 e os funds payable to customers de 16.035 sao FLOAT DE CLIENTES do Mercado Pago e ficam ambos fora da ponte. O defice de 2.921 entre os dois foi deduzido da caixa corporativa, porque significa que ha dinheiro de clientes alojado em activos nao restritos."
+      ],
+      [
+        "G5",
+        "PASSA — goodwill de 168 e intangiveis de 30 sao imateriais num balanco de 51.356. Nao ha purchase accounting a distorcer margem."
+      ],
+      [
+        "G6",
+        "PASSA — sem colunas reclassificadas no export."
+      ],
+      [
+        "G7",
+        "PASSA — LTM Q2-26 (Q3-25 a Q2-26) explicitamente rotulado, nunca comparado com FY como se fosse YoY."
+      ],
+      [
+        "G8",
+        "PASSA — extraccao de texto corrida nos PDFs de _docs: letter do Q2-26 com 58.095 caracteres, 10-K FY2025 com 142 paginas legiveis."
+      ],
+      [
+        "G9",
+        "DISPARA e RESOLVIDO — CENTRAL NESTA EMPRESA. O crescimento da carteira de credito consumiu 1.949 de caixa so no Q1-26, SETE VEZES o capex de 271. Um FCFF que ignore isto sobrestima o cash flow de forma grosseira. Modelado explicitamente na linha de NWC como investimento liquido na carteira (recebivel menos funding), calibrado em 16,1% do incremento de receita no LTM."
+      ],
+      [
+        "G10",
+        "PASSA — As Presented em toda a serie da empresa. O Standard so aparece no Comparable Analysis."
+      ],
+      [
+        "G11",
+        "PASSA — YoY sempre contra o trimestre homologo."
+      ],
+      [
+        "G12",
+        "A VERIFICAR — detectores na folha Reverse. F9 antes de citar."
+      ],
+      [
+        "G13",
+        "A CORRER — sensibilidade por driver."
+      ],
+      [
+        "G14",
+        "DISPARA — o modelo poe o cash opex a MELHORAR de 88,94% para 85,0% e o ultimo trimestre mostra a margem operacional a 6,7%, o sexto trimestre consecutivo de compressao. A gestao atribui-o a investimento deliberado e ha evidencia de resposta (items por comprador +14%, ecosystemic users +37%, MELI+ +72%). Exige cenario explicito e invalidador ligado — ver bloco A."
+      ],
+      [
+        "G15",
+        "A CORRER — corrida de reversao."
+      ],
+      [
+        "G16",
+        "— Nenhum gate ficou aproximado a meio."
+      ],
+      [
+        "G17",
+        "PASSA — o preco de $1.832 e do after-hours de 05-Ago-2026, POSTERIOR ao release das 22:43. Os exports do CapIQ foram puxados as 14:09 do mesmo dia e trazem o fecho de 04-Ago ($1.888,50), que seria uma ancora pre-reaccao. Este e exactamente o caso que o G17 descreve e foi evitado."
+      ],
+      [
+        "G18",
+        "PARCIAL — tie-out feito ao balanco de 30-Jun-2026 da letter: divida (so locacoes, 2.550), caixa (liquida de float), carteira de credito (11.996 contra 10.626), share count e ultimo periodo. NAO foi feito o tie-out da definicao de capex contra a nota do 10-K FY2025 — o capex de 1.496 vem da linha de caixa do CapIQ e da rubrica Capital expenditures do deck do Q2-26 (441 no trimestre), que batem entre si."
+      ]
+    ],
+    "convencoes": [
+      [
+        "Unidades",
+        "Milhoes de USD. Accoes em milhoes."
+      ],
+      [
+        "Cadeia ADAPTADA",
+        "A linha de NWC do template foi reaproveitada para o INVESTIMENTO LIQUIDO NA CARTEIRA DE CREDITO, que e a maior utilizacao de caixa da empresa. Documentado aqui porque muda a leitura da folha Projecoes."
+      ],
+      [
+        "Ponte EV->equity",
+        "So locacoes na divida. O loans payable esta netado na carteira. Float de clientes fora dos dois lados."
+      ],
+      [
+        "Consenso",
+        "NAO usado. Pre-print e desactualizado."
+      ],
+      [
+        "LTRP",
+        "O Long Term Retention Program (equivalente a SBC) esta dentro do cash opex, sem add-back. 303 em FY2025."
+      ]
+    ]
+  },
+  "cenarios": {
+    "g13": [],
+    "discretos": [],
+    "bandas": [],
+    "precos_assimetria": [],
+    "stress": [],
+    "notas": {}
+  },
+  "grelha": {
+    "eixo_linhas": [
+      -0.04,
+      -0.02,
+      0,
+      0.02,
+      0.04
+    ],
+    "eixo_colunas": [
+      -0.03,
+      -0.015,
+      0,
+      0.015,
+      0.03
+    ]
+  },
+  "tabela_wacc_g": {
+    "linhas": [
+      0.115,
+      0.125,
+      0.1363,
+      0.145,
+      0.155,
+      0.165
+    ],
+    "colunas": [
+      0.02,
+      0.025,
+      0.03,
+      0.035,
+      0.04
+    ]
+  },
+  "seeds": {
+    "A": 0.14,
+    "B": 0.02
+  },
+  "resultados_guardados": [
+    [
+      "RESULTADOS GUARDADOS DOS GOAL SEEKS",
+      null
+    ],
+    [
+      "Por correr.",
+      null
+    ]
+  ],
+  "passthrough": {
+    "Trimestres": {},
+    "Historico": {},
+    "Crosscheck": {}
+  },
+  "referencias": {
+    "cresc": {
+      "tipo": "facto",
+      "valor": 0.1857,
+      "modo": "cagr",
+      "fonte": "Referencia CONSTRUIDA como manda o SKILL: run-rate proprio no Y1 (+49,8%, repetindo o padrao sequencial dos ultimos quatro trimestres sobre o Q2-26) e DEPOIS O MESMO FADE do base. Isola \"parto de onde a empresa esta?\" de \"o meu fade e agressivo?\"."
+    },
+    "opex": {
+      "tipo": "facto",
+      "valor": 0.8894,
+      "modo": "nivel_y10",
+      "fonte": "Cash opex ex-D&A do LTM Q2-26 = 88,94%. O modelo poe 85,0% em Y10 — marcacao FAVORAVEL (melhoria de 394bp)."
+    },
+    "capex": {
+      "tipo": "facto",
+      "valor": 0.0425,
+      "modo": "nivel_y10",
+      "fonte": "Capex/receita do LTM Q2-26 = 4,25% (1.496/35.182). O modelo usa 3,5% em Y10 — marcacao FAVORAVEL."
+    },
+    "tax": {
+      "tipo": "facto",
+      "valor": 0.293,
+      "modo": "nivel_y10",
+      "fonte": "ETR do LTM Q1-26 = 29,3%. O modelo usa 29% — praticamente em linha."
+    },
+    "nwc": {
+      "tipo": "facto",
+      "valor": 0.161,
+      "modo": "escalar",
+      "fonte": "Investimento liquido na carteira de credito no LTM Q2-26 = 1.788 sobre incremento de receita de 11.086 = 16,1%. O modelo usa 16,0% — em linha."
+    }
+  }
+}

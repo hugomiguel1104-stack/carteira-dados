@@ -1,0 +1,26 @@
+{
+ "versao": "2026-10-30b",
+ "regra": "Metodo C (decisao do Hugo, 30-10-2026): Rf = obrigacao soberana a 10 anos a data do preco; ERP = estudo da Kroll mais recente; o ERP implicito do Damodaran fica so como sensibilidade; CRP so quando a exposicao a emergentes e material. Na duvida, perguntar ao Hugo — nunca escolher por defeito.",
+ "kroll": {
+  "estudo": "Kroll Cost of Capital Recommendations Updated to Use Spot Risk-Free Rates, 10-09-2026 (em vigor desde 2-09-2026)",
+  "ficheiro": "kroll-cost-of-capital-recommendations-updated-to-use-spot-risk-free-rates-september-2026.pdf"
+ },
+ "moedas": {
+  "USD": {
+   "erp": 0.05,
+   "erp_fonte": "Kroll US ERP 5,0% (reafirmado a 2-09-2026)",
+   "rf_serie": "UST 10Y (Treasury.gov, Daily Treasury Par Yield Curve)",
+   "kroll_emparelha": "UST 20Y spot — o Hugo usa o 10Y de proposito, para o Rf ser comparavel entre nomes",
+   "confirmado": true
+  },
+  "EUR": {
+   "erp": 0.05,
+   "erp_fonte": "Kroll zona euro 5,0-5,5% (2-09-2026); usado 5,0% (decisao do Hugo, 30-10-2026, confirmada depois de ver a recomendacao de 5,5%)",
+   "kroll_recomenda": 0.055,
+   "rf_serie": "Bund 10Y — Bundesbank BBSIS, curva Svensson, maturidade residual 10 anos (decisao do Hugo, 30-10-2026)",
+   "kroll_emparelha": "Bund 15Y spot",
+   "confirmado": true
+  }
+ },
+ "crp": "So quando a exposicao a mercados emergentes e material (ex.: NU, Brasil). Damodaran ctryprem com data (G19(d)). Nas restantes, 0."
+}
