@@ -88,7 +88,8 @@ def main():
         except OSError as e:   # ficheiro aberto/a sincronizar no OneDrive: tenta na próxima corrida
             log(f'aviso: não consegui ler {rel} ({e})')
             continue
-        if alvo.exists() and alvo.read_bytes() == novo:
+        # compara sem fins de linha (o git no Windows pode pôr CRLF na cópia do repositório)
+        if alvo.exists() and alvo.read_bytes().replace(b'\r\n', b'\n') == novo.replace(b'\r\n', b'\n'):
             continue
         mudou.append(rel.as_posix())
         if not DRY:
@@ -102,7 +103,10 @@ def main():
     git('pull', '--rebase', '--autostash', '-q')
     git('add', 'fichas')
     c, out = git('commit', '-q', '-m', f'Fichas sincronizadas do PC ({len(mudou)} ficheiro(s))')
-    if c != 0 and 'nothing to commit' not in out:
+    if c != 0 and ('nothing to commit' in out or 'nada a submeter' in out):
+        log('sem diferenças reais para enviar')
+        return 0
+    if c != 0:
         log(f'ERRO no commit: {out[:300]}')
         return 1
     c, out = git('push', '-q')
