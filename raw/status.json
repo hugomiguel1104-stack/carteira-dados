@@ -1,0 +1,32 @@
+{
+"fichas": {
+"tried": "2026-11-14T15:52Z",
+"at": "2026-11-14T15:52Z",
+"ok": true,
+"note": "13 de 13 fichas lidas"
+},
+"precos": {
+"tried": "2026-11-14T15:52Z",
+"at": "2026-11-14T15:52Z",
+"ok": true,
+"note": "64 de 64 simbolos lidos"
+},
+"sec": {
+"tried": "2026-11-14T15:52Z",
+"at": "2026-11-14T15:52Z",
+"ok": true,
+"note": "16 de 16 empresas lidas"
+},
+"calendario": {
+"tried": "2026-11-14T15:54Z",
+"ok": true,
+"note": "72 de 72 dias passados lidos; 20 eventos",
+"at": "2026-11-14T15:54Z"
+},
+"econ": {
+"tried": "2026-11-14T15:54Z",
+"at": "2026-11-14T15:54Z",
+"ok": true,
+"note": "17 of 17 series read"
+}
+}

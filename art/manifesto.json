@@ -1,0 +1,24 @@
+{
+ "feito": "2026-11-14T15:54:19Z",
+ "docs": 12,
+ "lotes": [
+  [
+   "meta",
+   "cal",
+   "econ",
+   "px-1",
+   "px-2",
+   "px-3"
+  ],
+  [
+   "px-4",
+   "sec-1",
+   "ficha-1",
+   "ficha-2"
+  ],
+  [
+   "ficha-3",
+   "ficha-4"
+  ]
+ ]
+}
