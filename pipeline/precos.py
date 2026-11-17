@@ -33,7 +33,18 @@ def serie(sim):
             pts.append((d, px))
         elif d == pts[-1][0]:
             pts[-1] = (d, px)
+    # futuros, cambio e cripto negoceiam quase 24 h: a vela do dia so fecha as 22:00 UTC (24:00 na cripto).
+    # Como o Actions corre de madrugada, a ultima vela e quase sempre do dia novo, ainda a meio: descarta-a.
+    if pts and vela_24h(sim):
+        agora = dt.datetime.now(dt.timezone.utc)
+        fecha = 24 if sim.endswith(('-USD', '-EUR')) else 22
+        while pts and agora < dt.datetime.fromisoformat(pts[-1][0]).replace(tzinfo=dt.timezone.utc) + dt.timedelta(hours=fecha):
+            pts.pop()
     return pts, meta
+
+
+def vela_24h(sim):
+    return sim.endswith(('=F', '=X', '-USD', '-EUR'))
 
 
 def rsi(cl, n=14):

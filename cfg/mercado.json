@@ -2,7 +2,7 @@
   "indices": [
     ["^GSPC","S&P 500","EUA"],["^NDX","Nasdaq 100","EUA"],["^DJI","Dow Jones","EUA"],["^RUT","Russell 2000","EUA"],
     ["^STOXX","STOXX Europe 600","Europa"],["^STOXX50E","Euro STOXX 50","Europa"],["^GDAXI","DAX","Europa"],["PSI20.LS","PSI","Europa"],
-    ["EUNL.DE","MSCI World (EUNL)","Global"],["IS3N.DE","MSCI EM IMI (IS3N)","Global"],["^N225","Nikkei 225","Ásia"],
+    ["EUNL.DE","MSCI World (EUNL)","Global"],["IS3N.DE","MSCI EM IMI (IS3N)","Global"],["^N225","Nikkei 225","Ásia"],["^KS11","KOSPI","Ásia"],
     ["^VIX","VIX","Risco"],["^TNX","Juro EUA 10a","Taxas"],["EURUSD=X","EUR/USD","Câmbio"],
     ["BZ=F","Brent","Matérias-primas"],["GC=F","Ouro","Matérias-primas"],["BTC-USD","Bitcoin","Cripto"]
   ],
