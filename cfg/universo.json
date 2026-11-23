@@ -17,6 +17,7 @@
     {"t": "MSFT",  "nome": "Microsoft",       "grupo": "watchlist", "yahoo": "MSFT",     "us": "MSFT",  "ficha": "MSFT"},
     {"t": "CELH",  "nome": "Celsius",         "grupo": "watchlist", "yahoo": "CELH",     "us": "CELH",  "ficha": "Diversos/CELH"},
     {"t": "CRWV",  "nome": "CoreWeave",       "grupo": "watchlist", "yahoo": "CRWV",     "us": "CRWV",  "ficha": "Diversos/CRWV"},
-    {"t": "FICO",  "nome": "FICO",            "grupo": "watchlist", "yahoo": "FICO",     "us": "FICO",  "ficha": "Diversos/FICO"}
+    {"t": "FICO",  "nome": "FICO",            "grupo": "watchlist", "yahoo": "FICO",     "us": "FICO",  "ficha": "Diversos/FICO"},
+    {"t": "TSM",   "nome": "TSMC",            "grupo": "watchlist", "yahoo": "TSM",      "us": "TSM",   "ficha": "TSM"}
   ]
 }
