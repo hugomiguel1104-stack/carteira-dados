@@ -1,5 +1,96 @@
 # Ficha de Empresa — Booking Holdings (BKNG · NasdaqGS)
 
+<!-- dados {"preco": 144.91, "fv": 219, "bear": 161, "bull": 268, "t1": 217, "cheia": null, "upside": 0.5113, "data": "20-11-2026", "decisao": "Entrada faseada (reforço) — T1 já; T2 após guidance FY27", "quarter": "Q3-26", "invalidadores": "0 de 5 · 3 em vigilância", "moeda": "USD", "par": {"rf": 0.049100000000000005, "erp": 0.05, "rf_metodo": "A", "erp_fonte": "Kroll"}, "proximo_report": "2026-11-03"} -->
+
+`Q3-2026` · `revista 23-11-2026` · `plugin v2.1` · **ACTUALIZAÇÃO Q3-26 com regime de taxas único** — substitui o RESUMO, a valuation e os cenários da ficha de 23-10 (base Q2, ERP 4,5%). As secções estruturais (negócio, moat, gestão) mantêm-se.
+
+> **Fontes:** nota do Equity Research da Blue Crow sobre o Q3-26 (04-11-2026: 8-K, 10-Q, deck e transcript). Preço de 20-11 da app. Modelo v0 no `modelo_calc` (`config_BKNG.json`), sem Excel.
+
+**Preço:** $ 144,91 *(20-11-2026)* · **Acções:** 743,7 M · **Market cap:** $ 107,8 mM · **Dívida líquida + passivos:** $ 5,4 mM *(dívida $ 20,1 mM + FTC $ 1,0 mM + CNMC $ 0,5 mM − caixa $ 15,8 mM − investimentos $ 0,4 mM)*
+
+---
+
+## Resumo
+
+| | β 0,88 *(Damodaran Hotel/Gaming)* | β 1,235 *(50% Hotel/Gaming + 50% Software (Internet))* | Ref.: Equity Research |
+|---|---|---|---|
+| WACC | 9,09% | 10,80% | 9,0% (β 1,10, ERP 4,5%) |
+| **Fair value base** | **$ 219 (+51%)** | **$ 172 (+19%)** | $ 192 |
+| Cenários *(adverso / base / favorável)* | $ 161 / $ 219 / $ 268 | $ 128 / $ 172 / $ 210 | $ 146 / $ 192 / $ 228 |
+| Ponderado 25/50/25 | $ 217 | $ 170 | $ 190 |
+| **Retorno que o preço oferece** | **12,3%** *(não depende do beta)* | | |
+| Crescimento exigido para render o WACC | **0,3%/ano** | 3,1%/ano | 4,2% a $ 171 (ER) |
+| Peso do TV | 55,8% | 48,1% | 58% |
+
+**Decisão: ENTRADA FASEADA (reforço).** É a única posição da carteira em que o preço exige quase nenhum crescimento: até o adverso fica acima do preço com β 0,88. O FTC e o guidance de FY27 (Fev-2027) decidem o tamanho, não a direcção.
+
+---
+
+## O que mudou face à ficha de 23-10
+
+| | Ficha 23-10 | Agora | Porquê |
+|---|---|---|---|
+| Fair value base | $ 236 (WACC 8,66%, ERP 4,5%) | $ 219 (β 0,88) / $ 172 (β 1,235) | ERP de 5%, beta Damodaran, Q4 guiado mais fraco, exclusões recorrentes de 1% da receita |
+| Q3 | Por processar | Room nights +6,7%, gross bookings +9,6% (~11% cc), Adj. Revenue +8,7%, Adj. EPS +17% | Bateu o topo do guidance em tudo |
+| Q4 guidance | — | Room nights +1–3%, Adj. EBITDA ~flat | Médio Oriente, Europa, base forte |
+| FTC (Priceline) | Não referido | $ 1,0 mM provisionado ($ 900 M na receita, $ 100 M em G&A), não pago, pode subir | 10-Q do Q3 |
+
+---
+
+## Reverse DCF
+
+O preço oferece **12,3%**. Ao WACC de 9,09%, exige **~0,3% de crescimento ao ano** durante 10 anos (com β 1,235, 3,1%). O histórico: room nights +8–9% em 2024-25, ambição da gestão ≥8% cc. **O preço desconta uma estagnação.** O único caminho que justifica isso é a desintermediação pela IA (agentes e LLMs a ficarem com a procura), hoje invisível nos números: referrals de LLM bem abaixo de 1% dos room nights; mix directo B2C nos mid-sixties.
+
+---
+
+## Cenários
+
+| Cenário | p | A história | Crescimento | Margem EBIT | β 0,88 | β 1,235 |
+|---|---|---|---|---|---|---|
+| Abrandamento + regulação | 25% | Q4 fraco persiste; FTC custa mais $ 1 mM; UE segue | base −3 pp/ano | ~32% | $ 161 | $ 128 |
+| **Compounder maduro** | **50%** | FY27 +7%, FY28 +7,5%, desce até 3% | 5,5% → 3% *(CAGR 5,2%)* | 34% → 35% | **$ 219** | **$ 172** |
+| Connected Trip + poupanças | 25% | Voos e alternativos aceleram; $ 650 M de poupanças | base +2 pp | ~36% | $ 268 | $ 210 |
+| *Stress: IA desintermedeia* | — | Receita flat 2 anos, margem 32%, FTC extra | — | — | *~$ 110 (ER)* | |
+
+---
+
+## Invalidadores
+
+| # | Afirmação | Invalidador | Estado |
+|---|---|---|---|
+| 1 | A IA não desintermedeia | Referrals de LLM acima de 1% dos room nights **com** o mix directo abaixo dos mid-sixties | OK |
+| 2 | O FTC é pontual | Custo final acima de $ 1,0 mM ou remédios que cortem o canal B2B | **Em vigilância** |
+| 3 | O Q4 é conjuntural | Room nights do Q4 abaixo de 2% **e** guidance FY27 em mid single digits | Por saber (Fev-27) |
+| 4 | O capital é bem alocado | Dívida líquida acima de ~$ 6 mM depois do FTC | Em vigilância ($ 4,2 mM) |
+| 5 | Custo de aquisição estável | Marketing / gross bookings a subir um terceiro trimestre seguido | **Em vigilância** (4,8 cêntimos) |
+
+---
+
+## Escada *(β 0,88; posição de 2,8%)*
+
+| Degrau | Preço | Regra |
+|---|---|---|
+| 1.ª tranche | **já** ($ 145 < ponderado $ 217 @WACC) | Até o β 1,235 dá ponderado de $ 170 |
+| 2.ª tranche | depois do guidance de FY27 (Fev) se ≥8% cc | Informação, não preço |
+| Peso máx. | ~6–8% da carteira | O risco de cauda (IA) limita o tamanho |
+
+---
+
+## Log
+
+| Data | Preço | FV base | IRR impl. | Decisão |
+|---|---|---|---|---|
+| 23-10-2026 | $ 161,10 | $ 236,03 | 11,97% | Entrada faseada |
+| **23-11-2026** | **$ 144,91** | **$ 219 / $ 172** | **12,3%** | **Entrada faseada — reforço** |
+
+**Changelog 23-11-2026:** Q3 processado; regime de taxas único (Rf 4,91%, ERP 5%, beta Damodaran); exclusões recorrentes de 1% da receita no opex (ER); FTC e CNMC na ponte. O fair value desce de $ 236 para $ 219 (β 0,88): −$ 17, dos quais ERP/beta ~−$ 8 e Q4/exclusões ~−$ 9 (estimativa; a ponte exacta sai do `08` no PC).
+
+---
+
+# Versão anterior (Out-2026) — estrutura válida, valuation substituída pelo bloco acima
+
+# Ficha de Empresa — Booking Holdings (BKNG · NasdaqGS)
+
 > **Documento único e vivo.** Não se cria cópia por trimestre — actualiza-se este.
 > **Secções 1–7:** estrutura. Escritas uma vez, revistas anualmente ou quando um invalidador dispara.
 > **Blocos A–D:** infraestrutura. Actualizados a cada análise trimestral.
@@ -14,17 +105,17 @@
 
 | | | | |
 |---|---|---|---|
-| **Preço** | $ 161,10 | **Data** | 22-10-2026 *(fecho; CapIQ export de 23-Out)* |
-| **Market cap** | $ 121.469 M *(754 M acções diluídas)* | **EV** | $ 125.357 M *(inclui $ 1.070 M de contingências regulatórias)* |
-| **Valor DCF** *(base, ao WACC de 9,09%)* | **$ 236,03** | **Upside** | +46,5% |
-| **Fair value ao required return de 10,08%** | $ 203,62 *(+26,4%)* | **Valor esperado ponderado** | $ 227,26 @WACC · $ 196,20 @required |
-| **Amplitude bull–bear** *(2 eixos)* | $ 200,62 a $ 277,11 | **Drivers dominantes** | Crescimento da receita · cash opex |
-| **IRR implícita** *(reverse DCF, motor A)* | **11,97%** | **vs required return** | spread **+189 bp** vs 10,08%; +289 bp vs WACC |
-| **Growth implícito** *(@ required return)* | CAGR receita **3,43%** a 10 anos | **vs CAGR histórico** | 10,2% FY19-25 · 12,2% FY23-25 · consenso FY25-30 8,6% |
-| **Decisão** | **Entrada faseada — T1 e T2 abertas; T3 condicionada a Q3-26** | **Gates** | 1ª tranche < $ 203,62 · 2ª tranche < $ 173,85 · cheia < $ 159,66 *(30-10: a cheia passou para baixo do preço)* |
-| **Invalidadores disparados** | 0 de 7 · 2 em vigilância | **Último report** | Q2-2026 (04-Ago-2026) |
+| **Preço** | $ 144,91 | **Data** | 20-11-2026 *(revisão Q3-26 de 23-11; regime de taxas único)* |
+| **Market cap** | $ 107.800 M *(743,7 M acções)* | **EV** | ~$ 113.200 M *(dívida líquida + FTC + CNMC $ 5,4 mM)* |
+| **Valor DCF** *(base, β 0,88, WACC 9,09%)* | **$ 219** | **Upside** | +51% *(β 1,235 / WACC 10,80%: $ 172, +19%)* |
+| **Fair value ao required return de 10,08%** | n/d nesta revisão *(ver β 1,235: $ 172)* | **Valor esperado ponderado** | $ 217 (β 0,88) · $ 170 (β 1,235) *(25/50/25)* |
+| **Amplitude bull–bear** *(cenários)* | $ 161 a $ 268 (β 0,88) · $ 128 a $ 210 (β 1,235) | **Drivers dominantes** | Crescimento (desintermediação por agentes de IA) · FTC |
+| **IRR implícita** *(reverse DCF, motor A)* | **12,3%** | **vs required return** | +~220 bp vs 10,08%; não depende do beta |
+| **Growth implícito** *(@ WACC)* | **0,3%/ano** a 10 anos (3,1% com β 1,235) | **vs CAGR histórico** | room nights +8–9% 2024-25 · ambição ≥ 8% cc |
+| **Decisão** | **Entrada faseada (reforço)** — 1ª tranche já; 2ª após guidance FY27 (Fev-2027) se ≥ 8% cc ou < $ 135 | **Gates** | 1ª tranche < $ 172 · 2ª tranche < $ 135 · peso máx. 6–8% |
+| **Invalidadores disparados** | 0 de 7 · 2 em vigilância (FTC; tráfego de LLMs) | **Último report** | Q3-2026 (04-Nov-2026) |
 | **ROIC marginal** *(sobre o capital deployado)* | não definido — NOPAT +$ 3.260 M FY22→FY25 com capital fixo a **cair** $ 356 M | **vs WACC** | ROIC s/ capital fixo 121% LTM; capital investido total **negativo** |
-| **Próximo catalisador** | Resultados Q3-26 a 03-11-2026 (pós-mercado) · FTC/Priceline · DSA UE | **O que decide** | Room nights ≥ 3% e marketing/GB ≤ 5,0% |
+| **Próximo catalisador** | Resultados Q4-26 e guidance FY27 (fim de Fev-2027) · FTC/Priceline · DSA UE | **O que decide** | Room nights/gross bookings FY27 ≥ 8% cc; Q4 guiado a +1–3% |
 | **Consenso sell-side** | PT médio $ 233 (n=35, mín. $ 170) | **vs o meu DCF** | DCF @WACC 1,3% acima; @required 12,6% abaixo · FV/PT 1,01 |
 | **Ke** *(regra da carteira: Rf UST 10Y + ERP Kroll; CRP 0)* | 9,90% *(4,96% + 0,987 × 5,0%)* · WACC 9,09% | **Ke ±100 bp** | $ 272,99 / $ 207,63 por acção |
 | **Peers** *(múltiplo âncora)* | P/E NTM 14,5x | **vs pares maduros** | EXPE ~8-9x EV/EBITDA LTM · ABNB 33x P/E fwd |

@@ -1,3 +1,66 @@
+# Ficha de Empresa — Meta Platforms (META · NasdaqGS)
+
+<!-- dados {"preco": 560.84, "fv": 570, "bear": 265, "bull": 744, "t1": 477, "cheia": 422, "upside": 0.0163, "data": "20-11-2026", "decisao": "Esperar — 1.ª tranche a $477 (pré-split)", "quarter": "Q3-26", "invalidadores": "0 de 4", "moeda": "USD", "par": {"rf": 0.049100000000000005, "erp": 0.05, "rf_metodo": "A", "erp_fonte": "Kroll"}, "proximo_report": "2027-01-19"} -->
+
+> **REVISÃO DE RAIZ — 24-11-2026.** Este bloco substitui RESUMO/ESTADO, cenários, escada, decisão e taxa da versão anterior (que fica abaixo, a partir de "Versão anterior"). As secções estruturais antigas (negócio, moat, legal, SWOT) continuam válidas; os números de valuation antigos não.
+
+## REVERSE DCF — o que o preço exige *(preço $ 560,84 (pré-split 2:1 de Jan-27), fecho 20-11-2026)*
+
+A $ 560,84 o preço coincide com o base (IRR 10,0% vs WACC 9,9%): exige exactamente o cenário central, sem desconto para a cauda legal nem para a margem.
+
+## Custo de capital *(regra da carteira: Rf actual · ERP 5% · β de sector Damodaran Jan-26)*
+Ke = 4,91% + β 1,01 (Advertising) × 5,0% ≈ 9,96% · dívida com leases pequena · **WACC 9,90%** · required 10,90%.
+
+## Dados de partida
+Q3-26 (10-Q, via nota BlueCrow 23-10): receita $ 64,6 mM (+26%) · preço por anúncio +14%, impressões +10% · margem op. 20% reportada / 35,4% ex-acordo AG de $ 9,89 mM (40,1% há um ano) · FCF −$ 1,2 mM · capex FY26 $ 135–145 mM, 2027 BEst $ 202 mM · dívida líquida $ 32,4 mM com leases · contingências legais: $ 5,3 mM + multa de $ 25 mM (New Mexico) · 2.573 M acções. TTM receita $ 241,6 mM.
+
+## Método
+FCFF com D&A por vintage (vida 6 anos). Contingências legais abatidas por cenário: −$ 10 mM base, −$ 30 mM bear, −$ 5 mM bull. 15 anos.
+
+## Cenários *(probabilidades declaradas antes de ver os valores)*
+
+| Cenário | Crescimento | Margem / retorno | Valor @custo de capital | @required | IRR ao preço |
+|---|---|---|---|---|---|
+| Bear — "data center owner com margens de utility" (30%) | 15% → 3% | EBITDA 40%; capex 65% → 13%; −$ 30 mM legal | $ 265 | $ 214 | 7,0% |
+| Base — "margem cai em 2027 e recupera" (50%) | 20% → 3% | EBITDA 44% → 46%; capex 60% → 12% | $ 570 | $ 477 | 10,0% |
+| Bull — "a IA no ranking paga tudo" (20%) | 24% → 3% | EBITDA 45% → 48% | $ 744 | $ 622 | 11,5% |
+
+**Ponderado:** $ 514 @WACC · $ 427 @required
+**Porquê estas probabilidades:** 30/50/20: todos os custos excepto marketing crescem acima da receita, $ 89,5 mM em obra ainda por depreciar, cauda legal a crescer e FCF negativo. Mais evidência do lado negativo.
+
+## Sensibilidades (base)
+Crescimento ±3 pp → $ 813 / $ 399 · EBITDA ±3 pp → $ 633 / $ 507 · capex ±3 pp → $ 507 / $ 634. O crescimento domina por larga margem.
+
+## Escada de entrada *(ao required)*
+
+| Degrau | Preço |
+|---|---|
+| 1.ª tranche — base (escada trocada: ponderado abaixo do base) | $ 477 |
+| 2.ª tranche — ponderado | $ 427 |
+| Cheia — bear eixo único (EBITDA −3 pp) | $ 422 |
+
+**Bear conjunto** (bear ao required + 100 bp): $ 174 (−69%) → peso ≤ ~3%
+
+## Invalidadores
+1. Margem op. ex-encargos < 32% em 2027
+2. Capex 2027 > $ 220 mM
+3. Impressões < +5% com preço por anúncio a abrandar
+4. Multa New Mexico confirmada sem redução
+
+## Catalisadores
+Q4-26 (fim de Jan-27) com guide de capex e despesas 2027 · split 2:1 a 19-01-2027 · decisões legais.
+
+## O risco que o modelo não vê
+A emissão de Class C sem voto abre a porta a aumentos de capital — diluição não modelada.
+
+## Changelog
+- 27-11-2026: escada corrigida — a 1.ª tranche estava ao ponderado ($ 427) e a 2.ª ao base ($ 477), a subir. Com o ponderado abaixo do base, a 1.ª vai ao base.
+- 24-11-2026: revisão de raiz — dados Q3-26, regra de custo de capital única (Rf actual, ERP 5%, β de sector Damodaran), 15 anos, cenários com probabilidades por empresa. Modelo em chat (Python), não no Excel: correr o pipeline no PC para fechar os gates.
+
+---
+
+# Versão anterior (30-10-2026) — estrutura válida, valuation substituída pelo bloco acima
+
 # Ficha de Empresa — Meta Platforms, Inc. (META · NasdaqGS)
 
 > **Documento único e vivo.** Não se cria cópia por trimestre — actualiza-se este.

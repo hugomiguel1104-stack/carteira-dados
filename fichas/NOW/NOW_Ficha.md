@@ -1,3 +1,66 @@
+# Ficha de Empresa — ServiceNow (NOW · NYSE)
+
+<!-- dados {"preco": 87.61, "fv": 89, "bear": 50, "bull": 122, "t1": 77, "cheia": 58, "upside": 0.0159, "data": "20-11-2026", "decisao": "Manter; reforço abaixo de $77; pensar em reduzir acima de ~$105", "quarter": "Q3-26", "invalidadores": "0 de 4", "moeda": "USD", "par": {"rf": 0.049100000000000005, "erp": 0.05, "rf_metodo": "A", "erp_fonte": "Kroll"}} -->
+
+> **REVISÃO DE RAIZ — 24-11-2026.** Este bloco substitui RESUMO/ESTADO, cenários, escada, decisão e taxa da versão anterior (que fica abaixo, a partir de "Versão anterior"). As secções estruturais antigas (negócio, moat, legal, SWOT) continuam válidas; os números de valuation antigos não.
+
+## REVERSE DCF — o que o preço exige *(preço $ 87,61 (pós-split), fecho 20-11-2026)*
+
+O preço coincide com o base (IRR 11,2% vs WACC 11,1%); exige que o crescimento não abrande mais do que o base já assume.
+
+## Custo de capital *(regra da carteira: Rf actual · ERP 5% · β de sector Damodaran Jan-26)*
+Ke = 4,91% + β 1,25 (Software Sys & App) × 5,0% = 11,16% · dívida líquida $ 0,56 mM · **WACC 11,10%** · required 12,10%.
+
+## Dados de partida
+Q3-26 (via nota BlueCrow 11-11): receita trimestral $ 4,11 mM · cRPO orgânico ~16,75% (série a cair há 5 trimestres) · guide Q4 cRPO 18,5% com ~175 bp de Armis · margem bruta de subscrição 80% (83% FY24) · capex 2,2% da receita (6,9%) · SBC ~15% da receita · $ 11,8 mM de M&A desde Dez-25 · caixa líquida passou a dívida líquida de $ 0,56 mM. TTM receita $ 15,44 mM · ~1.040 M acções.
+
+## Método
+FCF do dono **depois de SBC** (o SBC é custo). Margem LTM 14,6%. 15 anos; o FCF já vem líquido de reinvestimento.
+
+## Cenários *(probabilidades declaradas antes de ver os valores)*
+
+| Cenário | Crescimento | Margem / retorno | Valor @custo de capital | @required | IRR ao preço |
+|---|---|---|---|---|---|
+| Bear — "a IA corta os seats" (30%) | 15% → 3% | FCF/receita 14,5% → 18% | $ 50 | $ 44 | 7,8% |
+| Base — "abrandamento ordenado" (50%) | 18% → 3,5% | FCF/receita 15% → 25% (SBC a descer) | $ 89 | $ 77 | 11,2% |
+| Bull — "plataforma de agentes" (20%) | 20% → 3,5% | FCF/receita 16% → 30% | $ 122 | $ 105 | 13,5% |
+
+**Ponderado:** $ 84 @WACC · $ 73 @required
+**Porquê estas probabilidades:** 30/50/20: o orgânico desacelera há cinco trimestres, o crescimento reportado está a ser comprado, e as margens de guidance desceram. O bear tem mais evidência.
+
+## Sensibilidades (base)
+Margem terminal 22% / 28% → $ 78 / $ 101 · crescimento −3 pp → $ 66 · WACC 10,17% (o da equipa) → $ 103. A margem terminal pesa tanto como o crescimento.
+
+## Escada de entrada *(ao required)*
+
+| Degrau | Preço |
+|---|---|
+| 1.ª tranche — base (escada trocada: ponderado abaixo do base) | $ 77 |
+| 2.ª tranche — ponderado | $ 73 |
+| Cheia — bear eixo único (crescimento −3 pp) | $ 58 |
+
+**Bear conjunto** (bear ao required + 100 bp): $ 39 (−55%) → peso ≤ ~3,5%
+
+## Invalidadores
+1. cRPO orgânico < 16% no Q4-26
+2. Guide orgânico de subscrição FY27 < 17%
+3. Margem bruta de subscrição < 79%
+4. Mais M&A > $ 3 mM sem métricas da Armis
+
+## Catalisadores
+Q4-26 e guide FY27 (fim de Jan-27).
+
+## O risco que o modelo não vê
+Já tens a posição: com o preço no base, *pensar em reduzir* acima de ~$ 105 (bull @required) faz sentido; abaixo de ~$ 77 o modelo deixa de dar razão para sair.
+
+## Changelog
+- 27-11-2026: escada corrigida — a 1.ª tranche estava ao ponderado ($ 73) e a 2.ª ao base ($ 77), a subir. Com o ponderado abaixo do base, a 1.ª vai ao base.
+- 24-11-2026: revisão de raiz — dados Q3-26, regra de custo de capital única (Rf actual, ERP 5%, β de sector Damodaran), 15 anos, cenários com probabilidades por empresa. Modelo em chat (Python), não no Excel: correr o pipeline no PC para fechar os gates.
+
+---
+
+# Versão anterior (30-10-2026) — estrutura válida, valuation substituída pelo bloco acima
+
 # Ficha de Empresa — ServiceNow, Inc. (NOW · NYSE)
 
 > **Documento único e vivo.** Não se cria cópia por trimestre — actualiza-se este.

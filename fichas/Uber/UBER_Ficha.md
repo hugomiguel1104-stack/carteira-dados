@@ -1,3 +1,98 @@
+# Ficha de Empresa — Uber Technologies (UBER · NYSE)
+
+<!-- dados {"preco": 63.47, "fv": 86, "bear": 36, "bull": 126, "t1": 60, "cheia": null, "upside": 0.355, "data": "20-11-2026", "decisao": "Manter; reforço a ~$60 ou por informação", "quarter": "Q3-26", "invalidadores": "0 de 6 · 4 em vigilância", "moeda": "USD", "par": {"rf": 0.049100000000000005, "erp": 0.05, "rf_metodo": "A", "erp_fonte": "Kroll"}, "proximo_report": "2026-11-04"} -->
+
+`Q3-2026` · `revista 23-11-2026` · `plugin v2.1` · **ACTUALIZAÇÃO Q3-26 com regime de taxas único** — substitui o RESUMO, a valuation e os cenários da ficha de 29-10 (base Q2, β 0,805, FV $ 129,40).
+
+> **Fontes:** Deep Report da Blue Crow (v3, 16-10-2026) e nota temática sobre robotáxis (16-10-2026); release do Q3-26 (04-11-2026); Delivery Hero (Börsen-Zeitung, 10-11-2026). Valores re-descontados a partir dos cash flows dos cenários do ER (reconstrução que reproduz o base do ER em $ 85 vs $ 86). Preço de 20-11 da app.
+
+**Preço:** $ 63,47 *(20-11-2026)* · **Acções:** 2.042,6 M · **Market cap:** $ 129,6 mM
+
+---
+
+## Resumo
+
+| | Regime único *(β 1,15 = 50% Transportation 0,71 + 50% Software (Internet) 1,59; WACC 10,51%; g 2,5%)* | Equity Research *(β 1,24, WACC 10,9%, g 3%)* | Ficha antiga 29-10 |
+|---|---|---|---|
+| Profundo adverso — um vencedor fora da Uber *(10%)* | $ 16 | $ 17 | — |
+| Adverso — duopólio integrado *(25%)* | $ 36 | $ 35 | $ 64 |
+| **Base — oligopólio em camadas *(45%)*** | **$ 86** (**~$ 91 com o Q3**) | $ 86 | **$ 129** |
+| Favorável — stacks licenciáveis *(20%)* | $ 126 | $ 126 | $ 167 |
+| **Ponderado** | **$ 74 (+17%)** | $ 74 | — |
+| Retorno do base ao preço | **~13,0%** | | 13,7% |
+
+**Decisão: MANTER; reforço só com informação ou preço.** O base fica 35–43% acima do preço, mas **35% da probabilidade está em cenários 45–75% abaixo**. A decisão depende da cauda (robotáxis), não da média.
+
+**A ficha antiga estava optimista em ~$ 40** no base: beta de 0,805, margem EBITDA a 22% sem cobrar o SBC nem retirar o float de seguros, e sem o programa de AV ($ 1 mM/ano). O ER corrige as três coisas.
+
+**Correcção a um alerta da app:** o "EPS −73% vs consenso" vem de um agregador que comparou o guidance trimestral com o consenso anual. O Q3 **bateu**: EPS non-GAAP $ 0,88 vs ~$ 0,86–0,87.
+
+---
+
+## Q3-26 — o que mudou
+
+| | Q3-26 | Leitura |
+|---|---|---|
+| Gross bookings | $ 59,8 mM, +20% cc (5.º trimestre ≥20%) | Acima do base do ER (15% nos Y1–3) |
+| Non-GAAP op. income / bookings | $ 2,3 mM, **3,9%** (3,4% há um ano) | Acima do arranque do base (3,54%) |
+| GAAP EPS | $ 0,25 (inclui −$ 476 M de reavaliação de investimentos) | O ano anterior ($ 3,11) tinha ganhos não operacionais |
+| FCF LTM | **$ 10,4 mM** (recorde) | O ER usa o owner FCFF ~$ 6,3 mM (SBC cobrado, float retirado) |
+| Mobility | Bookings +18%, **receita −2%** | Mudança de modelo/contabilização a explicar no 10-Q — **ponto aberto** |
+| Q4 guidance | Bookings $ 63,25–65,25 mM (+18–22% cc); EPS non-GAAP $ 0,95–0,99 | Sem desaceleração |
+| Delivery Hero | 66,56% após a 1.ª janela; conclusão prevista no 2.º semestre de 2027 | Agora é certo; fora do valor standalone |
+
+---
+
+## Reverse DCF *(do ER, ajustado ao regime único)*
+
+Ao WACC de ~10,5%, o preço exige **~9% ao ano de crescimento no owner FCFF** durante 10 anos (10% a 10,9%). Em termos operacionais: bookings a ~10% com a margem sobre bookings a subir de 3,5% para ~4,5%. Hoje: bookings +20% e margem 3,9%. **O presente supera o que o preço exige; o desconto é todo sobre os robotáxis.**
+
+---
+
+## Os robotáxis (a nota temática)
+
+- O software de condução concentra-se (Waymo, Tesla); as frotas fragmentam-se; a app do consumidor é onde a Uber cobra a portagem ou é contornada.
+- Base (45%): oligopólio em camadas — a Waymo directa nas melhores cidades, as restantes stacks na Uber.
+- O teste: Austin e Atlanta depois da saída da Waymo (Jan-2028) — se os bookings da Uber aí caírem, o cenário adverso ganha peso.
+
+---
+
+## Invalidadores
+
+| # | Afirmação | Invalidador | Estado |
+|---|---|---|---|
+| 1 | O compounding continua | Bookings abaixo de 15% cc dois trimestres seguidos | OK (20%) |
+| 2 | A margem sobe | Non-GAAP op. income / bookings abaixo de 3,5% dois trimestres | OK (3,9%) |
+| 3 | O FCF é durável | Recompras sem voltar a ~$ 1,3 mM/trimestre e SBC acima de 4% da receita | **Em vigilância** (recompras cortadas 83% no Q2) |
+| 4 | A Uber capta a procura AV | Bookings em Austin/Atlanta a cair após a saída da Waymo; Tesla a crescer em app própria | Em vigilância |
+| 5 | A dívida é gerível | Dívida bruta / EBITDA acima de 2x (fora do financiamento da DH) | Por verificar após a DH |
+| 6 | Mobility monetiza | Receita Mobility abaixo dos bookings mais um trimestre sem explicação | **Novo — em vigilância** |
+
+---
+
+## Escada *(posição de 1,9%)*
+
+| Degrau | Preço | Regra |
+|---|---|---|
+| 1.ª tranche | **~$ 60** | O ER: base ~40% acima; owner FCF a ~19x |
+| Por informação | Recompras de volta a ~metade do FCF durante 2 trimestres, ou um parceiro AV em escala na app | Independente do preço |
+| Peso máx. | ~4–5% | A cauda de 35% em −45% a −75% limita o tamanho |
+
+---
+
+## Log
+
+| Data | Preço | FV base | Ponderado | Decisão |
+|---|---|---|---|---|
+| 29-10-2026 | $ 65,74 | $ 129,40 | — | Entrada faseada |
+| **23-11-2026** | **$ 63,47** | **$ 86 (~$ 91 com Q3)** | **$ 74** | **Manter; reforço a ~$ 60 ou por informação** |
+
+**Changelog 23-11-2026:** base do ER adoptado (bookings × margem, SBC cobrado, float retirado, programa AV); re-descontado ao regime único; Q3 processado (+~$ 5 ao base, estimativa); quatro cenários AV com as probabilidades do ER (10/25/45/20); alerta "EPS −73%" corrigido.
+
+---
+
+# Versão anterior (Out-2026) — estrutura válida, valuation substituída pelo bloco acima
+
 # Ficha de Empresa — Uber Technologies, Inc. (UBER · NYSE)
 
 > **Documento único e vivo.** Não se cria cópia por trimestre — actualiza-se este.
@@ -31,21 +126,21 @@
 
 | | | | |
 |---|---|---|---|
-| **Preço** | $65,74 | **Data** | 29-10-2026 |
+| **Preço** | $63,47 | **Data** | 20-11-2026 *(revisão Q3-26 de 23-11; regime de taxas único, β 1,15)* |
 | **Market cap** | $135.161 M *(2.056 M acções diluídas)* | **EV** | $131.571 M *(dívida 12.945 − caixa e participações com preço 16.487 − 50% de 2.263 não cotadas + minoritários 1.083)* |
-| **Valor DCF** *(base — A plataforma agrega a autonomia)* | **$129,40** | **Upside** | **+96,8%** |
-| **Cenários nomeados** *(p declaradas antes)* | $64,35 / $129,40 / $167,40 · ponderado $122,64 | **IRR esperada** | 13,2% *(ponderado)* vs required 9,55% |
+| **Valor DCF** *(base — oligopólio em camadas)* | **$86** *(~$91 com o Q3)* | **Upside** | **+35%** |
+| **Cenários nomeados** *(p 10/25/45/20)* | $16 / $36 / $86 / $126 · ponderado $74 | **IRR esperada** | ~13,0% no base; 35% da probabilidade em cenários −45% a −75% |
 | **Ciclo de capex** | anunciado, não histórico — capex+FL 0,85% da receita LTM; o plano AV leva-o a 2,5% em Y2-Y3 | **Impacto no valor** | baixo — $123,32 (corta) / $108,08 (frotas próprias) |
-| **Δ FV vs revisão anterior** | $142,18 → $129,40 (−$12,78) | **Atribuição** | taxa de desconto −$14,97 · business plan +$2,20 · método $0 · balanço e ano-base $0 |
+| **Δ FV vs revisão anterior** | $129,40 → $86 (−$43) | **Atribuição** | base do ER (SBC cobrado, float de seguros retirado, programa AV) e β 0,805 → 1,15 |
 | **Ke** *(regra da carteira: Rf UST 10Y + ERP Kroll; CRP 0; beta bottom-up Damodaran)* | 9,00% *(4,98% + 0,805 × 5,0%)* · WACC 8,55% | **Ke ±100 bp** | $154,41 / $111,04 por acção |
-| **Amplitude bull–bear** *(2 eixos)* | $64,35 a $167,40 | **Drivers dominantes** | crescimento da receita ($56,72) e margem EBITDA ($39,83) |
-| **IRR implícita** *(reverse DCF)* | **13,69%** | **vs required return** | spread **+414 bp** *(+514 bp vs WACC)* |
+| **Amplitude bull–bear** *(cenários)* | $36 a $126 *(profundo adverso $16)* | **Drivers dominantes** | robotáxis (quem fica com a procura AV) · margem sobre bookings |
+| **IRR implícita** *(reverse DCF)* | **~13,0%** *(base)* | **vs required return** | WACC 10,51% · exige ~9%/ano de owner FCFF |
 | **Crescimento que o preço exige** *(motor B)* | CAGR **2,91%** a 10 anos para render o required | **vs** | base 10,23% · consenso FY26-30 ~12,5% · FY25 +18,3% · receita Y10 $70,9 mil M vs $140,9 mil M no base |
-| **Decisão** | **ENTRADA FASEADA** | **Gates** | 1ª tranche < **$109,53** (base @required) · 2ª < **$103,81** (ponderado @required) · cheia < **$88,73** (crescimento −3 pp @required) |
-| **Peso máximo da posição** | **8,5%** *(perda máx. 2% da carteira)* | **Bear conjunto** | $50,33 (−23,4% vs preço) |
-| **Invalidadores disparados** | **0 de 8 · 3 em vigilância** | **Último report** | Q2 2026 (05-08-2026) |
+| **Decisão** | **Manter; reforço a ~$60 ou por informação** | **Gates** | 1ª tranche < **$60** · por informação: recompras ~½ do FCF 2 trimestres ou parceiro AV em escala · peso máx. 4–5% |
+| **Peso máximo da posição** | **4–5%** *(cauda de 35% em −45% a −75%)* | **Bear conjunto** | $36 (adverso) · $16 (profundo) |
+| **Invalidadores disparados** | **0 de 6 · 3 em vigilância** (recompras, AV Austin/Atlanta, receita Mobility) | **Último report** | Q3 2026 (04-11-2026) |
 | **ROIC marginal** *(capital deployado fim FY23 → Jun-26)* | **186%** | **vs WACC 8,55%** | ROIC médio 39% a 47% conforme a base |
-| **Próximo catalisador** | Q3 2026, 04-11-2026 *(CapIQ)* | **O que decide** | recompras, GB, margem da Mobility e capex; aceitação da oferta da DH (05-11) |
+| **Próximo catalisador** | Q4 2026 e guidance 2027 (Fev-2027) | **O que decide** | recompras de volta a ~½ do FCF; receita Mobility vs bookings; AV em Austin/Atlanta |
 | **Consenso sell-side** | PT médio **$100,90** (n=46, mediana $100,50, mín. **$70**, máx. $150; CapIQ 29-10) | **vs o meu DCF** | +53% vs +97% · rácio FV/PT **1,28** *(ver D)* |
 | **Peers** *(EV/Receita LTM)* | UBER 2,4× | **vs pares maduros** | n/d — sem Comps CapIQ |
 | **Short interest** | n/d *(sem export)* | **vs mediana 5 anos** | n/d |

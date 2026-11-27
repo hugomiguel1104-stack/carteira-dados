@@ -1,3 +1,66 @@
+# Ficha de Empresa — Nu Holdings (NU · NYSE)
+
+<!-- dados {"preco": 11.27, "fv": 11.68, "bear": 6.42, "bull": 15.8, "t1": 10.1, "cheia": 8.11, "upside": 0.0364, "data": "20-11-2026", "decisao": "Manter; reforço abaixo de $10,10", "quarter": "Q3-26", "invalidadores": "0 de 4", "moeda": "USD", "par": {"rf": 0.049100000000000005, "erp": 0.05, "rf_metodo": "A", "erp_fonte": "Kroll"}, "proximo_report": "2026-11-12"} -->
+
+> **REVISÃO DE RAIZ — 24-11-2026.** Este bloco substitui RESUMO/ESTADO, cenários, escada, decisão e taxa da versão anterior (que fica abaixo, a partir de "Versão anterior"). As secções estruturais antigas (negócio, moat, legal, SWOT) continuam válidas; os números de valuation antigos não.
+
+## REVERSE DCF — o que o preço exige *(preço $ 11,27, fecho 20-11-2026)*
+
+O preço exige um ROE terminal de ~21,5% (0,5 pp abaixo do base) — perto do melhor do Itaú (22,8%). Sem margem para o ciclo de crédito.
+
+## Custo de capital *(regra da carteira: Rf actual · ERP 5% · β de sector Damodaran Jan-26)*
+Ke = 4,91% + β 0,82 × 5,0% + CRP Brasil 3,18% = **12,19%** · required 13,19%. (O β de banco do Damodaran é desalavancado — 0,44 Money Center — e não serve para o equity de um banco; mantenho o 0,82 da ficha anterior, a confirmar.)
+
+## Dados de partida
+Q3-26 (6-K, 12-11): net income $ 1.091,6 M (+39% USD, +31% FXN) · ROE 32% · carteira $ 41,6 mM · depósitos $ 47,5 mM · clientes 142,6 M · eficiência 19,3% · NPL 15–90 4,9%, NPL 90+ 7,3% (6,9% no Q2) · 90+ sobre carteira que rende juros 12,1% · cobertura 234% · risk-adjusted NIM 12,1%. Equity estimado ~$ 13,9 mM (NI anualizado / ROE) · ~4.840 M acções (a confirmar).
+
+## Método
+Residual income a 10 anos + perpetuidade a 3% com ROE terminal constante. Em USD; o BRL entra pelo crescimento do book.
+
+## Cenários *(probabilidades declaradas antes de ver os valores)*
+
+| Cenário | Crescimento | Margem / retorno | Valor @custo de capital | @required | IRR ao preço |
+|---|---|---|---|---|---|
+| Bear — "ciclo de crédito + BRL" (30%) | book 18% → 5% | ROE 26% → 16% | $ 6,42 | $ 5,63 | 8,8% |
+| Base — "Itaú digital com mais crescimento" (50%) | book 25% → 6% | ROE 31% → 22% | $ 11,68 | $ 10,10 | 12,4% |
+| Bull — "México e Colômbia replicam o Brasil" (20%) | book 28% → 7% | ROE 32% → 26% | $ 15,80 | $ 13,56 | 14,5% |
+
+**Ponderado:** $ 10,92 @Ke · $ 9,45 @required
+**Porquê estas probabilidades:** 30/50/20: NPL 90+ a subir há três trimestres, NIM ajustado a descer, BRL a −9% desde a eleição e expansão para EUA/Global com custos.
+
+## Sensibilidades (base)
+ROE ±3 pp → $ 13,94 / $ 9,42 · BRL −5%/ano → $ 9,47. ROE e câmbio pesam o mesmo.
+
+## Escada de entrada *(ao required)*
+
+| Degrau | Preço |
+|---|---|
+| 1.ª tranche — base (escada trocada: ponderado abaixo do base) | $ 10,10 |
+| 2.ª tranche — ponderado | $ 9,45 |
+| Cheia — bear eixo único (ROE −3 pp) | $ 8,11 |
+
+**Bear conjunto** (bear ao required + 100 bp): $ 4,99 (−56%) → peso ≤ ~3,5%
+
+## Invalidadores
+1. NPL 90+ > 8%
+2. Risk-adjusted NIM < 11%
+3. Eficiência > 21% (Nu US/Global a pesar mais de 100 bp)
+4. BRL/USD −15% em 12 meses
+
+## Catalisadores
+Q4-26 (Fev-27) · Investor Day · eleição e política fiscal do Brasil.
+
+## O risco que o modelo não vê
+A ficha antiga valia $ 9,41 com dados pré-Q3; a subida vem do Q3 (NI +39%) e do Ke mais baixo — mas o preço continua acima do ponderado.
+
+## Changelog
+- 27-11-2026: escada corrigida — a 1.ª tranche estava ao ponderado ($ 9,45) e a 2.ª ao base ($ 10,10), a subir. Com o ponderado abaixo do base, a 1.ª vai ao base.
+- 24-11-2026: revisão de raiz — dados Q3-26, regra de custo de capital única (Rf actual, ERP 5%, β de sector Damodaran), 15 anos, cenários com probabilidades por empresa. Modelo em chat (Python), não no Excel: correr o pipeline no PC para fechar os gates.
+
+---
+
+# Versão anterior (30-10-2026) — estrutura válida, valuation substituída pelo bloco acima
+
 # Ficha de Empresa — Nu Holdings Ltd. (NU · NYSE)
 
 > **Documento único e vivo.** Não se cria cópia por trimestre — actualiza-se este.

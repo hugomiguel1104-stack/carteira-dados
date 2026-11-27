@@ -1,5 +1,67 @@
 # Ficha de Empresa — Adyen N.V. (ADYEN · Euronext Amsterdam)
 
+<!-- dados {"preco": 793.5, "fv": 1288, "bear": 869, "bull": 1659, "t1": 1085, "cheia": 846, "upside": 0.6232, "data": "20-11-2026", "decisao": "Entrada faseada — preço abaixo dos três degraus; rever antes de comprar (plano v3.1: até €700)", "quarter": "Q3-26", "invalidadores": "0 de 4 · ver ficha", "moeda": "EUR", "par": {"rf": 0.033, "erp": 0.05, "rf_metodo": "A", "erp_fonte": "Kroll"}, "proximo_report": "2027-02-11"} -->
+
+> **REVISÃO DE RAIZ — 24-11-2026.** Este bloco substitui RESUMO/ESTADO, cenários, escada, decisão e taxa da versão anterior (que fica abaixo, a partir de "Versão anterior"). As secções estruturais antigas (negócio, moat, legal, SWOT) continuam válidas; os números de valuation antigos não.
+
+## REVERSE DCF — o que o preço exige *(preço € 793,50, fecho 20-11-2026)*
+
+O preço exige um crescimento **5,7 pp/ano abaixo** do base em todos os anos — net revenue a ~14% no ano 1 e a ~2% a partir do ano 7. A IRR do bear (8,9%) ainda passa o Ke (8,3%).
+
+## Custo de capital *(regra da carteira: Rf actual · ERP 5% · β de sector Damodaran Jan-26)*
+Ke = Bund 10Y 3,30% + β 1,00 × 5,0% = **8,30%** (sem dívida: WACC = Ke) · required 9,30%. β = 50% Information Services (0,76) + 50% Software Sys & App (1,25), Damodaran Jan-26.
+
+## Dados de partida
+Q3-26 (update 28-10): net revenue € 738,1 M (+23%, +22% cc; ~2 pp de aquisições) · volume € 451,1 mM (+30%) · take rate 16,36 bps (17,25 há um ano) · guide EBITDA FY26 cortado para 50% (era ~51,7%) · objectivo >55% em 2028 retirado · capex 7% · caixa própria ~€ 4,6 mM · 31,8 M acções. TTM net revenue € 2.713 M. Fonte: nota da equipa BlueCrow (28-10), a partir da carta Q3 e do H1-26.
+
+## Método
+FCF do dono = (EBITDA − D&A)(1 − 24,4%) + D&A − capex − leases (~31% da receita). Juro do float valorizado à parte a 75% (≈ € 208 M antes de imposto, perpetuidade a 3%; metade no bear), como na ficha anterior. Caixa: própria disponível € 3.067 M + 50% do capital regulatório € 600 M − leases € 409 M. 15 anos.
+
+## Cenários *(probabilidades declaradas antes de ver os valores)*
+
+| Cenário | Crescimento | Margem / retorno | Valor @custo de capital | @required | IRR ao preço |
+|---|---|---|---|---|---|
+| Bear — "a próxima PayPal" (25%) | 15% → 3% | EBITDA 46% → 45%; float a metade | € 869 | € 742 | 8,9% |
+| Base — "volume ganha ao preço" (50%) | 20% → 3% | EBITDA 50,5% → 52% | € 1.288 | € 1.085 | 11,7% |
+| Bull — "2023 outra vez" (25%) | 22% → 3,5% | EBITDA 52% → 55% | € 1.659 | € 1.382 | 13,7% |
+
+**Ponderado:** € 1.276 @Ke · € 1.073 @required
+**Porquê estas probabilidades:** 25/50/25: há dois cortes de guidance e um take rate a cair, mas também o precedente de 2023 (margem de 43% para 53% em 18 meses) e ganhos de quota (+30% de volume). Evidência equilibrada.
+
+## Sensibilidades (base)
+β 0,76 → € 1.665 · β 1,39 (regressão) → € 944 · crescimento −3 pp → € 987 · sem float → € 1.218. O crescimento domina; o β é a maior escolha de método.
+
+## Escada de entrada *(ao required)*
+
+| Degrau | Preço |
+|---|---|
+| 1.ª tranche — base (escada trocada: ponderado abaixo do base) | € 1.085 |
+| 2.ª tranche — ponderado | € 1.073 |
+| Cheia — bear eixo único (crescimento −3 pp) | € 846 |
+
+**Bear conjunto** (bear ao required + 100 bp): € 649 (−18%) → a cauda conjunta permite ~11% de peso para perda máx. de 2%
+
+## Invalidadores
+1. Margem EBITDA FY26 < 49,5% (terceiro corte) a 11-02-2027
+2. Objectivo FY27 de margem < 50%
+3. Take rate sem aquisições < 16,0 bps
+4. Crescimento cc orgânico < 18% no Q4-26
+
+## Catalisadores
+11-02-2027: resultados H2-26, objectivos 2027, PPA da Talon.One/Orb, primeira carta do novo CFO.
+
+## O risco que o modelo não vê
+O modelo e o mercado divergem por ~60%. Ou o mercado está a precificar a comoditização do processamento (PayPal a ~12–15x FCF), ou o modelo sobrestima a margem terminal com o take rate a cair ~5%/ano. Até Fevereiro não há número de margem para 2027 — o upside é real no modelo mas depende de uma margem que a própria empresa deixou de prometer.
+
+## Changelog
+- 24-11-2026: revisão de raiz — dados Q3-26, regra de custo de capital única (Rf actual, ERP 5%, β de sector Damodaran), 15 anos, cenários com probabilidades por empresa. Modelo em chat (Python), não no Excel: correr o pipeline no PC para fechar os gates.
+
+---
+
+# Versão anterior (30-10-2026) — estrutura válida, valuation substituída pelo bloco acima
+
+# Ficha de Empresa — Adyen N.V. (ADYEN · Euronext Amsterdam)
+
 > **Documento único e vivo.** Não se cria cópia por trimestre — actualiza-se este.
 > **Secções 1–7:** estrutura. Escritas uma vez, revistas anualmente ou quando um invalidador dispara.
 > **Blocos A–D:** infraestrutura. Actualizados a cada análise trimestral.

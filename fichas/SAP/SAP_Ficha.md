@@ -1,5 +1,66 @@
 # Ficha de Empresa — SAP SE (SAP · XETRA)
 
+<!-- dados {"preco": 183.68, "fv": 223, "bear": 132, "bull": 282, "t1": 191, "cheia": 146, "upside": 0.2141, "data": "20-11-2026", "decisao": "Entrada faseada — preço abaixo da 1.ª tranche; rever antes de reforçar (plano v3.1: até €1.200)", "quarter": "Q3-26", "invalidadores": "0 de 3", "moeda": "EUR", "par": {"rf": 0.033, "erp": 0.05, "rf_metodo": "A", "erp_fonte": "Kroll"}} -->
+
+> **REVISÃO DE RAIZ — 24-11-2026.** Este bloco substitui RESUMO/ESTADO, cenários, escada, decisão e taxa da versão anterior (que fica abaixo, a partir de "Versão anterior"). As secções estruturais antigas (negócio, moat, legal, SWOT) continuam válidas; os números de valuation antigos não.
+
+## REVERSE DCF — o que o preço exige *(preço € 183,68, fecho 20-11-2026)*
+
+O preço exige crescimento ~2 pp/ano abaixo do base. A IRR do base (10,9%) passa o Ke em ~130 bp.
+
+## Custo de capital *(regra da carteira: Rf actual · ERP 5% · β de sector Damodaran Jan-26)*
+Ke = Bund 10Y 3,30% + β 1,25 × 5,0% = **9,55%** · net liquidity € 2,2 mM + participações € 7,6 mM na ponte · required 10,55%. β: o ficheiro global do Damodaran não carregou; usei o US (1,25), que para software é dominado por empresas globais. Com o 0,96 antigo: € 280.
+
+## Dados de partida
+Q3-26 (6-K, 21-10): receita € 10.270 M (+13%, +12% cc) · cloud € 6.668 M (+26%) · licenças e suporte € 2.581 M (−5%) · op. profit non-IFRS € 3.030 M (+18%) · current cloud backlog € 24,1 mM (+28%) · SBC € 474 M no trimestre · FCF 9M € 7.968 M · dívida líquida € 1.224 M · buyback de € 10 mM até 2027 (€ 4,2 mM executados) · 1.157 M acções diluídas. Guide FY26: op. profit € 11,8–12,2 mM, FCF ~€ 10 mM. TTM receita ~€ 39,5 mM.
+
+## Método
+FCF do dono = FCF − SBC (~21% da receita em 2026). 15 anos. O FCF já é depois de juros e capex.
+
+## Cenários *(probabilidades declaradas antes de ver os valores)*
+
+| Cenário | Crescimento | Margem / retorno | Valor @custo de capital | @required | IRR ao preço |
+|---|---|---|---|---|---|
+| Bear — "a IA come os seats" (25%) | 8% → 3% | FCF/receita 21% → 20% | € 132 | € 115 | 7,6% |
+| Base — "a migração paga" (50%) | 12% → 3% | FCF/receita 21% → 27% | € 223 | € 191 | 10,9% |
+| Bull — "plataforma de dados e agentes" (25%) | 14% → 3% | FCF/receita 22% → 31% | € 282 | € 241 | 12,7% |
+
+**Ponderado:** € 215 @Ke · € 185 @required
+**Porquê estas probabilidades:** 25/50/25: backlog a acelerar (+26% cc) e margem a subir contra o risco de a IA reduzir licenças por utilizador. Evidência equilibrada.
+
+## Sensibilidades (base)
+Crescimento ±3 pp → € 301 / € 167 · margem ±3 pp → € 247 / € 198 · β 0,96 → € 290. O crescimento domina; o β é a maior decisão de método.
+
+## Escada de entrada *(ao required)*
+
+| Degrau | Preço |
+|---|---|
+| 1.ª tranche — base (escada trocada) | € 191 |
+| 2.ª tranche — ponderado | € 185 |
+| Cheia — bear eixo único (crescimento −3 pp) | € 146 |
+
+**Bear conjunto** (bear ao required + 100 bp): € 103 (−44%) → peso ≤ ~4,5%
+
+## Invalidadores
+1. Current cloud backlog cc < 20%
+2. Licenças + suporte a cair > 10%/ano (migração a cobrar menos)
+3. Guide de op. profit 2027 < +10%
+
+## Catalisadores
+Q4-26 e guide 2027 (fim de Jan-27) · ritmo do buyback.
+
+## O risco que o modelo não vê
+O Q3 teve uma recuperação de receita de clientes que saíram de dificuldades financeiras ("catch-up" de vários trimestres) — o +26% de cloud é parcialmente não recorrente.
+
+## Changelog
+- 24-11-2026: revisão de raiz — dados Q3-26, regra de custo de capital única (Rf actual, ERP 5%, β de sector Damodaran), 15 anos, cenários com probabilidades por empresa. Modelo em chat (Python), não no Excel: correr o pipeline no PC para fechar os gates.
+
+---
+
+# Versão anterior (30-10-2026) — estrutura válida, valuation substituída pelo bloco acima
+
+# Ficha de Empresa — SAP SE (SAP · XETRA)
+
 > **Documento único e vivo.** Não se cria cópia por trimestre — actualiza-se este.
 > Camada 1 de três. Camada 2 (tracking trimestral) vive em chat. Camada 3 é o `SAP_DCF.xlsx`.
 > Todo o número de valuation lê-se de uma célula do Excel ou da saída dos scripts `02`–`07` (G12).

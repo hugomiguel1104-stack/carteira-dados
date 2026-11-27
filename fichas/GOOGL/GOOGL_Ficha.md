@@ -1,5 +1,67 @@
 # Ficha de Empresa — Alphabet (GOOGL · NasdaqGS)
 
+<!-- dados {"preco": 265.29, "fv": 237, "bear": 126, "bull": 304, "t1": 203, "cheia": 180, "upside": -0.1066, "data": "20-11-2026", "decisao": "Esperar — 1.ª tranche a $203", "quarter": "Q3-26", "invalidadores": "0 de 4", "moeda": "USD", "par": {"rf": 0.049100000000000005, "erp": 0.05, "rf_metodo": "A", "erp_fonte": "Kroll"}} -->
+
+> **REVISÃO DE RAIZ — 24-11-2026.** Este bloco substitui RESUMO/ESTADO, cenários, escada, decisão e taxa da versão anterior (que fica abaixo, a partir de "Versão anterior"). As secções estruturais antigas (negócio, moat, legal, SWOT) continuam válidas; os números de valuation antigos não.
+
+## REVERSE DCF — o que o preço exige *(preço $ 265,29, fecho 20-11-2026)*
+
+O preço exige +1,1 pp/ano de crescimento sobre o base, **ou** capex 3,3 pp da receita abaixo do base em todos os anos. A IRR do base (9,4%) fica 70 bp abaixo do WACC.
+
+## Custo de capital *(regra da carteira: Rf actual · ERP 5% · β de sector Damodaran Jan-26)*
+Ke = 4,91% + β 1,09 × 5,0% = 10,36% (70% Advertising 1,01 + 30% Software 1,25) · dívida ~4% do EV · **WACC 10,10%** · required 11,10%.
+
+## Dados de partida
+Q3-26 (10-Q e 8-K, via nota BlueCrow 29-10): receita $ 127,6 mM (+24,7%) · Cloud $ 30,7 mM (+103%, margem 36%, backlog $ 561 mM) · Search +12% · margem operacional 31,8% · FCF −$ 9,1 mM (2.º trimestre negativo) · capex $ 51,4 mM, guide FY26 $ 195–205 mM, 2027 "significativamente" acima · dívida LP $ 125,1 mM · caixa líquida ~$ 15 mM + $ 90,4 mM em participações cotadas/marcadas · 12.294 M acções. TTM receita $ 471 mM.
+
+## Método
+FCFF com D&A por vintage de capex (vida 7 anos, legado de $ 30 mM a amortizar) — o capex chega à P&L com atraso, como na realidade. Terminal: reinvestimento = g/RONIC. 15 anos. Ponte: caixa líquida ~$ 15 mM + participações cotadas $ 90,4 mM + não cotadas a 50% ($ 67,5 mM) + Waymo $ 53,6 mM (SOTP da ficha anterior).
+
+## Cenários *(probabilidades declaradas antes de ver os valores)*
+
+| Cenário | Crescimento | Margem / retorno | Valor @custo de capital | @required | IRR ao preço |
+|---|---|---|---|---|---|
+| Bear — "AI Mode canibaliza o Search" (25%) | 14% → 3% | EBITDA 37%; capex mais alto; RONIC 15% | $ 126 | $ 109 | 6,5% |
+| Base — "Cloud paga o capex" (50%) | 22% → 3% | EBITDA 40% → 41%; capex 45% → 11% | $ 237 | $ 203 | 9,4% |
+| Bull — "TPU + Cloud = segunda AWS" (25%) | 26% → 3% | EBITDA 41% → 43%; RONIC 30% | $ 304 | $ 259 | 11,0% |
+
+**Ponderado:** $ 226 @WACC · $ 193 @required
+**Porquê estas probabilidades:** 25/50/25: Cloud excepcional (+103%, backlog +9% QoQ) contra os primeiros sinais de monetização do Search (cliques pagos +8%). Evidência simétrica.
+
+## Sensibilidades (base)
+Crescimento ±3 pp → $ 316 / $ 164 · capex ±3 pp → $ 201 / $ 253 · EBITDA ±3 pp → $ 253 / $ 201 · WACC ±1 pp → $ 193 / $ 272 · sem participações nem Waymo → $ 219. O crescimento domina; o capex vem logo a seguir.
+
+## Escada de entrada *(ao required)*
+
+| Degrau | Preço |
+|---|---|
+| 1.ª tranche — base (escada trocada) | $ 203 |
+| 2.ª tranche — ponderado | $ 193 |
+| Cheia — bear eixo único (capex +3 pp) | $ 180 |
+
+**Bear conjunto** (bear ao required + 100 bp): $ 96 (−64%) → peso ≤ ~3% para perda máx. de 2% da carteira na cauda conjunta (decisão de tamanho é tua)
+
+## Invalidadores
+1. Search < 10% YoY dois trimestres seguidos
+2. Capex 2027 > $ 280 mM sem aceleração de backlog
+3. Margem Cloud < 30% (TPU a diluir)
+4. FCF negativo em 2027 inteiro
+
+## Catalisadores
+Q4-26 e número de capex 2027 (início de Fev-2027) · remédios de ad tech · divulgação das vendas de TPU.
+
+## O risco que o modelo não vê
+Participações e Waymo valem ~$ 17/acção; as não cotadas (Anthropic) estão a 50% e um IPO muda esse número. E o FCF de 2027 é quase zero no base — o valor está todo depois de 2028.
+
+## Changelog
+- 24-11-2026: revisão de raiz — dados Q3-26, regra de custo de capital única (Rf actual, ERP 5%, β de sector Damodaran), 15 anos, cenários com probabilidades por empresa. Modelo em chat (Python), não no Excel: correr o pipeline no PC para fechar os gates.
+
+---
+
+# Versão anterior (30-10-2026) — estrutura válida, valuation substituída pelo bloco acima
+
+# Ficha de Empresa — Alphabet (GOOGL · NasdaqGS)
+
 > **Documento único e vivo.** Não se cria cópia por trimestre — actualiza-se este.
 > **Secções 1–7:** estrutura. Escritas uma vez, revistas anualmente ou quando um invalidador dispara.
 > **Blocos A–D:** infraestrutura. Actualizados a cada análise trimestral.
