@@ -1,6 +1,6 @@
 # Ficha de Empresa — Mastercard (MA · NYSE)
 
-<!-- dados {"preco": 625.59, "fv": 582.3, "bear": 381, "bull": 675, "t1": 526, "cheia": 461, "upside": -0.0692, "data": "20-11-2026", "decisao": "Esperar / manter — não reforçar", "quarter": "Q3-26", "invalidadores": "0 de 5 · 2 em vigilância", "moeda": "USD", "par": {"rf": 0.049100000000000005, "erp": 0.05, "rf_metodo": "A", "erp_fonte": "Kroll"}} -->
+<!-- dados {"preco": 625.59, "fv": 477.3, "bear": 316, "bull": 552, "t1": 460, "cheia": null, "upside": -0.237, "data": "20-11-2026", "decisao": "Esperar / manter — não reforçar", "quarter": "Q3-26", "invalidadores": "0 de 5 · 2 em vigilância", "moeda": "USD", "par": {"rf": 0.0491, "erp": 0.05, "rf_metodo": "A", "erp_fonte": "Kroll"}} -->
 
 `Q3-2026` · `revista 23-11-2026` · `criada 23-11-2026` · `plugin v2.1 · template v5.0` · **RASCUNHO v0**
 
@@ -33,7 +33,8 @@
 | | |
 |---|---|
 | **Retorno que o preço oferece** | **8,24%** (motor A; não depende do beta) |
-| **Decisão** | **ESPERAR / manter** — qualidade alta, preço a pedir o favorável; não reforçar |
+| **Beta que governa** | **β 1,005** (regra de 27-11: em sector ambíguo, o mais conservador) → **FV $ 477 (−24%)**, ponderado $ 460; β 0,76 fica como sensibilidade ($ 582) |
+| **Decisão** | **ESPERAR / manter** — qualidade alta, preço acima até do favorável ($ 552); não reforçar |
 | **Posição** | 5,6% da carteira (+~1% via ETFs) |
 | **O que decide** | Guidance de 2027 no Q4-26 (fim de Jan-2027): receita, opex e crescimento dos serviços |
 
@@ -118,14 +119,15 @@ O preço ($ 625,59) fica entre o base e o favorável. Com o beta de 0,76, a desc
 | FCF yield | ~2,8% | FCF LTM ~$ 15,2 mM, estimado |
 | Contra a própria história | n/d | Sem CapIQ |
 
-### Escada *(beta 0,76; hoje sem compras)*
+### Escada *(beta 1,005; hoje sem compras — provisória até recalcular no PC ao required de 10,85%)*
 
 | Degrau | Preço |
 |---|---|
-| 1.ª tranche — ponderado @9% | ~$ 526 |
-| 2.ª tranche — base @10% | ~$ 467 |
-| Posição cheia — crescimento −3 pp | ~$ 461 |
-| Pensar em reduzir | acima de ~$ 675 *(favorável)* |
+| 1.ª tranche — ponderado @WACC (provisório) | ~$ 460 |
+| 2.ª e cheia | a recalcular no pipeline (ao required) |
+| Pensar em reduzir | acima de ~$ 675 *(favorável com β 0,76)* |
+
+*Escada antiga com β 0,76 (revogada a 27-11): 1.ª ~$ 526 · 2.ª ~$ 467 · cheia ~$ 461.*
 
 ---
 
@@ -151,6 +153,7 @@ O preço ($ 625,59) fica entre o base e o favorável. Com o beta de 0,76, a desc
 
 | Data | O que mudou |
 |---|---|
+| 27-11-2026 | Regra do beta da carteira (decisão do Hugo): governa o β 1,005 (FV $ 477, ponderado $ 460); β 0,76 passa a sensibilidade. Escada provisória até ao pipeline. A decisão não muda |
 | 23-11-2026 | Criação (rascunho v0), com dados públicos e o motor `modelo_calc` |
 
 ## Notas de método

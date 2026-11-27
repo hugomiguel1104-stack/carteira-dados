@@ -1,6 +1,6 @@
 # Ficha de Empresa — Booking Holdings (BKNG · NasdaqGS)
 
-<!-- dados {"preco": 144.91, "fv": 219, "bear": 161, "bull": 268, "t1": 217, "cheia": null, "upside": 0.5113, "data": "20-11-2026", "decisao": "Entrada faseada (reforço) — T1 já; T2 após guidance FY27", "quarter": "Q3-26", "invalidadores": "0 de 5 · 3 em vigilância", "moeda": "USD", "par": {"rf": 0.049100000000000005, "erp": 0.05, "rf_metodo": "A", "erp_fonte": "Kroll"}, "proximo_report": "2026-11-03"} -->
+<!-- dados {"preco": 144.91, "fv": 172, "bear": 128, "bull": 210, "t1": 170, "cheia": null, "upside": 0.1869, "data": "20-11-2026", "decisao": "Entrada faseada (reforço) — T1 já; T2 após guidance FY27", "quarter": "Q3-26", "invalidadores": "0 de 5 · 3 em vigilância", "moeda": "USD", "par": {"rf": 0.0491, "erp": 0.05, "rf_metodo": "A", "erp_fonte": "Kroll"}} -->
 
 `Q3-2026` · `revista 23-11-2026` · `plugin v2.1` · **ACTUALIZAÇÃO Q3-26 com regime de taxas único** — substitui o RESUMO, a valuation e os cenários da ficha de 23-10 (base Q2, ERP 4,5%). As secções estruturais (negócio, moat, gestão) mantêm-se.
 
@@ -22,7 +22,9 @@
 | Crescimento exigido para render o WACC | **0,3%/ano** | 3,1%/ano | 4,2% a $ 171 (ER) |
 | Peso do TV | 55,8% | 48,1% | 58% |
 
-**Decisão: ENTRADA FASEADA (reforço).** É a única posição da carteira em que o preço exige quase nenhum crescimento: até o adverso fica acima do preço com β 0,88. O FTC e o guidance de FY27 (Fev-2027) decidem o tamanho, não a direcção.
+**Beta que governa (regra de 27-11): β 1,235** — quando o sector é ambíguo, usa-se o beta mais conservador e o outro fica como sensibilidade. **Fair value base $ 172 (+19%)** · ponderado $ 170 · WACC 10,80% · required 11,80%. Com β 0,88: $ 219.
+
+**Decisão: ENTRADA FASEADA (reforço).** É a única posição da carteira em que o preço exige pouco crescimento: 3,1%/ano com β 1,235, 0,3% com β 0,88. O preço oferece 12,3%, acima do required de 11,80% mesmo com o beta alto. O FTC e o guidance de FY27 (Fev-2027) decidem o tamanho, não a direcção.
 
 ---
 
@@ -66,11 +68,11 @@ O preço oferece **12,3%**. Ao WACC de 9,09%, exige **~0,3% de crescimento ao an
 
 ---
 
-## Escada *(β 0,88; posição de 2,8%)*
+## Escada *(β 1,235; posição de 2,8%)*
 
 | Degrau | Preço | Regra |
 |---|---|---|
-| 1.ª tranche | **já** ($ 145 < ponderado $ 217 @WACC) | Até o β 1,235 dá ponderado de $ 170 |
+| 1.ª tranche | **já** ($ 145 < ponderado $ 170 @WACC) | Com β 0,88 o ponderado seria $ 217 |
 | 2.ª tranche | depois do guidance de FY27 (Fev) se ≥8% cc | Informação, não preço |
 | Peso máx. | ~6–8% da carteira | O risco de cauda (IA) limita o tamanho |
 
@@ -82,6 +84,8 @@ O preço oferece **12,3%**. Ao WACC de 9,09%, exige **~0,3% de crescimento ao an
 |---|---|---|---|---|
 | 23-10-2026 | $ 161,10 | $ 236,03 | 11,97% | Entrada faseada |
 | **23-11-2026** | **$ 144,91** | **$ 219 / $ 172** | **12,3%** | **Entrada faseada — reforço** |
+
+**Changelog 27-11-2026:** regra do beta da carteira (decisão do Hugo): em sector ambíguo governa o beta mais conservador. Passa a governar o β 1,235 (FV $ 172, ponderado $ 170); o β 0,88 fica como sensibilidade. A decisão não muda.
 
 **Changelog 23-11-2026:** Q3 processado; regime de taxas único (Rf 4,91%, ERP 5%, beta Damodaran); exclusões recorrentes de 1% da receita no opex (ER); FTC e CNMC na ponte. O fair value desce de $ 236 para $ 219 (β 0,88): −$ 17, dos quais ERP/beta ~−$ 8 e Q4/exclusões ~−$ 9 (estimativa; a ponte exacta sai do `08` no PC).
 
