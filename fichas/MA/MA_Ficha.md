@@ -125,7 +125,7 @@ O preço ($ 625,59) fica entre o base e o favorável. Com o beta de 0,76, a desc
 |---|---|
 | 1.ª tranche — ponderado @WACC (provisório) | ~$ 460 |
 | 2.ª e cheia | a recalcular no pipeline (ao required) |
-| Pensar em reduzir | acima de ~$ 675 *(favorável com β 0,76)* |
+| Reduzir 1/3 (regra de venda de 27-11) | acima de ~$ 552 (favorável @WACC) **e** retorno implícito abaixo de 8% — hoje 8,24%, no limite |
 
 *Escada antiga com β 0,76 (revogada a 27-11): 1.ª ~$ 526 · 2.ª ~$ 467 · cheia ~$ 461.*
 

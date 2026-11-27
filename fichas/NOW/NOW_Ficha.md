@@ -51,7 +51,7 @@ Margem terminal 22% / 28% → $ 78 / $ 101 · crescimento −3 pp → $ 66 · WA
 Q4-26 e guide FY27 (fim de Jan-27).
 
 ## O risco que o modelo não vê
-Já tens a posição: com o preço no base, *pensar em reduzir* acima de ~$ 105 (bull @required) faz sentido; abaixo de ~$ 77 o modelo deixa de dar razão para sair.
+Já tens a posição. Regra de venda da carteira (27-11): reduzir 1/3 só acima de ~$ 122 (favorável @WACC) **e** com o retorno implícito abaixo de 8%; sair só com a tese partida (2 invalidadores ou o #1).
 
 ## Changelog
 - 27-11-2026: escada corrigida — a 1.ª tranche estava ao ponderado ($ 73) e a 2.ª ao base ($ 77), a subir. Com o ponderado abaixo do base, a 1.ª vai ao base.
@@ -60,6 +60,9 @@ Já tens a posição: com o preço no base, *pensar em reduzir* acima de ~$ 105 
 ---
 
 # Versão anterior (30-10-2026) — estrutura válida, valuation substituída pelo bloco acima
+
+> **Regras de saída desta versão anterior revogadas a 27-11-2026.** Vale a regra de venda da carteira: tese partida (2 invalidadores ou o principal) → reduzir para metade ou sair; peso acima do tecto por valorização → só diluição com dinheiro novo; trim só se overvalued (acima do favorável @WACC e retorno implícito < 8%) ou para financiar uma compra que passe a régua, sempre contra o custo fiscal.
+
 
 # Ficha de Empresa — ServiceNow, Inc. (NOW · NYSE)
 

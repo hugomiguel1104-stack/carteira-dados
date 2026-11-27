@@ -59,6 +59,9 @@ O Q3 teve uma recuperação de receita de clientes que saíram de dificuldades f
 
 # Versão anterior (30-10-2026) — estrutura válida, valuation substituída pelo bloco acima
 
+> **Regras de saída desta versão anterior revogadas a 27-11-2026.** Vale a regra de venda da carteira: tese partida (2 invalidadores ou o principal) → reduzir para metade ou sair; peso acima do tecto por valorização → só diluição com dinheiro novo; trim só se overvalued (acima do favorável @WACC e retorno implícito < 8%) ou para financiar uma compra que passe a régua, sempre contra o custo fiscal.
+
+
 # Ficha de Empresa — SAP SE (SAP · XETRA)
 
 > **Documento único e vivo.** Não se cria cópia por trimestre — actualiza-se este.

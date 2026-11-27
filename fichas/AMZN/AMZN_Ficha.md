@@ -177,7 +177,7 @@ O preço ($ 246,82) fica entre o base e o favorável: paga ~38% do caminho até 
 | 1.ª tranche | **~$ 211** | Valor ponderado @10% (25/50/25) |
 | 2.ª tranche | **~$ 207** | Base @10% |
 | Posição cheia | **~$ 157** | Adverso de eixo único (capex +3 pp) |
-| Pensar em reduzir | **acima de ~$ 300** | Perto do valor do cenário favorável: já paga o melhor caso |
+| Reduzir 1/3 (regra de venda de 27-11) | **acima de ~$ 309** | Favorável **e** retorno implícito abaixo de 8%. O peso acima de 8% corrige-se só com dinheiro novo |
 
 ---
 
