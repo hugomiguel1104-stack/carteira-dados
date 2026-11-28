@@ -1,7 +1,7 @@
 {
  "ticker": "SAP",
  "titulo": "SAP SE (XTRA:SAP) — DCF e Reverse DCF",
- "subtitulo": "Camada 3. Camada 1 = SAP_Ficha.md. Revisao Q3-26 (QS de 21-Out-2026). Preco de 28-Out-2026. Migrado para o pipeline v1.7 (o modelo de Jul-26 era feito a mao).",
+ "subtitulo": "Camada 3. Revisão v6 de 28-11-2026 (template v6, perfil software). Base LTM Sep-26 (QS Q3-26 de 21-10). Preço de fecho 27-11-2026. Pipeline v2.2.",
  "switches": {
   "cadeia": "cash_opex",
   "da_modo": "classes",
@@ -12,29 +12,32 @@
   ]
  },
  "mercado": {
-  "data": "2026-10-29",
-  "preco": 211.2,
-  "preco_memo": 140.2,
+  "data": "2026-11-27",
+  "preco": 195.64,
+  "preco_memo": 183.68,
   "shares": 1157,
   "divida": 8784,
   "caixa": 10997,
   "nao_marketavel": 7636,
-  "pct_ponte": 1,
-  "minoritarios": 513
+  "pct_ponte": 1.0,
+  "minoritarios": 513,
+  "pt_consenso": 238.93,
+  "moeda": "EUR"
  },
  "wacc": {
-  "rf": 0.0338,
+  "rf": 0.0327,
   "erp": 0.05,
-  "beta_unlev": 0.9636,
+  "beta_unlev": 1.33,
   "kd": 0.04,
   "tax_wacc": 0.29,
   "wacc_override": 0,
-  "required": 0.083831,
+  "required": 0.108319,
   "crp": 0.0,
-  "rf_metodo": "A",
-  "erp_fonte": "Kroll Recommended Eurozone ERP 5,0-5,5% (estudo mais recente, 2-09-2026); usado 5,0% (limite inferior; o Hugo: Europa 5%). Regra da carteira (Hugo, 30-10-2026): Rf sempre soberana a 10 anos, ERP sempre Kroll; implicito Damodaran 4,20% como sensibilidade.",
-  "crp_fonte": "n/a — CRP 0",
-  "beta_fonte": "Damodaran Global/Europe Jan-2026, Software (System & Application) 0,9636 unlev (ficha de 29-10)"
+  "rf_metodo": "C",
+  "erp_fonte": "Kroll Recommended Eurozone ERP 5,0–5,5% (2-09-2026); usado 5,0% (regra da carteira, Hugo 30-10-2026)",
+  "crp_fonte": "Alemanha Aaa — sem CRP (Damodaran ctryprem)",
+  "beta_fonte": "Damodaran Global Jan-2026, Software (System & Application), N=1.532, unlevered corrigido de caixa 1,33. Sensibilidades: Western Europe 0,96 (ficha de 29-10) e US 1,25 (ficha de 24-11). Sector não ambíguo; entre regiões governa o global, que é também o mais conservador.",
+  "rf_fonte": "Bund 10Y 3,27% no fecho de 27-11-2026 (Trading Economics; Bundesbank Svensson por confirmar no PC)"
  },
  "tv_activo": {
   "g": 0.025,
@@ -100,16 +103,16 @@
    0.04
   ],
   "opex": [
-   0.692,
-   0.68,
-   0.67,
+   0.699,
+   0.687,
+   0.677,
+   0.669,
    0.662,
-   0.655,
+   0.657,
+   0.653,
    0.65,
-   0.646,
-   0.643,
-   0.641,
-   0.639
+   0.648,
+   0.646
   ],
   "capex": [
    0.023,
@@ -136,367 +139,15 @@
    0.29
   ]
  },
- "ancoras": {
-  "data": "QS Q3-26 publicado 21-Out-2026 apos o fecho; webcast as 23:00 CEST.",
-  "preco": "Fecho XETRA 28-Out-2026 (CapIQ: Latest/Last close 208,95/211,20; folha Multiples datada 28-Out). Posterior ao QS de 21-Out -> G17 OK. 52 semanas 127,50-232,20.",
-  "preco_memo": "Preco da revisao anterior (24-Jul-2026). So referencia.",
-  "shares": "Diluted weighted Q3-26 = 1.157 M (QS A.1). CapIQ 1.154,2 e o snapshot de Jun-26 e nao desconta os ~9 M recomprados no Q3. Ponto no tempo estimado ~1.153 M: usar 1.157 e conservador em ~0,4% (G2 aceite).",
-  "divida": "Divida financeira EX-LEASES = cash & ST 10.997 - net liquidity 2.213 (definicao SAP, slide 26 Q3-26) = 8.784. Inclui as emissoes de 2026 (+4.663). Leases (~1,8 bn) FORA: o capex projectado inclui os pagamentos de leases (definicao FCF da SAP).",
-  "caixa": "Cash 9.364 + other financial assets correntes 1.633 = 10.997 (QS B; = CapIQ Cash & ST).",
-  "nao_marketavel": "Other financial assets nao correntes 8.300 x 92% equity investments (rácio do 20-F FY25) = 7.636. Ganhos fora do EBIT e do non-IFRS -> sem dupla contagem.",
-  "pct_ponte": "100%, como em Jul-26. A 75% o valor/accao cai ~1,65.",
-  "minoritarios": "QS Q3-26 B.",
-  "rf": "Bund 10Y 28-10-2026 = 3,38% (ficha de 29-10), data do preco. Regra da carteira: Rf sempre 10 anos.",
-  "erp": "Kroll Recommended Eurozone ERP 5,0-5,5% (estudo mais recente, 2-09-2026); usado 5,0% (limite inferior; o Hugo: Europa 5%). Regra da carteira (Hugo, 30-10-2026): Rf sempre soberana a 10 anos, ERP sempre Kroll; implicito Damodaran 4,20% como sensibilidade.",
-  "beta_unlev": "Damodaran Western Europe Jan-2026, Software (System & Application), N=290, unlevered corrigido de caixa. Tecto sectorial.",
-  "kd": "Bund 3,38% + ~60 bp para A+/A1 (S&P/Moody's). Peso de 3,5% no WACC: +/-50 bp no Kd mexe o WACC 1 bp.",
-  "tax_wacc": "Guidance ETR non-IFRS FY26 ~29%.",
-  "g": "2,5% nominal. PIB nominal zona euro ~3%. g <= PIB LT.",
-  "ppe": "PP&E Q3-26 4.549 (inclui ROU). Repartido em tranches para o D&A do Y1 bater com o run-rate ex-adquiridos (~900 LTM).",
-  "vida_carteira": "Substituido pelas tranches (da_modo = classes).",
-  "vida_capex": "Substituido pelas classes: 80% equipamento/software/ROU a 5 anos, 20% edificios a 30.",
-  "nwc": "G9 de Jul-26: media FY22-FY25 das linhas do CF = 2,1% de consumo. LTM Sep-26: -195 de consumo.",
-  "lin_cresc": "9M26 +12% cc (+9,5% reportado). Gestao: 2026 ~10,6% cc e 2027 ACELERA. Consenso FY27 +11,9%, FY28 +12,3%, FY29 +10,7%, FY30 +11,1%. Fade para 4% no Y10 (Jul-26: 6%).",
-  "lin_opex": "CASH OPEX ex-D&A, SBC dentro. LTM 68,6% com SBC a 3,9% (deprimido pela cotacao). Normalizado SBC 5,0% -> 69,7%. Guidance 2027: opex a 80-90% do crescimento da receita; >2 bn de eficiencia ate 2028. Y10 63,9% = EBITDA 36,1% (consenso FY30 EBIT 34,1% + D&A ~2,3% = 36,4%).",
-  "lin_capex": "Definicao da gestao (FCF): PP&E+intangiveis - proceeds + leases. LTM 2,24%. Consenso FY27-28 2,2% (sem leases).",
-  "lin_tax": "Guidance FY26 non-IFRS ~29%; 2025 30,5%; consenso 29-30%.",
-  "shift_g": "Fica sempre a 0. O motor B tem shift proprio na folha Reverse.",
-  "janela_check": "As formulas de D&A tem a janela amarrada a parte inteira da vida util. Se mudares B37 para outra ordem de grandeza, regera o modelo."
- },
  "base": {
   "receita_ltm": 39387,
   "ebit_ltm": 11468,
   "label_base": "LTM Sep-26"
  },
- "leia_me": {
-  "fontes": [
-   [
-    "Filings",
-    "_docs/2026-Q3_QuarterlyStatement.pdf (21-Out-2026, 23 p.) e 2026-Q3_Presentation.pdf (28 p.). Revisao anterior: 20-F FY25, QS Q3-25 a Q2-26, transcript Q2-26."
-   ],
-   [
-    "CapIQ",
-    "Financials/SAP_CapIQ_Financials.xls (As Presented, trimestral; ultima coluna Sep-30-2026) e SAP_CapIQ_Estimates.xls (painel XTRA, 27 PT, 28 EPS)."
-   ],
-   [
-    "Preco",
-    "211,20 EUR fecho XETRA 28-Out-2026."
-   ],
-   [
-    "Taxas",
-    "Bund 10Y 3,38% (28-Out, Trading Economics); ERP implicito Damodaran 4,20% (1-Out-2026)."
-   ],
-   [
-    "EC",
-    "Commitment decision da Comissao Europeia, 9-Jul-2026 (comunicado SAP e Brussels Times)."
-   ],
-   [
-    "NAO DISPONIVEL",
-    "Transcript do call Q3-26; export Comps (ancora estrutural do G15); nota de leases do Q3."
-   ]
-  ],
-  "gates": [
-   [
-    "G3 splits",
-    "OK. Capital emitido 1.229 M inalterado."
-   ],
-   [
-    "G4 activos no EV",
-    "RESOLVIDO. LT equity investments 7.636 na ponte (CapIQ deixa-os fora: TEV 243.871 vs EV do modelo 235.022)."
-   ],
-   [
-    "G5 amort. intangiveis",
-    "RESOLVIDO e ERRO DE JUL-26 CORRIGIDO. Acquisition-related LTM 379, fora do non-IFRS. O modelo de Jul-26 somava-a ao FCFF via D&A (3,3%) sem a ter deduzido no EBIT: -8,51/accao @9%. Agora D&A ex-adquiridos. Tres aquisicoes de 2026 com PPA preliminar (drag non-IFRS Q3 -39)."
-   ],
-   [
-    "G6 reclassificados",
-    "ATENCAO 2027. IFRS 18 e duas exclusoes novas no non-IFRS a partir de 2027 (efeitos cambiais e juros de impostos). A serie non-IFRS de 2027 nao sera comparavel com 2026 sem ponte."
-   ],
-   [
-    "G7 LTM vs FY",
-    "OK. LTM Sep-26 = FY25 - 9M25 + 9M26 = 39.387 (bate com CapIQ). Nao e YoY."
-   ],
-   [
-    "G8 PDF legivel",
-    "OK. QS 105k caracteres, deck 31k."
-   ],
-   [
-    "G9 NWC",
-    "ACEITE. 2,0% vs media 2,1% das linhas do CF. LTM: -195."
-   ],
-   [
-    "G10 template",
-    "OK. As Presented."
-   ],
-   [
-    "G11 homologo",
-    "OK. YoY contra Q3-25 do QS (comparativo publicado)."
-   ],
-   [
-    "G12 ficha vs Excel",
-    "Ver bloco RECONCILIACAO e folha Reverse. 02 a verde antes de citar."
-   ],
-   [
-    "G13 driver dominante",
-    "Crescimento (amplitude 134) ~ WACC (128) > g (87) > cash opex (52) > imposto (33) > capex (19, banda -0,5/+1,5pp). Bandas SAP para capex/imposto/NWC/vida fixadas antes de ler, mas DEPOIS de uma corrida com as bandas por defeito (capex +/-5pp, implausivel num asset-light). Eixos: crescimento x cash opex; a grelha viva do Excel so suporta capex x crescimento (limite do pipeline)."
-   ],
-   [
-    "G14 modelo vs evidencia",
-    "SBC modelado a 5,0% vs 3,9% LTM: a cotacao subiu ~55 no Q3 e o SBC do Q3 foi so 4,6% da receita. Margem: expansao de +1,2pp no Q3 e ~1,1pp efeito de base (one-offs de 0,1 bn no Q3-25). Modelo nao extrapola o trimestre."
-   ],
-   [
-    "G15 conservadorismo",
-    "Factos: +0,20% (OK). Consenso: +0,89%. BLOQUEADO na ancora estrutural do cash opex terminal: sem export Comps nesta revisao."
-   ],
-   [
-    "G16 sem meio-termo",
-    "Todos resolvidos/aceites, excepto G15 ancora (bloqueante ate export ou dispensa escrita do Hugo)."
-   ],
-   [
-    "G17 Ancora externa",
-    "OK. Preco 28-Out > QS 21-Out. Export CapIQ cobre Sep-30-2026. Preco dentro das 52 semanas (127,50-232,20)."
-   ],
-   [
-    "G18 Tie-out CapIQ vs filing",
-    "Divida: CapIQ 10.588 inclui leases (~1,8 bn) e deixa LT investments fora; modelo usa 8.784 ex-leases (net liquidity SAP 2.213) com leases no capex. Capex: definicao da gestao 882 LTM (CapIQ: 701 so PP&E+intang). D&A: 1.279 total, 900 ex-adquiridos. Shares: ver G2. Periodo: Sep-30-2026."
-   ],
-   [
-    "G19 Custo de capital",
-    "Metodo A: Bund 3,38% (28-Out) + ERP implicito 4,20% (1-Out). Sem CRP (Alemanha Aaa). Beta Damodaran 0,9636 unlev. Ke 7,53%; +/-100bp: 6,53%-8,53%."
-   ],
-   [
-    "G20 capex-crescimento",
-    "Nao aplicavel (capex 2,3% da receita; sem ciclo). ROIC marginal implicito Y10 316%."
-   ],
-   [
-    "G21 margem vs pre-ciclo",
-    "Nao aplicavel."
-   ],
-   [
-    "Valor por accao",
-    "=DCF!$B$27"
-   ]
-  ],
-  "convencoes": [
-   [
-    "Enterprise value",
-    "=DCF!$B$15"
-   ],
-   [
-    "Peso do TV no EV",
-    "=DCF!$B$16"
-   ],
-   [
-    "WACC em uso",
-    "=Inputs!$B$29"
-   ],
-   [
-    "Motor A — desvio G12",
-    "=Reverse!$B$16"
-   ],
-   [
-    "Motor B — desvio G12",
-    "=Reverse!$B$36"
-   ],
-   [
-    "G20 — ROIC marginal implicito Y5",
-    "=Projecoes!$B$35"
-   ],
-   [
-    "G20 — ROIC marginal implicito Y10",
-    "=Projecoes!$C$35"
-   ],
-   [
-    "G20 — receita incremental / capex Y10",
-    "=Projecoes!$C$37"
-   ]
-  ]
- },
- "cenarios": {
-  "g13": [
-   [
-    "Crescimento da receita",
-    "+3.0/-3.0 pp",
-    365.95,
-    232,
-    "=C6-D6"
-   ],
-   [
-    "WACC",
-    "-1.0/+1.0 pp",
-    368.59,
-    240.56,
-    "=C7-D7"
-   ],
-   [
-    "g perpetuo",
-    "+1.0/-1.0 pp",
-    343.81,
-    256.72,
-    "=C8-D8"
-   ],
-   [
-    "Cash opex / receita",
-    "-3.0/+3.0 pp",
-    317.18,
-    265.46,
-    "=C9-D9"
-   ],
-   [
-    "Taxa de imposto",
-    "-4.0/+4.0 pp",
-    307.66,
-    274.98,
-    "=C10-D10"
-   ],
-   [
-    "Capex / receita",
-    "-0.5/+1.5 pp",
-    296.18,
-    276.73,
-    "=C11-D11"
-   ],
-   [
-    "NWC / delta receita",
-    "-2.0/+6.0 pp",
-    292.56,
-    287.6,
-    "=C12-D12"
-   ],
-   [
-    "Vida do capex novo",
-    "+2.0/-1.5 anos",
-    290.84,
-    291.71,
-    "=C13-D13"
-   ]
-  ],
-  "discretos": [
-   [
-    "A IA come os seats (ERP 4,20% — por refazer)",
-    "CAGR 6,0%",
-    "Y10 70,0%",
-    "2,3%",
-    204.55,
-    "=E41/Inputs!$B$6-1",
-    "=E41/Inputs!$B$7-1",
-    null,
-    0.25
-   ],
-   [
-    "A migracao paga (base)",
-    "CAGR 8,4%",
-    "Y10 63,9%",
-    "2,3%",
-    "=DCF!$B$27",
-    "=E42/Inputs!$B$6-1",
-    "=E42/Inputs!$B$7-1",
-    "=DCF!$B$17",
-    0.5
-   ],
-   [
-    "Plataforma de dados e agentes (ERP 4,20% — por refazer)",
-    "CAGR 9,8%",
-    "Y10 62,0%",
-    "2,3%",
-    340.09,
-    "=E43/Inputs!$B$6-1",
-    "=E43/Inputs!$B$7-1",
-    null,
-    0.25
-   ],
-   [
-    "PONDERADO @WACC",
-    null,
-    null,
-    null,
-    "=SUMPRODUCT(E41:E43,I41:I43)",
-    "=E44/Inputs!$B$6-1",
-    "=E44/Inputs!$B$7-1",
-    null,
-    null
-   ]
-  ],
-  "bandas": [
-   [
-    "1a tranche — base @required 8.38%",
-    239.91,
-    "07_cenarios: escada trocou (ponderado abaixo do base)."
-   ],
-   [
-    "2a tranche — ponderado @required (ERP 4,20% — por refazer: caminhos dos cenarios nao gravados)",
-    267.65,
-    "Soma p x V dos tres cenarios nomeados."
-   ],
-   [
-    "Posicao cheia — base com crescimento -3pp @required",
-    192.73,
-    "Bear de eixo unico no driver dominante (G13)."
-   ],
-   [
-    "Referencia: base @9% (hurdle de Jul-26)",
-    216.6,
-    "Mesmo modelo, taxa antiga."
-   ]
-  ],
-  "precos_assimetria": [
-   null,
-   null,
-   null,
-   null,
-   null,
-   null
-  ],
-  "stress": [
-   [
-    null,
-    null
-   ],
-   [
-    null,
-    null
-   ],
-   [
-    null,
-    null
-   ],
-   [
-    null,
-    null
-   ],
-   [
-    null,
-    null
-   ],
-   [
-    null,
-    null
-   ],
-   [
-    null,
-    null
-   ]
-  ],
-  "notas": {
-   "14": "Eixos: crescimento x cash opex por G13; a grelha viva do pipeline so suporta capex x crescimento — fica como esta, o heatmap do 06 corre com eixo crescimento.",
-   "37": "Celula do canto = valor/accao do motor local. Fica vazia ate correr a tabela de dados."
-  }
- },
- "grelha": {
-  "eixo_linhas": [
-   -0.05,
-   -0.025,
-   0,
-   0.025,
-   0.05
-  ],
-  "eixo_colunas": [
-   -0.03,
-   -0.015,
-   0,
-   0.015,
-   0.03
-  ]
+ "seeds": {
+  "A": 0.09534413860016502,
+  "B": 0.025637705350527534,
+  "D": -0.012647801614366471
  },
  "tabela_wacc_g": {
   "linhas": [
@@ -515,33 +166,143 @@
    0.035
   ]
  },
- "seeds": {
-  "A": 0.0916219129642624,
-  "B": -0.0359272069646977,
-  "D": null
- },
- "resultados_guardados": [
-  [
-   "RESULTADOS GUARDADOS DOS GOAL SEEKS",
-   null
+ "grelha": {
+  "eixo_linhas": [
+   -0.05,
+   -0.025,
+   0,
+   0.025,
+   0.05
   ],
-  [
-   "Preenchido pelo 02_motores_reverse.py. Reconfirmar sempre que um driver mude.",
-   null
-  ],
-  [
-   "Motor A @ 211.20",
-   "9.1622%"
-  ],
-  [
-   "Motor B @ 211.20, required 8%",
-   "shift -3.59% -> CAGR 4.77%"
-  ],
-  [
-   "Valor/accao base @ WACC 7.37%",
-   "291.32"
+  "eixo_colunas": [
+   -0.03,
+   -0.015,
+   0,
+   0.015,
+   0.03
   ]
- ],
+ },
+ "referencias": {
+  "cresc": {
+   "tipo": "consenso",
+   "valor": 0.119,
+   "modo": "cagr",
+   "fonte": "Consenso CapIQ 29-10-2026: receita FY27E +11,9% (n alto); 9M26 +12% cc; gestão: 2027 acelera face a 2026 (10,6% cc)"
+  },
+  "opex": {
+   "tipo": "consenso",
+   "valor": 0.636,
+   "modo": "nivel_y10",
+   "fonte": "Consenso CapIQ FY30E: EBIT 34,1% (n=2) + D&A ex-adquiridos ~2,3% -> cash opex ~63,6%. ANCORA ESTRUTURAL EM FALTA (export Comps)"
+  },
+  "capex": {
+   "tipo": "facto",
+   "valor": 0.0224,
+   "modo": "nivel_y10",
+   "fonte": "LTM Sep-26 definicao da gestao: PP&E+intang 701 - proceeds 96 + leases 277 = 882"
+  },
+  "tax": {
+   "tipo": "facto",
+   "valor": 0.29,
+   "modo": "nivel_y10",
+   "fonte": "Guidance FY26 ETR non-IFRS ~29% (QS Q3-26)"
+  },
+  "nwc": {
+   "tipo": "facto",
+   "valor": 0.021,
+   "modo": "escalar",
+   "fonte": "Media FY22-FY25 das linhas reportadas do CF: 2,1% de consumo (G9 de Jul-26)"
+  }
+ },
+ "cenarios_nomeados": {
+  "A migracao paga": {
+   "prob": 0.5,
+   "base": true
+  },
+  "Plataforma de dados e agentes": {
+   "prob": 0.25,
+   "cresc": [
+    0.13,
+    0.13,
+    0.125,
+    0.115,
+    0.105,
+    0.095,
+    0.085,
+    0.075,
+    0.065,
+    0.055
+   ],
+   "opex": [
+    0.697,
+    0.682,
+    0.669,
+    0.659,
+    0.65,
+    0.643,
+    0.637,
+    0.632,
+    0.629,
+    0.627
+   ]
+  },
+  "A IA come os seats": {
+   "prob": 0.25,
+   "cresc": [
+    0.11,
+    0.095,
+    0.08,
+    0.07,
+    0.06,
+    0.05,
+    0.04,
+    0.035,
+    0.03,
+    0.03
+   ],
+   "opex": [
+    0.702,
+    0.702,
+    0.702,
+    0.702,
+    0.702,
+    0.704,
+    0.705,
+    0.706,
+    0.707,
+    0.707
+   ]
+  }
+ },
+ "cenarios_cheia": {
+  "shift_cresc": -0.03
+ },
+ "escada": {
+  "probabilidades": {
+   "bull": 0.25,
+   "base": 0.5,
+   "bear": 0.25
+  },
+  "perda_max_carteira": 0.02,
+  "cenarios": {
+   "bull": {
+    "shift_cresc": 0.01,
+    "shift_opex": -0.015
+   },
+   "bear": {
+    "shift_cresc": -0.025,
+    "shift_opex": 0.035
+   },
+   "bear_eixo_unico": {
+    "shift_cresc": -0.03
+   },
+   "bear_conjunto": {
+    "shift_cresc": -0.04,
+    "shift_opex": 0.05,
+    "shift_taxa": 0.015
+   }
+  }
+ },
  "passthrough": {
   "Trimestres": {
    "A1": {
@@ -1492,11 +1253,6 @@
     "v": "=E5/D5-1",
     "f": "0.0%"
    },
-   "F16": {
-    "v": "LTM vs FY25 NAO e YoY (G7): sao 9 meses de roll. YoY real 9M26 = +9,5% reportado, +12% cc.",
-    "sz": 8.0,
-    "c": "808080"
-   },
    "A17": {
     "v": "Margem non-IFRS"
    },
@@ -1625,6 +1381,11 @@
    "E23": {
     "v": "=E13/E8",
     "f": "0.00"
+   },
+   "F16": {
+    "v": "LTM vs FY25 NAO e YoY (G7): sao 9 meses de roll. YoY real 9M26 = +9,5% reportado, +12% cc.",
+    "sz": 8.0,
+    "c": "808080"
    }
   },
   "Crosscheck": {
@@ -1698,21 +1459,21 @@
    },
    "B13": {
     "v": "=B5/B7",
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "A14": {
     "v": "EV / op. profit Q3 anualizado"
    },
    "B14": {
     "v": "=B5/B8",
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "A15": {
     "v": "EV / EBIT FY27E consenso"
    },
    "B15": {
     "v": "=B5/B9",
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "A16": {
     "v": "FCF yield LTM (s/ market cap)"
@@ -1756,81 +1517,81 @@
    },
    "B20": {
     "v": 24.2,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "C20": {
     "v": 21.43,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "D20": {
     "v": 14.33,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "E20": {
     "v": 12.59,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "F20": {
     "v": 16.86,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "G20": {
     "v": 18.49,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "A21": {
     "v": "P / NTM EPS"
    },
    "B21": {
     "v": 35.65,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "C21": {
     "v": 31.63,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "D21": {
     "v": 20.29,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "E21": {
     "v": 17.97,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "F21": {
     "v": 23.86,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "G21": {
     "v": 26.19,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "A22": {
     "v": "TEV / LTM unlevered FCF"
    },
    "B22": {
     "v": 34.26,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "C22": {
     "v": 30.98,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "D22": {
     "v": 19.34,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "E22": {
     "v": 18.39,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "F22": {
     "v": 22.73,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "G22": {
     "v": 23.51,
-    "f": "0.0\\x"
+    "f": "0.0x"
    },
    "A24": {
     "v": "AVISO G17 (Jul-26): a folha Historical Capitalization do CapIQ preca as colunas semanas depois do fim do trimestre. Esta serie vem da folha Multiples (fecho do periodo).",
@@ -1843,5 +1604,465 @@
     "c": "808080"
    }
   }
+ },
+ "ancoras": {
+  "data": "QS Q3-26 publicado 21-Out-2026 apos o fecho; webcast as 23:00 CEST.",
+  "preco": "Fecho XETRA 28-Out-2026 (CapIQ: Latest/Last close 208,95/211,20; folha Multiples datada 28-Out). Posterior ao QS de 21-Out -> G17 OK. 52 semanas 127,50-232,20.",
+  "preco_memo": "Preco da revisao anterior (24-Jul-2026). So referencia.",
+  "shares": "Diluted weighted Q3-26 = 1.157 M (QS A.1). CapIQ 1.154,2 e o snapshot de Jun-26 e nao desconta os ~9 M recomprados no Q3. Ponto no tempo estimado ~1.153 M: usar 1.157 e conservador em ~0,4% (G2 aceite).",
+  "divida": "Divida financeira EX-LEASES = cash & ST 10.997 - net liquidity 2.213 (definicao SAP, slide 26 Q3-26) = 8.784. Inclui as emissoes de 2026 (+4.663). Leases (~1,8 bn) FORA: o capex projectado inclui os pagamentos de leases (definicao FCF da SAP).",
+  "caixa": "Cash 9.364 + other financial assets correntes 1.633 = 10.997 (QS B; = CapIQ Cash & ST).",
+  "nao_marketavel": "Other financial assets nao correntes 8.300 x 92% equity investments (rácio do 20-F FY25) = 7.636. Ganhos fora do EBIT e do non-IFRS -> sem dupla contagem.",
+  "pct_ponte": "100%, como em Jul-26. A 75% o valor/accao cai ~1,65.",
+  "minoritarios": "QS Q3-26 B.",
+  "rf": "Bund 10Y 3,38% no fecho de 28-Out-2026 (Trading Economics; Bundesbank 7-Out 3,55%). Metodo A (G19). Jul-26 usava 2,75% 'a verificar' — o Bund ja fechou Julho a 3,21%.",
+  "erp": "Damodaran ERP implicito 1-Out-2026 = 4,20%. Metodo A: Rf do dia + ERP implicito do mesmo mes. Ke a ERP 5%/6% na ficha.",
+  "beta_unlev": "Damodaran Western Europe Jan-2026, Software (System & Application), N=290, unlevered corrigido de caixa. Tecto sectorial.",
+  "kd": "Bund 3,38% + ~60 bp para A+/A1 (S&P/Moody's). Peso de 3,5% no WACC: +/-50 bp no Kd mexe o WACC 1 bp.",
+  "tax_wacc": "Guidance ETR non-IFRS FY26 ~29%.",
+  "g": "2,5% nominal. PIB nominal zona euro ~3%. g <= PIB LT.",
+  "ppe": "PP&E Q3-26 4.549 (inclui ROU). Repartido em tranches para o D&A do Y1 bater com o run-rate ex-adquiridos (~900 LTM).",
+  "vida_carteira": "Substituido pelas tranches (da_modo = classes).",
+  "vida_capex": "Substituido pelas classes: 80% equipamento/software/ROU a 5 anos, 20% edificios a 30.",
+  "nwc": "G9 de Jul-26: media FY22-FY25 das linhas do CF = 2,1% de consumo. LTM Sep-26: -195 de consumo.",
+  "lin_cresc": "9M26 +12% cc (+9,5% reportado). Gestao: 2026 ~10,6% cc e 2027 ACELERA. Consenso FY27 +11,9%, FY28 +12,3%, FY29 +10,7%, FY30 +11,1%. Fade para 4% no Y10 (Jul-26: 6%).",
+  "lin_opex": "CASH OPEX ex-D&A, SBC dentro. LTM 68,6% com SBC a 3,9% (deprimido pela cotacao). Normalizado SBC 5,0% -> 69,7%. Guidance 2027: opex a 80-90% do crescimento da receita; >2 bn de eficiencia ate 2028. Y10 63,9% = EBITDA 36,1% (consenso FY30 EBIT 34,1% + D&A ~2,3% = 36,4%). Revisão 28-11: +0,7 pp em todos os anos e cenários pelo G23 (Teradata e reestruturação excluídos do non-IFRS e que são caixa).",
+  "lin_capex": "Definicao da gestao (FCF): PP&E+intangiveis - proceeds + leases. LTM 2,24%. Consenso FY27-28 2,2% (sem leases).",
+  "lin_tax": "Guidance FY26 non-IFRS ~29%; 2025 30,5%; consenso 29-30%."
+ },
+ "leia_me": {
+  "fontes": [
+   [
+    "Filings",
+    "_docs/2026-Q3_QuarterlyStatement.pdf (21-Out-2026, 23 p.) e 2026-Q3_Presentation.pdf (28 p.). Revisao anterior: 20-F FY25, QS Q3-25 a Q2-26, transcript Q2-26."
+   ],
+   [
+    "CapIQ",
+    "Financials/SAP_CapIQ_Financials.xls (As Presented, trimestral; ultima coluna Sep-30-2026) e SAP_CapIQ_Estimates.xls (painel XTRA, 27 PT, 28 EPS)."
+   ],
+   [
+    "Preco",
+    "211,20 EUR fecho XETRA 28-Out-2026."
+   ],
+   [
+    "Taxas",
+    "Bund 10Y 3,38% (28-Out, Trading Economics); ERP implicito Damodaran 4,20% (1-Out-2026)."
+   ],
+   [
+    "EC",
+    "Commitment decision da Comissao Europeia, 9-Jul-2026 (comunicado SAP e Brussels Times)."
+   ],
+   [
+    "NAO DISPONIVEL",
+    "Transcript do call Q3-26; export Comps (ancora estrutural do G15); nota de leases do Q3."
+   ]
+  ],
+  "gates": [
+   [
+    "G1 bases misturadas",
+    "OK. EBIT non-IFRS em toda a serie (CapIQ Key Stats EBIT = non-IFRS). Consenso CapIQ EBIT tambem non-IFRS. Nao se divide IFRS por non-IFRS."
+   ],
+   [
+    "G2 share count",
+    "ACEITE. 1.157 M = diluted weighted Q3-26. CapIQ 1.154,2 e snapshot de Jun-26. Mesmo numero para market cap e valor/accao."
+   ],
+   [
+    "G3 splits",
+    "OK. Capital emitido 1.229 M inalterado."
+   ],
+   [
+    "G4 activos no EV",
+    "RESOLVIDO. LT equity investments 7.636 na ponte (CapIQ deixa-os fora: TEV 243.871 vs EV do modelo 235.022)."
+   ],
+   [
+    "G5 amort. intangiveis",
+    "RESOLVIDO e ERRO DE JUL-26 CORRIGIDO. Acquisition-related LTM 379, fora do non-IFRS. O modelo de Jul-26 somava-a ao FCFF via D&A (3,3%) sem a ter deduzido no EBIT: -8,51/accao @9%. Agora D&A ex-adquiridos. Tres aquisicoes de 2026 com PPA preliminar (drag non-IFRS Q3 -39)."
+   ],
+   [
+    "G6 reclassificados",
+    "ATENCAO 2027. IFRS 18 e duas exclusoes novas no non-IFRS a partir de 2027 (efeitos cambiais e juros de impostos). A serie non-IFRS de 2027 nao sera comparavel com 2026 sem ponte."
+   ],
+   [
+    "G7 LTM vs FY",
+    "OK. LTM Sep-26 = FY25 - 9M25 + 9M26 = 39.387 (bate com CapIQ). Nao e YoY."
+   ],
+   [
+    "G8 PDF legivel",
+    "OK. QS 105k caracteres, deck 31k."
+   ],
+   [
+    "G9 NWC",
+    "ACEITE. 2,0% vs media 2,1% das linhas do CF. LTM: -195."
+   ],
+   [
+    "G10 template",
+    "OK. As Presented."
+   ],
+   [
+    "G11 homologo",
+    "OK. YoY contra Q3-25 do QS (comparativo publicado)."
+   ],
+   [
+    "G12 ficha vs Excel",
+    "Ver bloco RECONCILIACAO e folha Reverse. 02 a verde antes de citar."
+   ],
+   [
+    "G13 driver dominante",
+    "Crescimento (amplitude 134) ~ WACC (128) > g (87) > cash opex (52) > imposto (33) > capex (19, banda -0,5/+1,5pp). Bandas SAP para capex/imposto/NWC/vida fixadas antes de ler, mas DEPOIS de uma corrida com as bandas por defeito (capex +/-5pp, implausivel num asset-light). Eixos: crescimento x cash opex; a grelha viva do Excel so suporta capex x crescimento (limite do pipeline)."
+   ],
+   [
+    "G14 modelo vs evidencia",
+    "SBC modelado a 5,0% vs 3,9% LTM: a cotacao subiu ~55 no Q3 e o SBC do Q3 foi so 4,6% da receita. Margem: expansao de +1,2pp no Q3 e ~1,1pp efeito de base (one-offs de 0,1 bn no Q3-25). Modelo nao extrapola o trimestre."
+   ],
+   [
+    "G15 conservadorismo",
+    "Factos: +0,20% (OK). Consenso: +0,89%. BLOQUEADO na ancora estrutural do cash opex terminal: sem export Comps nesta revisao."
+   ],
+   [
+    "G16 sem meio-termo",
+    "Todos resolvidos/aceites, excepto G15 ancora (bloqueante ate export ou dispensa escrita do Hugo)."
+   ],
+   [
+    "G17 Ancora externa",
+    "OK. Preco 28-Out > QS 21-Out. Export CapIQ cobre Sep-30-2026. Preco dentro das 52 semanas (127,50-232,20)."
+   ],
+   [
+    "G18 Tie-out CapIQ vs filing",
+    "Divida: CapIQ 10.588 inclui leases (~1,8 bn) e deixa LT investments fora; modelo usa 8.784 ex-leases (net liquidity SAP 2.213) com leases no capex. Capex: definicao da gestao 882 LTM (CapIQ: 701 so PP&E+intang). D&A: 1.279 total, 900 ex-adquiridos. Shares: ver G2. Periodo: Sep-30-2026."
+   ],
+   [
+    "G19 Custo de capital",
+    "Metodo A: Bund 3,38% (28-Out) + ERP implicito 4,20% (1-Out). Sem CRP (Alemanha Aaa). Beta Damodaran 0,9636 unlev. Ke 7,53%; +/-100bp: 6,53%-8,53%."
+   ],
+   [
+    "G20 capex-crescimento",
+    "Nao aplicavel (capex 2,3% da receita; sem ciclo). ROIC marginal implicito Y10 316%."
+   ],
+   [
+    "G21 margem vs pre-ciclo",
+    "Nao aplicavel."
+   ]
+  ],
+  "convencoes": [
+   [
+    "Unidades",
+    "Milhoes de EUR, excepto por accao e percentagens."
+   ],
+   [
+    "SBC",
+    "Custo real dentro do EBIT (cash opex). Sem add-back. Share count constante."
+   ],
+   [
+    "Base do EBIT",
+    "Non-IFRS da SAP: SBC dentro, amortizacao de adquiridos e reestruturacao fora. Add-backs LTM ~3,3% do operating profit."
+   ],
+   [
+    "FCFF",
+    "Receita x (1 - cash opex ex-D&A) - D&A = EBIT; x (1-t) + D&A - Capex - NWC = FCFF. Descontado ao WACC = EV."
+   ],
+   [
+    "Capex/leases",
+    "Capex = definicao FCF da SAP (inclui pagamentos de leases); lease liabilities fora da divida."
+   ],
+   [
+    "Required return",
+    "Rubrica v1.3: nivel 1 (wide moat, net cash, receita recorrente com backlog, ROIC > 2x WACC) = WACC + 25 bp = 7,62%. A coluna 9% (hurdle de Jul-26) corre em paralelo na ficha."
+   ],
+   [
+    "Migracao",
+    "Modelo de Jul-26 era feito a mao (margem bruta ex-SBC + opex + SBC, D&A % receita). Revisao Q3-26 migra para o pipeline v1.7. Ponte metodo na ficha."
+   ]
+  ]
+ },
+ "cenarios": {
+  "g13": [
+   [
+    "Crescimento da receita",
+    "+3,0 / -3,0 pp",
+    231.2867,
+    152.438,
+    null
+   ],
+   [
+    "WACC",
+    "-1,0 / +1,0 pp",
+    217.9087,
+    164.5173,
+    null
+   ],
+   [
+    "Cash opex / receita",
+    "-3,0 / +3,0 pp",
+    204.3999,
+    170.6285,
+    null
+   ],
+   [
+    "g perpetuo",
+    "+1,0 / -1,0 pp",
+    204.6991,
+    174.4544,
+    null
+   ],
+   [
+    "Taxa de imposto",
+    "-4,0 / +4,0 pp",
+    197.8778,
+    177.1506,
+    null
+   ],
+   [
+    "Capex / receita",
+    "-0,5 / +1,5 pp",
+    190.7265,
+    177.8772,
+    null
+   ],
+   [
+    "NWC / delta receita",
+    "-2,0 / +6,0 pp",
+    188.4066,
+    184.8371,
+    null
+   ],
+   [
+    "Vida do capex novo",
+    "+2,0 / -1,5 anos",
+    187.1703,
+    187.803,
+    null
+   ]
+  ],
+  "discretos": [
+   [
+    "A IA COME OS SEATS",
+    "CAGR 6.0%",
+    "EBITDA Y10 29.3%",
+    "2.3%",
+    135.1175,
+    "=E41/Inputs!$B$6-1",
+    "=E41/Inputs!$B$7-1",
+    0.5215,
+    0.25
+   ],
+   [
+    "A MIGRACAO PAGA",
+    "CAGR 8.4%",
+    "EBITDA Y10 35.4%",
+    "2.3%",
+    187.5142,
+    "=E42/Inputs!$B$6-1",
+    "=E42/Inputs!$B$7-1",
+    0.5659,
+    0.5
+   ],
+   [
+    "PLATAFORMA DE DADOS E AGENTES",
+    "CAGR 9.8%",
+    "EBITDA Y10 37.3%",
+    "2.3%",
+    216.4913,
+    "=E43/Inputs!$B$6-1",
+    "=E43/Inputs!$B$7-1",
+    0.5851,
+    0.25
+   ],
+   [
+    "PONDERADO",
+    null,
+    null,
+    null,
+    "=SUMPRODUCT(E41:E43,I41:I43)",
+    "=E44/Inputs!$B$6-1",
+    "=E44/Inputs!$B$7-1",
+    null,
+    "=SUM(I41:I43)"
+   ]
+  ],
+  "bandas": [
+   [
+    "1a tranche — base @req",
+    164.5172,
+    "Escada do 07_cenarios.py (analise.py) — trocou: o ponderado saiu abaixo do base"
+   ],
+   [
+    "2a tranche — ponderado @req",
+    159.4945,
+    "Ao required return"
+   ],
+   [
+    "Posicao cheia — base com o driver dominante adverso @req",
+    134.7592,
+    "Shift {'shift_cresc': -0.03} ao required"
+   ],
+   [
+    "Peso maximo da posicao",
+    0.05164,
+    "2% da carteira / perda no A IA come os seats @WACC+1pp"
+   ]
+  ],
+  "notas": {
+   "14": "Eixos: crescimento x cash opex por G13; a grelha viva do pipeline so suporta capex x crescimento — fica como esta, o heatmap do 06 corre com eixo crescimento.",
+   "37": "Celula do canto = valor/accao do motor local. Fica vazia ate correr a tabela de dados."
+  },
+  "stress": [
+   [
+    "STRESS TEST DE DOWNSIDE (aritmetico)",
+    null
+   ],
+   [
+    "Receita -5pp/ano, cash opex +4pp, capex +2pp, WACC +100bp",
+    null
+   ],
+   [
+    "Valor por accao",
+    96.5591
+   ],
+   [
+    "vs preco",
+    -0.506445
+   ],
+   [
+    "Receita Y10",
+    54833.1
+   ],
+   [
+    "Margem EBIT Y10",
+    0.275661
+   ]
+  ]
+ },
+ "par_custo_capital": {
+  "metodo": "C",
+  "moeda": "EUR",
+  "rf": 0.0327,
+  "rf_data": "2026-11-27",
+  "rf_fonte": "Bund 10Y 3,27% no fecho de 27-11-2026 (Trading Economics; Bundesbank Svensson por confirmar no PC)",
+  "erp": 0.05,
+  "erp_fonte": "Kroll Recommended Eurozone ERP 5,0–5,5% (2-09-2026); usado 5,0% (regra da carteira, Hugo 30-10-2026)",
+  "central_versao": "2026-10-30b"
+ },
+ "bandas_g13": {
+  "cresc": [
+   "Crescimento da receita",
+   0.03,
+   -0.03,
+   "driver"
+  ],
+  "wacc": [
+   "WACC",
+   -0.01,
+   0.01,
+   "taxa"
+  ],
+  "g": [
+   "g perpetuo",
+   0.01,
+   -0.01,
+   "taxa"
+  ],
+  "opex": [
+   "Cash opex / receita",
+   -0.03,
+   0.03,
+   "driver"
+  ],
+  "tax": [
+   "Taxa de imposto",
+   -0.04,
+   0.04,
+   "driver"
+  ],
+  "capex": [
+   "Capex / receita",
+   -0.005,
+   0.015,
+   "driver"
+  ],
+  "nwc": [
+   "NWC / delta receita",
+   -0.02,
+   0.06,
+   "escalar"
+  ],
+  "vida_capex": [
+   "Vida do capex novo",
+   2.0,
+   -1.5,
+   "escalar"
+  ]
+ },
+ "reverse": {
+  "preco_pre": {
+   "preco": 208.65,
+   "data": "2026-10-21"
+  }
+ },
+ "g15": {
+  "ancora_pendente": "Sem export Comps (Capital IQ no PC a 05-12). Opex terminal referido ao consenso FY30E; âncora estrutural por fechar — sem dispensa do Hugo para a SAP."
+ },
+ "resultados": {
+  "ticker": "SAP",
+  "metodo": "FCFF",
+  "data": "2026-11-27",
+  "preco": 195.64,
+  "moeda": "EUR",
+  "fv": 187.5142,
+  "upside": -0.041535,
+  "wacc": 0.098319,
+  "required": 0.108319,
+  "irr_implicita": 0.09534413860016502,
+  "cagr_exigido": 0.10930163787522895,
+  "par": {
+   "metodo": "C",
+   "rf": 0.0327,
+   "erp": 0.05,
+   "erp_fonte": "Kroll Recommended Eurozone ERP 5,0–5,5% (2-09-2026); usado 5,0% (regra da carteira, Hugo 30-10-2026)"
+  },
+  "decisao": null,
+  "proximo_report": null,
+  "quarter": null,
+  "invalidadores": null,
+  "g23": "OK",
+  "cenarios": {
+   "A IA come os seats": 135.1175,
+   "A migracao paga": 187.5142,
+   "Plataforma de dados e agentes": 216.4913
+  },
+  "base_nome": "A migracao paga",
+  "ponderado": 181.6593,
+  "irr_esperada": 0.09317439697147348,
+  "t1": 164.5172,
+  "t2": 159.4945,
+  "cheia": 134.7592,
+  "peso_max": 0.05163992234707474,
+  "bear": 135.1175,
+  "bull": 216.4913,
+  "plugin": "2.0"
+ },
+ "resultados_guardados": [
+  [
+   "RESULTADOS GUARDADOS DOS GOAL SEEKS",
+   null
+  ],
+  [
+   "Calculados pelo 01 (analise.py) sobre o cenario base. Recalculados a cada build.",
+   null
+  ],
+  [
+   "Motor A @195.64",
+   0.09534413860016502
+  ],
+  [
+   "Motor B — CAGR 10a exigido ao required",
+   0.10930163787522895
+  ]
+ ],
+ "g23": {
+  "base_margem": "ajustada",
+  "receita_8t": 76400,
+  "caixa_recorrente_8t": 510,
+  "embutido_opex": 0.007,
+  "fonte": "Estimativa: Q4-24..Q3-26. Excluído do non-IFRS e caixa: Teradata (provisão 387 + 29, paga 408 em Mar-26) + reestruturação (~95 em 8T, LTM ~45). Fora: amortização de adquiridos. O programa de 2024 (~€3,1 mM) fica fora da janela de 8T — ver ficha §4."
  }
 }
