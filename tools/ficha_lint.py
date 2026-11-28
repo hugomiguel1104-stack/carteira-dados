@@ -81,6 +81,27 @@ def verificar(path: Path) -> list[str]:
         elif not desc.endswith("num banco") and not hit:
             erros.append(f"secção {n} sem {desc} (obrigatório no perfil {', '.join(perfis)})")
 
+    # Alocação de capital (28-11): obrigatória com devolução > 100% do FCF ou dívida líquida a subir nos últimos 3 anos
+    dd = {}
+    if m:
+        try:
+            dd = json.loads(m.group(1))
+        except json.JSONDecodeError:
+            pass
+    if "banco" not in perfis:
+        if "devolucao_fcf_max" not in dd or "divida_liquida_sobe" not in dd:
+            erros.append("bloco dados sem 'devolucao_fcf_max' (%, máximo dos últimos 3 anos) e 'divida_liquida_sobe' (true/false)")
+        elif (dd.get("devolucao_fcf_max") or 0) > 100 or dd.get("divida_liquida_sobe"):
+            s6 = sec_txt(6)
+            for pat, desc in [(r"Aloca[çc][ãa]o de capital", "subsecção 'Alocação de capital'"),
+                              (r"pre[çc]o m[ée]dio de recompra", "preço médio de recompra contra o FV"),
+                              (r"caixa livre|d[íi]vida l[íi]quida ajustada", "caixa livre / dívida líquida ajustada"),
+                              (r"stress|pior ano", "stress do pior ano do ciclo")]:
+                if not re.search(pat, s6, re.I):
+                    erros.append(f"secção 6 sem {desc} (devolução {dd.get('devolucao_fcf_max')}% do FCF / dívida a subir: {dd.get('divida_liquida_sobe')})")
+            if not re.search(r"aloca[çc][ãa]o|devolu[çc][ãa]o|recompra", sec_txt(12), re.I):
+                erros.append("secção 12 sem invalidador de alocação de capital")
+
     if re.search(r"^#{1,2} *Versão anterior", txt, re.M):
         erros.append("tem uma 'Versão anterior' colada — vai para _arquivo")
 
