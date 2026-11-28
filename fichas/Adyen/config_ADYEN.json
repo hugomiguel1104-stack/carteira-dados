@@ -1,7 +1,7 @@
 {
  "ticker": "ADYEN",
  "titulo": "Adyen N.V. (ADYEN) — DCF e Reverse DCF",
- "subtitulo": "Camada 3. Camada 1 = ADYEN_Ficha.md. Preco 842,00 (Bloomberg 09:49 CET 28-Out-2026, pos Q3 update). EUR M.",
+ "subtitulo": "Camada 3. Camada 1 = ADYEN_Ficha.md (template v6, perfil plataforma). Data: 28-Nov-2026 (fecho de 27-Nov). EUR M.",
  "switches": {
   "cadeia": "cash_opex",
   "da_modo": "vintage",
@@ -12,36 +12,39 @@
   ]
  },
  "mercado": {
-  "data": "2026-10-28",
-  "preco": 842,
-  "preco_memo": 944,
+  "data": "2026-11-27",
+  "preco": 882.6,
+  "preco_memo": 793.5,
   "shares": 31.78,
   "divida": 409.4,
-  "caixa": 3067,
-  "nao_marketavel": 1200,
+  "caixa": 3067.0,
+  "nao_marketavel": 1200.0,
   "pct_ponte": 0.5,
-  "minoritarios": 0
+  "minoritarios": 0,
+  "pt_consenso": 1231.8,
+  "moeda": "EUR"
  },
  "wacc": {
-  "rf": 0.0337,
+  "rf": 0.0327,
   "erp": 0.05,
-  "beta_unlev": 1.1,
+  "beta_unlev": 1.25,
   "kd": 0.04,
   "tax_wacc": 0.245,
   "wacc_override": 0,
-  "required": 0.098444,
+  "required": 0.104944,
   "crp": 0.0,
-  "rf_metodo": "A",
-  "erp_fonte": "Kroll Recommended Eurozone ERP 5,0-5,5% (estudo mais recente, 2-09-2026); usado 5,0% (limite inferior; o Hugo: Europa 5%). Regra da carteira (Hugo, 30-10-2026): ERP sempre Kroll; implicito Damodaran 4,20% como sensibilidade.",
-  "crp_fonte": "n/a — CRP 0 por regra do Hugo (30-10-2026: CRP so se relevante). O 0,51% era sobretudo spread de mercados desenvolvidos, nao risco emergente.",
-  "beta_fonte": "Damodaran US Jan-2026, beta unlev 1,10 (ficha de 28-10)"
+  "rf_metodo": "C",
+  "rf_fonte": "Bund 10Y fecho 27-11-2026 = 3,27% (Trading Economics; Bundesbank inacessivel desta sessao — confirmar no PC)",
+  "erp_fonte": "Kroll zona euro 5,0-5,5% (2-09-2026); usado 5,0% (decisao do Hugo, 30-10-2026)",
+  "crp_fonte": "n/a — CRP 0: LatAm 5,7% e APAC 10% da receita, exposicao a emergentes nao material",
+  "beta_fonte": "Regra de 27-11-2026 (Hugo): sector ambiguo -> governa o beta mais conservador. Candidatos Damodaran US Jan-2026, unlevered corrected for cash: Software (System & Application) 1,25 (n=309); Computer Services 0,96; Information Services 0,76. Governa 1,25. Sensibilidades: 1,00 (50/50 Info Services + Software, ficha de 24-11) e regressao ~1,39 (ficha de 24-11)."
  },
  "tv_activo": {
   "g": 0.025,
   "midyear": 1,
-  "ppe": 645,
+  "ppe": 645.0,
   "vida_carteira": 4.2,
-  "vida_capex": 5,
+  "vida_capex": 5.0,
   "nwc": 0.02
  },
  "drivers": {
@@ -58,16 +61,16 @@
    "Y10"
   ],
   "cresc": [
-   0.21,
-   0.195,
-   0.18,
-   0.165,
-   0.15,
-   0.13,
-   0.11,
-   0.09,
-   0.07,
-   0.05
+   0.205,
+   0.19,
+   0.175,
+   0.16,
+   0.145,
+   0.125,
+   0.105,
+   0.085,
+   0.065,
+   0.045
   ],
   "opex": [
    0.5,
@@ -75,23 +78,23 @@
    0.49,
    0.485,
    0.48,
+   0.4775,
    0.475,
-   0.47,
-   0.465,
-   0.465,
-   0.465
+   0.475,
+   0.475,
+   0.475
   ],
   "capex": [
    0.087,
-   0.077,
+   0.08,
+   0.075,
    0.07,
    0.068,
-   0.066,
-   0.065,
-   0.065,
-   0.065,
-   0.065,
-   0.065
+   0.068,
+   0.068,
+   0.068,
+   0.068,
+   0.068
   ],
   "tax": [
    0.245,
@@ -106,22 +109,28 @@
    0.245
   ]
  },
- "ancoras": {
-  "data": "Q3-26 business update, 28-Out-2026.",
-  "preco": "842,00 Bloomberg 09:49 CET (intraday, pos-update). Fecho 27-Out 944,00.",
-  "shares": "31,67 M diluted H1-26 + ~0,11 M para aquisicoes.",
-  "divida": "Leases IFRS16 (71,1 correntes + 338,3 nao correntes), Jun-26.",
-  "caixa": "Cash proprio 4.898 (12.393 - 8.097 payables + 603 receivables merchants) - ~300 M&A remanescente - 331 restricted - 1.200 capital regulatorio estimado = 3.067.",
-  "nao_marketavel": "Capital regulatorio estimado imobilizado em cash (requisito nao divulgado no AR; Pillar 3). 50% reconhecido.",
-  "pct_ponte": "G4: a 0% o valor/accao cai ~19; a 100% sobe ~19.",
-  "minoritarios": "Nao ha.",
-  "rf": "Bund 10Y 28-10-2026 = 3,37% (ficha de 28-10), data do preco. Regra da carteira (Hugo, 30-10-2026): Rf sempre soberana a 10 anos.",
-  "erp": "Kroll Recommended Eurozone ERP 5,0-5,5% (estudo mais recente, 2-09-2026); usado 5,0% (limite inferior; o Hugo: Europa 5%). Regra da carteira (Hugo, 30-10-2026): ERP sempre Kroll; implicito Damodaran 4,20% como sensibilidade.",
-  "beta_unlev": "ESCOLHA: 1,10 entre Computer Services 0,96 e Software 1,25 (Damodaran US Jan-26).",
-  "kd": "Taxa incremental de leases ~4% (estimativa; peso 1,5%, irrelevante).",
-  "tax_wacc": "ETR 24,4-24,5%.",
-  "shift_g": "Fica sempre a 0. O motor B tem shift proprio na folha Reverse.",
-  "janela_check": "As formulas de D&A tem a janela amarrada a parte inteira da vida util. Se mudares B37 para outra ordem de grandeza, regera o modelo."
+ "sotp": {
+  "itens": [
+   {
+    "nome": "Juro sobre o float de merchants",
+    "marcacao": 1615.0,
+    "participacao": 1.0,
+    "pct_ponte": 1.0,
+    "fonte": "Float = payables - receivables de merchants, media Dez-25/Jun-26 = 6.650 (5.810 / 7.494). Yield normalizado 2,25% (realizado H1-26 2,47%; DFR do BCE 2,50% a 29-10-2026; neutral ~2%). Pre-imposto 149,6; x(1-24,5%) = 113,0; perpetuidade a (WACC 9,50% - g 2,5%) = 1.615. Reconhecido a 100% porque o yield ja esta abaixo do actual. Sensibilidade a taxa na ficha (s.10)."
+   }
+  ],
+  "perdas_pct": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  "base": {
   "receita_ltm": 2573.6,
@@ -132,109 +141,65 @@
   "fontes": [
    [
     "Financeiros",
-    "CapIQ As Presented 'Quarterly' em EUR (so traz H1 — emissor semestral) + Annual Report 2025 (FY24/FY25) + cartas H2-25 e H1-26. O filing ganha (G18)."
+    "AR 2025 e cartas H1-25, H2-25, H1-26 (PDF do Hugo); IR 'Financial comparison 2026 and 2025'; CapIQ As Presented EUR (cash flow FY23-FY25); AR 2018-2024 e comunicados H2 via financialfilings.com/adyen.com (FY17-FY22, so as linhas citadas)."
    ],
    [
     "Q3-26",
-    "Business Update 28-Out-2026 (press release Adyen): net revenue 738,1; volume 451,1 mM; guidance FY26 margem EBITDA 50%, objectivo 2028 retirado."
+    "Business update 28-10-2026: net revenue 738,1; volume 451,1 mM; guidance FY26 EBITDA 50%; objectivo de >55% em 2028 retirado. Pilares: nota da equipa BlueCrow (28-10)."
    ],
    [
     "Preco",
-    "842,00 as 09:49 CET 28-Out-2026 (Bloomberg, via nota da equipa BlueCrow). Fecho 27-Out: 944,00 (Alpha Vantage). Fecho de 28-Out por confirmar — trocar em Inputs."
+    "882,60 fecho 27-11-2026 (Yahoo via portal precos.json = Alpha Vantage GLOBAL_QUOTE)."
    ],
    [
     "Consenso",
-    "CapIQ Estimates (USD, spot): PT medio $1.517,71 / mediana $1.423,96 (n=35; 21 Buy, 7 Outperform, 6 Hold, 0 Sell) = ~1.362 / 1.278 EUR @1,1142. Pre-corte. LT growth 18,7% medio (n=3)."
+    "MarketScreener ~19-11-2026: PT medio 1.231,80 (n=34; 842-1.800). JPM 1.160 (29-10), Loop 1.194 (29-10), Citi 1.600 (07-11)."
    ],
    [
     "Custo de capital",
-    "Bund 10Y 3,37% (28-Out-2026, Trading Economics) + ERP implicito Damodaran 1-Out-2026 4,20% (metodo A) + CRP 0,51%. Beta unlev 1,10."
+    "Metodo C: Bund 10Y 3,27% (27-11) + ERP Kroll 5,0%; beta 1,25 (regra do mais conservador)."
    ],
    [
-    "Comps",
-    "Peer set do CapIQ nao editavel. Ancora estrutural sobre subconjunto (Visa, Wise, StoneCo, PicS, Worldline, Klarna); exclui fleet/benefits (Edenred, WEX, Corpay, W.A.G)."
+    "BCE",
+    "Taxa de deposito 2,50% (decisao de 29-10-2026, sem alteracao). Mercado espera +25 bp em Dez e +50 bp em 2027 (Trading Economics, 16-11)."
    ]
   ],
   "gates": [
    [
+    "G17 Preco",
+    "OK — fecho de 27-11 posterior ao ultimo documento (update Q3 28-10; anuncio do CEO 24-11)."
+   ],
+   [
+    "G18 Cash/EV",
+    "Cash proprio 4.898 (Jun-26: 12.393 - 8.097 payables + 603 receivables) - ~300 M&A remanescente - 331 restricted = 4.267; dos quais 1.200 (estimativa de capital regulatorio) a 50%. Os fundos de merchants NAO sao caixa livre; o seu juro esta no SOTP."
+   ],
+   [
     "G18 Divida",
-    "RESOLVIDO — sem divida financeira; leases IFRS16 409,4 entram na divida (ROU no D&A, juro abaixo do EBIT)."
+    "Sem divida financeira; leases IFRS16 409,4 na divida (ROU no D&A, juro abaixo do EBIT)."
    ],
    [
     "G18 Capex",
-    "RESOLVIDO — capex projectado = capex da empresa (ex-terminais POS de aluguer) + principal de leases (coerente com leases na divida). FY25 6,95% da receita; FY26 guidance 7% + ~1,7% leases."
-   ],
-   [
-    "G18 EBITDA",
-    "RESOLVIDO — CapIQ FY25 1.197 vs empresa 1.245,7 (-3,9%). Usa-se a definicao da empresa."
+    "Capex da empresa + principal das leases (coerente com leases na divida). FY25 6,95%; guidance FY26 7% + ~1,7% leases."
    ],
    [
     "G2 Shares",
-    "ACEITE — 31,67 M diluted H1-26 + ~0,11 M emitidas para Talon.One/Orb = 31,78 M. CapIQ basic 31,567."
+    "31,67 M diluidas H1-26 + ~0,11 M emitidas para Talon.One/Orb = 31,78 M."
    ],
    [
     "G7 LTM",
-    "Base LTM Jun-26 (ultimo P&L disponivel). Q3-26 so tem receita."
+    "Base LTM Jun-26 (ultimo P&L). Q3-26 so tem receita."
    ],
    [
-    "G19 Custo de capital",
-    "Metodo A coerente. CRP e beta com fonte. Beta e escolha (ver Inputs)."
+    "G19",
+    "Metodo C coerente; Rf a confirmar no Bundesbank (PC)."
    ],
    [
     "SBC",
-    "Dentro do EBITDA da empresa (employee benefits). Custo real, sem add-back."
+    "Dentro do EBITDA da empresa. Custo real, sem add-back."
    ],
    [
-    "Float de merchants",
-    "SOTP — juros sobre saldos de merchants nao estao no FCFF nem no cash proprio; valorizados a parte, 75%."
-   ],
-   [
-    "Valor por accao",
-    "=DCF!$B$27"
-   ],
-   [
-    "Preco em uso",
-    "=Inputs!$B$6"
-   ],
-   [
-    "Upside / downside",
-    "=DCF!$B$29"
-   ],
-   [
-    "Enterprise value",
-    "=DCF!$B$15"
-   ],
-   [
-    "Peso do TV no EV",
-    "=DCF!$B$16"
-   ],
-   [
-    "WACC em uso",
-    "=Inputs!$B$29"
-   ],
-   [
-    "Motor A — desvio G12",
-    "=Reverse!$B$16"
-   ],
-   [
-    "Motor B — desvio G12",
-    "=Reverse!$B$36"
-   ],
-   [
-    "G20 — ROIC marginal implicito Y5",
-    "=Projecoes!$B$35"
-   ],
-   [
-    "G20 — ROIC marginal implicito Y10",
-    "=Projecoes!$C$35"
-   ],
-   [
-    "G20 — receita incremental / capex Y10",
-    "=Projecoes!$C$37"
-   ],
-   [
-    "SOTP reconhecido na ponte",
-    "=Inputs!$B$16"
+    "Float",
+    "SOTP — juro sobre saldos de merchants fora do FCFF e fora da caixa; valorizado a parte."
    ]
   ],
   "convencoes": [
@@ -244,19 +209,15 @@
    ],
    [
     "SBC",
-    "CUSTO REAL dentro do EBIT. Sem add-back. Share count constante."
-   ],
-   [
-    "FCFF",
-    "Net revenue x (1 - cash opex ex-D&A) - D&A = EBIT; x (1-t) = NOPAT; + D&A - (capex + leases) - Inv. NWC = FCFF. Descontado ao WACC = EV operacional."
+    "CUSTO REAL dentro do EBIT. Sem add-back."
    ],
    [
     "Receita",
-    "NET revenue (exclui interchange e scheme fees, pass-through)."
+    "NET revenue (exclui interchange e scheme fees)."
    ],
    [
     "Ponte",
-    "EV - leases + cash proprio disponivel + 50% do capital regulatorio estimado + 75% do valor do float."
+    "EV - leases + caixa propria disponivel + 50% do capital regulatorio estimado + valor do juro do float."
    ]
   ]
  },
@@ -264,93 +225,93 @@
   "g13": [
    [
     "Crescimento da receita",
-    "+3pp / -3pp",
-    1660.32,
-    1116.65,
-    "=C6-D6"
+    "+3,0 / -3,0 pp",
+    1342.5824,
+    925.4696,
+    null
    ],
    [
     "WACC",
-    "-100bp / +100bp",
-    1627.95,
-    1168.21,
-    "=C7-D7"
-   ],
-   [
-    "g perpetuo",
-    "3,5% / 1,5%",
-    1527.95,
-    1238.44,
-    "=C8-D8"
-   ],
-   [
-    "Capex / receita",
-    "-5pp / +5pp",
-    1498.82,
-    1219.07,
-    "=C9-D9"
-   ],
-   [
-    "Taxa de imposto",
-    "-5pp / +5pp",
-    1441.33,
-    1276.56,
-    "=C10-D10"
+    "-1,0 / +1,0 pp",
+    1288.1335,
+    980.0404,
+    null
    ],
    [
     "Cash opex / receita",
-    "-3pp / +3pp",
-    1438,
-    1279.89,
-    "=C11-D11"
+    "-3,0 / +3,0 pp",
+    1175.7704,
+    1047.5199,
+    null
+   ],
+   [
+    "g perpetuo",
+    "+0,5 / -0,5 pp",
+    1159.0555,
+    1070.5608,
+    null
+   ],
+   [
+    "Taxa de imposto",
+    "-3,0 / +3,0 pp",
+    1150.7654,
+    1072.5248,
+    null
+   ],
+   [
+    "Capex / receita",
+    "-1,0 / +2,0 pp",
+    1134.3816,
+    1066.1721,
+    null
    ],
    [
     "NWC / delta receita",
-    "-2pp / +4pp",
-    1363.89,
-    1349.06,
-    "=C12-D12"
+    "-2,0 / +4,0 pp",
+    1115.6361,
+    1103.6633,
+    null
    ],
    [
     "Vida do capex novo",
-    "+2,7 / -1,8 anos",
-    1352.14,
-    1363.61,
-    "=C13-D13"
+    "+1,0 / -1,0 anos",
+    1109.3599,
+    1113.9799,
+    null
    ]
   ],
   "discretos": [
    [
-    "BEAR",
-    "-3pp",
-    "+3pp",
-    "base",
-    873.43,
+    "COMODITIZACAO DO PROCESSAMENTO",
+    "CAGR 8.9%",
+    "EBITDA Y10 49.5%",
+    "6.8%",
+    823.9529,
     "=E41/Inputs!$B$6-1",
-    null,
-    null,
+    "=E41/Inputs!$B$7-1",
+    0.5626,
     0.25
    ],
    [
-    "BASE",
-    "base",
-    "base",
-    "base",
-    1110.4,
+    "VOLUME GANHA AO PRECO",
+    "CAGR 12.9%",
+    "EBITDA Y10 52.5%",
+    "6.8%",
+    1111.6451,
     "=E42/Inputs!$B$6-1",
-    null,
-    null,
+    "=E42/Inputs!$B$7-1",
+    0.6015,
     0.5
    ],
    [
-    "BULL",
-    "+2pp",
-    "-2pp",
-    "base",
-    1307.22,
+    "2023 OUTRA VEZ",
+    "CAGR 14.9%",
+    "EBITDA Y10 54.0%",
+    "6.8%",
+    1297.1409,
     "=E43/Inputs!$B$6-1",
-    null,
-    null,
+    "=E43/Inputs!$B$7-1",
+    0.6192,
     0.25
    ],
    [
@@ -360,99 +321,93 @@
     null,
     "=SUMPRODUCT(E41:E43,I41:I43)",
     "=E44/Inputs!$B$6-1",
+    "=E44/Inputs!$B$7-1",
     null,
-    null,
-    null
+    "=SUM(I41:I43)"
    ]
   ],
   "bandas": [
    [
-    "1a tranche — base @required 9,47% (troca: ponderado < base)",
-    1110.4,
-    "05_escada.py. Escada desce sempre: ponderado 1.157,55 < base 1.168,21, trocam."
+    "1a tranche — base @req",
+    980.0375,
+    "Escada do 07_cenarios.py (analise.py) — trocou: o ponderado saiu abaixo do base"
    ],
    [
-    "2a tranche — ponderado @required",
-    1100.36,
-    "05_escada.py"
+    "2a tranche — ponderado @req",
+    958.2658,
+    "Ao required return"
    ],
    [
-    "Posicao cheia — bear eixo unico (cresc -3pp) @required",
-    924.21,
-    "05_escada.py"
+    "Posicao cheia — base com o driver dominante adverso @req",
+    823.4199,
+    "Shift {'shift_cresc': -0.03} ao required"
    ],
    [
-    "Bear conjunto — por refazer (definicao nao gravada a 28-10)",
-    714.79,
-    "O valor de 28-10 (714,79) era ao ERP antigo; nao se reproduz porque os shifts nao ficaram no config."
+    "Peso maximo da posicao",
+    0.12081,
+    "2% da carteira / perda no Comoditizacao do processamento @WACC+1pp"
    ]
   ],
   "precos_assimetria": [
-   null,
-   null,
-   null,
-   null,
-   null,
-   null
+   1100,
+   944,
+   882.6,
+   800,
+   750,
+   700
   ],
   "stress": [
    [
-    null,
+    "STRESS TEST DE DOWNSIDE (aritmetico)",
     null
    ],
    [
-    null,
+    "Receita -5pp/ano, cash opex +4pp, capex +2pp, WACC +100bp",
     null
    ],
    [
-    null,
-    null
+    "Valor por accao",
+    656.9773
    ],
    [
-    null,
-    null
+    "vs preco",
+    -0.255634
    ],
    [
-    null,
-    null
+    "Receita Y10",
+    5493.0
    ],
    [
-    null,
-    null
-   ],
-   [
-    null,
-    null
+    "Margem EBIT Y10",
+    0.399487
    ]
   ],
-  "notas": {
-   "14": "Valores dos cenarios discretos e bandas: AO REQUIRED RETURN 9,47% (05_escada.py), nao ao WACC. O FV ao WACC (folha DCF) e 1.358,95."
-  }
+  "notas": {}
  },
  "grelha": {
   "eixo_linhas": [
-   -0.02,
-   -0.01,
-   0,
-   0.01,
-   0.02
-  ],
-  "eixo_colunas": [
    -0.03,
    -0.015,
    0,
    0.015,
    0.03
+  ],
+  "eixo_colunas": [
+   -0.02,
+   -0.01,
+   0,
+   0.01,
+   0.02
   ]
  },
  "tabela_wacc_g": {
   "linhas": [
    0.075,
-   0.08,
    0.085,
-   0.09,
    0.095,
-   0.1
+   0.105,
+   0.115,
+   0.125
   ],
   "colunas": [
    0.015,
@@ -463,9 +418,9 @@
   ]
  },
  "seeds": {
-  "A": 0.123131630462818,
-  "B": -0.0532431343919598,
-  "D": null
+  "A": 0.11446983917034231,
+  "B": -0.017896887712413448,
+  "D": 0.10073889882769436
  },
  "resultados_guardados": [
   [
@@ -473,34 +428,26 @@
    null
   ],
   [
-   "Preenchido pelo 02_motores_reverse.py. Reconfirmar sempre que um driver mude.",
+   "Calculados pelo 01 (analise.py) sobre o cenario base. Recalculados a cada build.",
    null
   ],
   [
-   "Motor A @ 842.00",
-   "12.3132%"
+   "Motor A @882.6",
+   0.11446983917034231
   ],
   [
-   "Motor B @ 842.00, required 9%",
-   "shift -5.32% -> CAGR 8.05%"
-  ],
-  [
-   "Valor/accao base @ WACC 8.47%",
-   "1,358.95"
+   "Motor B — CAGR 10a exigido ao required",
+   0.1109036613747667
   ]
  ],
  "passthrough": {
   "Trimestres": {
    "A1": {
-    "v": "TRIMESTRES — Q1-25 a Q3-26 (EUR M)",
-    "b": true,
-    "sz": 13.0,
-    "c": "FFFFFF"
+    "v": "TRIMESTRES — net revenue, volume e take rate por pilar (EUR M / EUR mM / bp)",
+    "b": true
    },
    "A2": {
-    "v": "Fonte: IR Adyen 'Financial comparison 2026 and 2025' (Q1-25 a Q2-26) + Q3-26 Business Update (28-Out-2026). Adyen so reporta P&L semestral.",
-    "sz": 8.0,
-    "c": "808080"
+    "v": "IR Adyen 'Financial comparison 2026 and 2025' (Q1-25 a Q2-26). Q3-26: receita por pilar do business update de 28-10-2026; volume por pilar DERIVADO do crescimento YoY do update (Digital +28%, UC +22%, Platforms +55%), soma 451,4 vs 451,1 reportado."
    },
    "A4": {
     "v": "Trimestre",
@@ -535,713 +482,1202 @@
     "b": true
    },
    "A5": {
-    "v": "Net revenue",
+    "v": "Net revenue Digital",
     "b": true
    },
    "B5": {
-    "v": 534.7,
-    "f": "#,##0.0"
-   },
-   "C5": {
-    "v": 558.8,
-    "f": "#,##0.0"
-   },
-   "D5": {
-    "v": 598.4,
-    "f": "#,##0.0"
-   },
-   "E5": {
-    "v": 672.3,
-    "f": "#,##0.0"
-   },
-   "F5": {
-    "v": 620.8,
-    "f": "#,##0.0"
-   },
-   "G5": {
-    "v": 682.1,
-    "f": "#,##0.0"
-   },
-   "H5": {
-    "v": 738.1,
-    "f": "#,##0.0"
-   },
-   "A6": {
-    "v": "Digital",
-    "b": true
-   },
-   "B6": {
     "v": 320.4,
     "f": "#,##0.0"
    },
-   "C6": {
+   "C5": {
     "v": 318.5,
     "f": "#,##0.0"
    },
-   "D6": {
-    "v": 335,
+   "D5": {
+    "v": 335.0,
     "f": "#,##0.0"
    },
-   "E6": {
+   "E5": {
     "v": 361.1,
     "f": "#,##0.0"
    },
-   "F6": {
+   "F5": {
     "v": 349.6,
     "f": "#,##0.0"
    },
-   "G6": {
+   "G5": {
     "v": 370.1,
     "f": "#,##0.0"
    },
-   "H6": {
+   "H5": {
     "v": 387.4,
     "f": "#,##0.0"
    },
+   "A6": {
+    "v": "Volume Digital (EUR mM)",
+    "b": true
+   },
+   "B6": {
+    "v": 181.0,
+    "f": "#,##0.0"
+   },
+   "C6": {
+    "v": 183.5,
+    "f": "#,##0.0"
+   },
+   "D6": {
+    "v": 183.7,
+    "f": "#,##0.0"
+   },
+   "E6": {
+    "v": 196.1,
+    "f": "#,##0.0"
+   },
+   "F6": {
+    "v": 207.8,
+    "f": "#,##0.0"
+   },
+   "G6": {
+    "v": 220.1,
+    "f": "#,##0.0"
+   },
+   "H6": {
+    "v": 235.1,
+    "f": "#,##0.0"
+   },
    "A7": {
-    "v": "Unified Commerce",
+    "v": "Take rate Digital (bp)",
     "b": true
    },
    "B7": {
-    "v": 158.8,
-    "f": "#,##0.0"
+    "v": "=B5/B6*10",
+    "f": "0.00"
    },
    "C7": {
-    "v": 175.3,
-    "f": "#,##0.0"
+    "v": "=C5/C6*10",
+    "f": "0.00"
    },
    "D7": {
-    "v": 194.8,
-    "f": "#,##0.0"
+    "v": "=D5/D6*10",
+    "f": "0.00"
    },
    "E7": {
-    "v": 236.5,
-    "f": "#,##0.0"
+    "v": "=E5/E6*10",
+    "f": "0.00"
    },
    "F7": {
-    "v": 196.2,
-    "f": "#,##0.0"
+    "v": "=F5/F6*10",
+    "f": "0.00"
    },
    "G7": {
-    "v": 221.5,
-    "f": "#,##0.0"
+    "v": "=G5/G6*10",
+    "f": "0.00"
    },
    "H7": {
-    "v": 250.5,
-    "f": "#,##0.0"
+    "v": "=H5/H6*10",
+    "f": "0.00"
    },
    "A8": {
-    "v": "Platforms",
+    "v": "Net revenue Unified Commerce",
     "b": true
    },
    "B8": {
-    "v": 55.5,
+    "v": 158.8,
     "f": "#,##0.0"
    },
    "C8": {
-    "v": 65.1,
+    "v": 175.3,
     "f": "#,##0.0"
    },
    "D8": {
-    "v": 68.6,
+    "v": 194.8,
     "f": "#,##0.0"
    },
    "E8": {
-    "v": 74.7,
+    "v": 236.5,
     "f": "#,##0.0"
    },
    "F8": {
-    "v": 75,
+    "v": 196.2,
     "f": "#,##0.0"
    },
    "G8": {
-    "v": 90.6,
+    "v": 221.5,
     "f": "#,##0.0"
    },
    "H8": {
-    "v": 100.2,
+    "v": 250.5,
     "f": "#,##0.0"
    },
    "A9": {
-    "v": "Volume processado (EUR bn)",
+    "v": "Volume Unified Commerce (EUR mM)",
     "b": true
    },
    "B9": {
-    "v": 314.8,
+    "v": 88.5,
     "f": "#,##0.0"
    },
    "C9": {
-    "v": 334.2,
+    "v": 100.9,
     "f": "#,##0.0"
    },
    "D9": {
-    "v": 346.9,
+    "v": 111.1,
     "f": "#,##0.0"
    },
    "E9": {
-    "v": 398.4,
+    "v": 141.0,
     "f": "#,##0.0"
    },
    "F9": {
-    "v": 382,
+    "v": 111.7,
     "f": "#,##0.0"
    },
    "G9": {
-    "v": 421.8,
+    "v": 129.2,
     "f": "#,##0.0"
    },
    "H9": {
-    "v": 451.1,
+    "v": 135.5,
     "f": "#,##0.0"
    },
    "A10": {
-    "v": "Take rate (bp)",
+    "v": "Take rate Unified Commerce (bp)",
     "b": true
    },
    "B10": {
-    "v": "=B5/B9*10",
+    "v": "=B8/B9*10",
     "f": "0.00"
    },
    "C10": {
-    "v": "=C5/C9*10",
+    "v": "=C8/C9*10",
     "f": "0.00"
    },
    "D10": {
-    "v": "=D5/D9*10",
+    "v": "=D8/D9*10",
     "f": "0.00"
    },
    "E10": {
-    "v": "=E5/E9*10",
+    "v": "=E8/E9*10",
     "f": "0.00"
    },
    "F10": {
-    "v": "=F5/F9*10",
+    "v": "=F8/F9*10",
     "f": "0.00"
    },
    "G10": {
-    "v": "=G5/G9*10",
+    "v": "=G8/G9*10",
     "f": "0.00"
    },
    "H10": {
-    "v": "=H5/H9*10",
+    "v": "=H8/H9*10",
     "f": "0.00"
    },
    "A11": {
-    "v": "Net revenue YoY",
+    "v": "Net revenue Platforms",
     "b": true
+   },
+   "B11": {
+    "v": 55.5,
+    "f": "#,##0.0"
+   },
+   "C11": {
+    "v": 65.1,
+    "f": "#,##0.0"
+   },
+   "D11": {
+    "v": 68.6,
+    "f": "#,##0.0"
+   },
+   "E11": {
+    "v": 74.7,
+    "f": "#,##0.0"
    },
    "F11": {
-    "v": "=F5/B5-1",
-    "f": "0.0%"
+    "v": 75.0,
+    "f": "#,##0.0"
    },
    "G11": {
-    "v": "=G5/C5-1",
-    "f": "0.0%"
+    "v": 90.6,
+    "f": "#,##0.0"
    },
    "H11": {
-    "v": "=H5/D5-1",
-    "f": "0.0%"
+    "v": 100.2,
+    "f": "#,##0.0"
    },
    "A12": {
-    "v": "Volume YoY",
+    "v": "Volume Platforms (EUR mM)",
     "b": true
+   },
+   "B12": {
+    "v": 45.3,
+    "f": "#,##0.0"
+   },
+   "C12": {
+    "v": 49.8,
+    "f": "#,##0.0"
+   },
+   "D12": {
+    "v": 52.1,
+    "f": "#,##0.0"
+   },
+   "E12": {
+    "v": 61.3,
+    "f": "#,##0.0"
    },
    "F12": {
-    "v": "=F9/B9-1",
-    "f": "0.0%"
+    "v": 62.5,
+    "f": "#,##0.0"
    },
    "G12": {
-    "v": "=G9/C9-1",
-    "f": "0.0%"
+    "v": 72.4,
+    "f": "#,##0.0"
    },
    "H12": {
-    "v": "=H9/D9-1",
-    "f": "0.0%"
+    "v": 80.8,
+    "f": "#,##0.0"
    },
    "A13": {
-    "v": "Take rate YoY",
+    "v": "Take rate Platforms (bp)",
     "b": true
    },
+   "B13": {
+    "v": "=B11/B12*10",
+    "f": "0.00"
+   },
+   "C13": {
+    "v": "=C11/C12*10",
+    "f": "0.00"
+   },
+   "D13": {
+    "v": "=D11/D12*10",
+    "f": "0.00"
+   },
+   "E13": {
+    "v": "=E11/E12*10",
+    "f": "0.00"
+   },
    "F13": {
-    "v": "=F10/B10-1",
-    "f": "0.0%"
+    "v": "=F11/F12*10",
+    "f": "0.00"
    },
    "G13": {
-    "v": "=G10/C10-1",
-    "f": "0.0%"
+    "v": "=G11/G12*10",
+    "f": "0.00"
    },
    "H13": {
-    "v": "=H10/D10-1",
-    "f": "0.0%"
+    "v": "=H11/H12*10",
+    "f": "0.00"
+   },
+   "A14": {
+    "v": "Net revenue total",
+    "b": true
+   },
+   "B14": {
+    "v": "=B5+B8+B11",
+    "f": "#,##0.0"
+   },
+   "C14": {
+    "v": "=C5+C8+C11",
+    "f": "#,##0.0"
+   },
+   "D14": {
+    "v": "=D5+D8+D11",
+    "f": "#,##0.0"
+   },
+   "E14": {
+    "v": "=E5+E8+E11",
+    "f": "#,##0.0"
+   },
+   "F14": {
+    "v": "=F5+F8+F11",
+    "f": "#,##0.0"
+   },
+   "G14": {
+    "v": "=G5+G8+G11",
+    "f": "#,##0.0"
+   },
+   "H14": {
+    "v": "=H5+H8+H11",
+    "f": "#,##0.0"
+   },
+   "A15": {
+    "v": "Volume total reportado (EUR mM)",
+    "b": true
+   },
+   "B15": {
+    "v": 314.8,
+    "f": "#,##0.0"
+   },
+   "C15": {
+    "v": 334.2,
+    "f": "#,##0.0"
+   },
+   "D15": {
+    "v": 346.9,
+    "f": "#,##0.0"
+   },
+   "E15": {
+    "v": 398.4,
+    "f": "#,##0.0"
+   },
+   "F15": {
+    "v": 382.0,
+    "f": "#,##0.0"
+   },
+   "G15": {
+    "v": 421.8,
+    "f": "#,##0.0"
+   },
+   "H15": {
+    "v": 451.1,
+    "f": "#,##0.0"
+   },
+   "A16": {
+    "v": "Take rate total (bp)",
+    "b": true
+   },
+   "B16": {
+    "v": "=B14/B15*10",
+    "f": "0.00"
+   },
+   "C16": {
+    "v": "=C14/C15*10",
+    "f": "0.00"
+   },
+   "D16": {
+    "v": "=D14/D15*10",
+    "f": "0.00"
+   },
+   "E16": {
+    "v": "=E14/E15*10",
+    "f": "0.00"
+   },
+   "F16": {
+    "v": "=F14/F15*10",
+    "f": "0.00"
+   },
+   "G16": {
+    "v": "=G14/G15*10",
+    "f": "0.00"
+   },
+   "H16": {
+    "v": "=H14/H15*10",
+    "f": "0.00"
+   },
+   "A17": {
+    "v": "FTE",
+    "b": true
+   },
+   "B17": {
+    "v": 4455,
+    "f": "#,##0"
+   },
+   "C17": {
+    "v": 4568,
+    "f": "#,##0"
+   },
+   "D17": {
+    "v": 4654,
+    "f": "#,##0"
+   },
+   "E17": {
+    "v": 4771,
+    "f": "#,##0"
+   },
+   "F17": {
+    "v": 4859,
+    "f": "#,##0"
+   },
+   "G17": {
+    "v": 5020,
+    "f": "#,##0"
    }
   },
   "Historico": {
    "A1": {
-    "v": "HISTORICO — FY2023 a FY2025 + LTM Jun-26 (EUR M, definicoes da empresa)",
-    "b": true,
-    "sz": 13.0,
-    "c": "FFFFFF"
+    "v": "HISTORICO — FY2017 a FY2025 + LTM (EUR M; definicoes da empresa)",
+    "b": true
    },
    "A2": {
-    "v": "FY24/FY25: Annual Report 2025 (non-IFRS table). LTM = H2-25 + H1-26 (cartas H2-25 e H1-26). FY23 net revenue e EBITDA: CapIQ Key Stats — base nao identica a da empresa (marcar).",
-    "sz": 8.0,
-    "c": "808080"
+    "v": "FY17-FY18: AR 2018 (net revenue na definicao antiga). FY19: AR 2019 na definicao antiga (496,7 / 279,3) e REEXPRESSO no AR 2020 (~534,5 / 316,9). FY20-FY24: comunicados H2 e AR. FY23-FY25: cash flow do CapIQ (As Presented, EUR). FY25 e LTM: AR 2025, cartas H2-25 e H1-26. n/d = a completar com o CapIQ anual no PC (05-12)."
    },
    "A4": {
     "v": "Periodo",
     "b": true
    },
    "B4": {
-    "v": "FY2023",
+    "v": "FY17",
     "b": true
    },
    "C4": {
-    "v": "FY2024",
+    "v": "FY18",
     "b": true
    },
    "D4": {
-    "v": "FY2025",
+    "v": "FY19",
     "b": true
    },
    "E4": {
-    "v": "LTM Jun-26",
+    "v": "FY20",
+    "b": true
+   },
+   "F4": {
+    "v": "FY21",
     "b": true
    },
    "G4": {
-    "v": "Leitura",
+    "v": "FY22",
+    "b": true
+   },
+   "H4": {
+    "v": "FY23",
+    "b": true
+   },
+   "I4": {
+    "v": "FY24",
+    "b": true
+   },
+   "J4": {
+    "v": "FY25",
+    "b": true
+   },
+   "K4": {
+    "v": "LTM Jun-26",
     "b": true
    },
    "A5": {
-    "v": "Net revenue",
+    "v": "Volume processado (EUR mM)",
     "b": true
    },
    "B5": {
-    "v": 1626,
+    "v": 108.4,
     "f": "#,##0.0"
    },
    "C5": {
-    "v": 1996.1,
+    "v": 159.0,
     "f": "#,##0.0"
    },
    "D5": {
-    "v": 2364.2,
+    "v": 239.6,
     "f": "#,##0.0"
    },
    "E5": {
-    "v": 2573.6,
+    "v": 303.6,
+    "f": "#,##0.0"
+   },
+   "F5": {
+    "v": 516.0,
+    "f": "#,##0.0"
+   },
+   "G5": {
+    "v": 767.5,
+    "f": "#,##0.0"
+   },
+   "H5": {
+    "v": 970.1,
+    "f": "#,##0.0"
+   },
+   "I5": {
+    "v": 1285.9,
+    "f": "#,##0.0"
+   },
+   "J5": {
+    "v": 1394.3,
+    "f": "#,##0.0"
+   },
+   "K5": {
+    "v": 1549.1,
     "f": "#,##0.0"
    },
    "A6": {
-    "v": "EBITDA (empresa)",
+    "v": "Net revenue",
     "b": true
    },
    "B6": {
-    "v": 728,
+    "v": 218.3,
     "f": "#,##0.0"
    },
    "C6": {
-    "v": 992.3,
+    "v": 348.9,
     "f": "#,##0.0"
    },
    "D6": {
-    "v": 1245.7,
+    "v": 534.5,
     "f": "#,##0.0"
    },
    "E6": {
-    "v": 1343.6,
+    "v": 684.2,
+    "f": "#,##0.0"
+   },
+   "F6": {
+    "v": 1002.0,
     "f": "#,##0.0"
    },
    "G6": {
-    "v": "FY25 52,7%; H2-25 55,3% (melhor semestre desde 2022); H1-26 49,2%; guidance FY26 50%."
+    "v": 1332.9,
+    "f": "#,##0.0"
+   },
+   "H6": {
+    "v": 1626.1,
+    "f": "#,##0.0"
+   },
+   "I6": {
+    "v": 1996.1,
+    "f": "#,##0.0"
+   },
+   "J6": {
+    "v": 2364.2,
+    "f": "#,##0.0"
+   },
+   "K6": {
+    "v": 2573.6,
+    "f": "#,##0.0"
    },
    "A7": {
-    "v": "D&A (PP&E + ROU + intang.)",
+    "v": "EBITDA (empresa, SBC dentro)",
     "b": true
    },
    "B7": {
-    "v": 85.5,
+    "v": 99.4,
     "f": "#,##0.0"
    },
    "C7": {
-    "v": 104.5,
+    "v": 181.9,
     "f": "#,##0.0"
    },
    "D7": {
-    "v": 135.8,
+    "v": 316.9,
     "f": "#,##0.0"
    },
    "E7": {
-    "v": 152.1,
+    "v": 402.5,
+    "f": "#,##0.0"
+   },
+   "F7": {
+    "v": 630.0,
+    "f": "#,##0.0"
+   },
+   "G7": {
+    "v": 728.3,
+    "f": "#,##0.0"
+   },
+   "H7": {
+    "v": 743.0,
+    "f": "#,##0.0"
+   },
+   "I7": {
+    "v": 992.3,
+    "f": "#,##0.0"
+   },
+   "J7": {
+    "v": 1245.7,
+    "f": "#,##0.0"
+   },
+   "K7": {
+    "v": 1343.6,
     "f": "#,##0.0"
    },
    "A8": {
-    "v": "Capex empresa (ex-terminais POS aluguer)",
+    "v": "D&A (PP&E + ROU + intang.)",
     "b": true
    },
-   "B8": {
-    "v": 69.7,
+   "H8": {
+    "v": 85.5,
     "f": "#,##0.0"
    },
-   "C8": {
-    "v": 91.1,
+   "I8": {
+    "v": 104.5,
     "f": "#,##0.0"
    },
-   "D8": {
-    "v": 116.8,
+   "J8": {
+    "v": 135.8,
     "f": "#,##0.0"
    },
-   "E8": {
-    "v": 133.6,
+   "K8": {
+    "v": 152.1,
     "f": "#,##0.0"
-   },
-   "G8": {
-    "v": "Guidance FY26: capex 7% da net revenue; volta ao historico (~5%) pos-2026."
    },
    "A9": {
-    "v": "Lease payments (principal)",
+    "v": "SBC (equity + cash settled)",
     "b": true
    },
-   "B9": {
-    "v": 33.8,
+   "H9": {
+    "v": 28.0,
     "f": "#,##0.0"
    },
-   "C9": {
-    "v": 41.4,
+   "I9": {
+    "v": 35.2,
     "f": "#,##0.0"
    },
-   "D9": {
-    "v": 47.6,
+   "J9": {
+    "v": 40.6,
     "f": "#,##0.0"
    },
-   "E9": {
-    "v": 49.8,
+   "K9": {
+    "v": 52.7,
     "f": "#,##0.0"
    },
    "A10": {
-    "v": "Free cash flow (def. empresa)",
+    "v": "Capex empresa",
     "b": true
    },
-   "C10": {
-    "v": 859.8,
+   "H10": {
+    "v": 69.7,
     "f": "#,##0.0"
    },
-   "D10": {
-    "v": 1081.3,
+   "I10": {
+    "v": 91.1,
     "f": "#,##0.0"
    },
-   "E10": {
-    "v": 1160.2,
+   "J10": {
+    "v": 116.8,
+    "f": "#,##0.0"
+   },
+   "K10": {
+    "v": 133.6,
+    "f": "#,##0.0"
+   },
+   "A11": {
+    "v": "Lease payments",
+    "b": true
+   },
+   "H11": {
+    "v": 33.8,
+    "f": "#,##0.0"
+   },
+   "I11": {
+    "v": 41.4,
+    "f": "#,##0.0"
+   },
+   "J11": {
+    "v": 47.6,
+    "f": "#,##0.0"
+   },
+   "K11": {
+    "v": 49.7,
     "f": "#,##0.0"
    },
    "A12": {
-    "v": "RACIOS",
-    "b": true,
-    "sz": 10.0,
-    "c": "1F3864"
+    "v": "FCF empresa (EBITDA - capex - leases)",
+    "b": true
+   },
+   "D12": {
+    "v": 287.1,
+    "f": "#,##0.0"
+   },
+   "E12": {
+    "v": 371.1,
+    "f": "#,##0.0"
+   },
+   "H12": {
+    "v": 639.5,
+    "f": "#,##0.0"
+   },
+   "I12": {
+    "v": 859.8,
+    "f": "#,##0.0"
+   },
+   "J12": {
+    "v": 1081.3,
+    "f": "#,##0.0"
+   },
+   "K12": {
+    "v": 1160.3,
+    "f": "#,##0.0"
    },
    "A13": {
-    "v": "Margem EBITDA",
+    "v": "FTE fim de periodo",
     "b": true
    },
    "B13": {
-    "v": "=B6/B5",
-    "f": "0.0%"
+    "v": 668,
+    "f": "#,##0.0"
    },
    "C13": {
-    "v": "=C6/C5",
-    "f": "0.0%"
+    "v": 873,
+    "f": "#,##0.0"
    },
    "D13": {
-    "v": "=D6/D5",
-    "f": "0.0%"
+    "v": 1182,
+    "f": "#,##0.0"
    },
    "E13": {
-    "v": "=E6/E5",
-    "f": "0.0%"
+    "v": 1747,
+    "f": "#,##0.0"
    },
-   "A14": {
-    "v": "Cash opex ex-D&A / receita",
-    "b": true
+   "F13": {
+    "v": 2180,
+    "f": "#,##0.0"
    },
-   "B14": {
-    "v": "=1-B6/B5",
-    "f": "0.0%"
+   "G13": {
+    "v": 3332,
+    "f": "#,##0.0"
    },
-   "C14": {
-    "v": "=1-C6/C5",
-    "f": "0.0%"
+   "J13": {
+    "v": 4771,
+    "f": "#,##0.0"
    },
-   "D14": {
-    "v": "=1-D6/D5",
-    "f": "0.0%"
-   },
-   "E14": {
-    "v": "=1-E6/E5",
-    "f": "0.0%"
+   "K13": {
+    "v": 5020,
+    "f": "#,##0.0"
    },
    "A15": {
-    "v": "D&A / receita",
+    "v": "RACIOS",
     "b": true
    },
-   "B15": {
-    "v": "=B7/B5",
-    "f": "0.0%"
-   },
-   "C15": {
-    "v": "=C7/C5",
-    "f": "0.0%"
-   },
-   "D15": {
-    "v": "=D7/D5",
-    "f": "0.0%"
-   },
-   "E15": {
-    "v": "=E7/E5",
-    "f": "0.0%"
-   },
    "A16": {
-    "v": "Margem EBIT",
+    "v": "Take rate (bp)",
     "b": true
    },
    "B16": {
-    "v": "=(B6-B7)/B5",
-    "f": "0.0%"
+    "v": "=B6/B5*10",
+    "f": "0.00"
    },
    "C16": {
-    "v": "=(C6-C7)/C5",
-    "f": "0.0%"
+    "v": "=C6/C5*10",
+    "f": "0.00"
    },
    "D16": {
-    "v": "=(D6-D7)/D5",
-    "f": "0.0%"
+    "v": "=D6/D5*10",
+    "f": "0.00"
    },
    "E16": {
-    "v": "=(E6-E7)/E5",
-    "f": "0.0%"
+    "v": "=E6/E5*10",
+    "f": "0.00"
+   },
+   "F16": {
+    "v": "=F6/F5*10",
+    "f": "0.00"
+   },
+   "G16": {
+    "v": "=G6/G5*10",
+    "f": "0.00"
+   },
+   "H16": {
+    "v": "=H6/H5*10",
+    "f": "0.00"
+   },
+   "I16": {
+    "v": "=I6/I5*10",
+    "f": "0.00"
+   },
+   "J16": {
+    "v": "=J6/J5*10",
+    "f": "0.00"
+   },
+   "K16": {
+    "v": "=K6/K5*10",
+    "f": "0.00"
    },
    "A17": {
-    "v": "Capex + leases / receita",
+    "v": "Margem EBITDA",
     "b": true
    },
    "B17": {
-    "v": "=(B8+B9)/B5",
+    "v": "=B7/B6",
     "f": "0.0%"
    },
    "C17": {
-    "v": "=(C8+C9)/C5",
+    "v": "=C7/C6",
     "f": "0.0%"
    },
    "D17": {
-    "v": "=(D8+D9)/D5",
+    "v": "=D7/D6",
     "f": "0.0%"
    },
    "E17": {
-    "v": "=(E8+E9)/E5",
+    "v": "=E7/E6",
+    "f": "0.0%"
+   },
+   "F17": {
+    "v": "=F7/F6",
+    "f": "0.0%"
+   },
+   "G17": {
+    "v": "=G7/G6",
+    "f": "0.0%"
+   },
+   "H17": {
+    "v": "=H7/H6",
+    "f": "0.0%"
+   },
+   "I17": {
+    "v": "=I7/I6",
+    "f": "0.0%"
+   },
+   "J17": {
+    "v": "=J7/J6",
+    "f": "0.0%"
+   },
+   "K17": {
+    "v": "=K7/K6",
     "f": "0.0%"
    },
    "A18": {
-    "v": "Capex+leases / D&A",
-    "b": true
-   },
-   "B18": {
-    "v": "=(B8+B9)/B7",
-    "f": "0.0%"
-   },
-   "C18": {
-    "v": "=(C8+C9)/C7",
-    "f": "0.0%"
-   },
-   "D18": {
-    "v": "=(D8+D9)/D7",
-    "f": "0.0%"
-   },
-   "E18": {
-    "v": "=(E8+E9)/E7",
-    "f": "0.0%"
-   },
-   "A19": {
     "v": "Crescimento net revenue",
     "b": true
    },
-   "C19": {
-    "v": "=C5/B5-1",
+   "C18": {
+    "v": "=C6/B6-1",
     "f": "0.0%"
    },
-   "D19": {
-    "v": "=D5/C5-1",
+   "D18": {
+    "v": "=D6/C6-1",
     "f": "0.0%"
+   },
+   "E18": {
+    "v": "=E6/D6-1",
+    "f": "0.0%"
+   },
+   "F18": {
+    "v": "=F6/E6-1",
+    "f": "0.0%"
+   },
+   "G18": {
+    "v": "=G6/F6-1",
+    "f": "0.0%"
+   },
+   "H18": {
+    "v": "=H6/G6-1",
+    "f": "0.0%"
+   },
+   "I18": {
+    "v": "=I6/H6-1",
+    "f": "0.0%"
+   },
+   "J18": {
+    "v": "=J6/I6-1",
+    "f": "0.0%"
+   },
+   "A20": {
+    "v": "Nota: FY19 reexpresso faz a quebra de serie; FY17-FY18 nao sao comparaveis com FY20+. FY21/FY22 net revenue derivados dos crescimentos publicados (FY22 = 1.626,1/1,22; FY21 = FY22/1,33). FY24 volume inclui um cliente grande de baixa margem que saiu em 2024-25."
    }
   },
   "Crosscheck": {
    "A1": {
-    "v": "CROSSCHECK DE MULTIPLOS (EUR M) — @842,00 (Bloomberg 09:49 CET 28-Out-2026)",
-    "b": true,
-    "sz": 13.0,
-    "c": "FFFFFF"
+    "v": "CROSSCHECK — @882,60 (fecho 27-11-2026)",
+    "b": true
    },
    "A2": {
-    "v": "EV sobre cash PROPRIO. O TEV do CapIQ (17.805 @944) inclui ~8 mM de fundos de merchants no cash e subavalia o EV em ~8 mM — nao usar os multiplos EV do CapIQ.",
-    "sz": 8.0,
-    "c": "808080"
+    "v": "EV sobre cash PROPRIO (sem saldos de merchants). O TEV do CapIQ mete ~8 mM de fundos de merchants no cash."
    },
    "A4": {
-    "v": "BASES",
-    "b": true,
-    "sz": 10.0,
-    "c": "1F3864"
+    "v": "Market cap 882,60 x 31,78 M"
    },
-   "A5": {
-    "v": "Market cap @842 x 31,78 M"
-   },
-   "B5": {
-    "v": "=842*31.78",
+   "B4": {
+    "v": "=882.6*31.78",
     "f": "#,##0"
    },
-   "A6": {
+   "A5": {
     "v": "+ Leases"
    },
-   "B6": {
+   "B5": {
     "v": 409.4,
     "f": "#,##0"
    },
-   "A7": {
-    "v": "- Cash proprio liquido de M&A (carta H1-26: ~4,6 mM)"
+   "A6": {
+    "v": "- Cash proprio liquido de M&A (~4,6 mM, carta H1-26)"
    },
-   "B7": {
+   "B6": {
     "v": -4600,
     "f": "#,##0"
    },
-   "A8": {
-    "v": "EV sobre cash proprio (=B5+B6+B7)",
+   "A7": {
+    "v": "EV sobre cash proprio (B4+B5+B6)",
     "b": true
    },
-   "B8": {
-    "v": "=B5+B6+B7",
+   "B7": {
+    "v": "=B4+B5+B6",
     "f": "#,##0"
    },
-   "A9": {
+   "A8": {
     "v": "EBITDA LTM Jun-26"
    },
-   "B9": {
+   "B8": {
     "v": 1343.6,
     "f": "#,##0"
    },
-   "A10": {
-    "v": "EBITDA FY26E (50% x ~2.886 net revenue, guidance mid)"
+   "A9": {
+    "v": "EBITDA FY26E (guidance 50% x ~2.870)"
    },
-   "B10": {
-    "v": 1442,
+   "B9": {
+    "v": 1435,
     "f": "#,##0"
    },
-   "A11": {
-    "v": "EBITDA FY27E consenso CapIQ (pre-corte)"
+   "A10": {
+    "v": "EBITDA Y1 do modelo (Jul-26 a Jun-27)"
    },
-   "B11": {
-    "v": 1868,
+   "B10": {
+    "v": "=Projecoes!C9",
     "f": "#,##0"
    },
    "A12": {
-    "v": "EBITDA H2-26 anualizado (50,6% x 1.581 x 2)"
-   },
-   "B12": {
-    "v": 1601.4,
-    "f": "#,##0"
-   },
-   "A14": {
-    "v": "MULTIPLOS",
-    "b": true,
-    "sz": 10.0,
-    "c": "1F3864"
-   },
-   "A15": {
     "v": "EV / EBITDA LTM"
    },
-   "B15": {
-    "v": "=B8/B9",
-    "f": "0.0\\x"
+   "B12": {
+    "v": "=B7/B8",
+    "f": "0.0x"
    },
-   "A16": {
+   "A13": {
     "v": "EV / EBITDA FY26E"
    },
+   "B13": {
+    "v": "=B7/B9",
+    "f": "0.0x"
+   },
+   "A14": {
+    "v": "EV / net revenue LTM Set-26 (2.713,3)"
+   },
+   "B14": {
+    "v": "=B7/2713.3",
+    "f": "0.0x"
+   },
+   "A15": {
+    "v": "P / E LTM Jun-26 (EPS 35,57; inclui finance income)"
+   },
+   "B15": {
+    "v": "=882.6/35.57",
+    "f": "0.0x"
+   },
+   "A16": {
+    "v": "FCF empresa LTM / market cap"
+   },
    "B16": {
-    "v": "=B8/B10",
-    "f": "0.0\\x"
-   },
-   "A17": {
-    "v": "EV / EBITDA FY27E consenso (pre-corte)"
-   },
-   "B17": {
-    "v": "=B8/B11",
-    "f": "0.0\\x"
-   },
-   "A18": {
-    "v": "EV / EBITDA H2-26 anualizado"
-   },
-   "B18": {
-    "v": "=B8/B12",
-    "f": "0.0\\x"
-   },
-   "A19": {
-    "v": "EV / net revenue LTM"
-   },
-   "B19": {
-    "v": "=B8/2573.6",
-    "f": "0.0\\x"
-   },
-   "A21": {
-    "v": "MEDIANA PROPRIA — CapIQ Multiples (TEV CapIQ, com float no cash: comparavel so consigo propria)",
-    "b": true,
-    "sz": 10.0,
-    "c": "1F3864"
-   },
-   "A22": {
-    "v": "TEV/LTM revenue medias anuais CapIQ: 19,3x (2022) 16,1x 14,5x 10,3x 7,5x 7,2x 6,5x — de-rating continuo; a mediana e a media da queda, nao nivel de reversao."
+    "v": "=1160.3/B4",
+    "f": "0.0%"
    }
   }
  },
- "sotp": {
-  "itens": [
-   {
-    "nome": "Float de merchants (juros sobre saldos de merchants)",
-    "marcacao": 1890,
-    "participacao": 1,
-    "pct_ponte": 0.75,
-    "fonte": "Saldo medio liquido payables-receivables merchants ~6.650 (Dez-25 5.810; Jun-26 7.494) x yield realizado H1-26 2,47% = 164 pre-imposto; x(1-24,5%) = 124; capitalizado a (WACC 8,5% - g 2,0%) = 1.890. 75% reconhecido: risco de descida de taxas BCE."
-   }
-  ],
-  "perdas_pct": [
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0
-  ]
+ "referencias": {
+  "cresc": {
+   "tipo": "consenso",
+   "valor": 0.21,
+   "modo": "cagr",
+   "fonte": "CapIQ Estimates (Out-2026, PRE-corte): receita FY27 +21,7%, FY28 +20,1% -> Y1 ~21%. Refrescar com o CapIQ no PC (05-12)."
+  },
+  "opex": {
+   "tipo": "ancora",
+   "valor": 0.51,
+   "modo": "nivel_y10",
+   "fonte": "Quartil superior da margem EBITDA LTM do subconjunto de pares do CapIQ (Visa 68,1; StoneCo 50,2; Wise 45,3; PicS 40,9; Worldline 6,9; Klarna -0,5) ~49% -> cash opex 51%. Export de Out-2026; ancora fraca (gross vs net revenue)."
+  },
+  "capex": {
+   "tipo": "facto",
+   "valor": 0.0695,
+   "modo": "nivel_y10",
+   "fonte": "FY25 capex empresa + leases = 6,95% (AR 2025)"
+  },
+  "tax": {
+   "tipo": "facto",
+   "valor": 0.244,
+   "modo": "nivel_y10",
+   "fonte": "ETR H1-26 24,4%"
+  },
+  "nwc": {
+   "tipo": "facto",
+   "valor": 0.0,
+   "modo": "escalar",
+   "fonte": "Linhas operacionais (receivables, inventario, payables) ~0% do delta da receita FY24-FY25"
+  }
  },
  "escada": {
+  "perda_max_carteira": 0.02,
   "probabilidades": {
    "bull": 0.25,
    "base": 0.5,
    "bear": 0.25
   },
-  "probabilidades_justificacao": "",
-  "perda_max_carteira": 0.02,
   "cenarios": {
    "bull": {
     "shift_cresc": 0.02,
-    "shift_opex": -0.02
+    "shift_opex": -0.015
    },
    "bear": {
-    "shift_cresc": -0.03,
+    "shift_cresc": -0.04,
     "shift_opex": 0.03
    },
    "bear_eixo_unico": {
     "shift_cresc": -0.03
+   },
+   "bear_conjunto": {
+    "shift_cresc": -0.04,
+    "shift_opex": 0.03,
+    "shift_taxa": 0.01
    }
   }
+ },
+ "cenarios_cheia": {
+  "shift_cresc": -0.03
+ },
+ "cenarios_nomeados": {
+  "Comoditizacao do processamento": {
+   "prob": 0.25,
+   "cresc": {
+    "shift": -0.04
+   },
+   "opex": {
+    "shift": 0.03
+   }
+  },
+  "Volume ganha ao preco": {
+   "prob": 0.5,
+   "base": true
+  },
+  "2023 outra vez": {
+   "prob": 0.25,
+   "cresc": {
+    "shift": 0.02
+   },
+   "opex": {
+    "shift": -0.015
+   }
+  }
+ },
+ "bandas_g13": {
+  "cresc": [
+   "Crescimento da receita",
+   0.03,
+   -0.03,
+   "driver"
+  ],
+  "wacc": [
+   "WACC",
+   -0.01,
+   0.01,
+   "taxa"
+  ],
+  "capex": [
+   "Capex / receita",
+   -0.01,
+   0.02,
+   "driver"
+  ],
+  "g": [
+   "g perpetuo",
+   0.005,
+   -0.005,
+   "taxa"
+  ],
+  "opex": [
+   "Cash opex / receita",
+   -0.03,
+   0.03,
+   "driver"
+  ],
+  "tax": [
+   "Taxa de imposto",
+   -0.03,
+   0.03,
+   "driver"
+  ],
+  "vida_capex": [
+   "Vida do capex novo",
+   1.0,
+   -1.0,
+   "escalar"
+  ],
+  "nwc": [
+   "NWC / delta receita",
+   -0.02,
+   0.04,
+   "escalar"
+  ]
+ },
+ "reverse": {
+  "preco_pre": {
+   "preco": 944.0,
+   "data": "2026-10-27"
+  }
+ },
+ "g23": {
+  "base_margem": "GAAP",
+  "receita_8t": 4957.0,
+  "caixa_recorrente_8t": 0.0,
+  "embutido_opex": 0.0,
+  "fonte": "EBITDA da empresa = Income before net finance income and income taxes + D&A (IFRS), sem exclusoes; SBC dentro. Receita 8T Q4-24 a Q3-26 (Q4-24 estimado ~552)."
+ },
+ "g20": {
+  "roic_marginal_hist": 1.51,
+  "rec_capex_hist": 2.45,
+  "fonte": "ROIC marginal FY23->LTM Jun-26 ex-M&A 151% (ficha de 28-10); receita nova por euro de capex+leases FY23-H1-26: (2.573,6 - 1.332,9) / 507,7 = 2,45"
+ },
+ "par_custo_capital": {
+  "metodo": "C",
+  "moeda": "EUR",
+  "rf": 0.0327,
+  "rf_data": "2026-11-27",
+  "rf_fonte": "Bund 10Y, Trading Economics (Bundesbank por confirmar no PC)",
+  "erp": 0.05,
+  "erp_fonte": "Kroll zona euro 5,0% (decisao do Hugo, 30-10-2026)",
+  "central_versao": "2026-10-30b"
+ },
+ "ancoras": {
+  "data": "Q3-26 business update 28-10-2026; anuncio de 24-11-2026 (van der Does sai de co-CEO).",
+  "preco": "Fecho 27-11-2026 (Yahoo/Alpha Vantage). G17 OK.",
+  "preco_memo": "Fecho de 20-11 (ficha de 24-11). Nao alimenta o modelo.",
+  "shares": "G2. 31,67 M diluidas H1-26 + ~0,11 M para aquisicoes.",
+  "divida": "Leases IFRS16 Jun-26 (71,1 + 338,3).",
+  "caixa": "Caixa propria disponivel 4.267 - 1.200 capital regulatorio estimado = 3.067. Jun-26; nao inclui o FCF do H2.",
+  "nao_marketavel": "Capital regulatorio estimado imobilizado (own funds 5,3 mM CET1; requisito no Pillar 3, por confirmar no PC). 50%.",
+  "pct_ponte": "G4: 0% -> -18,9/accao; 100% -> +18,9.",
+  "minoritarios": "Nao ha.",
+  "ev_mercado": "Alvo dos motores A e B",
+  "rf": "Bund 10Y 3,27% a 27-11-2026.",
+  "erp": "Kroll zona euro 5,0%.",
+  "beta_unlev": "1,25 Software (System & Application), Damodaran US Jan-26 — regra do mais conservador.",
+  "kd": "Taxa incremental das leases ~4% (peso 1,5%).",
+  "tax_wacc": "ETR 24,4-24,5%.",
+  "required": "WACC + 100 bp (nivel 2).",
+  "g": "2,5% <= PIB nominal da zona euro.",
+  "ppe": "PP&E 277 + ROU 368 (Jun-26).",
+  "vida_carteira": "~4,2 anos (D&A LTM 152 sobre 645).",
+  "vida_capex": "5 anos (servidores, terminais, data centers)",
+  "nwc": "2% do delta da receita (linhas operacionais, sem merchants).",
+  "lin_ano": "Y1 = Jul-26 a Jun-27",
+  "lin_cresc": "Ver s.7 da ficha",
+  "lin_opex": "Cash opex ex-D&A com SBC = 1 - margem EBITDA",
+  "lin_capex": "Capex + leases",
+  "lin_tax": "ETR",
+  "shift_g": "Motor B"
+ },
+ "resultados": {
+  "ticker": "ADYEN",
+  "metodo": "FCFF",
+  "data": "2026-11-27",
+  "preco": 882.6,
+  "moeda": "EUR",
+  "fv": 1111.6451,
+  "upside": 0.259512,
+  "wacc": 0.094944,
+  "required": 0.104944,
+  "irr_implicita": 0.11446983917034231,
+  "cagr_exigido": 0.1109036613747667,
+  "par": {
+   "metodo": "C",
+   "rf": 0.0327,
+   "erp": 0.05,
+   "erp_fonte": "Kroll zona euro 5,0-5,5% (2-09-2026); usado 5,0% (decisao do Hugo, 30-10-2026)"
+  },
+  "decisao": null,
+  "proximo_report": null,
+  "quarter": null,
+  "invalidadores": null,
+  "g23": "OK",
+  "cenarios": {
+   "Comoditizacao do processamento": 823.9529,
+   "Volume ganha ao preco": 1111.6451,
+   "2023 outra vez": 1297.1409
+  },
+  "base_nome": "Volume ganha ao preco",
+  "ponderado": 1086.096,
+  "irr_esperada": 0.11237654219404794,
+  "t1": 980.0375,
+  "t2": 958.2658,
+  "cheia": 823.4199,
+  "peso_max": 0.12081043238664092,
+  "bear": 823.9529,
+  "bull": 1297.1409,
+  "plugin": "2.0"
  }
 }
