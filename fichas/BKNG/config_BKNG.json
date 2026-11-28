@@ -1,7 +1,7 @@
 {
  "ticker": "BKNG",
  "titulo": "Booking Holdings (BKNG) - DCF e Reverse DCF",
- "subtitulo": "Camada 3. Camada 1 = BKNG_Ficha.md. Camada 2 = analise trimestral em chat. Data: 23-Out-2026 (preco de 22-Out).",
+ "subtitulo": "Camada 3. Camada 1 = BKNG_Ficha.md (template v6, perfil plataforma). Data: 28-Nov-2026 (fecho de 27-Nov).",
  "switches": {
   "cadeia": "cash_opex",
   "da_modo": "vintage",
@@ -12,29 +12,32 @@
   ]
  },
  "mercado": {
-  "data": "2026-10-22",
-  "preco": 161.1,
-  "preco_memo": 158.07,
-  "shares": 754.0,
-  "divida": 20180,
-  "caixa": 17214,
-  "nao_marketavel": 296,
+  "data": "2026-11-27",
+  "preco": 150.39,
+  "preco_memo": 144.91,
+  "shares": 743.7,
+  "divida": 20061,
+  "caixa": 15814,
+  "nao_marketavel": 400,
   "pct_ponte": 0.5,
-  "minoritarios": 1070
+  "minoritarios": 1722,
+  "pt_consenso": 222.35,
+  "moeda": "USD"
  },
  "wacc": {
-  "rf": 0.0496,
+  "rf": 0.04936,
   "erp": 0.05,
-  "beta_unlev": 0.876,
+  "beta_unlev": 1.235,
   "kd": 0.055,
-  "tax_wacc": 0.235,
+  "tax_wacc": 0.234,
   "wacc_override": 0,
-  "required": 0.100833,
-  "beta_fonte": "Damodaran US Jan-2026, Hotel/Gaming (N=63), unlevered corrected for cash 0,876 — tecto; realavancado ~0,99 (regressao ~1,07 acima do tecto)",
+  "required": 0.117813,
+  "beta_fonte": "Regra de 27-11-2026 (Hugo): sector ambiguo -> governa o beta mais conservador. 50% Damodaran Hotel/Gaming (0,876) + 50% Software (Internet) (~1,59), unlevered, US Jan-2026 = 1,235. Sensibilidade: Hotel/Gaming 0,876.",
   "erp_fonte": "Kroll Recommended U.S. ERP 5,0% (estudo mais recente, 2-09-2026). Regra da carteira (Hugo, 30-10-2026): ERP sempre o estudo Kroll mais recente. Antes: 4,5% (convencao da casa).",
-  "rf_metodo": "A",
+  "rf_metodo": "C",
   "crp": 0.0,
-  "crp_fonte": "n/a — CRP 0: exposicao a emergentes nao material"
+  "crp_fonte": "n/a — CRP 0: exposicao a emergentes nao material",
+  "rf_fonte": "UST 10Y, Yahoo ^TNX via portal (precos.json), fecho 2026-11-27 — Treasury.gov inacessivel desta sessao; confirmar no PC"
  },
  "tv_activo": {
   "g": 0.025,
@@ -58,28 +61,28 @@
    "Y10"
   ],
   "cresc": [
-   0.075,
-   0.085,
+   0.065,
    0.08,
    0.075,
    0.07,
    0.065,
-   0.055,
+   0.06,
    0.05,
    0.045,
-   0.04
+   0.04,
+   0.035
   ],
   "opex": [
    0.63,
-   0.623,
-   0.618,
-   0.615,
-   0.613,
-   0.612,
-   0.611,
-   0.61,
-   0.61,
-   0.61
+   0.628,
+   0.627,
+   0.626,
+   0.625,
+   0.625,
+   0.625,
+   0.625,
+   0.625,
+   0.625
   ],
   "capex": [
    0.015,
@@ -94,50 +97,50 @@
    0.015
   ],
   "tax": [
-   0.235,
+   0.234,
    0.235,
    0.236,
    0.237,
-   0.237,
    0.238,
    0.239,
-   0.239,
+   0.24,
+   0.24,
    0.24,
    0.24
   ]
  },
  "base": {
-  "receita_ltm": 28241,
-  "ebit_ltm": 9284,
-  "label_base": "LTM Jun-26"
+  "receita_ltm": 29026,
+  "ebit_ltm": 10219,
+  "label_base": "LTM Set-26 ex-FTC"
  },
  "ancoras": {
-  "data": "Q2-26 reportado a 04-Ago-2026 (ER) / 10-Q. Q3-26 sai a 03-Nov-2026 pos-mercado (Alpha Vantage, so data).",
-  "preco": "Fecho de 22-Out-2026 (CapIQ 'Last Close', export de 23-Out). G17: posterior ao ultimo doc (ER Q2-26, 04-Ago). 52s: 150,14-220,81.",
-  "preco_memo": "CapIQ 'Latest Price' intradia 23-Out no momento do export. Nao alimenta o modelo.",
-  "shares": "G2. Basicas 751,38 M a 27-Jul-2026 (capa do 10-Q) + ~2,6 M de diluicao TSM (Q2: 2 M; RSU nao vestidas 5,39 M). Pos-split 25:1 de 02-Abr-2026 (G3). Ponderadas diluidas Q2 = 770 M, inflacionadas pelas recompras intra-trimestre - NAO usadas.",
-  "divida": "G18. Senior notes contabilisticas 2.000 corrente + 18.180 LT = 20.180 (principal 20,3 mM; fair value 20,3 mM). 94% em EUR. SEM finance leases. CapIQ da 20.924 porque soma operating leases (~744) - EXCLUIDAS (renda dentro do EBIT).",
-  "caixa": "Cash & equivalents 30-Jun-2026 (10-Q). Restricted cash 294 EXCLUIDO. Inclui float sazonal de deferred merchant bookings (10.121 em Jun vs 5.270 em Dez) - aceite: o Y1 (Jul-26 a Jun-27) contem o ciclo sazonal completo, logo a caixa de Junho e coerente com a janela de FCFF.",
-  "nao_marketavel": "Long-term investments 296 (10-Q Nota 5): equity securities, parte privadas, apos ajustamentos negativos de 419.",
+  "data": "Q3-26 reportado a 03-Nov-2026 (8-K/ER, 10-Q). Q4-26 e guidance FY27 no fim de Fev-2027.",
+  "preco": "Fecho de 27-Nov-2026 (portal, precos.json; Yahoo). G17: posterior ao ultimo doc (10-Q Q3 03-Nov; 8-K das notes 13-Nov). Minimo 52s 144,91 (20-11).",
+  "preco_memo": "Fecho de 20-11 (ficha de 23-11). Nao alimenta o modelo.",
+  "shares": "G2. 743,7 M diluidas (ficha de 23-11: capa do 10-Q Q3 + diluicao). Ponderadas diluidas Q3 753 M, inflacionadas pelas recompras intra-trimestre — NAO usadas. Pos-split 25:1 (02-Abr-2026, G3).",
+  "divida": "G18. Senior notes 1.987 corrente + 18.074 LT = 20.061 (ER Q3, 30-Set). SEM finance leases; operating leases fora (renda no EBIT). Pos-Q3: EUR 3.550 M de notes novas a 13-Nov (8-K) — entram na divida E na caixa ate serem usadas, efeito liquido zero; nao modeladas.",
+  "caixa": "Cash & equivalents 30-Set-2026 (ER Q3) 15.814. Restricted cash fora. Y1 = Out-26 a Set-27 contem o ciclo sazonal completo do float.",
+  "nao_marketavel": "Investimentos de longo prazo ~400 (aprox., 10-Q), a 50%.",
   "pct_ponte": "G4. Convencao da casa para iliquidos. A 0% ou 100% move +/-0,20 por accao.",
-  "minoritarios": "NAO HA MINORITARIOS. Campo usado para CONTINGENCIAS tipo divida: multa CNMC Espanha 472 ja provisionada em Other LT liabilities (10-Q) + FTC/Priceline ~350 esperado (fonte Reuters: >500; 70%) + DSA UE ~250 esperado (investigacao aberta 21-Out; maximo legal 6% da receita). Total 1.070.",
+  "minoritarios": "NAO HA MINORITARIOS. Contingencias tipo divida: FTC/Priceline 1.000 provisionado e nao pago (900 contra receita + 100 G&A; pode subir) + CNMC 472 provisionado + DSA UE ~250 esperado. Total 1.722.",
   "ev_mercado": "Alvo dos motores A e B",
-  "rf": "UST 10Y 22-10-2026 = 4,96% (Treasury.gov), data do preco. Regra da carteira (Hugo, 30-10-2026): Rf sempre 10 anos.",
+  "rf": "UST 10Y 27-11-2026 = 4,94% (Yahoo ^TNX via portal; Treasury.gov inacessivel desta sessao — confirmar no PC). Metodo C.",
   "erp": "Kroll Recommended U.S. ERP 5,0% (estudo mais recente, 2-09-2026). Regra da carteira (Hugo, 30-10-2026): ERP sempre o estudo Kroll mais recente. Antes: 4,5% (convencao da casa).",
-  "beta_unlev": "Damodaran US Jan-2026, Hotel/Gaming (N=63), unlevered corrected for cash 0,876 - TECTO. Realavancado ~0,99. Beta de regressao 5Y mensal ~1,07 (Yahoo) ACIMA do tecto: a regra da casa manda o sector; sensibilidade +0,08 de beta = +~31bp de WACC.",
-  "kd": "Custo marginal em USD-equivalente: notes USD 2036 emitidas a 5,47% efectivo (Mai-26); EUR 3,67-4,66%, mas por paridade de juro o custo em USD e o relevante. Peso da divida ~14% - efeito pequeno.",
+  "beta_unlev": "1,235 = 50% Hotel/Gaming 0,876 + 50% Software (Internet) ~1,59 (Damodaran US Jan-2026), unlevered. Regra do beta de 27-11: governa o mais conservador; o 0,876 fica como sensibilidade.",
+  "kd": "Custo marginal em USD-equivalente ~5,5%: notes EUR de Nov-26 a 3,95-5,00% (2029-38); por paridade de juro o custo USD e o relevante.",
   "tax_wacc": "ETR 2026 YTD 23,4% (10-Q).",
-  "required": "NIVEL 2 da rubrica (WACC + 100bp): moat estabelecido (rede bilateral, ROIC muito acima do WACC), FCF consistente, MAS ciclicidade de viagens e risco de desintermediacao por IA impedem o nivel 1.",
+  "required": "NIVEL 2 (WACC + 100bp): moat estabelecido e ROIC muito acima do WACC, mas ciclicidade de viagens, risco de desintermediacao por IA e regulacao (FTC, DSA, DMA).",
   "g": "Nominal, abaixo do PIB nominal. Convencao da casa 2,5%.",
   "ppe": "PP&E liquido 767 + intangiveis 852 (30-Jun-2026). D&A anualizado H1-26 = 520.",
   "vida_carteira": "1.619 / 520 de D&A anual = ~3,1 anos; 3 para depreciar exactamente 100%.",
   "vida_capex": "Capex e sobretudo software capitalizado e equipamento informatico (3-5 anos).",
-  "nwc": "G9, das linhas reportadas (AR + prepaid + deferred merchant bookings/outros passivos correntes) / delta receita: FY23 -36,7%, FY24 -35,5%, FY25 -5,2% (queda de accrued expenses de 1.593), media 3a -26,2% (FONTE de caixa). Modelo -15%: o float cresce com o mix merchant, ja em ~70% da receita - satura.",
+  "nwc": "G9. Float do merchant (deferred merchant bookings). Linhas reportadas FY23 -36,7%, FY24 -35,5%, FY25 -5,2%; residuo do CFO LTM Set-26 ~-17%. Modelo -15%: o crescimento merchant abranda (GB merchant +14% no Q3 vs +25% em 2025).",
   "lin_ano": "Ancora historica",
-  "lin_cresc": "Q2-26 +8% (+7% cc); guidance Q3-26 +4-6% (+5-7% cc), FY26 'high single digits'. Tendencia FY24-25 ~10,5% cc. G14: Y1 entre a tendencia e o trimestre (Medio Oriente e choque identificavel). Consenso FY26-28 +8,7/+9,3/+8,4%. Fade para 4% em Y10.",
-  "lin_opex": "Cash opex ex-D&A COM SBC e transformation, SEM imparidades. FY23 70,3% / FY24 65,7% / FY25 63,2% (62,4% ex-transformation) / LTM 63,5%. Transformation: 650 M de poupancas run-rate ate fim-2027, parcialmente reinvestidas. Consenso EBITDA FY30 40,7% = opex 59,3%. Y10 61,0%.",
-  "lin_capex": "FY23 1,6% / FY24 1,8% / FY25 1,2%. Consenso FY26-28 1,4-1,5%.",
-  "lin_tax": "ETR 2026 YTD 23,4% (BBB Act). FY25 20,9%. Innovation Box NL a favor; Pillar 2 contra.",
+  "lin_cresc": "Base = receita AJUSTADA (ex-FTC). LTM Set-26 +11,5% ajustada (FX a favor). Q4-26 guidance 0-2% (2-4% cc). Consenso FY26 +9% / FY27 +9% (TIKR, 04-11, pre-revisoes). Y1 (Out-26 a Set-27) 6,5% = Q4 fraco + 2027 a ~8%; Y2 8% (ambicao >= 8% cc); fade para 3,5% (CAGR 10a 5,9%).",
+  "lin_opex": "Cash opex ex-D&A COM SBC e transformation, SEM FTC. LTM Set-26 62,8% (EBITDA 37,2%). Q4 guiado com EBITDA flat. Ambicao: margem EBITDA estavel. Y1 63,0% -> 62,5%. Poupancas de 650 M do Transformation Program assumidas reinvestidas.",
+  "lin_capex": "FY23 1,6% / FY24 1,8% / FY25 1,2% / LTM 1,1%. 1,5% (inclui software capitalizado).",
+  "lin_tax": "ETR 2026 YTD 23,4%. Pillar 2 contra; Innovation Box NL a favor.",
   "shift_g": "Fica sempre a 0 na folha DCF. O motor B tem shift proprio na folha Reverse."
  },
  "passthrough": {
@@ -1440,24 +1443,24 @@
  "leia_me": {
   "fontes": [
    [
-    "Financeiros trimestrais",
-    "CapIQ As Presented Quarterly (Q1-19 a Q2-26). Financials/BKNG_CapIQ_Financials_Quarterly.xls. Cash flow vem em YTD - descumulado."
+    "Financeiros anuais e trimestrais",
+    "SEC EDGAR via portal (out/sec.json do ramo data, lido 28-11-2026 03:21Z): XBRL us-gaap, 2016-2025 e trimestres ate Q3-26."
    ],
    [
-    "Financeiros anuais",
-    "NAO HA export Annual. Anuais reconstruidos: IS = soma dos 4 trimestres; CF = coluna YTD de Dezembro."
+    "KPIs e Q3-26",
+    "ER do Q3-26 (8-K de 03-Nov-2026, ex. 99.1): room nights, gross bookings, FTC, reconciliacao do Adj. EBITDA, guidance Q4."
    ],
    [
     "Consenso",
-    "Financials/BKNG_CapIQ_Estimates.xls (Consensus, Guidance, Revisions)."
-   ],
-   [
-    "Filings",
-    "_docs: 10-K FY24 e FY25, 10-Q Q2-26, ERs Q1-25 a Q2-26, transcript e apresentacao Q2-26, apresentacao Q1-26."
+    "Web: MarketBeat (PT medio 222,35, 08-Nov-2026); EPS do calendario do portal (Nasdaq): FY26 10,24 / FY27 12,06 / FY28 13,91."
    ],
    [
     "Mercado",
-    "Preco CapIQ 22-Out-2026. UST 10Y 4,96% (22-Out). Beta Damodaran US Jan-2026."
+    "Fecho 27-Nov-2026 (portal). UST 10Y 4,94% (27-Nov). Beta Damodaran US Jan-2026. ERP Kroll 5%."
+   ],
+   [
+    "CapIQ",
+    "Nao usado nesta revisao (fica para o PC a 05-12)."
    ]
   ],
   "gates": [
@@ -1595,134 +1598,153 @@
   ]
  },
  "seeds": {
-  "A": 0.09,
-  "B": 0.0,
-  "D": 0.0
+  "A": 0.12130239490303213,
+  "B": -0.0050992994627449655,
+  "D": 0.04981108757201583
  },
- "resultados_guardados": [],
+ "resultados_guardados": [
+  [
+   "RESULTADOS GUARDADOS DOS GOAL SEEKS",
+   null
+  ],
+  [
+   "Calculados pelo 01 (analise.py) sobre o cenario base. Recalculados a cada build.",
+   null
+  ],
+  [
+   "Motor A @150.39",
+   0.12130239490303213
+  ],
+  [
+   "Motor B — CAGR 10a exigido ao required",
+   0.05330071629660438
+  ]
+ ],
  "cenarios": {
   "g13": [
    [
     "Crescimento da receita",
-    "+2,0/-2,0 pp",
-    298.0,
-    214.61
+    "+2,0 / -2,0 pp",
+    206.383,
+    150.7166,
+    null
+   ],
+   [
+    "WACC",
+    "-1,0 / +1,0 pp",
+    201.9666,
+    156.3886,
+    null
    ],
    [
     "Cash opex / receita",
-    "-3,0/+3,0 pp",
-    273.24,
-    232.72
+    "-3,0 / +3,0 pp",
+    191.3974,
+    161.4128,
+    null
    ],
    [
     "Taxa de imposto",
-    "-3,0/+3,0 pp",
-    262.9,
-    243.06
+    "-3,0 / +3,0 pp",
+    183.4695,
+    169.3408,
+    null
+   ],
+   [
+    "g perpetuo",
+    "+0,5 / -0,5 pp",
+    182.6358,
+    170.8839,
+    null
    ],
    [
     "Capex / receita",
-    "-0,5/+1,5 pp",
-    256.49,
-    242.45
+    "-0,5 / +1,5 pp",
+    179.0165,
+    168.571,
+    null
    ],
    [
     "NWC / delta receita",
-    "-11/+15 pp",
-    257.63,
-    246.65
+    "-11,0 / +15,0 pp",
+    179.6884,
+    171.9279,
+    null
    ],
    [
     "Vida do capex novo",
-    "+1/-1 anos",
-    252.86,
-    253.11
-   ],
-   [
-    "WACC (nao e eixo)",
-    "-1,0/+1,0 pp",
-    304.15,
-    216.18
-   ],
-   [
-    "g perpetuo (nao e eixo)",
-    "+0,5/-0,5 pp",
-    267.28,
-    240.83
+    "+1,0 / -1,0 anos",
+    176.3034,
+    176.5121,
+    null
    ]
   ],
   "discretos": [
    [
-    "BULL",
-    "+1,5pp",
-    "-1,5pp",
-    "base",
-    277.11,
+    "ABRANDAMENTO + REGULACAO",
+    "CAGR 2.8%",
+    "EBITDA Y10 35.5%",
+    "1.5%",
+    131.2014,
     "=E41/Inputs!$B$6-1",
     "=E41/Inputs!$B$7-1",
-    0.607,
-    0.2
-   ],
-   [
-    "BASE",
-    "base",
-    "base",
-    "base",
-    236.03,
-    "=E42/Inputs!$B$6-1",
-    "=E42/Inputs!$B$7-1",
-    0.592,
-    0.45
-   ],
-   [
-    "BEAR eixo unico",
-    "-2pp",
-    "base",
-    "base",
-    200.62,
-    "=E43/Inputs!$B$6-1",
-    "=E43/Inputs!$B$7-1",
-    0.569,
+    0.4506,
     0.25
    ],
    [
-    "CAUDA CONJUNTA",
-    "-2pp",
-    "+3pp",
-    "base",
-    184.32,
-    "=E44/Inputs!$B$6-1",
-    "=E44/Inputs!$B$7-1",
-    0.569,
-    null
+    "COMPOUNDER MADURO",
+    "CAGR 5.8%",
+    "EBITDA Y10 37.5%",
+    "1.5%",
+    176.4051,
+    "=E42/Inputs!$B$6-1",
+    "=E42/Inputs!$B$7-1",
+    0.4872,
+    0.5
    ],
    [
-    "STRESS IA",
-    "CAGR 3%",
-    "+5pp",
-    "base",
-    154.65,
-    "=E45/Inputs!$B$6-1",
-    "=E45/Inputs!$B$7-1",
-    0.562,
-    0.1
+    "CONNECTED TRIP + POUPANCAS",
+    "CAGR 7.8%",
+    "EBITDA Y10 39.0%",
+    "1.5%",
+    215.0229,
+    "=E43/Inputs!$B$6-1",
+    "=E43/Inputs!$B$7-1",
+    0.5101,
+    0.25
+   ],
+   [
+    "PONDERADO",
+    null,
+    null,
+    null,
+    "=SUMPRODUCT(E41:E43,I41:I43)",
+    "=E44/Inputs!$B$6-1",
+    "=E44/Inputs!$B$7-1",
+    null,
+    "=SUM(I41:I43)"
    ]
   ],
   "bandas": [
    [
-    "T1 - base rende o required",
-    203.62,
-    "Preco a que o BASE entrega 9.66% (WACC + 100bp, nivel 2). Calculado."
+    "1a tranche — base @req",
+    156.3883,
+    "Escada do 07_cenarios.py (analise.py) — trocou: o ponderado saiu abaixo do base"
    ],
    [
-    "T2 - bear de eixo unico rende o required",
-    173.85,
-    "Crescimento -2pp todos os anos (driver dominante do G13)."
+    "2a tranche — ponderado @req",
+    154.9217,
+    "Ao required return"
    ],
    [
-    "T3 - cauda conjunta rende o required",
-    159.66,
-    "Crescimento -2pp E cash opex +3pp. Convencao SAP: 'rende o required' em vez de 'nao perde' (degenerado com perpetuidade)."
+    "Posicao cheia — base com o driver dominante adverso @req",
+    133.0576,
+    "Shift {'shift_capex': 0.05} ao required"
+   ],
+   [
+    "Peso maximo da posicao",
+    0.089982,
+    "2% da carteira / perda no Abrandamento + regulacao @WACC+1pp"
    ]
   ],
   "notas": {
@@ -1731,14 +1753,39 @@
    "17": "POS-PROCESSADO BKNG: B17 desloca o CASH OPEX (2.o driver do G13), nao o capex (6.o)."
   },
   "precos_assimetria": [],
-  "stress": []
+  "stress": [
+   [
+    "STRESS TEST DE DOWNSIDE (aritmetico)",
+    null
+   ],
+   [
+    "Receita -5pp/ano, cash opex +4pp, capex +2pp, WACC +100bp",
+    null
+   ],
+   [
+    "Valor por accao",
+    87.2379
+   ],
+   [
+    "vs preco",
+    -0.419922
+   ],
+   [
+    "Receita Y10",
+    31557.1
+   ],
+   [
+    "Margem EBIT Y10",
+    0.299376
+   ]
+  ]
  },
  "referencias": {
   "cresc": {
-   "tipo": "facto",
-   "valor": 0.08,
+   "tipo": "consenso",
+   "valor": 0.069,
    "modo": "cagr",
-   "fonte": "Guidance FY26 'high single digits' cc (ER Q2-26) = 8%; mesmo fade do base"
+   "fonte": "Decisao do Hugo (28-11-2026): referencia = consenso. FY27 receita $32,0 mM (+9%, TIKR 04-11-2026) com o Q4-26 guiado a 0-2% -> Y1 (Out-26 a Set-27) ~+6,9%; mesmo fade do base. A ambicao >= 8% cc e objectivo da gestao, nao facto para o Y1"
   },
   "opex": {
    "tipo": "facto",
@@ -1748,9 +1795,9 @@
   },
   "capex": {
    "tipo": "facto",
-   "valor": 0.0153,
+   "valor": 0.0135,
    "modo": "nivel_y10",
-   "fonte": "Media FY23-25 (1,6/1,8/1,2%)"
+   "fonte": "Media FY23-25 + LTM (1,6/1,8/1,2/1,1%)"
   },
   "tax": {
    "tipo": "facto",
@@ -1762,32 +1809,164 @@
    "tipo": "facto",
    "valor": -0.262,
    "modo": "escalar",
-   "fonte": "Media FY23-25 das linhas reportadas (-36,7/-35,5/-5,2%)"
+   "fonte": "Media FY23-25 das linhas reportadas"
   }
  },
  "escada": {
+  "perda_max_carteira": 0.02,
   "probabilidades": {
-   "bull": 0.2,
-   "base": 0.45,
+   "bull": 0.25,
+   "base": 0.5,
    "bear": 0.25
   },
-  "probabilidades_justificacao": "20/45/25 + 10% stress IA (ficha de 23-10)",
-  "perda_max_carteira": 0.02,
   "cenarios": {
    "bull": {
-    "shift_cresc": 0.015,
+    "shift_cresc": 0.02,
     "shift_opex": -0.015
    },
    "bear": {
-    "shift_cresc": -0.02
+    "shift_cresc": -0.03,
+    "shift_opex": 0.02
    },
    "bear_eixo_unico": {
-    "shift_cresc": -0.02
+    "shift_cresc": -0.03
    },
    "bear_conjunto": {
-    "shift_cresc": -0.02,
+    "shift_cresc": -0.03,
     "shift_opex": 0.03
    }
   }
+ },
+ "cenarios_nomeados": {
+  "Abrandamento + regulacao": {
+   "prob": 0.25,
+   "cresc": {
+    "shift": -0.03
+   },
+   "opex": {
+    "shift": 0.02
+   }
+  },
+  "Compounder maduro": {
+   "prob": 0.5,
+   "base": true
+  },
+  "Connected Trip + poupancas": {
+   "prob": 0.25,
+   "cresc": {
+    "shift": 0.02
+   },
+   "opex": {
+    "shift": -0.015
+   }
+  }
+ },
+ "bandas_g13": {
+  "cresc": [
+   "Crescimento da receita",
+   0.02,
+   -0.02,
+   "driver"
+  ],
+  "wacc": [
+   "WACC",
+   -0.01,
+   0.01,
+   "taxa"
+  ],
+  "capex": [
+   "Capex / receita",
+   -0.005,
+   0.015,
+   "driver"
+  ],
+  "g": [
+   "g perpetuo",
+   0.005,
+   -0.005,
+   "taxa"
+  ],
+  "opex": [
+   "Cash opex / receita",
+   -0.03,
+   0.03,
+   "driver"
+  ],
+  "tax": [
+   "Taxa de imposto",
+   -0.03,
+   0.03,
+   "driver"
+  ],
+  "vida_capex": [
+   "Vida do capex novo",
+   1.0,
+   -1.0,
+   "escalar"
+  ],
+  "nwc": [
+   "NWC / delta receita",
+   -0.11,
+   0.15,
+   "escalar"
+  ]
+ },
+ "reverse": {
+  "preco_pre": {
+   "preco": 155.67,
+   "data": "2026-11-03"
+  }
+ },
+ "resultados": {
+  "ticker": "BKNG",
+  "metodo": "FCFF",
+  "data": "2026-11-27",
+  "preco": 150.39,
+  "moeda": "USD",
+  "fv": 176.4051,
+  "upside": 0.172984,
+  "wacc": 0.107813,
+  "required": 0.117813,
+  "irr_implicita": 0.12130239490303213,
+  "cagr_exigido": 0.05330071629660438,
+  "par": {
+   "metodo": "C",
+   "rf": 0.04936,
+   "erp": 0.05,
+   "erp_fonte": "Kroll Recommended U.S. ERP 5,0% (estudo mais recente, 2-09-2026). Regra da carteira (Hugo, 30-10-2026): ERP sempre o estudo Kroll mais recente. Antes: 4,5% (convencao da casa)."
+  },
+  "decisao": null,
+  "proximo_report": null,
+  "quarter": null,
+  "invalidadores": null,
+  "g23": "POR DECLARAR",
+  "cenarios": {
+   "Abrandamento + regulacao": 131.2014,
+   "Compounder maduro": 176.4051,
+   "Connected Trip + poupancas": 215.0229
+  },
+  "base_nome": "Compounder maduro",
+  "ponderado": 174.7586,
+  "irr_esperada": 0.12044938855967488,
+  "t1": 156.3883,
+  "t2": 154.9217,
+  "cheia": 133.0576,
+  "peso_max": 0.08998227442667414,
+  "bear": 131.2014,
+  "bull": 215.0229,
+  "plugin": "2.0"
+ },
+ "par_custo_capital": {
+  "metodo": "C",
+  "moeda": "USD",
+  "rf": 0.04936,
+  "rf_data": "2026-11-27",
+  "rf_fonte": "Yahoo ^TNX via portal (Treasury.gov par yield por confirmar)",
+  "erp": 0.05,
+  "erp_fonte": "Kroll Recommended U.S. ERP 5,0% (estudo mais recente, 2-09-2026). Regra da carteira (Hugo, 30-10-2026): ERP sempre o estudo Kroll mais recente. Antes: 4,5% (convencao da casa).",
+  "central_versao": "2026-10-30b"
+ },
+ "g15": {
+  "ancora_dispensada": "Hugo, 28-11-2026 (resposta no chat): sem export Comps do Capital IQ ate ao PC; EXPE e ABNB da web nao dao ancora de margem terminal comparavel. Caduca no piloto v6 de 05-12."
  }
 }

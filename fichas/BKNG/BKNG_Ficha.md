@@ -1,525 +1,422 @@
 # Ficha de Empresa — Booking Holdings (BKNG · NasdaqGS)
 
-<!-- dados {"preco": 144.91, "fv": 172, "bear": 128, "bull": 210, "t1": 170, "cheia": null, "upside": 0.1869, "data": "20-11-2026", "decisao": "Entrada faseada (reforço) — T1 já; T2 após guidance FY27", "quarter": "Q3-26", "invalidadores": "0 de 5 · 3 em vigilância", "moeda": "USD", "par": {"rf": 0.0491, "erp": 0.05, "rf_metodo": "A", "erp_fonte": "Kroll"}} -->
+<!-- dados {"preco": 150.39, "fv": 176.41, "bear": 131.20, "bull": 215.02, "t1": 156.39, "cheia": 133.06, "irr": 12.13, "upside": 0.173, "data": "27-11-2026", "decisao": "Entrada faseada — T1 já (preço abaixo do base @required $156); T2 com o guidance FY27 ou < $133", "quarter": "Q3-26", "invalidadores": "1 de 5 (técnico: marketing/GB) · 2 em vigilância", "moeda": "USD", "par": {"rf": 0.0494, "erp": 0.05, "rf_metodo": "C", "erp_fonte": "Kroll"}, "proximo_report": "2027-02-25", "perfil": "plataforma"} -->
 
-`Q3-2026` · `revista 23-11-2026` · `plugin v2.1` · **ACTUALIZAÇÃO Q3-26 com regime de taxas único** — substitui o RESUMO, a valuation e os cenários da ficha de 23-10 (base Q2, ERP 4,5%). As secções estruturais (negócio, moat, gestão) mantêm-se.
-
-> **Fontes:** nota do Equity Research da Blue Crow sobre o Q3-26 (04-11-2026: 8-K, 10-Q, deck e transcript). Preço de 20-11 da app. Modelo v0 no `modelo_calc` (`config_BKNG.json`), sem Excel.
-
-**Preço:** $ 144,91 *(20-11-2026)* · **Acções:** 743,7 M · **Market cap:** $ 107,8 mM · **Dívida líquida + passivos:** $ 5,4 mM *(dívida $ 20,1 mM + FTC $ 1,0 mM + CNMC $ 0,5 mM − caixa $ 15,8 mM − investimentos $ 0,4 mM)*
+`revista 28-11-2026` · `Q3-2026` · `fecho $ 150,39 (27-11-2026)` · `template v6 · plugin v2.2` · `modelo: Excel citável (G12 verde, G15 OK, ponte a fechar ao cêntimo); Rf a confirmar no PC` · `fontes: SEC EDGAR (portal, 28-11), ER Q3-26 (8-K de 03-11), 8-K de 13-11, consenso e comps por web; sem Capital IQ`
 
 ---
 
-## Resumo
+## 1. Sumário executivo
 
-| | β 0,88 *(Damodaran Hotel/Gaming)* | β 1,235 *(50% Hotel/Gaming + 50% Software (Internet))* | Ref.: Equity Research |
-|---|---|---|---|
-| WACC | 9,09% | 10,80% | 9,0% (β 1,10, ERP 4,5%) |
-| **Fair value base** | **$ 219 (+51%)** | **$ 172 (+19%)** | $ 192 |
-| Cenários *(adverso / base / favorável)* | $ 161 / $ 219 / $ 268 | $ 128 / $ 172 / $ 210 | $ 146 / $ 192 / $ 228 |
-| Ponderado 25/50/25 | $ 217 | $ 170 | $ 190 |
-| **Retorno que o preço oferece** | **12,3%** *(não depende do beta)* | | |
-| Crescimento exigido para render o WACC | **0,3%/ano** | 3,1%/ano | 4,2% a $ 171 (ER) |
-| Peso do TV | 55,8% | 48,1% | 58% |
-
-**Beta que governa (regra de 27-11): β 1,235** — quando o sector é ambíguo, usa-se o beta mais conservador e o outro fica como sensibilidade. **Fair value base $ 172 (+19%)** · ponderado $ 170 · WACC 10,80% · required 11,80%. Com β 0,88: $ 219.
-
-**Decisão: ENTRADA FASEADA (reforço).** É a única posição da carteira em que o preço exige pouco crescimento: 3,1%/ano com β 1,235, 0,3% com β 0,88. O preço oferece 12,3%, acima do required de 11,80% mesmo com o beta alto. O FTC e o guidance de FY27 (Fev-2027) decidem o tamanho, não a direcção.
-
----
-
-## O que mudou face à ficha de 23-10
-
-| | Ficha 23-10 | Agora | Porquê |
-|---|---|---|---|
-| Fair value base | $ 236 (WACC 8,66%, ERP 4,5%) | $ 219 (β 0,88) / $ 172 (β 1,235) | ERP de 5%, beta Damodaran, Q4 guiado mais fraco, exclusões recorrentes de 1% da receita |
-| Q3 | Por processar | Room nights +6,7%, gross bookings +9,6% (~11% cc), Adj. Revenue +8,7%, Adj. EPS +17% | Bateu o topo do guidance em tudo |
-| Q4 guidance | — | Room nights +1–3%, Adj. EBITDA ~flat | Médio Oriente, Europa, base forte |
-| FTC (Priceline) | Não referido | $ 1,0 mM provisionado ($ 900 M na receita, $ 100 M em G&A), não pago, pode subir | 10-Q do Q3 |
-
----
-
-## Reverse DCF
-
-O preço oferece **12,3%**. Ao WACC de 9,09%, exige **~0,3% de crescimento ao ano** durante 10 anos (com β 1,235, 3,1%). O histórico: room nights +8–9% em 2024-25, ambição da gestão ≥8% cc. **O preço desconta uma estagnação.** O único caminho que justifica isso é a desintermediação pela IA (agentes e LLMs a ficarem com a procura), hoje invisível nos números: referrals de LLM bem abaixo de 1% dos room nights; mix directo B2C nos mid-sixties.
-
----
-
-## Cenários
-
-| Cenário | p | A história | Crescimento | Margem EBIT | β 0,88 | β 1,235 |
+| Preço | Fair value base @WACC | Ponderado | Retorno implícito vs required | Decisão | 1.ª tranche / cheia | Próximo catalisador |
 |---|---|---|---|---|---|---|
-| Abrandamento + regulação | 25% | Q4 fraco persiste; FTC custa mais $ 1 mM; UE segue | base −3 pp/ano | ~32% | $ 161 | $ 128 |
-| **Compounder maduro** | **50%** | FY27 +7%, FY28 +7,5%, desce até 3% | 5,5% → 3% *(CAGR 5,2%)* | 34% → 35% | **$ 219** | **$ 172** |
-| Connected Trip + poupanças | 25% | Voos e alternativos aceleram; $ 650 M de poupanças | base +2 pp | ~36% | $ 268 | $ 210 |
-| *Stress: IA desintermedeia* | — | Receita flat 2 anos, margem 32%, FTC extra | — | — | *~$ 110 (ER)* | |
+| $ 150,39 *(27-11)* | **$ 176,41** (+17%) | $ 174,76 @WACC · $ 154,92 @required | **12,13%** vs 11,78% *(+35 bp)* | **Entrada faseada — T1 já** | < $ 156,39 / < $ 133,06 | Q4-26 e guidance FY27 (~25-02-2027) |
+
+**Tese.** A Booking é um compounder de comissões (14,4% sobre $ 202 mM de gross bookings) com capital investido negativo; o mercado paga-a como se o crescimento caísse para 3,8% ao ano durante dez anos, contra 7% de room nights e +11,5% de receita ajustada nos últimos doze meses.
+**O que o preço exige:** a $ 150,39 o preço rende 12,13% ao ano; para render só o WACC (10,78%) bastaria a receita crescer 3,8%/ano ou a margem EBITDA cair para 32,3% (hoje 37,3%).
+**Maior risco:** desintermediação por agentes de IA e regulação (FTC $ 1,0 mM já provisionado, DSA, DMA) — aparece primeiro no marketing/gross bookings, que subiu face ao homólogo pelo quarto trimestre seguido (pouco, 3–25 bp, e por mix B2B).
+**Porque não é "posição cheia":** a margem sobre o required é só 35 bp e o Q4 vem guiado a +1–3% de room nights; a cheia exige o base com crescimento −2 pp ao required ($ 133). **Porque não é "esperar":** o preço está abaixo da 1.ª tranche, e o cenário central rende 12,1%, acima da régua (índice 8% + 250 bp = 10,5%).
 
 ---
 
-## Invalidadores
+## 2. Negócio e modelo de receita
 
-| # | Afirmação | Invalidador | Estado |
-|---|---|---|---|
-| 1 | A IA não desintermedeia | Referrals de LLM acima de 1% dos room nights **com** o mix directo abaixo dos mid-sixties | OK |
-| 2 | O FTC é pontual | Custo final acima de $ 1,0 mM ou remédios que cortem o canal B2B | **Em vigilância** |
-| 3 | O Q4 é conjuntural | Room nights do Q4 abaixo de 2% **e** guidance FY27 em mid single digits | Por saber (Fev-27) |
-| 4 | O capital é bem alocado | Dívida líquida acima de ~$ 6 mM depois do FTC | Em vigilância ($ 4,2 mM) |
-| 5 | Custo de aquisição estável | Marketing / gross bookings a subir um terceiro trimestre seguido | **Em vigilância** (4,8 cêntimos) |
+A Booking liga viajantes a ~3 milhões de propriedades (hotéis independentes e alojamento alternativo) e cobra uma **comissão sobre o valor da reserva**. A unidade de receita é:
 
----
+> **Receita = room nights × ADR × take rate** (+ voos, carros, atracções no Connected Trip, + publicidade da KAYAK e OpenTable).
 
-## Escada *(β 1,235; posição de 2,8%)*
+Dois modelos de cobrança: **agency** (o hotel recebe o viajante e paga a comissão à Booking depois) e **merchant** (a Booking cobra o viajante na reserva, paga ao hotel depois da estadia e fica com a margem e o rendimento de pagamentos). A migração para merchant é o motor da década: dá o pagamento, o Connected Trip e o **float**.
 
-| Degrau | Preço | Regra |
-|---|---|---|
-| 1.ª tranche | **já** ($ 145 < ponderado $ 170 @WACC) | Com β 0,88 o ponderado seria $ 217 |
-| 2.ª tranche | depois do guidance de FY27 (Fev) se ≥8% cc | Informação, não preço |
-| Peso máx. | ~6–8% da carteira | O risco de cauda (IA) limita o tamanho |
+**Linhas de receita** *(Q3-26, ER)*
 
----
-
-## Log
-
-| Data | Preço | FV base | IRR impl. | Decisão |
+| Linha | Q3-26 | % receita ajustada | YoY | Unidade |
 |---|---|---|---|---|
-| 23-10-2026 | $ 161,10 | $ 236,03 | 11,97% | Entrada faseada |
-| **23-11-2026** | **$ 144,91** | **$ 219 / $ 172** | **12,3%** | **Entrada faseada — reforço** |
-
-**Changelog 27-11-2026:** regra do beta da carteira (decisão do Hugo): em sector ambíguo governa o beta mais conservador. Passa a governar o β 1,235 (FV $ 172, ponderado $ 170); o β 0,88 fica como sensibilidade. A decisão não muda.
-
-**Changelog 23-11-2026:** Q3 processado; regime de taxas único (Rf 4,91%, ERP 5%, beta Damodaran); exclusões recorrentes de 1% da receita no opex (ER); FTC e CNMC na ponte. O fair value desce de $ 236 para $ 219 (β 0,88): −$ 17, dos quais ERP/beta ~−$ 8 e Q4/exclusões ~−$ 9 (estimativa; a ponte exacta sai do `08` no PC).
-
----
-
-# Versão anterior (Out-2026) — estrutura válida, valuation substituída pelo bloco acima
-
-> **Regras de saída desta versão anterior revogadas a 27-11-2026.** Vale a regra de venda da carteira: tese partida (2 invalidadores ou o principal) → reduzir para metade ou sair; peso acima do tecto por valorização → só diluição com dinheiro novo; trim só se overvalued (acima do favorável @WACC e retorno implícito < 8%) ou para financiar uma compra que passe a régua, sempre contra o custo fiscal.
-
-
-# Ficha de Empresa — Booking Holdings (BKNG · NasdaqGS)
-
-> **Documento único e vivo.** Não se cria cópia por trimestre — actualiza-se este.
-> **Secções 1–7:** estrutura. Escritas uma vez, revistas anualmente ou quando um invalidador dispara.
-> **Blocos A–D:** infraestrutura. Actualizados a cada análise trimestral.
-> Todo o número de valuation lê-se de uma célula do `BKNG_DCF.xlsx` (G12). Recalculado no Excel a 23-Out-2026 e, com o custo de capital novo, a 30-Out-2026.
-> **Revisão de 30-10-2026 — regra de custo de capital da carteira** (Rf UST 10Y à data do preço, ERP do estudo Kroll mais recente, CRP só se relevante): ERP 4,5% → 5,0%. Actualizados o ESTADO, o capítulo REVERSE DCF (novo), o log e o changelog. **O sumário executivo e a §7 continuam a ERP 4,5%** (versão de 23-10 em `_arquivo\BKNG_Ficha_20261023.md`).
-
-`Criada:` 23-Out-2026 · `Última revisão estrutural:` 23-Out-2026 · `Último quarter processado:` Q2-2026
-
----
-
-## ESTADO
-
-| | | | |
-|---|---|---|---|
-| **Preço** | $ 144,91 | **Data** | 20-11-2026 *(revisão Q3-26 de 23-11; regime de taxas único)* |
-| **Market cap** | $ 107.800 M *(743,7 M acções)* | **EV** | ~$ 113.200 M *(dívida líquida + FTC + CNMC $ 5,4 mM)* |
-| **Valor DCF** *(base, β 0,88, WACC 9,09%)* | **$ 219** | **Upside** | +51% *(β 1,235 / WACC 10,80%: $ 172, +19%)* |
-| **Fair value ao required return de 10,08%** | n/d nesta revisão *(ver β 1,235: $ 172)* | **Valor esperado ponderado** | $ 217 (β 0,88) · $ 170 (β 1,235) *(25/50/25)* |
-| **Amplitude bull–bear** *(cenários)* | $ 161 a $ 268 (β 0,88) · $ 128 a $ 210 (β 1,235) | **Drivers dominantes** | Crescimento (desintermediação por agentes de IA) · FTC |
-| **IRR implícita** *(reverse DCF, motor A)* | **12,3%** | **vs required return** | +~220 bp vs 10,08%; não depende do beta |
-| **Growth implícito** *(@ WACC)* | **0,3%/ano** a 10 anos (3,1% com β 1,235) | **vs CAGR histórico** | room nights +8–9% 2024-25 · ambição ≥ 8% cc |
-| **Decisão** | **Entrada faseada (reforço)** — 1ª tranche já; 2ª após guidance FY27 (Fev-2027) se ≥ 8% cc ou < $ 135 | **Gates** | 1ª tranche < $ 172 · 2ª tranche < $ 135 · peso máx. 6–8% |
-| **Invalidadores disparados** | 0 de 7 · 2 em vigilância (FTC; tráfego de LLMs) | **Último report** | Q3-2026 (04-Nov-2026) |
-| **ROIC marginal** *(sobre o capital deployado)* | não definido — NOPAT +$ 3.260 M FY22→FY25 com capital fixo a **cair** $ 356 M | **vs WACC** | ROIC s/ capital fixo 121% LTM; capital investido total **negativo** |
-| **Próximo catalisador** | Resultados Q4-26 e guidance FY27 (fim de Fev-2027) · FTC/Priceline · DSA UE | **O que decide** | Room nights/gross bookings FY27 ≥ 8% cc; Q4 guiado a +1–3% |
-| **Consenso sell-side** | PT médio $ 233 (n=35, mín. $ 170) | **vs o meu DCF** | DCF @WACC 1,3% acima; @required 12,6% abaixo · FV/PT 1,01 |
-| **Ke** *(regra da carteira: Rf UST 10Y + ERP Kroll; CRP 0)* | 9,90% *(4,96% + 0,987 × 5,0%)* · WACC 9,09% | **Ke ±100 bp** | $ 272,99 / $ 207,63 por acção |
-| **Peers** *(múltiplo âncora)* | P/E NTM 14,5x | **vs pares maduros** | EXPE ~8-9x EV/EBITDA LTM · ABNB 33x P/E fwd |
-| **Short interest** | n/d — sem export Charting | **vs mediana 5 anos** | n/d |
-| **Posição actual** | — | **% da carteira** | — |
-
-**Múltiplos-chave** — os que decidem *nesta* empresa. Justificação na §7.
-
-| Múltiplo | Actual | Mediana 3 anos | vs mediana | Leitura |
-|---|---|---|---|---|
-| P/NTM EPS *(âncora, forward)* | 14,5x | 21,3x | −32% | Mínimo de 5 anos. Mas a mediana formou-se com o UST 10Y a ~4%, não a 5% |
-| TEV/NTM EBITDA *(forward)* | 11,0x | 16,4x | −33% | EBITDA na mesma base que o modelo (o Adj. EBITDA não soma SBC) |
-| Market cap / LTM levered FCF | 15,7x | 21,3x | −26% | FCF yield de 6,4% para um negócio a crescer ~8% |
-| *(o que contraria a tese)* TEV/LTM EBITDA vs EXPE | 11,7x | — | ~+35% vs EXPE | A Expedia, com o mesmo risco de IA e pior execução, está a 8-9x — o "chão" de um OTA desintermediado é baixo |
-
----
-
-## REVERSE DCF — o que o preço exige *(30-10-2026, ERP 5,0%)*
-
-*Calculado sobre o `modelo_calc` do `config_BKNG.json` (Excel verificado a 30-10). Preço $ 161,10.*
-
-**0. A grelha simples — valor por acção ao WACC (9,09%)** *(crescimento × margem EBITDA do Y10; todas acima do preço)*
-
-| CAGR 10a ＼ Margem EBITDA Y10 | 33% | 36% | **39% (base)** | 42% | 44% |
-|---|---|---|---|---|---|
-| 3,4% *(base −3 pp)* | $ 154,7 | $ 169,8 | $ 184,9 | $ 200,1 | $ 210,2 |
-| 4,9% | $ 175,1 | $ 192,0 | $ 209,0 | $ 225,9 | $ 237,2 |
-| **6,4% (base)** | $ 198,2 | $ 217,1 | **$ 236,0** | $ 255,0 | $ 267,6 |
-| 7,9% | $ 224,2 | $ 245,3 | $ 266,5 | $ 287,7 | $ 301,8 |
-| 9,4% *(base +3 pp)* | $ 253,4 | $ 277,1 | $ 300,8 | $ 324,5 | $ 340,3 |
-
-Só a célula de 3,4% de CAGR com 33% de margem fica abaixo do preço. Capex na linha do base: −0,5 pp → $ 239,3 · +1 pp → $ 229,5 · +2 pp → $ 222,9. **Para valer $ 161,10 ao WACC**, com a margem do base o CAGR teria de ser **1,7%**; com o crescimento do base, a margem EBITDA do Y10 teria de ser **27,1%**.
-
-**1. Retorno que o preço oferece (motor A)** — inalterado pelo ERP
-
-| | IRR |
-|---|---|
-| Bull · **base** · bear eixo único · stress IA · ponderado | 13,40% · **11,97%** · 10,67% · 8,82% · 11,65% |
-| Base com crescimento −3 pp / cash opex +3 pp / g −1 pp | 10,06% / 11,24% / 11,50% |
-
-**2. Crescimento exigido (motor B) — CAGR a 10 anos, por retorno exigido × margem EBITDA do Y10**
-
-| Retorno exigido ＼ Margem Y10 | 33% | 36% | **39% (base)** | 42% |
-|---|---|---|---|---|
-| WACC + 25 bp (9,34%) | 4,34% | 3,20% | 2,14% | 1,16% |
-| **Required 10,08% (nível 2)** | 5,66% | 4,50% | **3,43%** | 2,42% |
-| 11% | 7,18% | 6,00% | 4,91% | 3,88% |
-| 12% | 8,75% | 7,55% | 6,43% | 5,39% |
-
-Âncoras: CAGR do base 6,39% · histórico FY19-25 10,2% · consenso FY25-30 8,6%.
-
-**3. Em números falsificáveis** — Y4 com Y1–Y2 no base: o preço exige receita de **$ 35.506 M** (base $ 38.243 M), EBITDA **$ 13.670 M** (base $ 14.724 M), FCFF **$ 10.199 M** (base $ 11.182 M), NOPAT/acção **$ 13,33** (base $ 14,38) — crescimento de ~4% no Y3 a cair para ~0% no Y10.
-
-**Leitura:** mesmo com o ERP mais alto, o preço pede 3,4% de crescimento a 10 anos para render o required, contra um consenso de 8,6% e um histórico de 10%. O teste continua a ser o Q3-26 (03-11): room nights ≥ 3%.
-
----
-
-## SUMÁRIO EXECUTIVO
-
-**Recomendação: entrada faseada — primeira e segunda tranches abertas ao preço actual, terceira condicionada aos resultados de Q3-26 a 3 de Novembro.** Fair value de $ 252,98 ao WACC de 8,66% e de $ 216,27 ao meu required return de 9,66%, contra um preço de $ 161,10 — +57% e +34%, respectivamente. Não é "posição cheia já" porque o degrau de posição cheia ($ 169,29, cauda conjunta ao required return) está só 5% acima do preço e desce para $ 161,87 — o próprio preço — se trocar o beta do sector Damodaran (0,99 realavancado) pelo beta de regressão da empresa (1,07); um gate que depende da escolha do beta não é um gate. Não é "esperar" porque ao preço de hoje o cenário base rende 11,97% e o bear de eixo único 10,67%, ambos acima do required return.
-
-### A tese numa frase
-
-O mercado está a pagar a Booking como se a IA fosse desintermediar o canal de reserva — preço que exige só 2,7% de crescimento anual da receita durante dez anos — enquanto os números reportados ainda mostram 5% de room nights, canal directo estável em mid-fifties e reservas via agentes de IA abaixo de 1%; a tensão é entre um risco real mas ainda não observado e um múltiplo que já o desconta quase todo.
-
-### Os financials, em vinte segundos
-
-Receita LTM de $ 28.241 M, a crescer 8% em Q2-26 (7% em moeda constante), com o mix a deslocar-se para merchant — já 70% da receita do trimestre, com gross bookings merchant a +14,5% contra agency a −3,3%. É receita transaccional, não contratada: a métrica de retenção é o canal directo, que a empresa diz estar em "mid-fifties" de room nights há quatro trimestres. A margem não tem fosso GAAP/non-GAAP relevante: o Adjusted EBITDA (36,0% em Q2-26, 36,9% em FY25) **não** soma o SBC de volta, que pesa só 2,1% da receita; as diferenças GAAP são a imparidade de $ 457 M na KAYAK em Q3-25 (aquisição de clientes encarecida pela IA a absorver tráfego de pesquisa) e os custos do Transformation Program (~$ 190 M LTM). Cash opex LTM de 63,5% da receita, a melhorar de 70,3% (FY23). CFO LTM de $ 9.859 M, capex de apenas 1,1–1,8% da receita, e working capital como **fonte** de caixa (média de 3 anos 26% da receita incremental) porque os clientes pagam antes de o hotel receber. Balanço: $ 20.180 M de senior notes (94% em euros) contra $ 17.214 M de caixa; capital próprio contabilístico de −$ 10.783 M por recompras de $ 6,4–10,4 mM/ano. O que mudou de natureza: o room night growth desacelerou de 9,0% (4Q25) para 5,3% (2Q26) com guidance de 3–5% para Q3, e voos passaram de +28,5% para +3,7% — efeito indirecto do conflito no Médio Oriente sobre o long-haul.
-
-### O DCF — pressupostos e resultado
-
-| Pressuposto | Y1 → Y10 | Âncora histórica |
-|---|---|---|
-| Crescimento da receita | 7,5% → 8,5% → fade a 4,0% (CAGR 6,39%) | Guidance FY26 "high single digits" cc; Q3 +5–7% cc; tendência FY24-25 ~10,5% cc; consenso FY26-28 +8,7/+9,3/+8,4% |
-| Cash opex ex-D&A (com SBC) | 63,0% → 61,0% | LTM 63,5%; FY25 62,4% ex-transformation; consenso FY30 59,3% |
-| Capex / receita | 1,5% | FY23-25: 1,6 / 1,8 / 1,2% |
-| Imposto | 23,5% → 24,0% | ETR 2026 YTD 23,4% (BBB Act); FY25 20,9% |
-| NWC / Δ receita | −15% (fonte de caixa) | Média FY23-25 −26,2% |
-| WACC · g perpétuo | 8,66% · 2,5% | rf 4,96% (UST 10Y, 22-Out); β 0,99; ERP 4,5% |
-
-**Resultado:** enterprise value de $ 194.636 M contra $ 125.357 M de mercado; valor por acção de $ 252,98. Na mesma respiração, o reverse DCF: o preço de hoje oferece **11,97%** (motor A), e para eu ganhar 9,66% basta que a receita cresça **2,71% ao ano** durante dez anos (motor B) — menos de metade do meu base e menos de um terço do consenso.
-
-**Três honestidades obrigatórias.** O terminal value pesa **59,2%** do EV, e o Gordon implica um EV/EBITDA de saída de **12,4x** — praticamente o múltiplo de hoje (11,7x LTM), por isso o valor não depende de re-rating no terminal. A margem EBIT do modelo salta de 35,6% para 37,2% no Y4 porque a amortização dos intangíveis da carteira corre off — efeito em FCFF é negativo (menos escudo fiscal), não positivo; não há alavanca escondida. E a amplitude por driver:
-
-| Driver | Cenário adverso | Valor/ação | Δ vs base |
-|---|---|---|---|
-| WACC *(não é eixo)* | +1,0 pp | $ 216,18 | −14,5% |
-| **Crescimento da receita** | −2,0 pp/ano | $ 214,61 | −15,2% |
-| **Cash opex / receita** | +3,0 pp | $ 232,72 | −8,0% |
-| g perpétuo *(não é eixo)* | −0,5 pp | $ 240,83 | −4,8% |
-| Imposto | +3,0 pp | $ 243,06 | −3,9% |
-| Capex / receita | +1,5 pp | $ 242,45 | −4,2% |
-| NWC / Δ receita | +15 pp (float acaba) | $ 246,65 | −2,5% |
-
-**Frase obrigatória do G15:** repor nos factos os três drivers onde estou abaixo deles (crescimento na guidance, imposto na ETR de 2026, NWC na média de 3 anos) leva o valor a $ 270,99, **+7,12%** — o base está inclinado para o lado cauteloso, parcialmente compensado pelo opex terminal (61,0%), que é melhor do que o melhor ano próprio (62,4%) e vale −$ 9,46. Contra o consenso a reversão é **+16,25%** ($ 294,09), toda ela de pressupostos (crescimento +$ 28,44, margem +$ 11,48) e nada de base contabilística, porque o EBITDA do consenso está na mesma base que o meu cash opex.
-
-### Os múltiplos — e se contradizem o DCF
-
-Contra a mediana própria de 3 anos, todos os múltiplos estão no mínimo do período: P/NTM EPS 14,5x contra 21,3x, TEV/NTM EBITDA 11,0x contra 16,4x. Contra peers, a BKNG está entre a Expedia (~8-9x EV/EBITDA LTM, o que o mercado paga a um OTA com execução fraca) e a Airbnb (33x P/E forward, o que paga a crescimento de oferta própria). Contra o trimestre corrente anualizado o teste não serve — a sazonalidade é extrema (margem de EBITDA de 23% em Q1 e 47% em Q3) — por isso usa-se LTM e NTM, que dão o mesmo veredicto. Os múltiplos não contradizem o DCF: ambos dizem barato. O que contradiz é a Expedia, que mostra até onde o mercado está disposto a levar um OTA quando duvida do moat.
-
-### Qual das fontes é mais credível aqui
-
-**Governa o DCF**, por três razões específicas a este caso. Primeira: a mediana de múltiplos de 3 anos formou-se com o 10 anos americano entre 3,8% e 4,5%; com o rf a 4,96% (máximo de 5,31% a 5-Out) parte do de-rating é a taxa de desconto e não o negócio, portanto "voltar à mediana" não é um nível de reversão defensável — o DCF incorpora o rf de hoje explicitamente. Segunda: o múltiplo desceu de 21,6x (Jun-25) para 11,7x EV/EBITDA LTM com uma única interrupção (13,0x → 13,5x em Q2-26), o que faz da mediana a média de um de-rating em curso. Terceira: o DCF tem só 59% no terminal e um exit multiple implícito igual ao de hoje, logo não está a importar optimismo de saída. O **cross-check independente** é o motor B: 2,71% de crescimento exigido é uma afirmação falsificável e muito abaixo de tudo o que a empresa já entregou, incluindo 2020-21.
-
-### Se comprar a X, ganho quanto por ano?
-
-Horizonte de 5 anos, cenário base. Valor da acção no ano 5 = o mesmo DCF refeito no ano 5 ao WACC = **$ 385,91**, com o FCFF dos anos 1–5 reinvestido à taxa de desconto (a BKNG devolve tudo em recompras e dividendos). Verificação: ao fair value dá 8,81% ≈ WACC de 8,66%.
-
-| Preço | P/E NTM à entrada | Retorno total | **Anualizado (re-rating ao FV)** | Sem re-rating | Re-rating |
-|---|---|---|---|---|---|
-| **$ 161,10** *(preço actual)* | 14,5x | +139,5% | **19,09%** | 12,28% | +6,81 pp |
-| $ 252,98 *(fair value @WACC)* | 22,8x | +52,5% | 8,81% ≈ WACC | 8,81% | 0 |
-| $ 216,27 *(1ª tranche)* | 19,5x | +78,4% | 12,28% | 9,85% ≈ required | +2,43 pp |
-| $ 184,30 *(2ª tranche)* | 16,6x | +109,4% | 15,93% | 11,09% | +4,84 pp |
-| $ 169,29 *(posição cheia)* | 15,3x | +128,0% | 17,92% | 11,82% | +6,09 pp |
-
-Ao preço de hoje, 12,28% é **negócio** (o mercado continua a exigir o mesmo que exige hoje) e 6,81 pp é **re-rating** — que não está garantido e é exactamente a aposta contra a narrativa da IA. Sem re-rating nenhum ainda bate o required return por 262 bp. *Nota de convenção: com o FCFF acumulado a render zero, todos os anualizados caem 0,7–0,9 pp (ao preço actual 18,13%).*
-
-### Porque não é a recomendação adjacente, e o que a mudaria
-
-| Banda | Preço | Racional | Assimetria bull:bear |
-|---|---|---|---|
-| Preço actual | $ 161,10 | IRR de 11,97% no base; 10,67% no bear de eixo único | 24,8 : 1 |
-| **1ª tranche** | **< $ 216,27** | IRR = required return (9,66%) no cenário **base** — aberta | 0,5 : 1 no limiar |
-| **2ª tranche** | **< $ 184,30** | **bear de eixo único** (crescimento −2 pp todos os anos) rende o required — aberta | 6,6 : 1 |
-| **Posição cheia** | **< $ 169,29** | **cauda conjunta** (crescimento −2 pp e cash opex +3 pp) rende o required — tecnicamente disparada, mas a $ 161,87 com β de regressão | 14,9 : 1 |
-
-*Desvio ao texto da skill, mesma convenção da SAP:* "bear não perde" é degenerado num DCF com perpetuidade; usa-se "rende o required return". Assimetria = valor esperado acima do preço sobre valor esperado abaixo, com os cenários ao required return e probabilidades 20/45/25/10 (bull/base/bear/stress).
-
-**A diferença para "posição cheia já"** é o T3 estar dentro do ruído do beta, um G14 activo (room nights a desacelerar três trimestres seguidos) e um evento binário a 11 dias. **O que mudaria a recomendação já** — os mesmos invalidadores do bloco A: room nights abaixo de 3% num trimestre (#1), marketing acima de 5,0% dos gross bookings (#2), canal directo descrito abaixo de "mid-fifties" (#3), ou um remédio regulatório que toque nas cláusulas de paridade fora de Espanha (#6). No sentido oposto, um Q3 com room nights dentro da guidance e marketing/GB ≤ 4,8% abre o T3.
-
-**Próximo catalisador:** resultados Q3-26 a 03-11-2026, pós-mercado — o preço de 22-Out deixa de passar o G17 nesse dia e a ficha tem de ser refeita.
-
----
-
-## 1. Negócio — o que vende
-
-A Booking é o maior intermediário de alojamento do mundo: liga ~325 M de room nights por trimestre a hotéis independentes e, cada vez mais, a alojamento alternativo, cobrando uma comissão sobre o valor da reserva. O dinheiro vem de dois modelos — **agency** (o viajante paga ao hotel, a Booking factura a comissão depois) e **merchant** (a Booking cobra o viajante, paga ao hotel mais tarde, e fica com a margem mais o rendimento de facilitar o pagamento). A migração de agency para merchant é o motor da última década: dá controlo do pagamento, permite o "Connected Trip" (voos, carros, atracções no mesmo carrinho) e gera o float que financia o negócio.
-
-**Linhas de receita** *(LTM Jun-26, CapIQ As Presented)*
-
-| Linha | % receita | O que é | Cliente-tipo |
-|---|---|---|---|
-| Merchant revenues | ~68% | Reservas pagas através da Booking; inclui payments e voos | Viajante lazer, hotéis independentes |
-| Agency revenues | ~28% | Comissão sobre reservas pagas no hotel | Hotéis, sobretudo Europa |
-| Advertising & other | ~4% | KAYAK (metasearch), OpenTable | Anunciantes, restaurantes |
-
-Marcas: Booking.com (o grosso), Priceline (EUA), Agoda (Ásia), KAYAK, OpenTable.
-
-**Métricas de escala** *(ER Q2-26)*: room nights 325 M no trimestre (+5,3%); gross bookings $ 51,0 mM (+9%, +8% cc); receita $ 7.352 M; take rate implícito ~14,4%; marketing 4,7% dos gross bookings; canal directo "mid-fifties" de room nights (LTM); alternative accommodation room nights +4%.
-
-**Exposição geográfica:** maioritariamente Europa (Booking.com, receita e dívida em euros), depois Ásia (Agoda) e EUA (Priceline, onde a Booking é subponderada face à Expedia). **Concentração de clientes:** nenhuma — centenas de milhares de propriedades e milhões de viajantes.
-
----
-
-## 2. Vantagem competitiva — porquê esta e não a rival
-
-**Rival de referência:** Expedia Group (EXPE) — o único outro OTA global de escala, com o mesmo modelo de comissão e a mesma exposição a Google e aos agentes de IA. A Airbnb compete em alojamento alternativo mas é marketplace de oferta própria, não OTA.
-
-| Dimensão | Booking | Expedia | Quem ganha, e porquê |
-|---|---|---|---|
-| Produto / tecnologia | Booking.com, uma marca global, app-first | Várias marcas (Expedia, Hotels.com, Vrbo), replatforming lento | **Booking** — uma plataforma, um programa de fidelização (Genius) |
-| Distribuição | Canal directo mid-fifties de room nights | Maior dependência de B2B e de pesquisa paga nos EUA | **Booking** — menos custo marginal por reserva |
-| Pricing power | Take rate ~14% estável | Take rate mais baixo, mais mix B2B | **Booking** |
-| Escala | 325 M room nights/trimestre | Menos de metade em room nights | **Booking** — liquidez dos dois lados |
-| Custo de mudança | Baixo para o viajante, alto para o hotel independente na Europa | Idem, mas menos relevante nos EUA (cadeias) | **Booking** na Europa; empate nos EUA |
-| Economia unitária | Margem EBITDA 36–37%, capex 1,5% | Margem EBITDA ~20–25% | **Booking** |
-
-**Onde o diferencial aparece nos números:** margem EBITDA de 36,9% (FY25) com marketing a só 4,7% dos gross bookings, ROIC sobre capital fixo de 113% (FY25), e um múltiplo que se manteve acima da Expedia mesmo neste de-rating (11,7x contra ~8-9x).
-
-**Onde NÃO aparece:** nos EUA, onde a Priceline é pequena e a quota é da Expedia e das cadeias hoteleiras com programas de fidelização; e na KAYAK, onde a imparidade de $ 457 M (Q3-25) já mostra o que acontece a um activo que depende de tráfego de pesquisa quando a pesquisa muda de forma. A assimetria é o achado: o moat da Booking é **oferta fragmentada + marca directa**, não tráfego — a parte do grupo que vivia de tráfego já foi imparizada.
-
----
-
-## 3. Monetização — de onde vem exactamente o dinheiro
-
-| Fluxo | % receita | Unidade cobrada | Quem paga | Recorrente? | Preço/unidade |
-|---|---|---|---|---|---|
-| Comissão merchant | ~68% | % do valor da reserva + spread de pagamento | Hotel (via margem) e viajante | Transaccional, com repetição alta via Genius | ~14% take rate médio do grupo |
-| Comissão agency | ~28% | % do valor da reserva, facturada ao hotel | Hotel | Transaccional | ~15% em hotéis independentes europeus |
-| Publicidade e outros | ~4% | CPC (KAYAK), reservas OpenTable | Anunciantes, restaurantes | Recorrente-ish | — |
-
-**Mecânica do fluxo principal:** o viajante paga à Booking no momento da reserva (merchant), o dinheiro fica como deferred merchant bookings ($ 10.121 M em Jun-26, pico sazonal) e só sai para o hotel depois da estadia — daí o working capital negativo e o float. **Alavancas de preço:** programas de visibilidade pagos pelos hotéis (Preferred, Genius), payments, e cross-sell no Connected Trip. **Onde o dinheiro NÃO vem:** de subscrições ou contratos — não há backlog; a receita de amanhã depende da reserva de amanhã. **Qualidade da receita:** zero RPO, mas repetição comportamental elevada (canal directo mid-fifties). **Assimetria de monetização vs custo:** o custo marginal relevante é o marketing de performance (Google). Se os agentes de IA cobrarem "portagem" pelo tráfego, aparece primeiro no rácio marketing/gross bookings — por isso é o invalidador #2.
-
----
-
-## 4. Moat — porque é que isto não é replicável
-
-| Tipo de moat | Presente? | Evidência quantitativa | Força |
-|---|---|---|---|
-| Network effects | Sim | Mais oferta → melhor conversão → mais procura; 325 M room nights/trimestre | **Forte** |
-| Switching costs | Parcial | Hotel independente europeu depende do canal; viajante não tem custo de mudança | Médio |
-| Economias de escala | Sim | Marketing 4,7% dos GB vs muito acima em rivais pequenos; capex 1,5% da receita | Forte |
-| Intangíveis (marca, dados) | Sim | Canal directo mid-fifties; Genius | Médio-forte |
-| Vantagem de custo estrutural | Sim | Float: capital investido total negativo (−$ 7.051 M Jun-26) | Forte |
-| Eficiência de distribuição | Sim | Direct mix estável há 4 trimestres | Médio |
-
-**Teste do capital ilimitado**
-
-> Se um competidor com € 10 mil milhões e cinco anos copiasse isto amanhã, **o que é que o dinheiro não compra?**
-
-Não compra a cauda longa de oferta — centenas de milhares de hotéis independentes e alojamento alternativo, cada um com o seu contrato, conteúdo e integração de disponibilidade — nem o hábito de mais de metade dos viajantes irem directamente à app. **Mas atenção:** a Google e a OpenAI não precisam de comprar a oferta se a puderem *ler* da Booking. É por isso que o risco relevante não é um novo OTA, é um agente que fique com a relação com o viajante e trate a Booking como fornecedor de inventário — com take rate menor.
-
-**O que erode o moat, e a que velocidade:** (1) agentes de IA como interface de reserva — hoje <1% das room nights; (2) regulação das cláusulas de paridade e do ranking (CNMC, DMA/DSA) — já em curso em Espanha; (3) cadeias hoteleiras a puxarem reserva directa. **Trajectória:** estável — canal directo mid-fifties em 4 trimestres seguidos, take rate estável; a erosão é um risco de cauda, ainda não um número.
-
-### O moat converte-se em economia? O teste do ROIC
-
-O capital investido total é **negativo** desde 2023 — o negócio é financiado pelos clientes — e o ROIC convencional não tem significado. Apresento-o sobre capital fixo (PP&E + goodwill + intangíveis + ROU + outros activos), com NOPAT = EBIT ex-imparidades × (1 − 22%; 23,4% no LTM).
-
-| | FY22 | FY23 | FY24 | FY25 | LTM Jun-26 |
-|---|---|---|---|---|---|
-| NOPAT normalizado | 3.980 | 4.551 | 5.893 | 7.240 | 7.462 |
-| Capital fixo investido | 6.774 | 6.868 | 6.681 | 6.418 | 6.177 |
-| NWC operacional | −4.572 | −7.018 | −9.575 | −9.757 | −13.228 |
-| **Capital investido total** | 2.202 | −150 | −2.894 | −3.339 | −7.051 |
-| **ROIC s/ capital fixo** | 59% | 66% | 88% | 113% | 121% |
-| Spread vs WACC 8,66% | +50 pp | +58 pp | +79 pp | +104 pp | +112 pp |
-
-Capital de fim de período; a base média e a base com NOPAT normalizado da amortização de aquisições dão números ainda mais altos, porque o capital fixo está a cair. CapIQ *Return on Capital %* (Ratios, Q2-26) dá 61% — base diferente (inclui caixa), mesma conclusão.
-
-| | |
-|---|---|
-| Capital fixo acrescentado FY22→FY25 | **−$ 356 M** |
-| Δ NOPAT normalizado | **+$ 3.260 M** |
-| **ROIC marginal** | não definido — crescimento sem capital |
-| WACC | 8,66% |
-
-O crescimento da Booking não consome capital; consome marketing. Por isso o ROIC marginal relevante é o retorno do marketing incremental — que se lê no rácio marketing/gross bookings (4,6% → 4,7% YoY): estável.
-
----
-
-## 5. SWOT
-
-**Forças:** 325 M room nights/trimestre e a maior oferta de alojamento independente na Europa; margem EBITDA 36,9% com capex de 1,5%; float de $ 10 mM em pico que financia o negócio; devolução de capital de ~$ 7,7 mM/ano (recompras $ 6,4 mM + dividendos $ 1,2 mM em FY25), com share count a cair ~4% ao ano (838 M → 751 M em 8 trimestres).
-
-**Fraquezas:** posição fraca nos EUA (Priceline); dependência de marketing de performance pago à Google; KAYAK imparizada ($ 457 M) por perda de tráfego; dívida 94% em euros contra capital próprio negativo de −$ 10.783 M.
-
-**Oportunidades:** alojamento alternativo (+4% room nights, abaixo do total — oportunidade não capturada); payments e Connected Trip (voos +28% em FY25 antes do choque); $ 650 M de poupanças run-rate do Transformation Program até fim-2027 (~2% da receita de 2027); Ásia via Agoda.
-
-**Ameaças:** agentes de IA como interface de reserva (probabilidade relevante, horizonte 3–7 anos; hoje <1%); regulação UE — DMA (gatekeeper) e investigação formal DSA aberta a 21-Out-2026 com coima máxima de 6% da receita (~$ 1,7 mM); FTC/Priceline (potencial >$ 500 M); conflito no Médio Oriente a pesar no long-haul (Q3 room nights guidance 3–5%); taxas reais altas a pressionarem procura discricionária.
-
----
-
-## 6. Legal, regulatório e fiscal
-
-| Matéria | Tipo | Estado | Exposição máx. | % market cap | Timeline |
-|---|---|---|---|---|---|
-| CNMC Espanha | Antitrust (paridade, ranking) | Coima suspensa em recurso; **$ 472 M provisionados** | $ 472 M + remédios | 0,4% | Tribunal Nacional |
-| FTC / Priceline | Consumer protection (taxas, apoio, facturação) | Staff recomenda queixa (Jul-26); em negociação | >$ 500 M (Reuters) + compromissos | ~0,4% | 2026-27 |
-| DSA — Comissão Europeia | Plataforma muito grande (VLOP) | **Investigação formal aberta 21-Out-2026** | até 6% da receita (~$ 1,7 mM) | ~1,4% | 12–24 meses |
-| DMA | Gatekeeper | Designada; obrigações sobre paridade e dados | Remédios de negócio | — | Contínuo |
-| Swiss PSO | Nível de comissões na Suíça | Ordem de redução suspensa em recurso | Receita suíça | Imaterial | Recurso |
-
-Na ponte EV→equity entram **$ 1.070 M** de contingências: CNMC 472 (já passivo) + FTC ~350 esperado + DSA ~250 esperado. **Regime regulatório:** o risco não é a coima, é o remédio — a perda das cláusulas de paridade em toda a UE seria o canal pelo qual a regulação chega ao take rate. **Risco fiscal:** Netherlands Innovation Box (taxa de 9% sobre parte do lucro) sob escrutínio; Pillar 2 e BBB Act já subiram a ETR de 20,9% para 23,4%; $ 302 M de unrecognized tax benefits. **Factores de risco novos face ao 10-K anterior:** a linguagem sobre agentes de IA a evoluírem para plataformas de reserva completas e a desintermediarem OTAs.
-
----
-
-## 7. Enquadramento de valuation
-
-### Que métricas são as certas
-
-| Múltiplo | Usar? | Porquê / porque não |
-|---|---|---|
-| P/E GAAP | Com reserva | Distorcido por FX sobre a dívida em euros (outros gastos de −$ 962 M em Q2-25) e pela imparidade |
-| P/E ajustado | Sim | O ajustado não soma SBC; o fosso para o GAAP é FX, imparidade e transformation |
-| EV/EBITDA | **Sim** | Mesma base do modelo; capex ínfimo, logo EBITDA ≈ caixa |
-| EV/Receita | Não | Mix merchant/agency muda a receita sem mudar a economia |
-| P / NTM EPS | **Sim — âncora de mercado** | É o múltiplo que o sell-side usa e o que mostra o de-rating |
-| EV/FCF | Sim | FCF yield de 6,4% é a forma mais limpa de ler o preço |
-| Específico | Marketing/gross bookings, take rate | Saúde do moat, não valuation |
-
-**Métrica âncora:** DCF de FCFF, com P/NTM EPS e EV/FCF como cross-check. **Peers:** Expedia (mesmo modelo, pior execução) e Airbnb (alojamento alternativo). **Armadilhas:** EPS do CapIQ mistura bases pré e pós split; TEV do CapIQ soma operating leases; FX sobre a dívida em euros entra no resultado GAAP.
-
-### O múltiplo é barato porque o preço caiu, ou porque o lucro caiu?
-
-Porque o **preço** caiu. Receita do H1-26 +11,5% YoY, Adjusted EBITDA +9% em Q2, EPS ajustado +15% — o denominador está a subir. O trimestre corrente anualizado não serve (em FY25, Q2 foi ~25% da receita anual e Q3 ~33%); LTM e NTM dão a mesma leitura.
-
-| | LTM *(As Presented)* | Mediana 3 anos | Trimestre corrente anualizado |
-|---|---|---|---|
-| EV / Receita | 4,4x | 6,3x | n/a — sazonalidade |
-| EV / EBITDA | 11,7x | 18,4x | n/a |
-| EV / EBIT | 12,6x | 20,6x | n/a |
-
-### Decomposição de qualquer colapso de margem
-
-Não há colapso. Margem operacional GAAP de Q2-26 34,0% contra 33,1% em Q2-25 (homólogo). O único salto é Q3-25, onde a imparidade de $ 457 M da KAYAK corre off e já está fora do cash opex do modelo.
-
-### Três lentes, três veredictos
-
-| Lente | Veredicto |
-|---|---|
-| vs história própria de múltiplos | Barata — mínimo de 5 anos, com a ressalva do rf |
-| vs peers | Entre EXPE e ABNB; prémio à EXPE justificado pela margem, mas mostra o chão |
-| DCF | Barata — +57% ao WACC, +34% ao required return |
-
-As lentes concordam; a divergência está entre elas e o mercado, que precifica um cenário de desintermediação que os números ainda não mostram. **Governa o DCF**, porque é o único que trata o risco de IA como um cenário explícito com probabilidade em vez de o deixar escondido num múltiplo.
-
-### Os drivers dominantes — por sensibilidade, não por intuição (G13)
-
-Bandas BKNG definidas antes de olhar: crescimento ±2 pp, cash opex ±3 pp, capex −0,5/+1,5 pp, imposto ±3 pp, NWC −11/+15 pp, vida do capex ±1 ano, WACC ±1 pp, g ±0,5 pp. Os dois operacionais mais sensíveis são **crescimento** (amplitude $ 83,38) e **cash opex** ($ 40,53). O capex, que é o driver que mais discussão gera noutras empresas, é o 6.º aqui.
-
-**Grelha viva** (`Cenarios!B31:G36`, tabela de dados do Excel; eixo das linhas reapontado para o cash opex — ver Leia-me):
-
-| Cash opex ＼ Crescimento | −2 pp | −1 pp | **base** | +1 pp | +2 pp |
-|---|---|---|---|---|---|
-| −3 pp | 232,02 | 251,81 | 273,24 | 296,45 | 321,58 |
-| −1,5 pp | 223,32 | 242,42 | 263,11 | 285,52 | 309,79 |
-| **base** | 214,61 | 233,03 | **252,98** | 274,59 | 298,00 |
-| +1,5 pp | 205,90 | 223,63 | 242,85 | 263,66 | 286,20 |
-| +3 pp | 197,20 | 214,24 | 232,72 | 252,73 | 274,41 |
-
-Ao WACC. Toda a grelha está acima do preço de $ 161,10.
-
-**Cenários discretos** (`Cenarios!A41:I45`)
-
-| Cenário | Prob. | CAGR receita 10a | Cash opex Y10 | Valor @WACC | Valor @required | IRR ao preço de hoje |
+| Merchant | $ 6.998 M | 71% | +14% | Comissão + spread de pagamento, cobrado ao viajante |
+| Agency | $ 2.463 M | 25% | −4% | Comissão facturada ao hotel |
+| Publicidade e outros | $ 332 M | 3% | +8% | CPC da KAYAK, reservas OpenTable |
+| Acerto FTC | −$ 900 M | — | — | Contra-receita, fora da receita ajustada |
+| **Receita GAAP / ajustada** | **$ 8.893 M / $ 9.793 M** | 100% | −1% / +9% (+10% cc) | |
+
+**KPIs que movem a receita** *(ERs; LTM Set-26 = soma de quatro trimestres)*
+
+| | FY21 | FY22 | FY23 | FY24 | FY25 | LTM Set-26 |
 |---|---|---|---|---|---|---|
-| Bull (+1,5 pp cresc., −1,5 pp opex) | 20% | 7,89% | 59,5% | $ 297,42 | $ 253,47 | 13,40% |
-| **Base (modal)** | **45%** | **6,39%** | **61,0%** | **$ 252,98** | **$ 216,27** | **11,97%** |
-| Bear — eixo único (cresc. −2 pp) | 25% | 4,39% | 61,0% | $ 214,61 | $ 184,30 | 10,67% |
-| Cauda conjunta (cresc. −2 pp, opex +3 pp) | — | 4,39% | 64,0% | $ 197,20 | $ 169,29 | 10,02% |
-| Stress — disrupção por IA (CAGR 3%, opex +5 pp) | 10% | 3,00% | 66,0% | $ 164,37 | $ 141,27 | 8,79% |
-| **Valor esperado** | | | | **$ 243,41** | **$ 208,22** | |
+| Room nights (M) | 590 | 888 | 1.046 | 1.146 | 1.236 | 1.293 *(+6,7%)* |
+| Gross bookings ($ mM) | 76,7 | 121,3 | 150,6 | 165,6 | 186,1 | 202,3 *(+12,2%)* |
+| Receita ($ M; FY ajustada ex-FTC no LTM) | 10.958 | 17.090 | 21.365 | 23.739 | 26.917 | 29.026 *(+11,5%)* |
+| **Take rate** (receita / gross bookings) | 14,3% | 14,1% | 14,2% | 14,3% | 14,5% | 14,3% |
+| GB por room night ($) | 130 | 137 | 144 | 145 | 151 | 156 |
 
-**Stress test de downside, aritmético.** Receita **plana dez anos**, cash opex +6 pp (67% — agentes de IA a cobrarem a portagem do tráfego), WACC +100 bp e g a 1,5%: FCFF Y1 $ 6.425 M, margem EBIT Y10 31,5%, valor **$ 99,02 (−38,5%)**. Ao WACC e g de 2,5%, o mesmo cenário dá $ 122,67 (−23,9%). É o que se perde se a tese estiver errada em tudo ao mesmo tempo.
+*O que isto mostra:* o crescimento dos últimos três anos veio de volume (room nights +7–10%/ano) e de preço por room night (+3–4%), com take rate **estável em 14,1–14,5% há cinco anos**. É a variável que a IA ou a regulação teriam de mexer para partir a tese, e ainda não mexeu. *(FY21–FY23 dos ERs anuais; confirmar no PC.)*
 
-**Porquê cada eixo, e porquê o valor do base.** O crescimento é o eixo porque compõe dez anos e arrasta o terminal; o opex porque é onde a portagem da IA aparece. O base de crescimento fica entre a tendência (FY24-25 ~10,5% cc) e o trimestre (Q3 guidance 5–7% cc), como manda o G14 quando o desvio tem explicação identificável (Médio Oriente) — e há um invalidador ligado (#1). Não há alavanca agressiva numa curva a desacelerar: o opex melhora 2 pp em dez anos, menos do que os 7 pp de FY23→LTM e do que o consenso. Contagem do G15: três drivers do lado cauteloso face a factos (crescimento, imposto, NWC), um favorável (opex terminal), um em linha (capex) — não é um bear mal rotulado; e o crescimento conta como **duas** marcações, porque está abaixo da guidance e do consenso ao mesmo tempo.
+**Q3-26 em números:** room nights 345 M (+7%), gross bookings $ 54,5 mM (+10%, ~11% cc), merchant GB +14% e agency −1%, voos +19%, alojamento alternativo +7% (37% das room nights da Booking.com). Mix directo B2C "mid-sixties", apps "high-fifties" das room nights LTM, Genius de nível alto "high-fifties". Por região: Europa e Ásia high single digits; EUA e resto mid single digits.
+
+**Geografia e concentração:** maioritariamente Europa (Booking.com; receita e dívida em euros), depois Ásia (Agoda) e EUA (Priceline, onde é subponderada face à Expedia). Sem concentração de clientes: centenas de milhares de propriedades e milhões de viajantes. A concentração relevante é de **fornecedor de tráfego** (Google), não de cliente.
 
 ---
 
-## A. Invalidadores da tese
+## 3. Moat e concorrência
 
-**Regras:** número legível numa fonte pública sem estimar; threshold que a série já quase tocou; frequência compatível com a fonte.
+**Rival de referência:** Expedia (mesmo modelo, ~metade das room nights, margem EBITDA ~20–25%). A Airbnb compete no alojamento alternativo com oferta própria; a Google e os agentes de IA são o risco de interface, não de oferta.
 
-| # | Afirmação (secção) | Invalidador — condição observável | Onde verifico | Definido | Estado | Revisto |
+**Onde a vantagem aparece nos números:** margem EBITDA de 37% com marketing a 4,4% dos gross bookings; take rate estável cinco anos; capital investido total negativo (os clientes financiam o negócio); e o mercado continua a pagar-lhe mais do que à Expedia (10,3x contra ~8x EV/EBITDA).
+
+**Onde não aparece:** nos EUA (Priceline pequena), e na KAYAK — imparidade de $ 457 M em Q3-25, o que acontece a um activo que vive de tráfego de pesquisa quando a pesquisa muda de forma. O moat é **oferta fragmentada + marca directa**, não tráfego.
+
+**O que o erode e a que velocidade:** (1) agentes de IA como interface de reserva — hoje residuais, sem número divulgado; (2) regulação das cláusulas de paridade e do ranking (CNMC em Espanha, DMA, investigação DSA aberta a 21-10-2026), e defesa do consumidor nos EUA (FTC/Priceline); (3) cadeias hoteleiras a puxarem a reserva directa. **Trajectória: estável nos números** (mix directo mid-sixties, take rate estável), **a estreitar no risco regulatório** (três processos activos em 2026).
+
+---
+
+## 4. Histórico: das vendas ao cash flow
+
+**Ponte por ano** *(SEC EDGAR, us-gaap; $ M. EBIT ajustado sem imparidades nem FTC; NOPAT a 22% até FY25 e 23,4% no LTM; FCF = CFO − capex, já depois de juros)*
+
+| | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 | LTM Set-26 |
 |---|---|---|---|---|---|---|
-| 1 | Procura resiliente; desaceleração é choque do Médio Oriente (§DCF, G14) | Room nights YoY **< 3,0%** num trimestre | ER, tabela Statistical Data | 23-10-2026 | **Vigiar** — 5,3% em Q2, guidance Q3 3–5% | 23-10-2026 |
-| 2 | Moat de distribuição; IA não cobra portagem (§3, §4) | Marketing / gross bookings **> 5,0%** num trimestre | ER, Additional Highlights | 23-10-2026 | **Vigiar** — 4,7% em Q2 (4,6% em Q2-25) | 23-10-2026 |
-| 3 | Canal directo estável (§2) | ER deixa de descrever o direct mix como "mid-fifties" (passa a "low fifties" ou abaixo) | ER, Additional Highlights | 23-10-2026 | OK | 23-10-2026 |
-| 4 | Agentes de IA marginais (§4) | Gestão divulga room nights via LLMs/agentes **≥ 5%** | Transcript | 23-10-2026 | OK — "significativamente abaixo de 1%" | 23-10-2026 |
-| 5 | Margem a melhorar com o Transformation (§DCF opex) | Adjusted EBITDA margin anual **< 35,0%** | ER de Q4 | 23-10-2026 | OK — FY25 36,9% | 23-10-2026 |
-| 6 | Regulação não chega ao take rate (§6) | Remédio que proíba cláusulas de paridade ou imponha ranking em **toda a UE** (DMA/DSA), ou coima única > $ 2 mM | 10-Q / 8-K, nota de litígio | 23-10-2026 | OK | 23-10-2026 |
-| 7 | Crescimento acima de room nights via merchant/payments (§1, §3) | Gross bookings cc YoY **abaixo** do room night growth num trimestre | ER, Statistical Data | 23-10-2026 | OK — 8% vs 5,3% | 23-10-2026 |
+| Receita | 10.958 | 17.090 | 21.365 | 23.739 | 26.917 | 29.026 |
+| **EBITDA** *(SBC dentro)* | 2.917 | 5.553 | 6.339 | 8.146 | 9.905 | 10.813 |
+| *margem EBITDA* | *26,6%* | *32,5%* | *29,7%* | *34,3%* | *36,8%* | *37,3%* |
+| EBIT ajustado | 2.496 | 5.102 | 5.835 | 7.555 | 9.282 | 10.219 |
+| NOPAT | 1.947 | 3.980 | 4.551 | 5.893 | 7.240 | 7.828 |
+| + D&A | 421 | 451 | 504 | 591 | 623 | 594 |
+| − Capex | −304 | −368 | −345 | −429 | −322 | −324 |
+| ± Working capital, SBC e outros *(resíduo do CFO)* | +452 | +2.123 | +2.289 | +1.839 | +1.546 | +1.139 |
+| **FCF (CFO − capex)** | 2.516 | 6.186 | 6.999 | 7.894 | 9.087 | 9.237 |
+| − SBC | −370 | −404 | −530 | −599 | −613 | −589 |
+| **FCF do dono** | **2.146** | **5.782** | **6.469** | **7.295** | **8.474** | **8.648** |
+| *FCF / EBITDA* | *86%* | *111%* | *110%* | *97%* | *92%* | *85%* |
+| *FCF do dono / NOPAT* | *110%* | *145%* | *142%* | *124%* | *117%* | *110%* |
+| *Float das linhas reportadas* (AR + prepaid + deferred merchant bookings) | n/d | +2.273 | +1.567 | +843 | +166 | n/d |
 
-**Disparados — o que fiz a seguir**
+**Cascata do LTM Set-26** *(o que isto mostra: de cada $ 100 de receita ajustada sobram $ 30 de FCF do dono)*
 
-| # | Data | O que disparou | Decisão tomada |
-|---|---|---|---|
-| — | — | Nenhum | — |
+| Receita | − Cash opex | = EBITDA | − D&A | = EBIT | − Imposto | = NOPAT | + D&A − capex | + Float e outros | = FCF | − SBC | = FCF do dono |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 29.026 | −18.213 | 10.813 | −594 | 10.219 | −2.391 | 7.828 | +270 | +1.139 | 9.237 | −589 | **8.648** |
+| 100% | 62,7% | 37,3% | 2,0% | 35,2% | 8,2% | 27,0% | 0,9% | 3,9% | 31,8% | 2,0% | **29,8%** |
 
-**Regra de saída** — sete maneiras de estar errado; a de estar certo: **trim** de uma tranche quando o preço passar o fair value ao WACC ($ 252,98) — aí o base rende menos do que o custo de capital — e saída de mais uma quando o motor A cair abaixo do WACC.
+**O que mudou, e porquê.**
+- **A margem subiu 10 pp em quatro anos** (26,6% → 37,3%) por alavanca operacional: o marketing cresce menos do que os gross bookings (mix directo e Genius), e os custos fixos ajustados crescem ~6% contra a receita a ~9–11%. O FY23 é a excepção (29,7%): provisões legais (CNMC) e o arranque do Transformation Program.
+- **A conversão em caixa está a descer** — de 110% do EBITDA (FY22–FY23) para 85% no LTM. Não é deterioração do negócio: é o **float** a deixar de crescer. Nos anos de migração para merchant o float acrescentou $ 1,6–2,3 mM por ano ao CFO; em FY25 só $ 0,2 mM, e o CFO do Q3-26 caiu 21% face ao homólogo. Com o merchant a crescer +14% (contra +25% em 2025), o float passa de motor a acompanhante. O modelo assume −15% da variação da receita, abaixo da média de três anos (−26%).
+- **O FCF ainda não inclui o FTC**: os $ 1,0 mM estão provisionados e não pagos — saem do CFO quando houver acordo. Estão na ponte como dívida (secção 10).
+- **A que custo se gera o dinheiro:** nenhum — capex de 1,1% da receita, sem factoring, sem deferred revenue contratual. O FCF do dono é ~110% do NOPAT porque o float financia o crescimento. **O que mudou foi o uso:** recompras e dividendos de $ 13,3 mM nos últimos doze meses, **144% do FCF**, pagos com caixa (−$ 1,4 mM desde Dezembro) e dívida nova (+$ 1,3 mM até Setembro, mais € 3,55 mM em Novembro).
+
+**GAAP vs non-GAAP.** O Adjusted EBITDA **não soma o SBC** (bom). Exclui: FTC ($ 1,0 mM, Q3), imparidades (KAYAK $ 457 M em Q3-25), custos do Transformation Program ($ 21 M no Q3; ~$ 105–190 M/ano desde 2024), ganhos e perdas de FX sobre a dívida em euros e de participações. **Add-backs questionados:** o Transformation já recorre há três anos — o modelo mantém-no dentro do cash opex (o EBITDA do modelo é 37,2%, não os 37,7% ajustados dos 9M). O FTC sai do run-rate mas entra na ponte como dívida, e a regulação recorrente (CNMC 2024, FTC 2026, DSA pendente) está no cenário adverso (+2 pp de opex).
 
 ---
 
-## B. Log de fair value e decisões
+## 5. Investimento e retorno
 
-| Data | Quarter | Preço | FV DCF | IRR impl. | Growth impl. | Decisão | Racional (1 linha) |
+**Sem ciclo de capex: capex 1,1–2,8% da receita.**
+
+| | FY21 | FY22 | FY23 | FY24 | FY25 | LTM |
+|---|---|---|---|---|---|---|
+| Capex / receita | 2,8% | 2,2% | 1,6% | 1,8% | 1,2% | 1,1% |
+| D&A / receita | 3,8% | 2,6% | 2,4% | 2,5% | 2,3% | 2,0% |
+| Capex / D&A | 0,72x | 0,82x | 0,68x | 0,73x | 0,52x | 0,55x |
+
+O capex fica abaixo do D&A porque parte do D&A é amortização de intangíveis de aquisições (a correr off). O modelo projecta capex de 1,5% (inclui software capitalizado) e D&A endógeno. **G20 não se aplica** (investimento líquido acumulado ≤ 0): o ROIC implícito do modelo não tem significado e a receita nova por $ de capex é 3,6–4,4x.
+
+**ROIC — com o float fora do capital** *(perfil plataforma)*. O capital investido total é negativo desde 2023 (−$ 7,1 mM em Jun-26), por isso mede-se sobre o **capital fixo** (PP&E + goodwill + intangíveis + ROU + outros activos não correntes):
+
+| | FY22 | FY23 | FY24 | FY25 | LTM Set-26 |
+|---|---|---|---|---|---|
+| NOPAT | 3.980 | 4.551 | 5.893 | 7.240 | 7.828 |
+| Capital fixo *(fim de período)* | 6.774 | 6.868 | 6.681 | 6.418 | ~6.177 *(Jun-26)* |
+| **ROIC s/ capital fixo** | 59% | 66% | 88% | 113% | ~127% |
+| Capital investido total *(com o float)* | 2.202 | −150 | −2.894 | −3.339 | −7.051 *(Jun-26)* |
+
+**ROIC incremental:** de FY22 ao LTM o NOPAT subiu **+$ 3.848 M** com o capital fixo a **cair ~$ 600 M** — o ROIC marginal sobre capital não tem denominador. O crescimento consome **marketing**, não capital: o retorno incremental que importa lê-se no marketing/gross bookings (4,35% → 4,43% LTM). Médio e incremental dão a mesma leitura: um negócio que cresce sem reter capital e devolve tudo.
+
+**De onde veio o dinheiro (LTM):** CFO $ 9,6 mM + dívida líquida +$ 1,3 mM + caixa −$ 1,4 mM → recompras $ 12,0 mM e dividendos $ 1,3 mM. Sem emissão de acções (o SBC de 2% é mais do que compensado: acções diluídas −7,5% YoY).
+
+---
+
+## 6. Balanço e estrutura de capital
+
+| $ M, 30-Set-2026 | |
+|---|---|
+| Senior notes (corrente 1.987 + LT 18.074) | 20.061 |
+| Passivos tipo dívida: FTC 1.000 (provisionado, não pago) + CNMC 472 + DSA ~250 (esperado) | 1.722 |
+| − Caixa e equivalentes | −15.814 |
+| − Investimentos de longo prazo (~400 a 50%) | −200 |
+| **Dívida líquida + passivos** | **5.769** |
+| Dívida líquida / EBITDA LTM | 0,5x *(0,4x sem os passivos)* |
+
+- **Depois do Q3:** € 3,55 mM de notes a 13-11-2026 (8-K): € 1,25 mM a 3,95% (2029), € 0,8 mM a 4,375% (2032), € 0,75 mM a 4,75% (2035), € 0,75 mM a 5,0% (2038). Entram na dívida e na caixa até serem usadas (efeito líquido zero; não modeladas). A dívida bruta pro forma passa de ~$ 20 mM para ~$ 24 mM, quase toda em euros — coerente com a receita em euros, mas gera ruído de FX no resultado GAAP.
+- **Sem finance leases;** as operating leases ficam fora (a renda está no EBIT).
+- **Capital próprio contabilístico −$ 10,4 mM** (recompras acima do lucro acumulado). Não é sinal de stress: o EBITDA cobre os juros ~9x. Rating de grau de investimento e covenants das linhas de crédito por confirmar no PC.
+- **Recompras vs diluição:** $ 12,4 mM de autorização por usar; recompras LTM $ 12,0 mM (~11% do market cap), dividendo de $ 0,42/trimestre. O risco é de alocação, não de solvência: a devolução a 144% do FCF não é repetível sem mais dívida (invalidador 4).
+- **Não operacionais:** investimentos de longo prazo ~$ 0,4 mM (a 50% na ponte); restricted cash fora.
+
+---
+
+## 7. Projecções
+
+Y1 = Out-26 a Set-27 (contém o ciclo sazonal completo do float). Receita **ajustada** (ex-FTC) como base.
+
+| Driver | Y1 | Y2 | Y3 | Y4 | Y5 | Y10 | Âncora (histórico · guidance · consenso) |
 |---|---|---|---|---|---|---|---|
-| 30-10-2026 | Q2-26 | $ 161,10 | $ 236,03 | 11,97% | CAGR 3,43% @required | Entrada faseada (T1 e T2) | Regra de custo de capital da carteira: ERP 4,5% → 5,0% (Kroll); Rf 4,96% igual. Ponte: só ERP, −$ 16,95. A cheia passou para $ 159,66, abaixo do preço |
-| 23-10-2026 | Q2-26 | $ 161,10 | $ 252,98 @WACC · $ 216,27 @req | 11,97% | 2,71% | **T1 + T2 abertas; T3 depois de 03-Nov** | Preço exige quase nenhum crescimento; T3 dentro do ruído do β e com G14 activo |
+| Crescimento da receita | 6,5% | 8,0% | 7,5% | 7,0% | 6,5% | 3,5% | LTM +11,5% (FX a favor); Q4-26 guiado 0–2% (2–4% cc); ambição ≥ 8% cc; consenso FY26 +9% / FY27 +9% (pré-revisões). CAGR 10a 5,8% |
+| Cash opex ex-D&A *(SBC dentro)* | 63,0% | 62,8% | 62,7% | 62,6% | 62,5% | 62,5% | LTM 62,7%; FY25 62,4% ex-transformation; ambição: margem estável; poupanças de $ 650 M assumidas reinvestidas |
+| Capex / receita | 1,5% | 1,5% | 1,5% | 1,5% | 1,5% | 1,5% | FY23–LTM 1,1–1,8% |
+| Imposto | 23,4% | 23,5% | 23,6% | 23,7% | 23,8% | 24,0% | ETR 2026 YTD 23,4%; Pillar 2 contra, Innovation Box a favor |
+| NWC / Δ receita | −15% | | | | | −15% | Média FY23–25 −26%; a abrandar com o merchant |
 
-**Verificação retrospectiva** — de seis em seis meses. Primeira: Abr-2027.
+| $ M | Y1 | Y2 | Y3 | Y4 | Y5 | Y10 |
+|---|---|---|---|---|---|---|
+| Receita | 30.913 | 33.386 | 35.890 | 38.402 | 40.898 | 51.202 |
+| Margem EBITDA | 37,0% | 37,2% | 37,3% | 37,4% | 37,5% | 37,5% |
+| Capex | 464 | 501 | 538 | 576 | 613 | 768 |
+| **FCFF** | **8.734** | **9.555** | **10.281** | **10.882** | **11.580** | **14.259** |
+| ROIC s/ capital fixo | >100% em todo o horizonte | | | | | |
+
+**Onde diverge do consenso, e porquê:** o Y1 fica 0,4 pp abaixo do consenso (6,9% com o Q4 guiado a 0–2%) e o fade é mais rápido do que a ambição da gestão — Médio Oriente, Europa em base forte e risco de IA. A margem fica plana (a gestão também só promete margem estável). **Coerência:** não há alavanca escondida (EBITDA +0,5 pp em dez anos); o capex acompanha a receita; G20 e G21 não se aplicam (sem ciclo de capex). **G15** *(04_reversao.py)*: contra os factos o base está do lado cauteloso em **todos os cinco drivers**, mas pouco (+3,4% no valor se todos voltassem à referência; +3,2% contra o consenso no crescimento). A âncora estrutural da margem terminal está dispensada até ao piloto de 05-12 (decisão do Hugo, 28-11): sem Comps do Capital IQ, o opex terminal só tem o próprio melhor ano e o consenso como travão.
 
 ---
 
-## D. Sentimento e posicionamento
+## 8. Métricas do sector e múltiplos
 
-**Reacção e narrativa.** A acção caiu de ~$ 214 em Agosto (pós-Q2) para $ 161,10 — −25% face ao máximo de 52 semanas de $ 220,81 e +7% acima do mínimo de $ 150,14. Três camadas: (1) **regulatória** — a Reuters noticiou a 7-Out que o FTC prepara acção contra a Priceline com coima potencial >$ 500 M, e a 21-Out a Comissão Europeia abriu investigação formal ao abrigo do DSA (−3,3% nesse dia); (2) **narrativa de IA** — "vítima da IA", com a imparidade da KAYAK como prova; a contra-narrativa (CNBC, Set-26) é que a Google e a OpenAI não querem ser merchant of record e devolvem o checkout ao OTA, com a Booking como parceiro de lançamento nos dois; (3) **macro** — UST 10Y a 4,96% depois de 5,31% a 5-Out, mercado a dar ~76% de probabilidade a uma *subida* de 25 bp em Dezembro, e sell-off de tecnologia a 22-Out. **Ligação aos drivers:** a camada 1 está na ponte ($ 1.070 M) e no invalidador #6; a camada 2 é o eixo de opex e o cenário de stress; a camada 3 está no rf de 4,96%.
+**As métricas certas para a BKNG:**
+- **EV/EBITDA** — capex de 1,5%, por isso o EBITDA é quase caixa, e o EBITDA da casa não soma o SBC (comparável com o modelo).
+- **FCF yield (do dono, depois de SBC)** — a forma mais limpa de ler o preço num negócio que devolve tudo.
+- **P/E forward** como cross-check de mercado (é o que o sell-side usa). EV/gross bookings ($ 0,58 por $ de GB) só como contexto.
 
-**O que o mercado pode estar a assumir errado.** Que a desintermediação é linear e próxima. O que se observa é <1% de room nights via agentes e canal directo estável. Se a IA vier, chega primeiro ao rácio marketing/gross bookings — que é público e trimestral. O mercado está a descontar hoje o que ainda pode ser lido amanhã.
+| Múltiplo | BKNG hoje | Mediana própria 3 anos *(CapIQ, Out-26)* | Expedia | Airbnb |
+|---|---|---|---|---|
+| EV / EBITDA LTM | 10,9x | 18,4x | ~8x *(09-11)* | ~30x *(Ago-26)* |
+| EV / EBITDA NTM *(Y1 do modelo)* | 10,3x | 16,4x | — | — |
+| P / E FY26 · FY27 *(consenso Nasdaq)* | 14,7x · 12,5x | 21,3x *(NTM)* | 12,2x *(forward, 09-11)* | ~29x *(forward, Ago-26)* |
+| FCF yield LTM · do dono | 8,3% · 7,7% | ~4,7% *(market cap/FCF 21,3x)* | ~12% *(estimado)* | — |
+| EV / gross bookings LTM | 0,58x | — | — | — |
 
-**Insider** — 0 compras e 30 vendas em 12 meses (GuruFocus), $ 17,4 M vendidos nos últimos 90 dias (MarketBeat), **todas ao abrigo de planos 10b5-1**: CFO 20.000 acções a ~$ 211 (12-Ago), VP P. Millones 50.050 a ~$ 208 (17-Ago), CHRO 1.500 a ~$ 163 (15-Out, plano adoptado a 1-Jun). Sem sinal de convicção para nenhum lado; a ausência de compras em mínimos é nota, não alarme.
+*EV de mercado $ 117,6 mM (market cap $ 111,8 mM + dívida e passivos − caixa). Comps da web com datas diferentes — contexto, não âncora (Capital IQ no PC). A mediana própria de 3 anos formou-se com o UST 10Y a ~4%: aponta a direcção, não o nível.*
 
-**Short interest** — n/d. Sem export Charting do CapIQ. **Pedir na próxima ronda.**
+**Leitura:** a BKNG está no mínimo da sua história (−40% contra a mediana do EV/EBITDA) e entre a Expedia e a Airbnb. Barata porque o **preço** caiu (−30% no ano), não o lucro (EPS ajustado +17% no Q3). O "chão" é a Expedia a ~8x: é o que o mercado paga a um OTA de quem duvida. A diferença para a BKNG (~2–3x de EBITDA) é o prémio de margem, de mix directo e de execução.
 
-**Sell-side** — PT médio $ 233, mediano $ 236, intervalo $ 170–301, desvio-padrão $ 28, n=35. 24 Buy, 6 Outperform, 7 Hold, 0 Sell. Cortes recentes: Wells Fargo $ 220 → $ 190 (Equal Weight, 7-Out), Jefferies $ 200 → $ 185 (19-Out). EPS LT growth do consenso 17,5% (n=7) — inclui recompras.
+---
 
-| Base | Fair value | Governa a decisão? |
+## 9. Custo de capital
+
+| Componente | Valor | Fonte e porquê |
 |---|---|---|
-| DCF, SBC como custo real, ao WACC | $ 252,98 | **Sim** |
-| DCF ao required return | $ 216,27 | Sim — define o T1 |
-| Consenso sell-side (PT 12 meses) | $ 233 | Não — referência |
-| Mínimo do intervalo sell-side | $ 170 | Coincide com o T3 |
+| Rf | 4,94% | UST 10Y a 27-11-2026 (portal; Treasury.gov inacessível desta sessão — confirmar no PC) |
+| ERP | 5,0% | Kroll (regra da carteira) |
+| CRP | 0 | Exposição a emergentes não material |
+| β desalavancado | **1,235** | Regra de 27-11 (sector ambíguo → governa o mais conservador): 50% Hotel/Gaming 0,876 + 50% Software (Internet) ~1,59, Damodaran US Jan-2026. Sensibilidade: Hotel/Gaming 0,876 |
+| β realavancado | 1,40 | D/E de mercado 18% (dívida $ 20,1 mM / market cap $ 111,8 mM), imposto 23,4% |
+| **Ke** | **11,96%** | 4,94% + 1,40 × 5,0% |
+| Kd (depois de imposto) | 5,5% (4,21%) | Custo marginal em USD-equivalente; notes em euros de Nov-26 a 3,95–5,0% |
+| Pesos | 85% equity / 15% dívida | De mercado |
+| **WACC** | **10,78%** | |
+| **Required** | **11,78%** | Nível 2 (WACC + 100 bp): moat estabelecido e ROIC muito acima do WACC, mas ciclicidade de viagens, risco de IA e regulação |
 
-**Decomposição do gap ao consenso:** zero de base contabilística (o EBITDA do consenso não soma SBC, como o meu). Pôr os pressupostos de crescimento e margem do consenso no meu DCF dá $ 294,09 — acima do PT de $ 233. O gap entre o modelo do consenso e o PT do consenso é o sell-side a aplicar um múltiplo que já embute o de-rating, não uma diferença de previsão.
-
-**Estrutura accionista** — dispersa, institucional; sem activistas conhecidos.
+**Com β 0,876 (Hotel/Gaming):** WACC 9,05%, fair value **$ 225,63** (+50%). A escolha do beta vale $ 49 por acção — mais do que qualquer driver operacional (secção 11). É por isso que a decisão se ancora no **retorno implícito**, que não depende do beta.
 
 ---
 
-## C. Changelog
+## 10. Valuation
 
-| Data | Quarter | O que mudou | Secções |
+**Três cenários** *(probabilidades declaradas antes de ver os valores: 25 / 50 / 25)*
+
+| Cenário | p | A história | Crescimento | Margem EBITDA Y10 | @WACC | @required | IRR ao preço |
+|---|---|---|---|---|---|---|---|
+| **Abrandamento + regulação** | 25% | O Q4 fraco prolonga-se; o FTC custa mais; a UE segue a Espanha nas cláusulas de paridade; a IA começa a cobrar tráfego | base −3 pp/ano *(CAGR 2,8%)* | 35,5% | $ 131,20 | $ 116,96 | 9,73% |
+| **Compounder maduro** *(base)* | 50% | 2027 volta a ~8%, o crescimento desce para 3,5% em dez anos, margem estável | 6,5% → 3,5% *(CAGR 5,8%)* | 37,5% | **$ 176,41** | **$ 156,39** | **12,13%** |
+| **Connected Trip + poupanças** | 25% | Voos e alojamento alternativo aceleram; os $ 650 M de poupanças ficam na margem | base +2 pp *(CAGR 7,8%)* | 39,0% | $ 215,02 | $ 189,95 | 13,98% |
+| **Ponderado** | | | | | **$ 174,76** | **$ 154,92** | 12,04% |
+| *Stress aritmético* | — | Receita plana dez anos, opex +4 pp, WACC +1 pp, g 1,5% | 0% | 33,5% | *$ 82,16 (−45%)* | | |
+
+**Peso do terminal:** 48,7% do EV; EV/EBITDA de saída implícito 9,2x no Y10 (abaixo dos 10,9x de hoje — o valor não depende de re-rating).
+
+**Ponte EV → equity:** EV $ 136.961 M − dívida $ 20.061 M − passivos tipo dívida $ 1.722 M + caixa $ 15.814 M + investimentos $ 200 M = equity $ 131.192 M ÷ 743,7 M acções = **$ 176,41**.
+
+**Reverse DCF** *(motores A e B, G12 verde)*
+
+| | Valor |
+|---|---|
+| **Retorno que o preço oferece** (motor A) | **12,13%** — antes dos resultados ($ 155,67, 03-11) era 11,82%; a reacção alargou o desconto |
+| Crescimento que o preço exige para render o WACC · o required (motor B) | **3,8%** · 5,3% ao ano durante 10 anos *(base 5,8%; histórico FY21–25 em room nights +7–10%)* |
+| Margem EBITDA do Y10 que o preço implica (crescimento do base, @WACC) | 32,3% *(hoje 37,3%)* |
+| Capex do Y10 que o preço implica | 6,5% da receita *(hoje 1,1%)* |
+
+| Crescimento exigido ＼ margem EBITDA Y10 | 31,5% | 34,5% | **37,5%** | 40,5% |
+|---|---|---|---|---|
+| WACC 10,78% | 6,2% | 4,9% | **3,8%** | 2,8% |
+| Required 11,78% | 7,7% | 6,5% | **5,3%** | 4,2% |
+| 10,0% | 4,9% | 3,7% | 2,6% | 1,5% |
+
+**Em números falsificáveis — o Y4 (Set-2030) que o preço exige para render 11,78%:** receita $ 37.913 M (base $ 38.402 M), EBITDA $ 14.179 M ($ 14.362 M), FCFF $ 10.711 M ($ 10.882 M), NOPAT por acção $ 14,02 ($ 14,20). Ou seja: **o preço de hoje exige quase o nosso base para render o required** — a margem de segurança está no retorno sobre o índice, não sobre o required.
+
+**Ponte do fair value face às revisões anteriores**
+
+| | FV | Δ | Porquê |
 |---|---|---|---|
-| 30-10-2026 | Q2-26 | Regra de custo de capital da carteira (decisão do Hugo): Rf UST 10Y à data do preço (4,96%, igual), ERP Kroll 5,0% (era 4,5%), CRP 0. FV $ 252,98 → $ 236,03; motor A inalterado (11,97%); motor B 2,71% → 3,43%; escada $ 203,62 / $ 173,85 / $ 159,66. Escada pré-v1.3 mantida (bull/base/bear eixo único/cauda/stress IA como shifts, agora no bloco `escada` do config); o stress IA recalculado com um shift uniforme até CAGR 3% (a ficha de 23-10 dava $ 164,37; o mesmo método dá $ 165,25 ao ERP antigo). Excel regerado e verificado | ESTADO, REVERSE DCF (novo), B, C |
-| 23-10-2026 | Q2-26 | **Criação.** Pasta reorganizada na estrutura canónica. G3 (split 25:1), G14 (room nights) e G18 (operating leases no TEV do CapIQ) dispararam e foram resolvidos. G15 vs factos +7,12% (frase no sumário). Recálculo final via Excel COM, G12 verde. Grelha reapontada para opex × crescimento. | Todas |
+| Ficha de 30-10 *(config gravado; β 0,876, Q2)* | $ 236,03 | | |
+| Mercado, balanço e ano-base (LTM Set-26 ajustado, acções −10 M, FTC e caixa) | $ 244,22 | +$ 8,19 | Q3 |
+| Taxa de desconto (β 0,876 → 1,235; Rf 4,96 → 4,94%) | $ 191,03 | **−$ 53,19** | Regra do beta de 27-11 |
+| Business plan (crescimento e margem) | $ 176,41 | −$ 14,62 | Q4 guiado fraco, fade mais rápido, transformation no opex |
+| Ficha de 23-11 *(modelo v0, sem config)* | $ 172 | | Mesmo β; a diferença (+$ 4) é o ano-base do Q3 e o crescimento de 2027 reescrito |
+
+**Leitura obrigatória:** mais de metade da descida desde Outubro (−$ 59,62) é **taxa de desconto**, não negócio. O business plan custou −$ 14,62.
 
 ---
 
-*Template v3.0 — Julho 2026. Camada 1 de três: ficha estrutural · análise trimestral em chat · DCF em Excel.*
+## 11. Sensibilidades
+
+**Tornado (G13)** *(bandas definidas antes: crescimento ±2 pp, opex ±3 pp, capex −0,5/+1,5 pp, imposto ±3 pp, NWC −11/+15 pp, WACC ±1 pp, g ±0,5 pp)*
+
+| Driver | Favorável | Adverso | Amplitude |
+|---|---|---|---|
+| **Crescimento da receita** | $ 206,38 | $ 150,72 | **$ 55,67** |
+| WACC *(taxa)* | $ 201,97 | $ 156,39 | $ 45,58 |
+| **Cash opex / receita** | $ 191,40 | $ 161,41 | **$ 29,98** |
+| Imposto | $ 183,47 | $ 169,34 | $ 14,13 |
+| g perpétuo *(taxa)* | $ 182,64 | $ 170,88 | $ 11,75 |
+| Capex / receita | $ 179,02 | $ 168,57 | $ 10,45 |
+| NWC / Δ receita | $ 179,69 | $ 171,93 | $ 7,76 |
+| Vida do capex novo | $ 176,30 | $ 176,51 | ~0 |
+
+**Os dois dominantes — crescimento × margem EBITDA do Y10** *(@WACC; ▼ abaixo do preço de $ 150,39)*
+
+| CAGR 10a ＼ EBITDA Y10 | 31,5% | 34,5% | **37,5%** | 39,5% | 42,5% |
+|---|---|---|---|---|---|
+| 2,8% | ▼ $ 115,0 | ▼ $ 127,2 | ▼ $ 139,3 | ▼ $ 147,4 | $ 159,5 |
+| 4,3% | ▼ $ 129,8 | ▼ $ 143,3 | $ 156,8 | $ 165,8 | $ 179,2 |
+| **5,8%** | ▼ $ 146,4 | $ 161,4 | **$ 176,4** | $ 186,4 | $ 201,4 |
+| 7,3% | $ 165,1 | $ 181,8 | $ 198,5 | $ 209,6 | $ 226,2 |
+| 8,8% | $ 186,1 | $ 204,6 | $ 223,2 | $ 235,6 | $ 254,1 |
+
+**WACC × g**
+
+| WACC ＼ g | 1,5% | 2,0% | **2,5%** | 3,0% | 3,5% |
+|---|---|---|---|---|---|
+| 9,78% | $ 187,6 | $ 194,3 | $ 202,0 | $ 210,7 | $ 220,9 |
+| **10,78%** | $ 166,0 | $ 170,9 | **$ 176,4** | $ 182,6 | $ 189,7 |
+| 11,78% | $ 148,6 | $ 152,3 | $ 156,4 | $ 161,0 | $ 166,1 |
+
+**O que move o valor:** o crescimento (cada 1 pp/ano vale ~$ 14), depois a taxa (o beta sozinho vale $ 49). A margem pesa metade do crescimento; o capex quase nada.
+
+**Se comprar a X, ganho quanto em 5 anos?** *(base; EV/EBITDA de saída implícito no DCF no ano 5: 10,0x)*
+
+| Preço | EV/EBITDA NTM à entrada | Anualizado com re-rating | Sem re-rating |
+|---|---|---|---|
+| **$ 150,39** *(hoje)* | 10,3x | **14,37%** | 12,13% |
+| $ 156,39 *(1.ª tranche)* | 10,7x | 13,48% | 11,78% |
+| $ 133,06 *(cheia)* | 9,2x | 17,21% | 13,31% |
+
+Heatmap a 5 anos ao preço de hoje: 8,5–20,5% entre crescimento −2/+2 pp e saída a 8–12,3x EV/EBITDA; a 8x (o múltiplo da Expedia) e com o crescimento do base, 10,7%.
+
+---
+
+## 12. Decisão
+
+**Entrada faseada — T1 já.**
+
+| Degrau | Preço | Regra | Assimetria fav:adv @WACC |
+|---|---|---|---|
+| Hoje | $ 150,39 | IRR 12,13% no base; 9,73% no cenário adverso | 3,37x |
+| **1.ª tranche** | **< $ 156,39** | O base rende o required (11,78%) | 2,33x |
+| 2.ª tranche | < $ 154,92 | O ponderado rende o required *(a escada trocou: o ponderado saiu abaixo do base)* | 2,53x |
+| **Posição cheia** | **< $ 133,06** | O base com o crescimento −2 pp rende o required | 44x |
+
+- **Na prática há duas bandas, não três:** a 1.ª e a 2.ª estão a $ 1,47 uma da outra. O preço está abaixo de ambas, mas a 2.ª tranche do plano continua amarrada a **informação** (guidance FY27 ≥ 8% cc, fim de Fev) ou ao preço da cheia (~$ 133–135), porque o Q4 guiado a +1–3% é a dúvida que o preço está a cobrar.
+- **Limite da ordem T1:** com esta ficha, **≤ $ 156** (o plano dizia "até ~$ 160 aceitável"). Acima de $ 156 o base deixa de render o required.
+- **Peso máximo: 9,0%** da carteira (perda máxima de 2% no cenário adverso @WACC+1 pp, −22%). Hoje ~2,8%. O tecto da carteira por nome é 15%.
+- **Régua de compra (plano v3.2):** retorno implícito 12,13% ≥ índice 8% + 250 bp = 10,5% → **passa**.
+- **Regra de venda aplicada:** (1) tese partida? Não — um invalidador secundário disparou só tecnicamente (5); (2) acima do tecto? Não; (3) overvalued? Não — preço abaixo do favorável @WACC ($ 215) e retorno 12,1% > 8%.
+
+**Invalidadores** *(revistos 28-11-2026)*
+
+| # | Afirmação | Invalidador observável | Onde | Estado |
+|---|---|---|---|---|
+| 1 | A IA não desintermedeia | Referrals de LLM > 1% das room nights **com** o mix directo B2C abaixo de mid-sixties | ER / call | OK — mix directo mid-sixties no Q3 |
+| 2 | O FTC é pontual | Custo final > $ 1,0 mM, ou remédios que cortem o canal B2B da Priceline | 10-Q, 8-K | **Em vigilância** — $ 1,0 mM provisionado; a FTC "pode pedir mais" |
+| 3 | O Q4 é conjuntural | Room nights do Q4 < 2% **e** guidance FY27 em mid single digits | ER Q4-26 (~25-02) | Por saber |
+| 4 | O capital é bem alocado | Dívida líquida + passivos > ~$ 6 mM, ou devolução > 120% do FCF dois anos seguidos | 10-Q | **Em vigilância** — $ 5,8 mM; devolução LTM 144% do FCF |
+| 5 | O custo de aquisição está estável | Marketing / gross bookings a subir face ao homólogo três trimestres seguidos | ER | **Disparado (técnico)** — 4 trimestres seguidos, mas só +3 a +25 bp (Q3: 4,75 vs 4,71 cêntimos) e explicado pelo crescimento do B2B affiliate. Proposta: redefinir para "≥ +15 bp YoY três trimestres, ex-B2B" (decisão do Hugo) |
+
+**Catalisadores com data:** 04-12 payroll e data-limite de T1 dos índices · 09-12 FOMC (não comprar nesse dia) · 10-12 CPI · FTC/Priceline (acordo sem data) · DSA UE (12–24 meses) · **~25-02-2027 resultados Q4-26 e guidance FY27** (o que decide a T2) · 05-12 piloto v6 no PC (Capital IQ: Comps, consenso, âncora da margem terminal).
+
+---
+
+## A. Séries completas e reconciliações
+
+**Trimestres** *($ M; SEC EDGAR e ERs; KPIs dos ERs)*
+
+| | Q4-24 | Q1-25 | Q2-25 | Q3-25 | Q4-25 | Q1-26 | Q2-26 | Q3-26 |
+|---|---|---|---|---|---|---|---|---|
+| Room nights (M) | 261 | 319 | 309 | 323 | 285 | 338 | 325 | 345 |
+| Gross bookings ($ mM) | 37,2 | 46,7 | 46,7 | 49,7 | 43,0 | 53,8 | 51,0 | 54,5 |
+| Receita GAAP | 5.471 | 4.762 | 6.798 | 9.008 | 6.349 | 5.532 | 7.352 | 8.893 *(9.793 ajustada)* |
+| EBIT GAAP | 1.729 | 1.062 | 2.250 | 3.483 | 2.030 | 1.271 | 2.500 | 3.418 |
+| Marketing | 1.578 | 1.777 | 2.139 | 2.340 | 1.930 | 2.068 | 2.371 | 2.588 |
+| Marketing / GB | 4,24% | 3,81% | 4,58% | 4,71% | 4,49% | 3,84% | 4,65% | 4,75% |
+| CFO | 721 | 3.283 | 3.201 | 1.435 | 1.490 | 3.215 | 3.719 | 1.137 |
+| Recompras | 1.227 | 2.170 | 1.498 | 653 | 2.119 | 3.770 | 3.988 | 2.142 |
+| Caixa (fim) | 16.164 | 15.578 | 17.595 | 16.509 | 17.203 | 16.024 | 17.214 | 15.814 |
+| Dívida LT (fim) | 16.598 | 16.024 | 18.472 | 16.996 | 18.736 | 15.398 | 18.180 | 18.074 |
+
+**Reconciliação do Adjusted EBITDA do Q3-26 (ER):** lucro líquido 2.717 + FTC 1.000 + D&A 183 + transformation 21 − juros recebidos 221 + juros pagos 311 + perdas em participações 18 − ganho de FX na dívida em euros 127 + imposto 706 = **4.607** (47,0%; igual ao homólogo).
+
+## B. Gráficos de suporte
+
+As tabelas das secções 2, 4 e 11 substituem os gráficos nesta versão (sem Excel aberto no PC). O `BKNG_DCF.xlsx` traz a cascata (`Projecoes`), a grelha viva (`Cenarios`) e os motores (`Reverse`).
+
+## C. SWOT e legal, regulatório e fiscal
+
+**Forças:** 1,29 mM de room nights por ano; margem EBITDA de 37% com capex de 1,5%; float que financia o negócio; acções −7,5% num ano. **Fraquezas:** posição fraca nos EUA; dependência de tráfego pago à Google; KAYAK imparizada; devolução de capital acima do FCF. **Oportunidades:** alojamento alternativo (37% das room nights da Booking.com, +7%); voos (+19%) e Connected Trip; $ 650 M de poupanças do Transformation; Ásia via Agoda. **Ameaças:** agentes de IA como interface de reserva; regulação UE (DMA; DSA com coima máxima de 6% da receita); FTC; Médio Oriente no long-haul; procura discricionária com taxas reais altas.
+
+| Matéria | Estado | Exposição | Na ponte |
+|---|---|---|---|
+| FTC / Priceline (taxas, apoio ao cliente, facturação) | $ 1,0 mM provisionado ($ 900 M contra receita + $ 100 M em G&A); em negociação; a FTC pode pedir mais | > $ 1,0 mM + mudanças de práticas | $ 1.000 M |
+| CNMC Espanha (paridade, ranking) | Coima suspensa em recurso; provisionada | $ 472 M + remédios | $ 472 M |
+| DSA — Comissão Europeia | Investigação formal aberta a 21-10-2026 | Até 6% da receita (~$ 1,7 mM) | ~$ 250 M esperado |
+| DMA | Gatekeeper designada | Remédios de negócio | — |
+
+**Fiscal:** ETR 2026 YTD 23,4% (Pillar 2 e BBB Act); Innovation Box holandesa a favor e sob escrutínio.
+
+## D. Sentimento
+
+- **Sell-side:** PT médio **$ 222,35** (MarketBeat, 08-11-2026); calls recentes entre $ 190 (Wells Fargo, Hold) e $ 265 (UBS, Buy). FV / PT = **0,79**. EPS de consenso (Nasdaq, portal): FY26 $ 10,24 · FY27 $ 12,06 · FY28 $ 13,91, com mais revisões em baixa do que em alta depois do Q3 (FY27: 9 contra 3). Receita de consenso FY26 $ 29,3 mM e FY27 $ 32,0 mM (TIKR, 04-11, antes das revisões).
+- **Reacção aos resultados:** de $ 155,67 (03-11) a $ 170,97 no dia seguinte e depois para o mínimo de 52 semanas, $ 144,91 (20-11). −30% no ano, −35% do máximo (Jul-2025).
+- **Insiders e short interest:** n/d nesta revisão (Capital IQ no PC).
+
+## E. Log de fair value e decisões
+
+| Data | Preço | FV base | IRR implícita | Decisão |
+|---|---|---|---|---|
+| 23-10-2026 | $ 161,10 | $ 252,98 (ERP 4,5%) | 11,97% | Entrada faseada |
+| 30-10-2026 | $ 161,10 | $ 236,03 (ERP 5%, β 0,876) | 11,97% | Entrada faseada |
+| 23-11-2026 | $ 144,91 | $ 219 (β 0,876) / $ 172 (β 1,235) | 12,3% | Entrada faseada — reforço |
+| 27-11-2026 | $ 144,91 | $ 172 (β 1,235 governa) | 12,3% | Idem — regra do beta |
+| **28-11-2026** | **$ 150,39** | **$ 176,41** | **12,13%** | **Entrada faseada — T1 já, limite ≤ $ 156** |
+
+## F. Changelog
+
+**28-11-2026 — ficha refeita no template v6 (perfil plataforma).** A versão de 23-11 vai para `_arquivo/BKNG_Ficha_20261123.md`. Mudanças:
+- **Estrutura:** secções 0–12 do v6; a versão de Outubro deixou de estar colada por baixo.
+- **Dados:** financials do SEC EDGAR (portal) e ER do Q3-26; KPIs com cinco anos; ponte das vendas ao FCF do dono; sem Capital IQ.
+- **Modelo:** pipeline v2.2 refeito sobre o LTM Set-26 com receita **ajustada** (ex-FTC), FTC/CNMC/DSA na ponte como dívida, Rf 4,94%, β 1,235. **Base reescrito:** crescimento 6,5% → 8% → 3,5% (CAGR 5,8%; era 5,2%), porque o caminho de 23-11 ficava 22% abaixo da referência factual (G15 bloqueante). Fair value $ 172 → **$ 176,41**.
+- **G15:** referência do crescimento passa de "ambição ≥ 8% cc" (facto) para o **consenso** (Y1 ~6,9%), por decisão do Hugo de 28-11: a ambição é objectivo, não facto para um Y1 que contém o Q4 guiado a 0–2%. Âncora estrutural dispensada até 05-12 (decisão do Hugo de 28-11). Resultado: OK (+3,4% contra os factos).
+- **Conclusões novas:** (1) a conversão em caixa está a cair (110% → 85% do EBITDA) porque o float deixou de crescer — o modelo usa −15%, não a média de −26%; (2) a devolução de capital está a 144% do FCF, com dívida nova — invalidador 4 reforçado; (3) o invalidador 5 disparou tecnicamente (proposta de redefinição); (4) a margem sobre o required é só 35 bp — o limite da T1 passa para **≤ $ 156**.
+- **A decisão não muda:** entrada faseada, T1 já.
+
+## G. Notas de método e gates
+
+| Gate | Estado |
+|---|---|
+| G1 GAAP vs non-GAAP | OK — Adj. EBITDA não soma SBC; transformation mantido no opex; FTC fora do run-rate e na ponte |
+| G2 Share count | 743,7 M diluídas (capa do 10-Q + diluição); as ponderadas do Q3 (753 M) não se usam |
+| G3 Split | Resolvido — 25:1 a 02-04-2026; EPS anuais da SEC antes de 2026 em base pré-split |
+| G12 | **Verde** — motores A e B com desvio < 0,0001%; 0 erros no recálculo; ponte a fechar ao cêntimo |
+| G13 | Crescimento e opex são os eixos (crescimento $ 55,67, opex $ 29,98) |
+| G15 | OK — +3,43% contra os factos, +3,19% contra o consenso; âncora estrutural dispensada até 05-12 (decisão do Hugo) |
+| G17 | OK — fecho de 27-11 posterior ao 10-Q (03-11) e ao 8-K das notes (13-11) |
+| G18 | Dívida = senior notes do ER (sem leases); capex = definição do FCF da gestão |
+| G19 | Método C; **Rf a confirmar**: UST 10Y 4,94% do portal (Yahoo ^TNX); Treasury.gov inacessível desta sessão |
+| G20 / G21 | Não se aplicam (sem ciclo de capex) |
+| G23 | Por declarar no config — as exclusões recorrentes (transformation, ~0,4% da receita) estão dentro do cash opex |
+| Calibração | FV / PT 0,79 |
+
+*Fontes:* [ER Q3-26 (SEC)](https://www.sec.gov/Archives/edgar/data/0001075531/000107553126000044/q3-26bkngearningsrelease.htm) · [8-K das notes de 13-11-2026](https://www.sec.gov/Archives/edgar/data/0001075531/000110465926127223/tm2629703d1_8k.htm) · [StockTitan — FTC](https://stocktitan.net/articles/booking-holdings-q3-2026-earnings-ftc-900-million-revenue-cut) · [Zacks — KPIs do Q3](https://www.zacks.com/stock/news/3023239/booking-holdings-q3-earnings-beat-on-travel-growth,-revenues-miss) · [TIKR — consenso e PTs](https://www.tikr.com/blog/booking-holdings-price-target-upside-airbnb-growth-bkng) · [MarketBeat — PT médio](https://www.marketbeat.com/instant-alerts/consensus-booking-holdings-inc-nasdaq-bkng-stock-has-average-target-price-of-22235-according-to-brokerages-2026-11-08/) · [Investing.com — Expedia](https://www.investing.com/news/stock-market-news/at-12x-earnings-is-this-cashrich-travel-platform-a-deepvalue-buy-5014472) · [Investing.com — Airbnb vs Expedia](https://ca.investing.com/news/stock-market-news/airbnb-vs-expedia-growth-valuation-and-which-ota-wins-on-price-93CH-4774719)
