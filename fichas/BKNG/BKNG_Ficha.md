@@ -1,6 +1,6 @@
 # Ficha de Empresa — Booking Holdings (BKNG · NasdaqGS)
 
-<!-- dados {"preco": 150.39, "fv": 176.41, "bear": 131.20, "bull": 215.02, "t1": 156.39, "cheia": 133.06, "irr": 12.13, "upside": 0.173, "data": "27-11-2026", "decisao": "Entrada faseada — T1 já (preço abaixo do base @required $156); T2 com o guidance FY27 ou < $133", "quarter": "Q3-26", "invalidadores": "1 de 5 (técnico: marketing/GB) · 2 em vigilância", "moeda": "USD", "par": {"rf": 0.0494, "erp": 0.05, "rf_metodo": "C", "erp_fonte": "Kroll"}, "proximo_report": "2027-02-25", "perfil": "plataforma"} -->
+<!-- dados {"preco": 150.39, "fv": 176.41, "bear": 131.20, "bull": 215.02, "t1": 156.39, "cheia": 133.06, "irr": 12.13, "upside": 0.173, "data": "27-11-2026", "decisao": "Entrada faseada — T1 já (preço abaixo do base @required $156); T2 com o guidance FY27 ou < $133", "quarter": "Q3-26", "invalidadores": "1 de 5 (técnico: marketing/GB) · 2 em vigilância", "moeda": "USD", "par": {"rf": 0.0494, "erp": 0.05, "rf_metodo": "C", "erp_fonte": "Kroll"}, "proximo_report": "2027-02-25", "perfil": "plataforma", "devolucao_fcf_max": 148, "divida_liquida_sobe": true} -->
 
 `revista 28-11-2026` · `Q3-2026` · `fecho $ 150,39 (27-11-2026)` · `template v6 · plugin v2.2` · `modelo: Excel citável (G12 verde, G15 OK, ponte a fechar ao cêntimo); Rf a confirmar no PC` · `fontes: SEC EDGAR (portal, 28-11), ER Q3-26 (8-K de 03-11), 8-K de 13-11, consenso e comps por web; sem Capital IQ`
 
@@ -137,17 +137,90 @@ O capex fica abaixo do D&A porque parte do D&A é amortização de intangíveis 
 | $ M, 30-Set-2026 | |
 |---|---|
 | Senior notes (corrente 1.987 + LT 18.074) | 20.061 |
-| Passivos tipo dívida: FTC 1.000 (provisionado, não pago) + CNMC 472 + DSA ~250 (esperado) | 1.722 |
+| Passivos tipo dívida: FTC 1.000 (provisionado, não pago) + CNMC 469 + DSA ~250 (esperado) | 1.719 |
 | − Caixa e equivalentes | −15.814 |
 | − Investimentos de longo prazo (~400 a 50%) | −200 |
-| **Dívida líquida + passivos** | **5.769** |
+| **Dívida líquida + passivos** *(a ponte do DCF)* | **5.769** |
 | Dívida líquida / EBITDA LTM | 0,5x *(0,4x sem os passivos)* |
 
-- **Depois do Q3:** € 3,55 mM de notes a 13-11-2026 (8-K): € 1,25 mM a 3,95% (2029), € 0,8 mM a 4,375% (2032), € 0,75 mM a 4,75% (2035), € 0,75 mM a 5,0% (2038). Entram na dívida e na caixa até serem usadas (efeito líquido zero; não modeladas). A dívida bruta pro forma passa de ~$ 20 mM para ~$ 24 mM, quase toda em euros — coerente com a receita em euros, mas gera ruído de FX no resultado GAAP.
-- **Sem finance leases;** as operating leases ficam fora (a renda está no EBIT).
-- **Capital próprio contabilístico −$ 10,4 mM** (recompras acima do lucro acumulado). Não é sinal de stress: o EBITDA cobre os juros ~9x. Rating de grau de investimento e covenants das linhas de crédito por confirmar no PC.
-- **Recompras vs diluição:** $ 12,4 mM de autorização por usar; recompras LTM $ 12,0 mM (~11% do market cap), dividendo de $ 0,42/trimestre. O risco é de alocação, não de solvência: a devolução a 144% do FCF não é repetível sem mais dívida (invalidador 4).
-- **Não operacionais:** investimentos de longo prazo ~$ 0,4 mM (a 50% na ponte); restricted cash fora.
+*A ponte do DCF usa CNMC 472 (ficha de 23-11); o 10-Q dá 469. Diferença de $ 0,004 por acção, não corrigida no modelo.*
+
+- **Depois do Q3:** € 3,55 mM de notes a 13-11-2026 (8-K): € 1,25 mM a 3,95% (2029), € 0,8 mM a 4,375% (2032), € 0,75 mM a 4,75% (2035), € 0,75 mM a 5,0% (2038). Entram na dívida e na caixa até serem usadas (efeito líquido zero; não modeladas). Dívida bruta pro forma **~$ 24,2 mM** (a ~1,16 $/€), quase toda em euros — coerente com a receita em euros, mas gera ruído de FX no resultado GAAP.
+- **Sem finance leases;** as operating leases ficam fora (a renda está no EBIT). Revolver de $ 2 mM por usar, com covenant de alavancagem máxima cumprido a 30-09 (10-Q; o rácio não é divulgado). Rating por confirmar no PC.
+- **Capital próprio contabilístico −$ 10,4 mM** (recompras acima do lucro acumulado). O EBITDA cobre os juros ~9x.
+- **Caixa no estrangeiro:** $ 14,4 mM dos $ 16,2 mM de caixa e investimentos estão em subsidiárias internacionais (10-Q).
+
+### Alocação de capital — quatro testes
+
+**(1) Preço médio de recompra contra o FV** *(recompras do cash flow ÷ queda das acções em circulação no fim do trimestre; acções pós-split do CapIQ até Jun-26 e capa do 10-Q a 26-10)*
+
+| Trimestre | Recompras ($ M) | Δ acções (M) | Preço implícito | Fecho médio do trimestre | vs FV $ 176,41 |
+|---|---|---|---|---|---|
+| Q3-24 | 1.764 | −10,7 | $ 165 | $ 153 | −6% |
+| Q4-24 | 1.227 | −7,0 | $ 175 | $ 206 | −1% |
+| Q1-25 | 2.170 | −6,9 | $ 314 *(ruído)* | $ 191 | — |
+| Q2-25 | 1.498 | −3,3 | $ 454 *(ruído)* | $ 205 | — |
+| Q3-25 | 653 | −4,4 | $ 148 *(ruído)* | $ 223 | — |
+| Q4-25 | 2.119 | −14,0 | $ 151 *(ruído)* | $ 206 | — |
+| Q1-26 | 3.770 | −16,9 | $ 223 | $ 184 | +27% |
+| Q2-26 | 3.988 | −23,5 | $ 170 | $ 171 | −4% |
+| **Q3-26** *(10-Q: 12 M acções por $ 2.116 M)* | **2.142** | **−12** | **$ 176** | $ 188 | **0%** |
+| **Q3-24 a Q2-26, acumulado** | **17.189** | **−86,7** | **$ 198** *(~$ 185 brutos de ~6 M acções emitidas por SBC)* | $ 192 | **+5% a +12%** |
+
+*O que isto mostra:* trimestre a trimestre o rácio é ruído (o cash flow trimestral é descumulado do YTD e a liquidação não coincide com o fim do trimestre); o acumulado de dois anos e o Q3 do 10-Q são as leituras fiáveis. **A Booking recomprou a ~$ 185–198 em média, 5–12% acima do fair value de hoje** — ao nosso β 1,235 isso transferiu valor de quem ficou para quem vendeu. Com β 0,876 (FV $ 226) teria criado valor. O Q3 foi a $ 176, exactamente o FV; ao ritmo do Q3 e ao preço de Novembro (~$ 157 de média) cria valor. A gestão compra ao ritmo do FCF e da dívida, não ao desconto sobre o valor: o trimestre de maior volume a preço alto (Q1-26, $ 3,8 mM a ~$ 184 de fecho médio) ficou acima do FV.
+
+**(2) Quanta da caixa é livre?** A caixa da Booking é, em grande parte, dinheiro dos viajantes e dos hotéis.
+
+| $ M | 31-Dez-2025 | 30-Set-2026 |
+|---|---|---|
+| Caixa e equivalentes | 17.203 | 15.814 |
+| − Deferred merchant bookings (reembolsáveis em grande parte) | −5.270 | −6.450 |
+| − Contas a pagar (sobretudo a hotéis) + contas a receber | −1.274 | −904 |
+| **Caixa livre — float estrito fora** | **10.659** | **8.460** |
+| − Accrued expenses ex-FTC − prepaid | −3.843 | −4.141 |
+| **Caixa livre — todo o working capital operacional fora** | **6.816** | **4.319** |
+| Dívida + passivos tipo dívida (FTC, CNMC, DSA) | 19.221 | 21.780 |
+| **Dívida líquida ajustada** *(float estrito como dívida)* | **8.562 (0,86x EBITDA)** | **13.320 (1,23x)** |
+| *(todo o working capital como dívida)* | *12.405 (1,25x)* | *17.461 (1,61x)* |
+
+*O que isto mostra:* a dívida líquida da ponte ($ 5,8 mM, 0,5x) é a leitura de *going concern* — o float renova-se. A dívida líquida **ajustada** é a leitura de *stress* — o float sai — e subiu **+$ 4,8 mM em nove meses** (0,86x → 1,23x), porque as recompras de $ 9,9 mM no ano foram pagas em parte com caixa que pertence a terceiros. Setembro não é o pico: em Junho os deferred merchant bookings chegaram a $ 10,1 mM.
+
+**(3) Se a devolução continuar a 144% do FCF** *(FCF a crescer com a receita do base; défice coberto com dívida; FTC pago no Y1)*
+
+| | Hoje *(Set-26)* | Y1 | Y2 | Y3 |
+|---|---|---|---|---|
+| FCF (CFO − capex) | 9.237 | 9.837 | 10.624 | 11.421 |
+| Devolução a 144% | 13.304 | 14.166 | 15.299 | 16.446 |
+| Défice anual *(+ FTC no Y1)* | 4.067 | 5.329 | 4.675 | 5.025 |
+| Dívida líquida simples *(dívida − caixa)* | 4.247 | 9.576 | 14.251 | 19.276 |
+| EBITDA do modelo | 10.813 | 11.438 | 12.419 | 13.387 |
+| **Dívida líquida / EBITDA** | 0,39x | 0,84x | 1,15x | 1,44x |
+| **Dívida líquida ajustada / EBITDA** *(float estrito)* | 1,23x | 1,54x | 1,80x | **2,04x** |
+| Dívida bruta / EBITDA *(pro forma com as notes de Nov)* | 2,24x | 2,58x | 2,75x | 2,93x |
+
+*Devolução / FCF nos últimos três anos:* FY2023 148% · FY2024 97% · FY2025 85% · LTM 144% (máximo 148%). Dívida líquida simples: $ 2,1 mM (FY2023) → $ 0,4 mM (FY2024) → $ 1,5 mM (FY2025) → $ 4,2 mM (Set-26), a subir.
+
+*O que isto mostra:* a 144% a alavancagem sobe ~0,3–0,4x de EBITDA por ano; a dívida líquida ajustada passa 2x no terceiro ano e o juro adicional (~$ 0,7 mM/ano a ~4,5%) leva a cobertura de ~9x para ~7x. Não é um problema de solvência no base — é um problema de **cauda**: cada ano a este ritmo deixa menos folga para um choque que inverta o float.
+
+**(4) O stress de 2020 na estrutura de hoje.** Em 2020 a receita caiu 55% ($ 15,1 mM → $ 6,8 mM) e o CFO passou de **$ 4.865 M para $ 85 M**: o float inverteu-se (cancelamentos e reembolsos, pagamentos a hotéis sem reservas novas). Na altura o merchant era uma parte menor do negócio; hoje é **71% da receita**, por isso o mesmo choque drena mais caixa.
+
+| $ mM — choque de procura de 2–3 trimestres | Em Setembro | No pico de Junho |
+|---|---|---|
+| Deferred merchant bookings que saem | 6,45 | 10,12 |
+| Contas a pagar − a receber | 0,90 | 0,90 |
+| Perda operacional (2 trimestres de custos fixos ~$ 1,5 mM/trim., parte coberta pela receita que resta) | 1,50 | 1,50 |
+| FTC | 1,00 | 1,00 |
+| Dívida a 12 meses | 1,99 | 1,99 |
+| Dividendos (suspendíveis; recompras param, como em 2020) | 1,30 | 1,30 |
+| **Necessidades** | **13,1** | **16,8** |
+| Caixa + notes de Nov + revolver *(15,8 + 4,1 + 2,0)* | 21,9 | 21,9 |
+| **Cobertura** | **1,67x** | **1,30x** |
+| *Se as notes de Nov forem gastas em recompras antes do choque* | *1,35x* | *1,06x* |
+| *Se a devolução a 144% continuar dois anos paga com caixa (−$ 9,0 mM; FTC já pago)* | *~1,06x* | *~0,82x* |
+
+**No valor** *(DCF, receita −50% no Y1, +60% no Y2, +40% no Y3 e depois o base; cash opex 87% / 70% / 64%)*: **$ 146 @WACC e $ 128 @WACC+1 pp** (−17% e −27% contra o base). Com as notes gastas em recompras: $ 142 e $ 123. O float que sai no Y1 volta com a retoma (como em 2021–22), por isso o efeito no valor é pequeno; **o efeito está na liquidez e no preço de mercado**: em 2020 a acção caiu ~44% entre Janeiro e Março (dez semanas).
+
+**Leitura dos quatro testes.** O negócio não precisa de capital, mas a política de devolução está a usar o float e a dívida para recomprar acima do fair value. Hoje a estrutura aguenta um 2020 com folga (1,67x) em Setembro e à justa no pico de Junho (1,30x); dois anos mais a 144% e deixa de aguentar sem emissão de emergência. Isto muda o invalidador 4 e o peso máximo (secção 12), não o fair value: as recompras a preço justo são neutras por acção.
 
 ---
 
@@ -322,7 +395,7 @@ Heatmap a 5 anos ao preço de hoje: 8,5–20,5% entre crescimento −2/+2 pp e s
 
 - **Na prática há duas bandas, não três:** a 1.ª e a 2.ª estão a $ 1,47 uma da outra. O preço está abaixo de ambas, mas a 2.ª tranche do plano continua amarrada a **informação** (guidance FY27 ≥ 8% cc, fim de Fev) ou ao preço da cheia (~$ 133–135), porque o Q4 guiado a +1–3% é a dúvida que o preço está a cobrar.
 - **Limite da ordem T1:** com esta ficha, **≤ $ 156** (o plano dizia "até ~$ 160 aceitável"). Acima de $ 156 o base deixa de render o required.
-- **Peso máximo: 9,0%** da carteira (perda máxima de 2% no cenário adverso @WACC+1 pp, −22%). Hoje ~2,8%. O tecto da carteira por nome é 15%.
+- **Peso máximo: 7%** da carteira *(era 9,0%)*. A regra é a mesma — perda máxima de 2% da carteira na cauda —, mas a cauda passa a ser o cenário adverso @WACC+1 pp **com a alavancagem de três anos de devolução a 144% do FCF** (secção 6, teste 3): $ 109,84 por acção, −27% contra o preço (sem a alavancagem era $ 116,96, −22%). 2% ÷ 27% = 7,4% → 7%. Ao preço de mercado, um choque como o de 2020 (−44%) custaria ~3% da carteira a 7% de peso — acima dos 2%, mas temporário; a regra mede perda permanente. Hoje ~2,8% (~4% depois da T1). O tecto da carteira por nome é 15%.
 - **Régua de compra (plano v3.2):** retorno implícito 12,13% ≥ índice 8% + 250 bp = 10,5% → **passa**.
 - **Regra de venda aplicada:** (1) tese partida? Não — um invalidador secundário disparou só tecnicamente (5); (2) acima do tecto? Não; (3) overvalued? Não — preço abaixo do favorável @WACC ($ 215) e retorno 12,1% > 8%.
 
@@ -333,7 +406,7 @@ Heatmap a 5 anos ao preço de hoje: 8,5–20,5% entre crescimento −2/+2 pp e s
 | 1 | A IA não desintermedeia | Referrals de LLM > 1% das room nights **com** o mix directo B2C abaixo de mid-sixties | ER / call | OK — mix directo mid-sixties no Q3 |
 | 2 | O FTC é pontual | Custo final > $ 1,0 mM, ou remédios que cortem o canal B2B da Priceline | 10-Q, 8-K | **Em vigilância** — $ 1,0 mM provisionado; a FTC "pode pedir mais" |
 | 3 | O Q4 é conjuntural | Room nights do Q4 < 2% **e** guidance FY27 em mid single digits | ER Q4-26 (~25-02) | Por saber |
-| 4 | O capital é bem alocado | Dívida líquida + passivos > ~$ 6 mM, ou devolução > 120% do FCF dois anos seguidos | 10-Q | **Em vigilância** — $ 5,8 mM; devolução LTM 144% do FCF |
+| 4 | O capital é bem alocado | Dívida líquida **ajustada** (float estrito — deferred merchant bookings + contas a pagar − a receber — como dívida) / EBITDA LTM **> 1,75x**, **ou** cobertura de liquidez no stress de 2020 ao pico de Junho **< 1,25x** *(redefinido a 28-11: o teste antigo, dívida líquida > $ 6 mM, não via o float)* | 10-Q (balanço e deferred merchant bookings) | **Em vigilância** — 1,23x em Set-26 (0,86x em Dez-25); cobertura 1,30x. A 144% do FCF passa 1,75x dentro de ~2 anos |
 | 5 | O custo de aquisição está estável | Marketing / gross bookings a subir face ao homólogo três trimestres seguidos | ER | **Disparado (técnico)** — 4 trimestres seguidos, mas só +3 a +25 bp (Q3: 4,75 vs 4,71 cêntimos) e explicado pelo crescimento do B2B affiliate. Proposta: redefinir para "≥ +15 bp YoY três trimestres, ex-B2B" (decisão do Hugo) |
 
 **Catalisadores com data:** 04-12 payroll e data-limite de T1 dos índices · 09-12 FOMC (não comprar nesse dia) · 10-12 CPI · FTC/Priceline (acordo sem data) · DSA UE (12–24 meses) · **~25-02-2027 resultados Q4-26 e guidance FY27** (o que decide a T2) · 05-12 piloto v6 no PC (Capital IQ: Comps, consenso, âncora da margem terminal).
@@ -393,6 +466,8 @@ As tabelas das secções 2, 4 e 11 substituem os gráficos nesta versão (sem Ex
 | **28-11-2026** | **$ 150,39** | **$ 176,41** | **12,13%** | **Entrada faseada — T1 já, limite ≤ $ 156** |
 
 ## F. Changelog
+
+**28-11-2026 (tarde) — alocação de capital na secção 6.** Quatro testes novos: preço médio de recompra (~$ 185–198 em 2024-26, 5–12% acima do FV; $ 176 no Q3), caixa livre e dívida líquida ajustada com o float como dívida (1,23x, era 0,86x em Dez-25), alavancagem a três anos com a devolução a 144% do FCF (2,04x ajustada no Y3) e o stress de 2020 na estrutura de hoje (cobertura de liquidez 1,67x em Set, 1,30x no pico de Junho; DCF $ 146 / $ 128). Consequências: **invalidador 4 redefinido** (dívida líquida ajustada > 1,75x ou cobertura < 1,25x; em vigilância) e **peso máximo 9,0% → 7%**. O fair value e a decisão não mudam. CNMC no 10-Q: $ 469 M (a ponte usa 472).
 
 **28-11-2026 — ficha refeita no template v6 (perfil plataforma).** A versão de 23-11 vai para `_arquivo/BKNG_Ficha_20261123.md`. Mudanças:
 - **Estrutura:** secções 0–12 do v6; a versão de Outubro deixou de estar colada por baixo.
