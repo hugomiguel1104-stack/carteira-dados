@@ -23,7 +23,21 @@ SECCOES = [
     (11, "Sensibilidades"),
     (12, "Decisão"),
 ]
-CAMPOS = ["preco", "fv", "bear", "bull", "t1", "irr", "data", "decisao", "quarter", "moeda", "par"]
+CAMPOS = ["preco", "fv", "bear", "bull", "t1", "irr", "data", "decisao", "quarter", "moeda", "par", "perfil"]
+
+# Perfis do template v6: (secção, padrão obrigatório, descrição). Ver "Perfis" em claude/Template_Ficha_v6.md.
+PERFIS = {
+    "geral": [(5, r"ROIC", "ROIC")],
+    "plataforma": [(2, r"take rate|comiss", "take rate"), (4, r"float|working capital|NWC", "float/working capital")],
+    "software": [(4, r"\bSBC\b", "SBC na ponte"), (2, r"ARR|cRPO|RPO|NRR|reten", "ARR/cRPO/retenção")],
+    "rede": [(2, r"volume|GDV|cross-border", "volume e cross-border")],
+    "capex": [(5, r"capex", "capex vs D&A"), (5, r"receita (nova|incremental) por", "receita nova por $ de capex")],
+    "ciclico": [(4, r"ciclo|normaliz", "margens a meio do ciclo"), (2, r"book-to-bill|encomendas|bookings", "encomendas")],
+    "banco": [(5, r"\bROE\b", "ROE"), (5, r"CET1|capital regulat", "CET1"), (5, r"NPL|incumpr|cobertura", "qualidade de crédito"), (10, r"residual income", "residual income")],
+    "sotp": [(10, r"SOTP|soma das partes", "SOTP")],
+    "pre_lucro": [(4, r"runway|queima", "runway"), (5, r"dilui", "diluição")],
+}
+PROIBIDO_BANCO = [(10, r"\bFCFF\b", "FCFF num banco"), (5, r"\bROIC\b", "ROIC num banco")]
 
 
 def verificar(path: Path) -> list[str]:
@@ -48,6 +62,25 @@ def verificar(path: Path) -> list[str]:
         except json.JSONDecodeError as e:
             erros.append(f"bloco dados não é JSON válido ({e})")
 
+    perfis = []
+    if m:
+        try:
+            pf = json.loads(m.group(1)).get("perfil")
+            perfis = [pf] if isinstance(pf, str) else list(pf or [])
+        except json.JSONDecodeError:
+            pass
+    for pf in perfis:
+        if pf not in PERFIS:
+            erros.append(f"perfil desconhecido '{pf}' (ver a tabela de perfis do template)")
+    sec_txt = lambda n: (re.search(rf"^## {n}\. .*?$(.*?)(?=^## \d{{1,2}}\. |\Z)", txt, re.M | re.S) or [None, ""])[1] or ""
+    regras = [r for pf in perfis for r in PERFIS.get(pf, [])] + (PROIBIDO_BANCO if "banco" in perfis else [])
+    for n, pat, desc in regras:
+        hit = re.search(pat, sec_txt(n), re.I)
+        if (desc.endswith("num banco") and hit):
+            erros.append(f"secção {n}: {desc} (o perfil banco não usa)")
+        elif not desc.endswith("num banco") and not hit:
+            erros.append(f"secção {n} sem {desc} (obrigatório no perfil {', '.join(perfis)})")
+
     if re.search(r"^#{1,2} *Versão anterior", txt, re.M):
         erros.append("tem uma 'Versão anterior' colada — vai para _arquivo")
 
@@ -71,8 +104,9 @@ def verificar(path: Path) -> list[str]:
         if len(anos) < 5:
             erros.append(f"secção 4 com {len(anos)} anos de histórico (mín. 5)")
     s5 = sec(5)
-    if s5 and not re.search(r"ROIC\s+(marginal|incremental)", s5.group(1), re.I):
-        erros.append("secção 5 sem ROIC incremental/marginal")
+    metrica = "ROE" if "banco" in perfis else "ROIC"
+    if s5 and not re.search(rf"{metrica}\s+(marginal|incremental)", s5.group(1), re.I):
+        erros.append(f"secção 5 sem {metrica} incremental/marginal")
     return erros
 
 
