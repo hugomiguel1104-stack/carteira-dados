@@ -1,0 +1,32 @@
+{
+"fichas": {
+"tried": "2026-11-28T14:33Z",
+"at": "2026-11-27T03:40Z",
+"ok": false,
+"note": "11 de 14 fichas lidas; erro: CELH: [Errno 2] No such file or directory: '/home/runner/work/carteira-dados/carteira-dados/fichas/D"
+},
+"precos": {
+"tried": "2026-11-28T03:21Z",
+"at": "2026-11-28T03:21Z",
+"ok": true,
+"note": "66 de 66 simbolos lidos"
+},
+"sec": {
+"tried": "2026-11-28T03:21Z",
+"at": "2026-11-28T03:21Z",
+"ok": true,
+"note": "17 de 17 empresas lidas"
+},
+"calendario": {
+"tried": "2026-11-28T03:23Z",
+"ok": true,
+"note": "72 de 72 dias passados lidos; 19 eventos",
+"at": "2026-11-28T03:23Z"
+},
+"econ": {
+"tried": "2026-11-28T03:23Z",
+"at": "2026-11-28T03:23Z",
+"ok": true,
+"note": "17 of 17 series read"
+}
+}
